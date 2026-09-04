@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "bstier"
+version = "0.1.0"
+description = "Braw Stars tierlist helper"
+authors = ["Beinan Li <li.beinan@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[[tool.poetry.packages]]
+include = "*"
+from = "src"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+kkpyutil = "*"
+opencv-python = "*"
+numpy = "*"
+
+[tool.poetry.scripts]
+bstier-cli = "src.cli:main"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
