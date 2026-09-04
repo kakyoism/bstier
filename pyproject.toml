@@ -17,7 +17,7 @@ opencv-python = "*"
 numpy = "*"
 
 [tool.poetry.scripts]
-bstier-cli = "src.cli:main"
+bstier = "src.cli:main"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "*"

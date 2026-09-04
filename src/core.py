@@ -19,7 +19,7 @@ class Worker:
     def __init__(self, args):
         self.args = args
         self.res = types.SimpleNamespace(ok=False, detail='', advice='')
-        self.out = None
+        self.out = types.SimpleNamespace(toPath='')
         self.repo = util.init_repo(__file__, organization='kakyoism', repodepth=2)
         self.paths = types.SimpleNamespace(
             desktop=osp.join(util.get_platform_home_dir(), 'Desktop'),
@@ -164,7 +164,7 @@ class Worker:
         if self.args.toPath:
             util.save_json(self.args.toPath, export_data)
             self.logger.info(f"Successfully exported tier list to JSON: {self.args.toPath}")
-            self.out = self.args.toPath
+            self.out.toPath = self.args.toPath
         
         self.res.ok = True
         self.res.detail = "Extraction routine executed."

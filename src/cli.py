@@ -17,28 +17,28 @@ sys.path.insert(0, str(project_root))
 def create_parser() -> argparse.ArgumentParser:
     """Create the main argument parser."""
     parser = argparse.ArgumentParser(
-        prog='bstier-cli',
+        prog='bstier',
         description='Brawl Stars tierlist helper CLI',
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
   # Extract text tierlist from a Deepdraft map tierlist picture, then save to a file
-  bstier-cli extract --source deepdraft --from /path/to/tier.png --to /path/to/tier.json
+  bstier extract --source deepdraft --from /path/to/tier.png --to /path/to/tier.json
 
   # Same as above, but print to screen only without saving as a file
-  bstier-cli extract --source deepdraft --from /path/to/tier.png 
+  bstier extract --source deepdraft --from /path/to/tier.png 
 
   # Generate a tierlist picture from a text metadata file
-  bstier-cli generate --from /path/to/tier.json --to tier.svg
+  bstier generate --from /path/to/tier.json --to tier.svg
 
   # Same as above, but outputs to a rasterized picture
-  bstier-cli generate --from /path/to/tier.json --to tier.png --reso 1024x768
+  bstier generate --from /path/to/tier.json --to tier.png --reso 1024x768
 
   # Convert a regular text tierlist to a class-based tierlist
-  bstier-cli convert --by class --from /path/to/tier-in.json --to /path/to/tier-out.json
+  bstier convert --by class --from /path/to/tier-in.json --to /path/to/tier-out.json
 
   # Convert a regular tierlist to a lane-based tierlist
-  bstier-cli convert --by lane --from /path/to/tier-in.json --to /path/to/tier-out.json
+  bstier convert --by lane --from /path/to/tier-in.json --to /path/to/tier-out.json
 """)
 
     # Global options
