@@ -39,19 +39,28 @@ Examples:
 
   # Convert a regular tierlist to a lane-based tierlist
   bstier-cli convert --by lane --from /path/to/tier-in.json --to /path/to/tier-out.json
-
-  # Convert
 """)
-    
+
     # Global options
     subparsers = parser.add_subparsers(dest='command', help='Available commands')
 
     # extract subcommand
     extract_parser = subparsers.add_parser('extract', help='Extract text tierlist from a tierlist picture')
-    extract_parser.add_argument('--source', '-s', dest='source', required=True, help='Source tag that defines the tierlist layout')
-    
-    #<start>#
-    #<end>#
+    extract_parser.add_argument('--from', dest='fromPath', required=True, help='Path to the input tierlist picture')
+    extract_parser.add_argument('--to', dest='toPath', help='Path to save the output JSON file')
+    extract_parser.add_argument('--source', '-s', dest='source', choices=('deepdraft', 'tiermaker', ), default='deepdraft', required=True, help='Source tag that defines the tierlist image format')
+
+    # generate subcommand
+    generate_parser = subparsers.add_parser('generate', help='Generate a tierlist picture from a text metadata file')
+    generate_parser.add_argument('--from', dest='fromPath', required=True, help='Path to the input JSON file')
+    generate_parser.add_argument('--to', dest='toPath', required=True, help='Path to save the output picture')
+    generate_parser.add_argument('--reso', help='Resolution for the rasterized picture (e.g., 1024x768)')
+
+    # convert subcommand
+    convert_parser = subparsers.add_parser('convert', help='Convert a tierlist format')
+    convert_parser.add_argument('--from', dest='fromPath', required=True, help='Path to the input JSON file')
+    convert_parser.add_argument('--to', dest='toPath', required=True, help='Path to save the output JSON file')
+    convert_parser.add_argument('--by', dest='convType', required=True, choices=('class', 'lane'), default='class', help='Conversion type')
 
     return parser
 
