@@ -1902,7 +1902,7 @@
             "brawlBall": "anti-aggro",
             "gemGrab": "*",
             "heist": "defender",
-            "hotZone": "damage",
+            "hotZone": "anti-aggro",
             "knockout": "*"
         }
     },
@@ -1975,8 +1975,8 @@
             "brawlBall": "support",
             "gemGrab": "carrier",
             "heist": "flex",
-            "hotZone": "",
-            "knockout": ""
+            "hotZone": "control",
+            "knockout": "support"
         }
     },
     "darryl": {
@@ -2964,8 +2964,8 @@
             "brawlBall": "support",
             "gemGrab": "carrier",
             "heist": "support",
-            "hotZone": "",
-            "knockout": ""
+            "hotZone": "*",
+            "knockout": "support"
         }
     },
     "gigi": {
@@ -3029,6 +3029,14 @@
             "reload": "VERY FAST",
             "speed": "VERY FAST",
             "tags": []
+        },
+        "roles": {
+            "bounty": "aggro",
+            "brawlBall": "aggro",
+            "gemGrab": "aggro",
+            "heist": "defender",
+            "hotZone": "aggro",
+            "knockout": "aggro"
         }
     },
     "glowbert": {
@@ -3092,7 +3100,17 @@
             "rangeSuper": "NORMAL",
             "reload": "NORMAL",
             "speed": "FAST",
-            "tags": ["healer"]
+            "tags": [
+                "healer"
+            ]
+        },
+        "roles": {
+            "bounty": "support",
+            "brawlBall": "support",
+            "gemGrab": "carrier",
+            "heist": "flex",
+            "hotZone": "zoneTime",
+            "knockout": "support"
         }
     },
     "gray": {
@@ -3166,9 +3184,16 @@
             "reload": "FAST",
             "speed": "NORMAL",
             "tags": [
-                "assassin",
-                "hotzone-support"
+                "assassin"
             ]
+        },
+        "roles": {
+            "bounty": "range",
+            "brawlBall": "support",
+            "gemGrab": "carrier",
+            "heist": "support",
+            "hotZone": "zoneTime",
+            "knockout": "flex"
         }
     },
     "griff": {
@@ -3236,9 +3261,16 @@
             "tags": [
                 "DamageDealer",
                 "anti-aggro",
-                "heist-defender",
-                "wallbreak"
+                "wallbreaker"
             ]
+        },
+        "roles": {
+            "bounty": "flex",
+            "brawlBall": "anti-aggro",
+            "gemGrab": "anti-aggro",
+            "heist": "*",
+            "hotZone": "defender",
+            "knockout": "flex"
         }
     },
     "grom": {
@@ -3306,6 +3338,14 @@
             "tags": [
                 "thrower"
             ]
+        },
+        "roles": {
+            "bounty": "range",
+            "brawlBall": "control",
+            "gemGrab": "control",
+            "heist": "safeDamage",
+            "hotZone": "control",
+            "knockout": "flex"
         }
     },
     "gus": {
@@ -3380,6 +3420,14 @@
                 "Marksman",
                 "healer"
             ]
+        },
+        "roles": {
+            "bounty": "range",
+            "brawlBall": "support",
+            "gemGrab": "carrier",
+            "heist": "support",
+            "hotZone": "support",
+            "knockout": "flex"
         }
     },
     "hank": {
@@ -3446,6 +3494,14 @@
             "reload": "VERY FAST",
             "speed": "NORMAL",
             "tags": []
+        },
+        "roles": {
+            "bounty": "aggro",
+            "brawlBall": "aggro",
+            "gemGrab": "aggro",
+            "heist": "*",
+            "hotZone": "zoneTime",
+            "knockout": ""
         }
     },
     "jacky": {
@@ -3514,6 +3570,14 @@
                 "mobility",
                 "shield"
             ]
+        },
+        "roles": {
+            "bounty": "aggro",
+            "brawlBall": "aggro",
+            "gemGrab": "aggro",
+            "heist": "*",
+            "hotZone": "aggro",
+            "knockout": "aggro"
         }
     },
     "jaeyong": {
@@ -3583,6 +3647,14 @@
             "tags": [
                 "healer"
             ]
+        },
+        "roles": {
+            "bounty": "flex",
+            "brawlBall": "support",
+            "gemGrab": "carrier",
+            "heist": "*",
+            "hotZone": "support",
+            "knockout": "flex"
         }
     },
     "janet": {
@@ -3652,6 +3724,14 @@
             "tags": [
                 "gem-carrier"
             ]
+        },
+        "roles": {
+            "bounty": "",
+            "brawlBall": "",
+            "gemGrab": "carrier",
+            "heist": "*",
+            "hotZone": "",
+            "knockout": ""
         }
     },
     "jessie": {
@@ -4489,6 +4569,14 @@
             "tags": [
                 "anti-aggro"
             ]
+        },
+        "roles": {
+            "bounty": "",
+            "brawlBall": "",
+            "gemGrab": "",
+            "heist": "*",
+            "hotZone": "",
+            "knockout": ""
         }
     },
     "mandy": {
