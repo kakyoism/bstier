@@ -605,6 +605,14 @@
             "tags": [
                 "controller"
             ]
+        },
+        "roles": {
+            "bounty": "",
+            "brawlBall": "",
+            "gemGrab": "",
+            "heist": "",
+            "hotZone": "",
+            "knockout": ""
         }
     },
     "berry": {
@@ -2349,7 +2357,7 @@
             ]
         },
         "roles": {
-            "bounty": "aggro",
+            "bounty": "pressure",
             "brawlBall": "pressure",
             "gemGrab": "pressure",
             "heist": "safeDamage",
@@ -3031,12 +3039,12 @@
             "tags": []
         },
         "roles": {
-            "bounty": "aggro",
-            "brawlBall": "aggro",
-            "gemGrab": "aggro",
+            "bounty": "pressure",
+            "brawlBall": "pressure",
+            "gemGrab": "pressure",
             "heist": "defender",
-            "hotZone": "aggro",
-            "knockout": "aggro"
+            "hotZone": "pressure",
+            "knockout": "pressure"
         }
     },
     "glowbert": {
@@ -3496,9 +3504,9 @@
             "tags": []
         },
         "roles": {
-            "bounty": "aggro",
-            "brawlBall": "aggro",
-            "gemGrab": "aggro",
+            "bounty": "pressure",
+            "brawlBall": "pressure",
+            "gemGrab": "pressure",
             "heist": "*",
             "hotZone": "zoneTime",
             "knockout": ""
@@ -3572,12 +3580,12 @@
             ]
         },
         "roles": {
-            "bounty": "aggro",
-            "brawlBall": "aggro",
-            "gemGrab": "aggro",
+            "bounty": "pressure",
+            "brawlBall": "pressure",
+            "gemGrab": "pressure",
             "heist": "*",
-            "hotZone": "aggro",
-            "knockout": "aggro"
+            "hotZone": "pressure",
+            "knockout": "pressure"
         }
     },
     "jaeyong": {
@@ -3799,6 +3807,14 @@
             "tags": [
                 "heist-attacker"
             ]
+        },
+        "roles": {
+            "bounty": "*",
+            "brawlBall": "*",
+            "gemGrab": "*",
+            "heist": "safeDamage",
+            "hotZone": "control",
+            "knockout": "*"
         }
     },
     "juju": {
@@ -3873,6 +3889,14 @@
                 "thrower",
                 "waterborne"
             ]
+        },
+        "roles": {
+            "bounty": "*",
+            "brawlBall": "*",
+            "gemGrab": "*",
+            "heist": "control",
+            "hotZone": "control",
+            "knockout": "*"
         }
     },
     "kaze": {
@@ -3940,6 +3964,14 @@
             "tags": [
                 "aggro"
             ]
+        },
+        "roles": {
+            "bounty": "blueStar",
+            "brawlBall": "*",
+            "gemGrab": "pressure",
+            "heist": "safeDamage",
+            "hotZone": "pressure",
+            "knockout": "pressure"
         }
     },
     "kenji": {
@@ -4013,6 +4045,14 @@
             "tags": [
                 "aggro"
             ]
+        },
+        "roles": {
+            "bounty": "pressure",
+            "brawlBall": "pressure",
+            "gemGrab": "pressure",
+            "heist": "pressure",
+            "hotZone": "pressure",
+            "knockout": "pressure"
         }
     },
     "kit": {
@@ -4076,7 +4116,7 @@
             ]
         },
         "rating": {
-            "class": "Assassin",
+            "class": "Support",
             "position": "lane",
             "rangeMain": "SHORT",
             "rangeSuper": "NORMAL",
@@ -4086,6 +4126,14 @@
                 "healer",
                 "support"
             ]
+        },
+        "roles": {
+            "bounty": "blueStar",
+            "brawlBall": "*",
+            "gemGrab": "aggro",
+            "heist": "flex",
+            "hotZone": "*",
+            "knockout": "support"
         }
     },
     "larry&Lawrie": {
@@ -4151,6 +4199,14 @@
             "tags": [
                 "thrower"
             ]
+        },
+        "roles": {
+            "bounty": "*",
+            "brawlBall": "control",
+            "gemGrab": "control",
+            "heist": "control",
+            "hotZone": "control",
+            "knockout": "control"
         }
     },
     "leon": {
@@ -4218,6 +4274,14 @@
             "reload": "NORMAL",
             "speed": "VERY FAST",
             "tags": []
+        },
+        "roles": {
+            "bounty": "blueStar",
+            "brawlBall": "control",
+            "gemGrab": "pressure",
+            "heist": "*",
+            "hotZone": "pressure",
+            "knockout": "pressure"
         }
     },
     "lily": {
@@ -4289,6 +4353,14 @@
                 "heist-attacker",
                 "aggro"
             ]
+        },
+        "roles": {
+            "bounty": "pressure",
+            "brawlBall": "pressure",
+            "gemGrab": "pressure",
+            "heist": "safeDamage",
+            "hotZone": "pressure",
+            "knockout": "pressure"
         }
     },
     "lola": {
@@ -4356,6 +4428,14 @@
             "tags": [
                 "anti-aggro"
             ]
+        },
+        "roles": {
+            "bounty": "damage",
+            "brawlBall": "damage",
+            "gemGrab": "damage",
+            "heist": "flex",
+            "hotZone": "zoneTime",
+            "knockout": "*"
         }
     },
     "lou": {
@@ -4426,6 +4506,14 @@
                 "anti-aggro",
                 "hotzone-zonetimer"
             ]
+        },
+        "roles": {
+            "bounty": "anti-aggro",
+            "brawlBall": "anti-aggro",
+            "gemGrab": "anti-aggro",
+            "heist": "flex",
+            "hotZone": "zoneTime",
+            "knockout": "anti-aggro"
         }
     },
     "lumi": {
@@ -4502,6 +4590,14 @@
                 "controller",
                 "anti-aggro"
             ]
+        },
+        "roles": {
+            "bounty": "control",
+            "brawlBall": "control",
+            "gemGrab": "control",
+            "heist": "control",
+            "hotZone": "control",
+            "knockout": "control"
         }
     },
     "maisie": {
@@ -4649,6 +4745,14 @@
             "reload": "NORMAL",
             "speed": "NORMAL",
             "tags": []
+        },
+        "roles": {
+            "bounty": "",
+            "brawlBall": "",
+            "gemGrab": "",
+            "heist": "",
+            "hotZone": "",
+            "knockout": ""
         }
     },
     "max": {
@@ -4717,6 +4821,14 @@
                 "anti-marksman",
                 "brawlball-support"
             ]
+        },
+        "roles": {
+            "bounty": "",
+            "brawlBall": "",
+            "gemGrab": "",
+            "heist": "",
+            "hotZone": "",
+            "knockout": ""
         }
     },
     "meeple": {
@@ -4782,6 +4894,14 @@
             "reload": "NORMAL",
             "speed": "NORMAL",
             "tags": []
+        },
+        "roles": {
+            "bounty": "",
+            "brawlBall": "",
+            "gemGrab": "",
+            "heist": "",
+            "hotZone": "",
+            "knockout": ""
         }
     },
     "meg": {
@@ -4847,6 +4967,14 @@
             "tags": [
                 "anti-aggro"
             ]
+        },
+        "roles": {
+            "bounty": "",
+            "brawlBall": "",
+            "gemGrab": "",
+            "heist": "",
+            "hotZone": "",
+            "knockout": ""
         }
     },
     "melodie": {
@@ -4917,6 +5045,14 @@
                 "heist-attacker",
                 "aggro"
             ]
+        },
+        "roles": {
+            "bounty": "",
+            "brawlBall": "",
+            "gemGrab": "",
+            "heist": "",
+            "hotZone": "",
+            "knockout": ""
         }
     },
     "mico": {
@@ -4991,6 +5127,14 @@
                 "wallpass",
                 "aggro"
             ]
+        },
+        "roles": {
+            "bounty": "",
+            "brawlBall": "",
+            "gemGrab": "",
+            "heist": "",
+            "hotZone": "",
+            "knockout": ""
         }
     },
     "mina": {
@@ -5058,6 +5202,14 @@
             "tags": [
                 "aggro"
             ]
+        },
+        "roles": {
+            "bounty": "",
+            "brawlBall": "",
+            "gemGrab": "",
+            "heist": "",
+            "hotZone": "",
+            "knockout": ""
         }
     },
     "moe": {
@@ -5128,6 +5280,14 @@
             "tags": [
                 "anti-aggro"
             ]
+        },
+        "roles": {
+            "bounty": "",
+            "brawlBall": "",
+            "gemGrab": "",
+            "heist": "",
+            "hotZone": "",
+            "knockout": ""
         }
     },
     "mortis": {
@@ -5193,6 +5353,14 @@
             "tags": [
                 "aggro"
             ]
+        },
+        "roles": {
+            "bounty": "",
+            "brawlBall": "",
+            "gemGrab": "",
+            "heist": "",
+            "hotZone": "",
+            "knockout": ""
         }
     },
     "mr.p": {
@@ -5267,6 +5435,14 @@
                 "thrower",
                 "anti-marksman"
             ]
+        },
+        "roles": {
+            "bounty": "",
+            "brawlBall": "",
+            "gemGrab": "",
+            "heist": "",
+            "hotZone": "",
+            "knockout": ""
         }
     },
     "nani": {
@@ -5335,6 +5511,14 @@
                 "anti-marksman",
                 "heist-attacker"
             ]
+        },
+        "roles": {
+            "bounty": "",
+            "brawlBall": "",
+            "gemGrab": "",
+            "heist": "",
+            "hotZone": "",
+            "knockout": ""
         }
     },
     "nita": {
@@ -5409,6 +5593,14 @@
                 "heist-defender",
                 "anti-aggro"
             ]
+        },
+        "roles": {
+            "bounty": "",
+            "brawlBall": "",
+            "gemGrab": "",
+            "heist": "",
+            "hotZone": "",
+            "knockout": ""
         }
     },
     "ollie": {
@@ -5480,6 +5672,14 @@
             "tags": [
                 "controller"
             ]
+        },
+        "roles": {
+            "bounty": "",
+            "brawlBall": "",
+            "gemGrab": "",
+            "heist": "",
+            "hotZone": "",
+            "knockout": ""
         }
     },
     "otis": {
@@ -5546,6 +5746,14 @@
                 "DamageDealer",
                 "anti-aggro"
             ]
+        },
+        "roles": {
+            "bounty": "",
+            "brawlBall": "",
+            "gemGrab": "",
+            "heist": "",
+            "hotZone": "",
+            "knockout": ""
         }
     },
     "pam": {
@@ -5617,6 +5825,14 @@
             "tags": [
                 "healer"
             ]
+        },
+        "roles": {
+            "bounty": "",
+            "brawlBall": "",
+            "gemGrab": "",
+            "heist": "",
+            "hotZone": "",
+            "knockout": ""
         }
     },
     "pearl": {
@@ -5689,6 +5905,14 @@
                 "anti-marksman",
                 "controller"
             ]
+        },
+        "roles": {
+            "bounty": "",
+            "brawlBall": "",
+            "gemGrab": "",
+            "heist": "",
+            "hotZone": "",
+            "knockout": ""
         }
     },
     "penny": {
@@ -5755,6 +5979,14 @@
             "reload": "SLOW",
             "speed": "NORMAL",
             "tags": []
+        },
+        "roles": {
+            "bounty": "",
+            "brawlBall": "",
+            "gemGrab": "",
+            "heist": "",
+            "hotZone": "",
+            "knockout": ""
         }
     },
     "pierce": {
@@ -5818,6 +6050,14 @@
             "reload": "VERY SLOW",
             "speed": "NORMAL",
             "tags": []
+        },
+        "roles": {
+            "bounty": "",
+            "brawlBall": "",
+            "gemGrab": "",
+            "heist": "",
+            "hotZone": "",
+            "knockout": ""
         }
     },
     "piper": {
@@ -5888,6 +6128,14 @@
             "reload": "VERY SLOW",
             "speed": "NORMAL",
             "tags": []
+        },
+        "roles": {
+            "bounty": "",
+            "brawlBall": "",
+            "gemGrab": "",
+            "heist": "",
+            "hotZone": "",
+            "knockout": ""
         }
     },
     "poco": {
@@ -5965,6 +6213,14 @@
                 "gem-carrier",
                 "healer"
             ]
+        },
+        "roles": {
+            "bounty": "",
+            "brawlBall": "",
+            "gemGrab": "",
+            "heist": "",
+            "hotZone": "",
+            "knockout": ""
         }
     },
     "r-t": {
@@ -6035,6 +6291,14 @@
                 "Marksman",
                 "Assassin"
             ]
+        },
+        "roles": {
+            "bounty": "",
+            "brawlBall": "",
+            "gemGrab": "",
+            "heist": "",
+            "hotZone": "",
+            "knockout": ""
         }
     },
     "rico": {
@@ -6106,6 +6370,14 @@
             "tags": [
                 "wallborne"
             ]
+        },
+        "roles": {
+            "bounty": "",
+            "brawlBall": "",
+            "gemGrab": "",
+            "heist": "",
+            "hotZone": "",
+            "knockout": ""
         }
     },
     "rosa": {
@@ -6174,6 +6446,14 @@
             "reload": "VERY FAST",
             "speed": "FAST",
             "tags": []
+        },
+        "roles": {
+            "bounty": "",
+            "brawlBall": "",
+            "gemGrab": "",
+            "heist": "",
+            "hotZone": "",
+            "knockout": ""
         }
     },
     "ruffs": {
@@ -6237,6 +6517,14 @@
             "reload": "FAST",
             "speed": "NORMAL",
             "tags": []
+        },
+        "roles": {
+            "bounty": "",
+            "brawlBall": "",
+            "gemGrab": "",
+            "heist": "",
+            "hotZone": "",
+            "knockout": ""
         }
     },
     "sam": {
@@ -6306,6 +6594,14 @@
             "tags": [
                 "tank"
             ]
+        },
+        "roles": {
+            "bounty": "",
+            "brawlBall": "",
+            "gemGrab": "",
+            "heist": "",
+            "hotZone": "",
+            "knockout": ""
         }
     },
     "sandy": {
@@ -6376,6 +6672,14 @@
             "reload": "NORMAL",
             "speed": "FAST",
             "tags": []
+        },
+        "roles": {
+            "bounty": "",
+            "brawlBall": "",
+            "gemGrab": "",
+            "heist": "",
+            "hotZone": "",
+            "knockout": ""
         }
     },
     "shade": {
@@ -6444,6 +6748,14 @@
             "reload": "VERY FAST",
             "speed": "VERY FAST",
             "tags": []
+        },
+        "roles": {
+            "bounty": "",
+            "brawlBall": "",
+            "gemGrab": "",
+            "heist": "",
+            "hotZone": "",
+            "knockout": ""
         }
     },
     "shelly": {
@@ -6509,6 +6821,14 @@
             "tags": [
                 "anti-aggro"
             ]
+        },
+        "roles": {
+            "bounty": "",
+            "brawlBall": "",
+            "gemGrab": "",
+            "heist": "",
+            "hotZone": "",
+            "knockout": ""
         }
     },
     "spike": {
@@ -6582,6 +6902,14 @@
             "tags": [
                 "anti-aggro"
             ]
+        },
+        "roles": {
+            "bounty": "",
+            "brawlBall": "",
+            "gemGrab": "",
+            "heist": "",
+            "hotZone": "",
+            "knockout": ""
         }
     },
     "sprout": {
@@ -6647,6 +6975,14 @@
             "reload": "NORMAL",
             "speed": "NORMAL",
             "tags": []
+        },
+        "roles": {
+            "bounty": "",
+            "brawlBall": "",
+            "gemGrab": "",
+            "heist": "",
+            "hotZone": "",
+            "knockout": ""
         }
     },
     "squeak": {
@@ -6723,6 +7059,14 @@
                 "Artillery",
                 "heist-attacker"
             ]
+        },
+        "roles": {
+            "bounty": "",
+            "brawlBall": "",
+            "gemGrab": "",
+            "heist": "",
+            "hotZone": "",
+            "knockout": ""
         }
     },
     "stu": {
@@ -6792,6 +7136,14 @@
             "reload": "NORMAL",
             "speed": "NORMAL",
             "tags": []
+        },
+        "roles": {
+            "bounty": "",
+            "brawlBall": "",
+            "gemGrab": "",
+            "heist": "",
+            "hotZone": "",
+            "knockout": ""
         }
     },
     "surge": {
@@ -6861,6 +7213,14 @@
             "tags": [
                 "anti-aggro"
             ]
+        },
+        "roles": {
+            "bounty": "",
+            "brawlBall": "",
+            "gemGrab": "",
+            "heist": "",
+            "hotZone": "",
+            "knockout": ""
         }
     },
     "tara": {
@@ -6938,6 +7298,14 @@
             "reload": "SLOW",
             "speed": "NORMAL",
             "tags": []
+        },
+        "roles": {
+            "bounty": "",
+            "brawlBall": "",
+            "gemGrab": "",
+            "heist": "",
+            "hotZone": "",
+            "knockout": ""
         }
     },
     "tick": {
@@ -7009,6 +7377,14 @@
             "reload": "VERY SLOW",
             "speed": "NORMAL",
             "tags": []
+        },
+        "roles": {
+            "bounty": "",
+            "brawlBall": "",
+            "gemGrab": "",
+            "heist": "",
+            "hotZone": "",
+            "knockout": ""
         }
     },
     "trunk": {
@@ -7074,6 +7450,14 @@
             "reload": "NORMAL",
             "speed": "FAST",
             "tags": []
+        },
+        "roles": {
+            "bounty": "",
+            "brawlBall": "",
+            "gemGrab": "",
+            "heist": "",
+            "hotZone": "",
+            "knockout": ""
         }
     },
     "willow": {
@@ -7140,6 +7524,14 @@
             "tags": [
                 "Artillery"
             ]
+        },
+        "roles": {
+            "bounty": "",
+            "brawlBall": "",
+            "gemGrab": "",
+            "heist": "",
+            "hotZone": "",
+            "knockout": ""
         }
     },
     "ziggy": {
@@ -7203,6 +7595,14 @@
             "reload": "NORMAL",
             "speed": "FAST",
             "tags": []
+        },
+        "roles": {
+            "bounty": "",
+            "brawlBall": "",
+            "gemGrab": "",
+            "heist": "",
+            "hotZone": "",
+            "knockout": ""
         }
     },
     "najia": {
@@ -7284,6 +7684,14 @@
             "tags": [
                 "controller"
             ]
+        },
+        "roles": {
+            "bounty": "",
+            "brawlBall": "",
+            "gemGrab": "",
+            "heist": "",
+            "hotZone": "",
+            "knockout": ""
         }
     },
     "nori": {
@@ -7362,6 +7770,14 @@
             "tags": [
                 "high-mobility"
             ]
+        },
+        "roles": {
+            "bounty": "",
+            "brawlBall": "",
+            "gemGrab": "",
+            "heist": "",
+            "hotZone": "",
+            "knockout": ""
         }
     },
     "bolt": {
@@ -7440,6 +7856,14 @@
             "tags": [
                 "brawler"
             ]
+        },
+        "roles": {
+            "bounty": "",
+            "brawlBall": "",
+            "gemGrab": "",
+            "heist": "",
+            "hotZone": "",
+            "knockout": ""
         }
     },
     "damian": {
@@ -7519,6 +7943,14 @@
             "tags": [
                 "controller"
             ]
+        },
+        "roles": {
+            "bounty": "",
+            "brawlBall": "",
+            "gemGrab": "",
+            "heist": "",
+            "hotZone": "",
+            "knockout": ""
         }
     },
     "starrNova": {
@@ -7599,6 +8031,14 @@
             "tags": [
                 "high-mobility"
             ]
+        },
+        "roles": {
+            "bounty": "",
+            "brawlBall": "",
+            "gemGrab": "",
+            "heist": "",
+            "hotZone": "",
+            "knockout": ""
         }
     },
     "sirius": {
@@ -7676,6 +8116,14 @@
             "tags": [
                 "gem-carrier"
             ]
+        },
+        "roles": {
+            "bounty": "",
+            "brawlBall": "",
+            "gemGrab": "",
+            "heist": "",
+            "hotZone": "",
+            "knockout": ""
         }
     },
     "wendy": {
@@ -7756,6 +8204,14 @@
             "tags": [
                 "healer"
             ]
+        },
+        "roles": {
+            "bounty": "",
+            "brawlBall": "",
+            "gemGrab": "",
+            "heist": "",
+            "hotZone": "",
+            "knockout": ""
         }
     },
     "cosmo": {
@@ -7834,6 +8290,14 @@
             "tags": [
                 "anti-aggro"
             ]
+        },
+        "roles": {
+            "bounty": "",
+            "brawlBall": "",
+            "gemGrab": "",
+            "heist": "",
+            "hotZone": "",
+            "knockout": ""
         }
     },
     "vince": {
@@ -7910,6 +8374,14 @@
             "tags": [
                 "area-control"
             ]
+        },
+        "roles": {
+            "bounty": "",
+            "brawlBall": "",
+            "gemGrab": "",
+            "heist": "",
+            "hotZone": "",
+            "knockout": ""
         }
     }
 }
