@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "bstier"
 version = "0.1.0"
-description = "Braw Stars tierlist helper"
+description = "Brawl Stars tierlist helper"
 authors = ["Beinan Li <li.beinan@gmail.com>"]
 license = "MIT"
 readme = "README.md"
@@ -13,8 +13,9 @@ from = "src"
 [tool.poetry.dependencies]
 python = "^3.11"
 kkpyutil = "*"
-opencv-python = "*"
 numpy = "*"
+opencv-python = "*"
+pillow = "*"
 
 [tool.poetry.scripts]
 bstier = "src.cli:main"

@@ -42,7 +42,7 @@ The traditional waterfall tierlist format cannot answer these quesions and thus 
   - Tank: High-HP slow-or-normal movement human-shields that counter low-HP brawlers (Snipers, Controllers, Throwers) on closed maps
   - Thrower: Countering everyone on walled maps, including Artillery brawlers and certain Support and Controllers such as Berry, Mr.P, Sirius, and Willow
 - The mode functions, inspired by SpenLC, are (Flex means the brawler can either enhance the teammate as a support, or makes the opponent hard to counter due to its hybrid spec, e.g., Emz has high damage and controlling attack with certain self-defence skills, making her a Flex hard to counter):
-  - Bounty: Range, BlueStar, Aggro
+  - Bounty: Range, BlueStar, Pressure
   - Brawl Ball: Damage, Flex, Pressure
   - Gem Grab: Carrier, Damage, Control, Pressure
   - Heist: Safe-Damage, Flex, Defender
@@ -72,7 +72,7 @@ The traditional waterfall tierlist format cannot answer these quesions and thus 
 - Defender: Brawlers that can defend the team safe by either defeating or disabling the opponent Safe-Damage brawlers but provide little to no value as Safe-Damage.
 
 ### HotZone
-- Zont-Time: High-HP (7000+) brawlers that can stand in the zone or with supers that can guarantee zone occupation.
+- Zone-Time: High-HP (7000+) brawlers that can stand in the zone or with supers that can guarantee zone occupation.
 - Damage: Same as in other modes.
 - Control: Same as in other modes.
 

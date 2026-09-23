@@ -1,0 +1,252 @@
+{
+    "version": 1,
+    "drySeason": {
+        "mode": "bounty",
+        "dimension": [21, 39],
+        "tiles": {
+            "bush": 100,
+            "brickWall": 38,
+            "metalWall": 10,
+            "water": 0
+        },
+        "midLane":{
+            "chokeSizes": [2, 2],
+            "areChokesBushy": [true, true],
+            "openPotentials": [50, 50]
+
+        },
+        "sideLane": {
+            "chokeSizes": [2, 5],
+            "areChokesBushy": [false, true],
+            "openPotentials": [100, 100]
+        },
+        "centerZone": {
+            "dimension": [15, 11],
+            "bush": 0,
+            "brickWall": 4,
+            "metalWall": 0,
+            "chokeSizes": [3, 4],
+            "areChokesBushy": [false, false],
+            "openPotential": [100, 100]
+        },
+        "spawnZone": {
+            "dimension": [17, 9],
+            "bush": 28,
+            "brickWall": 8,
+            "metalWall": 0,
+            "chokeSizes": [3, 6],
+            "areChokesBushy": [false, false],
+            "openPotential": [100, 100]
+        },
+        "tags": [
+            "open"
+        ]
+    },
+    "centerStage": {
+        "mode": "brawlBall",
+        "dimension": [21, 25],
+        "tiles": {
+            "bush": 148,
+            "brickWall": 58,
+            "metalWall": 0,
+            "water": 0
+        },
+        "midLane":{
+            "chokeSizes": [3, 3, 3, 3],
+            "areChokesBushy": [true, true, true, true],
+            "openPotentials": [100, 100, 100, 100]
+
+        },
+        "sideLane": {
+            "chokeSizes": [3, 3],
+            "areChokesBushy": [false, true],
+            "openPotentials": [100, 100]
+        },
+        "centerZone": {
+            "dimension": [11, 11],
+            "bush": 72,
+            "brickWall": 0,
+            "metalWall": 0,
+            "chokeSizes": [3, 3, 3, 3, 3, 3, 3, 3],
+            "areChokesBushy": [true, true, true, true, true, true, true, true],
+            "openPotential": [100, 100, 100, 100, 100, 100, 100, 100]
+        },
+        "spawnZone": {
+            "dimension": [11, 7],
+            "bush": 0,
+            "brickWall": 11,
+            "metalWall": 0,
+            "chokeSizes": [2, 2, 3, 3, 4, 4],
+            "areChokesBushy": [false, false, false, false, true, true],
+            "openPotential": [100, 100, 100, 100, 100, 100]
+        },
+        "tags": [
+            "bushy",
+            "closed"
+        ]
+    },
+    "deathcapTrap": {
+        "mode": "gemGrab",
+        "mid": {
+            "grass": 0.15,
+            "brickWall": 7,
+            "metalWall": 0
+        },
+        "leftLane": {
+            "grass": 0.3,
+            "brickWall": 7,
+            "metalWall": 0
+        },
+        "rightLane": {
+            "grass": 0.3,
+            "brickWall": 7,
+            "metalWall": 0
+        },
+         "hotspot": {
+            "grass": 0.15,
+            "brickWall": 6,
+            "metalWall": 0
+        },
+        "spawn": {
+            "grass": 0.3,
+            "brickWall": 7,
+            "metalWall": 0
+        },
+        "tags": [
+            "closed"
+        ]
+    },
+    "doubleSwoosh": {
+        "mode": "gemGrab",
+        "mid": {
+            "grass": 0.5,
+            "brickWall": 3,
+            "metalWall": 2
+        },
+        "leftLane": {
+            "grass": 0.5,
+            "brickWall": 3,
+            "metalWall": 0
+        },
+        "rightLane": {
+            "grass": 0.5,
+            "brickWall": 3,
+            "metalWall": 0
+        },
+        "hotspot": {
+            "grass": 0.5,
+            "brickWall": 6,
+            "metalWall": 2
+        },
+        "spawn": {
+            "grass": 0.5,
+            "brickWall": 3,
+            "metalWall": 0
+        },
+        "tags": [
+            "closed"
+        ]
+    },
+    "gemFort": {
+        "mode": "gemGrab",
+        "mid": {
+            "grass": 0.4,
+            "brickWall": 2,
+            "metalWall": 2
+        },
+        "leftLane": {
+            "grass": 0.68,
+            "brickWall": 2,
+            "metalWall": 2
+        },
+        "rightLane": {
+            "grass": 0.68,
+            "brickWall": 2,
+            "metalWall": 2
+        },
+        "hotspot": {
+            "grass": 0.13,
+            "brickWall": 2,
+            "metalWall": 2
+        },
+        "spawn": {
+            "grass": 0.1,
+            "brickWall": 1,
+            "metalWall": 1
+        },
+        "tags": [
+            "closed",
+            "bushy"
+        ]
+    },
+    "hardRockMine": {
+        "mode": "gemGrab",
+        "mid": {
+            "grass": 0.15,
+            "brickWall": 1,
+            "metalWall": 1
+        },
+        "leftLane": {
+            "grass": 0.7,
+            "brickWall": 4,
+            "metalWall": 2
+        },
+        "rightLane": {
+            "grass": 0.7,
+            "brickWall": 4,
+            "metalWall": 2
+        },
+        "hotspot": {
+            "grass": 0.6,
+            "brickWall": 4,
+            "metalWall": 4
+        },
+        "spawn": {
+            "grass": 0.2,
+            "brickWall": 5,
+            "metalWall": 1
+        },
+        "tags": [
+            "closed"
+        ]
+    },
+    "undermine": {
+        "mode": "gemGrab",
+        "mid": {
+            "grass": 0.15,
+            "brickWall": 2,
+            "metalWall": 0
+        },
+        "leftLane": {
+            "grass": 0.6,
+            "brickWall": 3,
+            "metalWall": 0
+        },
+        "rightLane": {
+            "grass": 0.6,
+            "brickWall": 3,
+            "metalWall": 0
+        },
+        "hotspot": {
+            "grass": 0.2,
+            "brickWall": 6,
+            "metalWall": 0
+        },
+        "spawn": {
+            "grass": 0.1,
+            "brickWall": 2,
+            "metalWall": 0
+        },
+        "tags": [
+            "closed"
+        ]
+    },
+    "tripleDribble": {
+        "mode": "brawlBall",
+        "dimensions": {
+            "width": 21,
+            "length": 33
+        }
+    }
+
+}
