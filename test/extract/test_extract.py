@@ -53,3 +53,29 @@ def test_extract_from_deepdraft_matches_expected():
     ref = util.load_json(osp.join(_paths.caseRefDir, 'bstier.json'))
     assert res.ok == True
     assert got == ref
+
+
+def test_master_document_uses_injected_ocr_adapter():
+    args = types.SimpleNamespace(
+        command='extract',
+        fromPath=osp.join(_paths.caseOrgDir, 'bstier.png'),
+        toPath=None,
+        source='deepdraft',
+        master=True,
+    )
+    calls = []
+
+    def fake_ocr(image_path):
+        calls.append(image_path)
+        return 'Brawi Stars Tier List — Pinball Dreams'
+
+    worker = core.Worker(args, ocr_adapter=fake_ocr)
+    document = worker._build_m1_document(
+        {'S': ['gus', 'bull']},
+        args.fromPath,
+    )
+
+    assert calls == [args.fromPath]
+    assert document['map'] == 'pinballDreams'
+    assert document['mode'] == 'brawlBall'
+    assert document['originalTierlist'] == {'S': ['gus', 'bull']}

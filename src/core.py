@@ -20,8 +20,9 @@ def main(args):
 
 
 class Worker:
-    def __init__(self, args):
+    def __init__(self, args, ocr_adapter=None):
         self.args = args
+        self.ocr_adapter = ocr_adapter
         self.res = types.SimpleNamespace(ok=False, detail='', advice='')
         self.out = types.SimpleNamespace(toPath='')
         self.repo = util.init_repo(__file__, organization='kakyoism', repodepth=2)
@@ -46,6 +47,10 @@ class Worker:
 
     def validate_args(self):
         fixed_args = copy.deepcopy(self.args)
+        if (getattr(fixed_args, 'master', False)
+                and fixed_args.source != 'deepdraft'):
+            raise ValueError('The --master option requires --source deepdraft')
+
         # Validate input path (--from) exists
         if fixed_args.fromPath:
             abs_from = osp.abspath(fixed_args.fromPath)
@@ -175,15 +180,42 @@ class Worker:
             export_data[tier] = names_only
             self.logger.info(f"{tier} Tier: {', '.join(names_only) if names_only else 'None'}")
 
+        output_data = export_data
+        if getattr(self.args, 'master', False):
+            output_data = self._build_m1_document(export_data, tier_pic)
+
         # Conditionally export to JSON if destination path is specified
         if self.args.toPath:
-            util.save_json(self.args.toPath, export_data)
+            util.save_json(self.args.toPath, output_data)
             self.logger.info(f"Successfully exported tier list to JSON: {self.args.toPath}")
             self.out.toPath = self.args.toPath
         
         self.res.ok = True
-        self.res.detail = "Extraction routine executed."
+        self.res.detail = (
+            'M1 master document generated.'
+            if getattr(self.args, 'master', False)
+            else 'Extraction routine executed.'
+        )
         return self.res, self.out
+
+    def _build_m1_document(self, tierlist, image_path):
+        import m1
+        import ocr
+
+        map_path = osp.join(self.repo.resDir, 'spec', 'all.map.json')
+        brawler_path = osp.join(self.repo.resDir, 'spec', 'all.brawler.json')
+        map_catalog = util.load_json(map_path)
+        global_roles = m1.load_global_roles(brawler_path)
+        mode_roles = m1.load_mode_roles(brawler_path)
+        adapter = self.ocr_adapter or ocr.TesseractMapTitleAdapter()
+        return m1.build_master_document_from_ocr(
+            tierlist,
+            image_path,
+            adapter,
+            map_catalog,
+            global_roles,
+            mode_roles,
+        )
 
     def _generate(self):
         self.res.ok = True

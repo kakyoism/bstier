@@ -29,6 +29,17 @@ The traditional waterfall tierlist format cannot answer these quesions and thus 
 - shuffle the recognized names to put them back in whatever shape based on sorting criteria, such as positioning, global roles, and map-mode roles.
 - create a new image tierlist based on the input text tierlist.
 
+### Deep-Draft M1 extraction
+To extract a Deep-Draft image and generate the map-aware M1 document, use the
+`--master` option:
+
+`poetry run bstier extract --source deepdraft --master --from tier.png --to master.json`
+
+This path requires the `tesseract` executable to be available on `PATH`. OCR
+returns raw text, which is resolved against `res/spec/all.map.json`; unknown
+maps fail instead of being silently assigned. Without `--master`, extraction
+continues to produce the original tierlist-only JSON output.
+
 ## Brawler Roles
 - The official brawler classes can be midleading in draft process, e.g., Najia is used as a Range brawler (sniper) in open maps rather than a Damage Dealer (the official class).
 - The same brawler may serve different purposes in different modes and maps, e.g., Barley can be a counter to other throwers when they are present, or a controller in a closed HotZone map.
@@ -83,3 +94,12 @@ Each brawler's `mainAttack` stores `baseDamage` for one damage unit, `projectile
 - Flex: Brawlers can either enhance the teammate as a support, or makes the opponent hard to counter due to its hybrid nature, e.g., Emz has both high damage and area-control attack with certain self-defence skills, making her a Flex hard to counter; Ruffs can enhance teammates damage by farming super from Aggros (its hard counters), so although it has less self-defence, it can actually make the team stronger.
 - Range: Same as in Bounty.
 - Pressure: Same as in other modes.
+
+
+## Dependencies
+Python packages:
+- `poetry install`
+
+Tesseract OCR
+- Windows: `winget install tesseract`
+- macOS: `brew install tesseract`

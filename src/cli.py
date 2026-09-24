@@ -7,6 +7,8 @@ import argparse
 import sys
 from pathlib import Path
 
+import src.core as core
+
 # Add project root to Python path so imports work from any cwd
 project_root = Path(__file__).parent.parent
 sys.path.insert(0, str(project_root))
@@ -24,6 +26,9 @@ def create_parser() -> argparse.ArgumentParser:
 Examples:
   # Extract text tierlist from a Deepdraft map tierlist picture, then save to a file
   bstier extract --source deepdraft --from /path/to/tier.png --to /path/to/tier.json
+
+  # Extract a Deepdraft tierlist and generate the M1 map-role document
+  bstier extract --source deepdraft --master --from /path/to/tier.png --to /path/to/master.json
 
   # Same as above, but print to screen only without saving as a file
   bstier extract --source deepdraft --from /path/to/tier.png 
@@ -49,6 +54,7 @@ Examples:
     extract_parser.add_argument('-f', '--from', dest='fromPath', required=True, help='Path to the input tierlist picture')
     extract_parser.add_argument('-t', '--to', dest='toPath', help='Path to save the output JSON file')
     extract_parser.add_argument('-s', '--source', dest='source', choices=('deepdraft', 'tiermaker', ), default='deepdraft', required=True, help='Source tag that defines the tierlist image format')
+    extract_parser.add_argument('--master', action='store_true', help='Generate the M1 map and role document; currently supported for Deep-Draft input')
 
     # generate subcommand
     generate_parser = subparsers.add_parser('generate', help='Generate a tierlist picture from a text metadata file')
@@ -75,8 +81,8 @@ def main():
         sys.exit(1)
 
     # Delegate all post-parse logic to core
-    from src.core import main as core_main
-    sys.exit(core_main(args))
+    result, _ = core.main(args)
+    sys.exit(0 if result.ok else 1)
 
 
 if __name__ == '__main__':

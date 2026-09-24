@@ -58,11 +58,22 @@ def normalize_map_name(ocr_text, map_catalog):
                   if 'brawl stars tier list' in line.casefold()), lines[0] if lines else '')
     display_name = _TITLE_PREFIX.sub('', title).strip()
     target = normalize_identifier(display_name)
-    for map_name in map_catalog:
-        if map_name == 'version':
-            continue
+    map_names = [name for name in map_catalog if name != 'version']
+    for map_name in map_names:
         if normalize_identifier(map_name) == target:
             return map_name
+
+    # OCR can corrupt surrounding title text while preserving the map name.
+    # Match only known catalog names and prefer the most specific match.
+    for line in lines:
+        line_target = normalize_identifier(line)
+        matches = [
+            map_name for map_name in map_names
+            if normalize_identifier(map_name) in line_target
+        ]
+        if matches:
+            return max(matches, key=lambda name: len(normalize_identifier(name)))
+
     raise KeyError(f'Unable to resolve OCR map name: {display_name!r}')
 
 

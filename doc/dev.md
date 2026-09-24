@@ -20,3 +20,9 @@ Tech Stack:
 - Python
 - OpenCV
 - Pillow
+
+The current M1 image path supports an explicit `extract --master` command. It
+uses a Tesseract subprocess adapter for raw title OCR, then resolves the map
+against `res/spec/all.map.json` before applying role metadata from
+`res/spec/all.brawler.json`. The existing extraction path remains tierlist-only
+unless `--master` is supplied.
