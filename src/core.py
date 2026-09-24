@@ -9,6 +9,11 @@ import kkpyutil as util
 import numpy as np
 
 
+def _normalize_identifier(value):
+    return ''.join(character.casefold() for character in str(value)
+                   if character.isalnum())
+
+
 def main(args):
     worker = Worker(args)
     return worker.main()
@@ -91,6 +96,13 @@ class Worker:
 
         results = {tier: [] for tier in tier_boundaries.keys()}
         template_files = [f for f in os.listdir(template_dir) if f.endswith(('.png', '.jpg'))]
+        brawler_data = util.load_json(
+            osp.join(self.repo.resDir, 'spec', 'all.brawler.json'))
+        canonical_names = {
+            _normalize_identifier(name): name
+            for name in brawler_data
+            if name != 'version'
+        }
 
         # If scale is not yet hardcoded, calibrate by finding the most frequently occurring best scale
         if OPTIMAL_SCALE is None:
@@ -122,7 +134,11 @@ class Worker:
         matched_count = 0
 
         for template_file in template_files:
-            brawler_name = os.path.splitext(template_file)[0].capitalize()
+            template_name = os.path.splitext(template_file)[0]
+            brawler_name = canonical_names.get(
+                _normalize_identifier(template_name))
+            if brawler_name is None:
+                continue
             template_path = os.path.join(template_dir, template_file)
             template = cv2.imread(template_path, 0)
             
