@@ -175,7 +175,7 @@
             "chargeRate": 1.0,
             "tags": [
                 "burn",
-                "Controller"
+                "control"
             ]
         },
         "reloadSpeedSeconds": 0.2,
@@ -275,7 +275,7 @@
                 "name": "Empower",
                 "effect": "Staying inside the Super will heal Angelo for 480 per second.",
                 "tags": [
-                    "healer"
+                    "heal"
                 ]
             },
             {
@@ -422,7 +422,7 @@
                 "name": "Herbal Tonic",
                 "effect": "Barley throws a healing potion toward an ally that creates an area of effect that restores 720 health per second.",
                 "tags": [
-                    "healer"
+                    "heal"
                 ]
             }
         ],
@@ -431,7 +431,7 @@
                 "name": "Medical Use",
                 "effect": "Heals for 480 health with each main attack.",
                 "tags": [
-                    "healer"
+                    "heal"
                 ]
             },
             {
@@ -610,7 +610,7 @@
             "reload": "FAST",
             "speed": "NORMAL",
             "tags": [
-                "controller"
+                "control"
             ]
         },
         "roles": {
@@ -633,7 +633,7 @@
             "breakdown": "Area Projectile (Leaves damaging/healing puddle)",
             "range": 6.33,
             "tags": [
-                "healer"
+                "heal"
             ]
         },
         "super": {
@@ -644,7 +644,7 @@
             "range": 6.33,
             "chargeRate": 1.0,
             "tags": [
-                "healer"
+                "heal"
             ]
         },
         "reloadSpeedSeconds": 2.4,
@@ -685,7 +685,7 @@
             "shieldBuff": 0.05,
             "chargeRate": 1.0,
             "tags": [
-                "healer"
+                "heal"
             ]
         },
         "rating": {
@@ -697,7 +697,7 @@
             "speed": "NORMAL",
             "tags": [
                 "thrower",
-                "healer"
+                "heal"
             ]
         },
         "roles": {
@@ -1264,7 +1264,7 @@
             "range": 10.0,
             "tags": [
                 "single-shot",
-                "healer",
+                "heal",
                 "poison"
             ]
         },
@@ -1275,7 +1275,7 @@
             "range": 7.0,
             "chargeRate": 1.0,
             "tags": [
-                "healer",
+                "heal",
                 "poison",
                 "wallpass"
             ]
@@ -1315,7 +1315,7 @@
             "chargeRate": 1.0,
             "tags": [
                 "piercing",
-                "healer",
+                "heal",
                 "poison"
             ]
         },
@@ -1327,7 +1327,7 @@
             "reload": "FAST",
             "speed": "NORMAL",
             "tags": [
-                "healer",
+                "heal",
                 "Marksman"
             ]
         },
@@ -2098,7 +2098,7 @@
             "breakdown": "Area Damage/Heal (Closer deals more)",
             "range": 3.33,
             "tags": [
-                "healer"
+                "heal"
             ]
         },
         "super": {
@@ -2108,7 +2108,7 @@
             "range": 9.33,
             "chargeRate": 1.0,
             "tags": [
-                "healer"
+                "heal"
             ]
         },
         "reloadSpeedSeconds": 1.5,
@@ -2145,7 +2145,7 @@
             "shieldBuff": 0.05,
             "chargeRate": 1.0,
             "tags": [
-                "healer"
+                "heal"
             ]
         },
         "rating": {
@@ -2157,7 +2157,7 @@
             "speed": "FAST",
             "tags": [
                 "tank",
-                "healer"
+                "heal"
             ]
         },
         "roles": {
@@ -2963,7 +2963,7 @@
                 "name": "Magic Puffs",
                 "effect": "Heals all nearby allies for 400 HP per second for 4 seconds.",
                 "tags": [
-                    "healer"
+                    "heal"
                 ]
             },
             {
@@ -3002,7 +3002,7 @@
             "speed": "NORMAL",
             "tags": [
                 "controller",
-                "healer"
+                "heal"
             ]
         },
         "roles": {
@@ -3096,7 +3096,7 @@
             "heal": 900,
             "breakdown": "Damages enemy and heals ally continuously while in contact, and stops when contact is lost",
             "range": 7.0,
-            "tags": ["healer"]
+            "tags": ["heal"]
         },
         "super": {
             "name": "Creep from the Deep",
@@ -3149,7 +3149,7 @@
             "reload": "NORMAL",
             "speed": "FAST",
             "tags": [
-                "healer"
+                "heal"
             ]
         },
         "roles": {
@@ -3425,14 +3425,14 @@
                 "name": "Spirit Animal",
                 "effect": "Gus pops a healing spirit that heals himself and nearby allies for 3200 HP.",
                 "tags": [
-                    "healer"
+                    "heal"
                 ]
             },
             {
                 "name": "Kooky Popper",
                 "effect": "Gus pops a damage spirit that deals 2200 damage to enemies caught in the blast.",
                 "tags": [
-                    "controller"
+                    "control"
                 ]
             }
         ],
@@ -3441,7 +3441,7 @@
                 "name": "Health Bonanza",
                 "effect": "Healing spirits from his Super (Ghostly Projection) heal an extra 100%.",
                 "tags": [
-                    "healer"
+                    "heal"
                 ]
             },
             {
@@ -3458,7 +3458,7 @@
             "shieldBuff": 0.05,
             "chargeRate": 1.0,
             "tags": [
-                "healer"
+                "heal"
             ]
         },
         "rating": {
@@ -3470,7 +3470,7 @@
             "speed": "NORMAL",
             "tags": [
                 "Marksman",
-                "healer"
+                "heal"
             ]
         },
         "roles": {
@@ -3662,7 +3662,7 @@
                 "name": "Weekend Warrior",
                 "effect": "Gains a 50% damage boost for 5 seconds.",
                 "tags": [
-                    "DamageDealer"
+                    "damage"
                 ]
             },
             {
@@ -3700,7 +3700,7 @@
             "reload": "FAST",
             "speed": "FAST",
             "tags": [
-                "healer"
+                "heal"
             ]
         },
         "roles": {
@@ -3967,7 +3967,7 @@
             "range": 7.0,
             "chargeRate": 1.0,
             "tags": [
-                "Controller"
+                "control"
             ]
         },
         "reloadSpeedSeconds": 1.0,
@@ -4126,7 +4126,7 @@
             "chargeRate": 1.0,
             "tags": [
                 "stun",
-                "healer"
+                "heal"
             ]
         },
         "reloadSpeedSeconds": 0.8,
@@ -4296,7 +4296,7 @@
                 "name": "Lollipop Drop",
                 "effect": "Drops a lollipop that makes all allies in a small radius invisible for 10 seconds.",
                 "tags": [
-                    "controller"
+                    "control"
                 ]
             }
         ],
@@ -4610,7 +4610,7 @@
                 "name": "Grim and Frostbitten",
                 "effect": "Creates icy, slippery zones around her maces on the ground (deals 100 damage per second).",
                 "tags": [
-                    "Controller"
+                    "control"
                 ]
             }
         ],
@@ -5096,7 +5096,7 @@
             "shieldBuff": 0.05,
             "chargeRate": 1.0,
             "tags": [
-                "DamageDealer"
+                "damage"
             ]
         },
         "rating": {
@@ -5452,7 +5452,7 @@
             "range": 3.33,
             "chargeRate": 1.0,
             "tags": [
-                "spawner"
+                "spawn"
             ]
         },
         "reloadSpeedSeconds": 1.6,
@@ -5467,7 +5467,7 @@
                 "name": "Reinforced Porter",
                 "effect": "Next main attack spawns a stronger, temporary Porter on landing.",
                 "tags": [
-                    "spawner"
+                    "spawn"
                 ]
             }
         ],
@@ -5491,7 +5491,7 @@
             "shieldBuff": 0.05,
             "chargeRate": 1.0,
             "tags": [
-                "spawner"
+                "spawn"
             ]
         },
         "rating": {
@@ -5743,7 +5743,7 @@
             "reload": "NORMAL",
             "speed": "FAST",
             "tags": [
-                "controller"
+                "control"
             ]
         },
         "roles": {
@@ -5850,7 +5850,7 @@
             "range": 7.0,
             "chargeRate": 1.0,
             "tags": [
-                "healer"
+                "heal"
             ]
         },
         "reloadSpeedSeconds": 1.3,
@@ -5860,7 +5860,7 @@
                 "name": "Mama's Squeeze",
                 "effect": "Super turret creates a pool of healing oil that heals allies and burns enemies for 500 damage per second.",
                 "tags": [
-                    "healer"
+                    "heal"
                 ]
             },
             {
@@ -5898,7 +5898,7 @@
             "reload": "VERY FAST",
             "speed": "NORMAL",
             "tags": [
-                "healer"
+                "heal"
             ]
         },
         "roles": {
@@ -5945,7 +5945,7 @@
                 "name": "Made with Love",
                 "effect": "Next main attack heals allies for 2800 HP over time.",
                 "tags": [
-                    "healer"
+                    "heal"
                 ]
             }
         ],
@@ -5979,7 +5979,7 @@
             "speed": "NORMAL",
             "tags": [
                 "anti-marksman",
-                "controller"
+                "control"
             ]
         },
         "roles": {
@@ -6250,7 +6250,7 @@
                 "name": "Tuning Fork",
                 "effect": "Poco and nearby allies heal 700 health per second for 5 seconds.",
                 "tags": [
-                    "healer"
+                    "heal"
                 ]
             },
             {
@@ -6291,7 +6291,7 @@
             "speed": "NORMAL",
             "tags": [
                 "gem-carrier",
-                "healer"
+                "heal"
             ]
         },
         "roles": {
@@ -6961,7 +6961,7 @@
                 "name": "Fertilize",
                 "effect": "Heals 1200 HP per second while inside his Super (Thorn Trap).",
                 "tags": [
-                    "healer"
+                    "heal"
                 ]
             },
             {
@@ -7105,7 +7105,7 @@
                 "name": "Windup",
                 "effect": "Next Sticky Bomb explodes instantly.",
                 "tags": [
-                    "DamageDealer"
+                    "damage"
                 ]
             },
             {
@@ -7354,7 +7354,7 @@
                 "name": "Support from Beyond",
                 "effect": "Summons 3 shadowy clones that attack nearby enemies.",
                 "tags": [
-                    "Controller"
+                    "control"
                 ]
             }
         ],
@@ -7368,7 +7368,7 @@
                 "name": "Healing Shade",
                 "effect": "Super summons a shadowy shade that heals allies for 800 HP per second.",
                 "tags": [
-                    "healer"
+                    "heal"
                 ]
             }
         ],
@@ -7412,7 +7412,7 @@
             "breakdown": "1360 x 3 (Mines)",
             "range": 7.33,
             "tags": [
-                "Controller"
+                "control"
             ]
         },
         "super": {
@@ -7781,7 +7781,7 @@
             "reload": "VERY FAST",
             "speed": "FAST",
             "tags": [
-                "controller"
+                "control"
             ]
         },
         "roles": {
@@ -8043,7 +8043,7 @@
             "reload": "VERY FAST",
             "speed": "FAST",
             "tags": [
-                "controller"
+                "control"
             ]
         },
         "roles": {
@@ -8307,7 +8307,7 @@
             "reload": "FAST",
             "speed": "FAST",
             "tags": [
-                "healer"
+                "heal"
             ]
         },
         "roles": {
