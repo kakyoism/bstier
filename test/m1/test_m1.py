@@ -3,6 +3,7 @@ import pathlib
 import sys
 
 import kkpyutil as util
+import pytest
 
 
 _ROOT = pathlib.Path(__file__).resolve().parents[2]
@@ -23,6 +24,28 @@ def test_normalize_map_name_keeps_ocr_separate_from_canonicalization():
         'Brawl Stars Tier List —- Pinball Dreams\nExported on 2026-09-03',
         map_catalog,
     ) == 'pinballDreams'
+
+
+def test_resolve_map_context_normalizes_map_and_tags():
+    map_catalog = util.load_json(_MAP_PATH)
+
+    assert m1.resolve_map_context('Pinball Dreams', map_catalog) == {
+        'map': 'pinballDreams',
+        'mode': 'brawlBall',
+        'tags': ['closed'],
+    }
+    assert m1.resolve_map_context('hideout', map_catalog)['tags'] == ['open']
+
+
+def test_resolve_map_context_rejects_unknown_or_unsupported_maps():
+    with pytest.raises(KeyError):
+        m1.resolve_map_context('not-a-map', {'version': 1})
+
+    with pytest.raises(ValueError):
+        m1.resolve_map_context('testMap', {
+            'version': 1,
+            'testMap': {'mode': 'unsupported', 'tags': []},
+        })
 
 
 def test_normalize_role_label_only_handles_unknown_values():
@@ -55,3 +78,29 @@ def test_build_master_document_preserves_source_order_inside_sorted_groups():
     assert document['map'] == 'pinballDreams'
     assert document['mode'] == 'brawlBall'
     assert '*' not in document['mapRoles']
+
+
+def test_build_master_document_from_ocr_uses_injected_adapter():
+    tierlist = {'S': ['gus', 'bull']}
+    map_catalog = util.load_json(_MAP_PATH)
+    global_roles = m1.load_global_roles(_BRAWLER_PATH)
+    mode_roles = m1.load_mode_roles(_BRAWLER_PATH)
+    calls = []
+
+    def fake_ocr(image_path):
+        calls.append(image_path)
+        return 'Brawl Stars Tier List —- Pinball Dreams\nExported on 2026-09-03'
+
+    document = m1.build_master_document_from_ocr(
+        tierlist,
+        '/tmp/deepdraft.png',
+        fake_ocr,
+        map_catalog,
+        global_roles,
+        mode_roles,
+    )
+
+    assert calls == ['/tmp/deepdraft.png']
+    assert document['map'] == 'pinballDreams'
+    assert document['mode'] == 'brawlBall'
+    assert document['originalTierlist'] == tierlist
