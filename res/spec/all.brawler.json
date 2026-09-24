@@ -64,10 +64,7 @@
             "rangeMain": "VERY LONG",
             "rangeSuper": "NORMAL",
             "reload": "NORMAL",
-            "speed": "VERY SLOW",
-            "tags": [
-                "gem-carrier"
-            ]
+            "speed": "VERY SLOW"
         },
         "roles": {
             "*": "antiTank",
@@ -142,8 +139,7 @@
             "rangeMain": "SHORT",
             "rangeSuper": "VERY LONG",
             "reload": "FAST",
-            "speed": "FAST",
-            "tags": []
+            "speed": "FAST"
         },
         "roles": {
             "*": "aggro",
@@ -221,8 +217,7 @@
             "rangeMain": "LONG",
             "rangeSuper": "LONG",
             "reload": "FAST",
-            "speed": "NORMAL",
-            "tags": []
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "controller",
@@ -299,11 +294,7 @@
             "rangeMain": "VERY LONG",
             "rangeSuper": "VERY LONG",
             "reload": "NORMAL",
-            "speed": "VERY FAST",
-            "tags": [
-                "waterborne",
-                "heist-attacker"
-            ]
+            "speed": "VERY FAST"
         },
         "roles": {
             "*": "thrower",
@@ -374,10 +365,7 @@
             "rangeMain": "SHORT",
             "rangeSuper": "LONG",
             "reload": "VERY FAST",
-            "speed": "NORMAL",
-            "tags": [
-                "bushy"
-            ]
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "tank",
@@ -457,8 +445,7 @@
             "rangeMain": "LONG",
             "rangeSuper": "LONG",
             "reload": "SLOW",
-            "speed": "NORMAL",
-            "tags": []
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "thrower",
@@ -530,8 +517,7 @@
             "rangeMain": "VERY LONG",
             "rangeSuper": "LONG",
             "reload": "VERY FAST",
-            "speed": "NORMAL",
-            "tags": ["anti-aggro"]
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "sniper",
@@ -608,10 +594,7 @@
             "rangeMain": "VERY LONG",
             "rangeSuper": "VERY LONG",
             "reload": "FAST",
-            "speed": "NORMAL",
-            "tags": [
-                "control"
-            ]
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "sniper",
@@ -694,11 +677,7 @@
             "rangeMain": "NORMAL",
             "rangeSuper": "LONG",
             "reload": "VERY SLOW",
-            "speed": "NORMAL",
-            "tags": [
-                "thrower",
-                "heal"
-            ]
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "thrower",
@@ -769,10 +748,7 @@
             "rangeMain": "SHORT",
             "rangeSuper": "VERY LONG",
             "reload": "NORMAL",
-            "speed": "VERY FAST",
-            "tags": [
-                "aggro"
-            ]
+            "speed": "VERY FAST"
         },
         "roles": {
             "*": "aggro",
@@ -852,8 +828,7 @@
             "rangeMain": "LONG",
             "rangeSuper": "LONG",
             "reload": "NORMAL",
-            "speed": "NORMAL",
-            "tags": []
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "controller",
@@ -929,11 +904,7 @@
             "rangeMain": "LONG/NORMAL",
             "rangeSuper": "LONG",
             "reload": "VERY FAST/SLOW",
-            "speed": "SLOW/VERY FAST",
-            "tags": [
-                "aggro",
-                "heist-attacker"
-            ]
+            "speed": "SLOW/VERY FAST"
         },
         "roles": {
             "*": "sniper",
@@ -1008,8 +979,7 @@
             "rangeMain": "LONG",
             "rangeSuper": "LONG",
             "reload": "SLOW",
-            "speed": "NORMAL",
-            "tags": []
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "sniper",
@@ -1085,10 +1055,7 @@
             "rangeMain": "NORMAL",
             "rangeSuper": "VERY LONG",
             "reload": "NORMAL",
-            "speed": "FAST",
-            "tags": [
-                "aggro"
-            ]
+            "speed": "FAST"
         },
         "roles": {
             "*": "aggro",
@@ -1159,10 +1126,7 @@
             "rangeMain": "NORMAL",
             "rangeSuper": "SHORT",
             "reload": "NORMAL",
-            "speed": "FAST",
-            "tags": [
-                "pressure"
-            ]
+            "speed": "FAST"
         },
         "roles": {
             "*": "support",
@@ -1239,10 +1203,7 @@
             "rangeMain": "SHORT",
             "rangeSuper": "VERY LONG",
             "reload": "VERY FAST",
-            "speed": "FAST",
-            "tags": [
-                "heist-attacker"
-            ]
+            "speed": "FAST"
         },
         "roles": {
             "*": "aggro",
@@ -1325,11 +1286,7 @@
             "rangeMain": "VERY LONG",
             "rangeSuper": "LONG",
             "reload": "FAST",
-            "speed": "NORMAL",
-            "tags": [
-                "heal",
-                "Marksman"
-            ]
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "sniper",
@@ -1404,8 +1361,7 @@
             "rangeMain": "LONG",
             "rangeSuper": "SHORT",
             "reload": "SLOW",
-            "speed": "NORMAL",
-            "tags": []
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "aggro",
@@ -1480,10 +1436,7 @@
             "rangeMain": "LONG",
             "rangeSuper": "LONG",
             "reload": "SLOW",
-            "speed": "NORMAL",
-            "tags": [
-                "anti-aggro"
-            ]
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "antiTank",
@@ -1554,10 +1507,7 @@
             "rangeMain": "LONG",
             "rangeSuper": "NORMAL",
             "reload": "NORMAL",
-            "speed": "FAST",
-            "tags": [
-                "anti-aggro"
-            ]
+            "speed": "FAST"
         },
         "roles": {
             "*": "antiTank",
@@ -1621,11 +1571,7 @@
             "rangeMain": "NORMAL",
             "rangeSuper": "VERY LONG",
             "reload": "SLOW",
-            "speed": "FAST",
-            "tags": [
-                "heist-attacker",
-                "gem-carrier"
-            ]
+            "speed": "FAST"
         },
         "roles": {
             "*": "aggro",
@@ -1700,10 +1646,7 @@
             "rangeMain": "LONG",
             "rangeSuper": "NORMAL",
             "reload": "SLOW",
-            "speed": "NORMAL",
-            "tags": [
-                "anti-aggro"
-            ]
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "antiTank",
@@ -1774,10 +1717,7 @@
             "rangeMain": "LONG",
             "rangeSuper": "VERY LONG",
             "reload": "NORMAL",
-            "speed": "NORMAL",
-            "tags": [
-                "anti-aggro"
-            ]
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "antiTank",
@@ -1852,8 +1792,7 @@
             "rangeMain": "LONG",
             "rangeSuper": "VERY LONG",
             "reload": "FAST",
-            "speed": "NORMAL",
-            "tags": []
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "antiTank",
@@ -1924,10 +1863,7 @@
             "rangeMain": "NORMAL",
             "rangeSuper": "LONG",
             "reload": "VERY FAST",
-            "speed": "VERY FAST",
-            "tags": [
-                "anti-aggro"
-            ]
+            "speed": "VERY FAST"
         },
         "roles": {
             "*": "antiTank",
@@ -1998,10 +1934,7 @@
             "rangeMain": "LONG",
             "rangeSuper": "LONG",
             "reload": "FAST",
-            "speed": "VERY FAST",
-            "tags": [
-                "support"
-            ]
+            "speed": "VERY FAST"
         },
         "roles": {
             "*": "support",
@@ -2074,10 +2007,7 @@
             "rangeMain": "NORMAL",
             "rangeSuper": "LONG",
             "reload": "NORMAL",
-            "speed": "FAST",
-            "tags": [
-                "aggro"
-            ]
+            "speed": "FAST"
         },
         "roles": {
             "*": "sniper",
@@ -2154,11 +2084,7 @@
             "rangeMain": "SHORT",
             "rangeSuper": "VERY LONG",
             "reload": "NORMAL",
-            "speed": "FAST",
-            "tags": [
-                "tank",
-                "heal"
-            ]
+            "speed": "FAST"
         },
         "roles": {
             "*": "aggro",
@@ -2229,10 +2155,7 @@
             "rangeMain": "NORMAL",
             "rangeSuper": "NORMAL",
             "reload": "VERY FAST",
-            "speed": "NORMAL",
-            "tags": [
-                "aggro"
-            ]
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "tank",
@@ -2307,10 +2230,7 @@
             "rangeMain": "LONG",
             "rangeSuper": "LONG",
             "reload": "NORMAL",
-            "speed": "FAST",
-            "tags": [
-                "thrower"
-            ]
+            "speed": "FAST"
         },
         "roles": {
             "*": "thrower",
@@ -2381,10 +2301,7 @@
             "rangeMain": "SHORT",
             "rangeSuper": "NORMAL",
             "reload": "VERY FAST",
-            "speed": "VERY FAST",
-            "tags": [
-                "aggro"
-            ]
+            "speed": "VERY FAST"
         },
         "roles": {
             "*": "aggro",
@@ -2458,11 +2375,7 @@
             "rangeMain": "SHORT",
             "rangeSuper": "LONG",
             "reload": "VERY FAST",
-            "speed": "FAST",
-            "tags": [
-                "anti-aggro",
-                "aggro"
-            ]
+            "speed": "FAST"
         },
         "roles": {
             "*": "tank",
@@ -2533,10 +2446,7 @@
             "rangeMain": "NORMAL",
             "rangeSuper": "NORMAL",
             "reload": "SLOW",
-            "speed": "NORMAL",
-            "tags": [
-                "anti-aggro"
-            ]
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "antiTank",
@@ -2609,11 +2519,7 @@
             "rangeMain": "VERY LONG",
             "rangeSuper": "LONG",
             "reload": "NORMAL",
-            "speed": "NORMAL",
-            "tags": [
-                "waterborne",
-                "heist-defender"
-            ]
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "controller",
@@ -2684,10 +2590,7 @@
             "rangeMain": "VERY LONG",
             "rangeSuper": "VERY LONG",
             "reload": "VERY FAST",
-            "speed": "FAST",
-            "tags": [
-                "aggro"
-            ]
+            "speed": "FAST"
         },
         "roles": {
             "*": "tank",
@@ -2762,10 +2665,7 @@
             "rangeMain": "LONG",
             "rangeSuper": "LONG",
             "reload": "VERY FAST",
-            "speed": "FAST",
-            "tags": [
-                "anti-aggro"
-            ]
+            "speed": "FAST"
         },
         "roles": {
             "*": "support",
@@ -2842,8 +2742,7 @@
             "rangeMain": "NORMAL",
             "rangeSuper": "LONG",
             "reload": "VERY FAST",
-            "speed": "FAST",
-            "tags": []
+            "speed": "FAST"
         },
         "roles": {
             "*": "tank",
@@ -2920,10 +2819,7 @@
             "rangeMain": "LONG",
             "rangeSuper": "VERY LONG",
             "reload": "VERY FAST",
-            "speed": "NORMAL",
-            "tags": [
-                "anti-aggro"
-            ]
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "antiTank",
@@ -2976,7 +2872,9 @@
             {
                 "name": "Magic Puffs",
                 "effect": "All nearby allies are healed for 400 HP per second.",
-                "tags": []
+                "tags": [
+                    "heal"
+                ]
             },
             {
                 "name": "Spirit Slap",
@@ -2999,11 +2897,7 @@
             "rangeMain": "VERY LONG",
             "rangeSuper": "LONG",
             "reload": "SLOW",
-            "speed": "NORMAL",
-            "tags": [
-                "controller",
-                "heal"
-            ]
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "antiTank",
@@ -3074,8 +2968,7 @@
             "rangeMain": "SHORT",
             "rangeSuper": "LONG",
             "reload": "VERY FAST",
-            "speed": "VERY FAST",
-            "tags": []
+            "speed": "VERY FAST"
         },
         "roles": {
             "*": "aggro",
@@ -3147,10 +3040,7 @@
             "rangeMain": "LONG",
             "rangeSuper": "NORMAL",
             "reload": "NORMAL",
-            "speed": "FAST",
-            "tags": [
-                "heal"
-            ]
+            "speed": "FAST"
         },
         "roles": {
             "*": "support",
@@ -3231,10 +3121,7 @@
             "rangeMain": "LONG",
             "rangeSuper": "NORMAL",
             "reload": "FAST",
-            "speed": "NORMAL",
-            "tags": [
-                "assassin"
-            ]
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "support",
@@ -3307,12 +3194,7 @@
             "rangeMain": "LONG",
             "rangeSuper": "LONG",
             "reload": "NORMAL",
-            "speed": "NORMAL",
-            "tags": [
-                "DamageDealer",
-                "anti-aggro",
-                "wallbreaker"
-            ]
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "antiTank",
@@ -3385,10 +3267,7 @@
             "rangeMain": "LONG",
             "rangeSuper": "LONG",
             "reload": "SLOW",
-            "speed": "NORMAL",
-            "tags": [
-                "thrower"
-            ]
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "thrower",
@@ -3467,11 +3346,7 @@
             "rangeMain": "LONG",
             "rangeSuper": "LONG",
             "reload": "FAST",
-            "speed": "NORMAL",
-            "tags": [
-                "Marksman",
-                "heal"
-            ]
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "sniper",
@@ -3545,8 +3420,7 @@
             "rangeMain": "SHORT",
             "rangeSuper": "VERY LONG",
             "reload": "VERY FAST",
-            "speed": "NORMAL",
-            "tags": []
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "tank",
@@ -3582,14 +3456,18 @@
         "movementSpeedUnits": 720,
         "gadgets": [
             {
-                "name": "Pneumatic Ejector",
-                "effect": "Jumps a short distance in the direction she is moving, instantly reloading 1 ammo.",
-                "tags": []
+                "name": "PNEUMATIC BOOSTER",
+                "effect": "Jacky gets a burst of energy and moves % faster.",
+                "tags": [
+                    "buffSpeed"
+                ]
             },
             {
-                "name": "Speedy Spin",
-                "effect": "Jacky gains a 30% speed boost for 3 seconds.",
-                "tags": []
+                "name": "REBUILD",
+                "effect": "Jacky rebuilds the environment in a small radius around her.",
+                "tags": [
+                    "fixEnv"
+                ]
             }
         ],
         "starPowers": [
@@ -3619,11 +3497,7 @@
             "rangeMain": "SHORT",
             "rangeSuper": "SHORT",
             "reload": "NORMAL",
-            "speed": "FAST",
-            "tags": [
-                "mobility",
-                "shield"
-            ]
+            "speed": "FAST"
         },
         "roles": {
             "*": "tank",
@@ -3644,7 +3518,8 @@
             "breakdown": "Switches between Damage (Work Mode) and Heal (Party Mode)",
             "range": 8.33,
             "tags": [
-                "singleShot"
+                "singleShot",
+                "heal"
             ]
         },
         "super": {
@@ -3698,10 +3573,7 @@
             "rangeMain": "LONG",
             "rangeSuper": "SHORT",
             "reload": "FAST",
-            "speed": "FAST",
-            "tags": [
-                "heal"
-            ]
+            "speed": "FAST"
         },
         "roles": {
             "*": "controller",
@@ -3776,10 +3648,7 @@
             "rangeMain": "NORMAL",
             "rangeSuper": "SHORT",
             "reload": "NORMAL",
-            "speed": "NORMAL",
-            "tags": [
-                "gem-carrier"
-            ]
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "controller",
@@ -3852,10 +3721,7 @@
             "rangeMain": "LONG",
             "rangeSuper": "LONG",
             "reload": "NORMAL",
-            "speed": "NORMAL",
-            "tags": [
-                "heist-attacker"
-            ]
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "controller",
@@ -3934,11 +3800,7 @@
             "rangeMain": "NORMAL/LONG",
             "rangeSuper": "NORMAL",
             "reload": "NORMAL",
-            "speed": "NORMAL",
-            "tags": [
-                "thrower",
-                "waterborne"
-            ]
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "thrower",
@@ -4011,10 +3873,7 @@
             "rangeMain": "SHORT/NORMAL",
             "rangeSuper": "LONG/LONG",
             "reload": "VERY FAST/NORMAL",
-            "speed": "VERY FAST/NORMAL",
-            "tags": [
-                "aggro"
-            ]
+            "speed": "VERY FAST/NORMAL"
         },
         "roles": {
             "*": "aggro",
@@ -4093,10 +3952,7 @@
             "rangeMain": "SHORT",
             "rangeSuper": "LONG",
             "reload": "VERY FAST",
-            "speed": "VERY FAST",
-            "tags": [
-                "aggro"
-            ]
+            "speed": "VERY FAST"
         },
         "roles": {
             "*": "aggro",
@@ -4126,6 +3982,7 @@
             "chargeRate": 1.0,
             "tags": [
                 "stun",
+                "crowdControl",
                 "heal"
             ]
         },
@@ -4174,11 +4031,7 @@
             "rangeMain": "SHORT",
             "rangeSuper": "NORMAL",
             "reload": "VERY FAST",
-            "speed": "VERY FAST",
-            "tags": [
-                "healer",
-                "support"
-            ]
+            "speed": "VERY FAST"
         },
         "roles": {
             "*": "support",
@@ -4249,10 +4102,7 @@
             "rangeMain": "LONG",
             "rangeSuper": "NORMAL",
             "reload": "VERY SLOW",
-            "speed": "FAST",
-            "tags": [
-                "thrower"
-            ]
+            "speed": "FAST"
         },
         "roles": {
             "*": "thrower",
@@ -4327,8 +4177,7 @@
             "rangeMain": "VERY LONG",
             "rangeSuper": "VERY LONG",
             "reload": "NORMAL",
-            "speed": "VERY FAST",
-            "tags": []
+            "speed": "VERY FAST"
         },
         "roles": {
             "*": "controller",
@@ -4404,11 +4253,7 @@
             "rangeMain": "SHORT",
             "rangeSuper": "LONG",
             "reload": "VERY FAST",
-            "speed": "VERY FAST",
-            "tags": [
-                "heist-attacker",
-                "aggro"
-            ]
+            "speed": "VERY FAST"
         },
         "roles": {
             "*": "aggro",
@@ -4481,10 +4326,7 @@
             "rangeMain": "LONG",
             "rangeSuper": "NORMAL",
             "reload": "NORMAL",
-            "speed": "NORMAL",
-            "tags": [
-                "anti-aggro"
-            ]
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "antiTank",
@@ -4559,11 +4401,7 @@
             "rangeMain": "VERY LONG",
             "rangeSuper": "LONG",
             "reload": "VERY FAST",
-            "speed": "NORMAL",
-            "tags": [
-                "anti-aggro",
-                "hotzone-zonetimer"
-            ]
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "antiTank",
@@ -4644,11 +4482,7 @@
             "rangeMain": "LONG",
             "rangeSuper": "LONG",
             "reload": "VERY FAST",
-            "speed": "NORMAL",
-            "tags": [
-                "controller",
-                "anti-aggro"
-            ]
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "controller",
@@ -4721,10 +4555,7 @@
             "rangeMain": "LONG",
             "rangeSuper": "SHORT",
             "reload": "NORMAL",
-            "speed": "NORMAL",
-            "tags": [
-                "anti-aggro"
-            ]
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "antiTank",
@@ -4804,8 +4635,7 @@
             "rangeMain": "LONG",
             "rangeSuper": "VERY LONG",
             "reload": "NORMAL",
-            "speed": "NORMAL",
-            "tags": []
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "sniper",
@@ -4878,11 +4708,7 @@
             "rangeMain": "LONG",
             "rangeSuper": "SHORT",
             "reload": "VERY FAST",
-            "speed": "VERY FAST",
-            "tags": [
-                "anti-marksman",
-                "brawlball-support"
-            ]
+            "speed": "VERY FAST"
         },
         "roles": {
             "*": "support",
@@ -4955,8 +4781,7 @@
             "rangeMain": "LONG",
             "rangeSuper": "NORMAL",
             "reload": "NORMAL",
-            "speed": "NORMAL",
-            "tags": []
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "controller",
@@ -5027,10 +4852,7 @@
             "rangeMain": "LONG",
             "rangeSuper": "NORMAL",
             "reload": "VERY FAST",
-            "speed": "NORMAL",
-            "tags": [
-                "anti-aggro"
-            ]
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "antiTank",
@@ -5105,18 +4927,14 @@
             "rangeMain": "LONG",
             "rangeSuper": "NORMAL",
             "reload": "NORMAL",
-            "speed": "NORMAL",
-            "tags": [
-                "heist-attacker",
-                "aggro"
-            ]
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "aggro",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
-            "heist": "",
+            "heist": "safeDamage",
             "hotZone": "",
             "knockout": ""
         }
@@ -5130,7 +4948,6 @@
             "breakdown": "Jump + Area Damage on Landing",
             "range": 4.0,
             "tags": [
-                "singleShot",
                 "wallpass"
             ]
         },
@@ -5167,7 +4984,9 @@
             {
                 "name": "Record Smash",
                 "effect": "Mico deals 100% extra damage against non-brawlers (pets, boxes, safe).",
-                "tags": []
+                "tags": [
+                    "safeDamage"
+                ]
             }
         ],
         "hypercharge": {
@@ -5187,19 +5006,14 @@
             "rangeMain": "NORMAL",
             "rangeSuper": "VERY LONG",
             "reload": "VERY SLOW",
-            "speed": "VERY FAST",
-            "tags": [
-                "heist-attacker",
-                "wallpass",
-                "aggro"
-            ]
+            "speed": "VERY FAST"
         },
         "roles": {
             "*": "aggro",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
-            "heist": "",
+            "heist": "safeDamage",
             "hotZone": "",
             "knockout": ""
         }
@@ -5265,10 +5079,7 @@
             "rangeMain": "LONG",
             "rangeSuper": "LONG",
             "reload": "FAST",
-            "speed": "FAST",
-            "tags": [
-                "aggro"
-            ]
+            "speed": "FAST"
         },
         "roles": {
             "*": "aggro",
@@ -5344,10 +5155,7 @@
             "rangeMain": "LONG",
             "rangeSuper": "LONG",
             "reload": "NORMAL",
-            "speed": "FAST",
-            "tags": [
-                "anti-aggro"
-            ]
+            "speed": "FAST"
         },
         "roles": {
             "*": "antiTank",
@@ -5418,10 +5226,7 @@
             "rangeMain": "SHORT",
             "rangeSuper": "VERY LONG",
             "reload": "VERY SLOW",
-            "speed": "VERY FAST",
-            "tags": [
-                "aggro"
-            ]
+            "speed": "VERY FAST"
         },
         "roles": {
             "*": "aggro",
@@ -5500,11 +5305,7 @@
             "rangeMain": "LONG",
             "rangeSuper": "VERY LONG",
             "reload": "NORMAL",
-            "speed": "NORMAL",
-            "tags": [
-                "thrower",
-                "anti-marksman"
-            ]
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "controller",
@@ -5577,18 +5378,14 @@
             "rangeMain": "LONG",
             "rangeSuper": "VERY LONG",
             "reload": "NORMAL",
-            "speed": "NORMAL",
-            "tags": [
-                "anti-marksman",
-                "heist-attacker"
-            ]
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "sniper",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
-            "heist": "",
+            "heist": "safeDamage",
             "hotZone": "",
             "knockout": ""
         }
@@ -5613,7 +5410,8 @@
             "range": 6.0,
             "chargeRate": 1.0,
             "tags": [
-                "stun"
+                "stun",
+                "spawn"
             ]
         },
         "reloadSpeedSeconds": 1.1,
@@ -5659,19 +5457,14 @@
             "rangeMain": "NORMAL",
             "rangeSuper": "SHORT",
             "reload": "VERY FAST",
-            "speed": "NORMAL",
-            "tags": [
-                "heist-attacker",
-                "heist-defender",
-                "anti-aggro"
-            ]
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "antiTank",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
-            "heist": "",
+            "heist": "flex",
             "hotZone": "",
             "knockout": ""
         }
@@ -5741,10 +5534,7 @@
             "rangeMain": "NORMAL",
             "rangeSuper": "NORMAL",
             "reload": "NORMAL",
-            "speed": "FAST",
-            "tags": [
-                "control"
-            ]
+            "speed": "FAST"
         },
         "roles": {
             "*": "aggro",
@@ -5815,11 +5605,7 @@
             "rangeMain": "LONG",
             "rangeSuper": "LONG",
             "reload": "NORMAL",
-            "speed": "NORMAL",
-            "tags": [
-                "DamageDealer",
-                "anti-aggro"
-            ]
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "antiTank",
@@ -5896,10 +5682,7 @@
             "rangeMain": "LONG",
             "rangeSuper": "NORMAL",
             "reload": "VERY FAST",
-            "speed": "NORMAL",
-            "tags": [
-                "heal"
-            ]
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "controller",
@@ -5976,11 +5759,7 @@
             "rangeMain": "LONG",
             "rangeSuper": "SHORT",
             "reload": "NORMAL",
-            "speed": "NORMAL",
-            "tags": [
-                "anti-marksman",
-                "control"
-            ]
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "controller",
@@ -6054,8 +5833,7 @@
             "rangeMain": "LONG",
             "rangeSuper": "VERY LONG",
             "reload": "SLOW",
-            "speed": "NORMAL",
-            "tags": []
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "controller",
@@ -6126,8 +5904,7 @@
             "rangeMain": "VERY LONG",
             "rangeSuper": "LONG",
             "reload": "VERY SLOW",
-            "speed": "NORMAL",
-            "tags": []
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "sniper",
@@ -6205,8 +5982,7 @@
             "rangeMain": "VERY LONG",
             "rangeSuper": "LONG",
             "reload": "VERY SLOW",
-            "speed": "NORMAL",
-            "tags": []
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "sniper",
@@ -6288,11 +6064,7 @@
             "rangeMain": "LONG",
             "rangeSuper": "VERY LONG",
             "reload": "NORMAL",
-            "speed": "NORMAL",
-            "tags": [
-                "gem-carrier",
-                "heal"
-            ]
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "support",
@@ -6367,11 +6139,7 @@
             "rangeMain": "VERY LONG/SHORT",
             "rangeSuper": "N/A",
             "reload": "NORMAL",
-            "speed": "NORMAL/VERY FAST",
-            "tags": [
-                "Marksman",
-                "Assassin"
-            ]
+            "speed": "NORMAL/VERY FAST"
         },
         "roles": {
             "*": "sniper",
@@ -6448,10 +6216,7 @@
             "rangeMain": "VERY LONG",
             "rangeSuper": "VERY LONG",
             "reload": "VERY FAST",
-            "speed": "NORMAL",
-            "tags": [
-                "wallborne"
-            ]
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "antiTank",
@@ -6527,8 +6292,7 @@
             "rangeMain": "SHORT",
             "rangeSuper": "N/A",
             "reload": "VERY FAST",
-            "speed": "FAST",
-            "tags": []
+            "speed": "FAST"
         },
         "roles": {
             "*": "tank",
@@ -6599,8 +6363,7 @@
             "rangeMain": "LONG",
             "rangeSuper": "LONG",
             "reload": "FAST",
-            "speed": "NORMAL",
-            "tags": []
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "support",
@@ -6675,10 +6438,7 @@
             "rangeMain": "SHORT",
             "rangeSuper": "LONG",
             "reload": "NORMAL",
-            "speed": "FAST",
-            "tags": [
-                "tank"
-            ]
+            "speed": "FAST"
         },
         "roles": {
             "*": "aggro",
@@ -6756,8 +6516,7 @@
             "rangeMain": "NORMAL",
             "rangeSuper": "LONG",
             "reload": "NORMAL",
-            "speed": "FAST",
-            "tags": []
+            "speed": "FAST"
         },
         "roles": {
             "*": "antiTank",
@@ -6833,8 +6592,7 @@
             "rangeMain": "SHORT",
             "rangeSuper": "SHORT",
             "reload": "VERY FAST",
-            "speed": "VERY FAST",
-            "tags": []
+            "speed": "VERY FAST"
         },
         "roles": {
             "*": "aggro",
@@ -6905,10 +6663,7 @@
             "rangeMain": "LONG",
             "rangeSuper": "LONG",
             "reload": "NORMAL",
-            "speed": "FAST",
-            "tags": [
-                "anti-aggro"
-            ]
+            "speed": "FAST"
         },
         "roles": {
             "*": "antiTank",
@@ -6987,10 +6742,7 @@
             "rangeMain": "LONG",
             "rangeSuper": "NORMAL",
             "reload": "SLOW",
-            "speed": "NORMAL",
-            "tags": [
-                "anti-aggro"
-            ]
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "antiTank",
@@ -7063,8 +6815,7 @@
             "rangeMain": "NORMAL",
             "rangeSuper": "LONG",
             "reload": "NORMAL",
-            "speed": "NORMAL",
-            "tags": []
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "tank",
@@ -7145,11 +6896,7 @@
             "rangeMain": "LONG",
             "rangeSuper": "LONG",
             "reload": "SLOW",
-            "speed": "NORMAL",
-            "tags": [
-                "Artillery",
-                "heist-attacker"
-            ]
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "controller",
@@ -7226,8 +6973,7 @@
             "rangeMain": "LONG",
             "rangeSuper": "SHORT",
             "reload": "NORMAL",
-            "speed": "NORMAL",
-            "tags": []
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "controller",
@@ -7302,10 +7048,7 @@
             "rangeMain": "NORMAL",
             "rangeSuper": "SHORT",
             "reload": "SLOW",
-            "speed": "SLOW",
-            "tags": [
-                "anti-aggro"
-            ]
+            "speed": "SLOW"
         },
         "roles": {
             "*": "antiTank",
@@ -7390,8 +7133,7 @@
             "rangeMain": "LONG",
             "rangeSuper": "NORMAL",
             "reload": "SLOW",
-            "speed": "NORMAL",
-            "tags": []
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "antiTank",
@@ -7470,8 +7212,7 @@
             "rangeMain": "LONG",
             "rangeSuper": "LONG",
             "reload": "VERY SLOW",
-            "speed": "NORMAL",
-            "tags": []
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "thrower",
@@ -7544,8 +7285,7 @@
             "rangeMain": "SHORT",
             "rangeSuper": "LONG",
             "reload": "NORMAL",
-            "speed": "FAST",
-            "tags": []
+            "speed": "FAST"
         },
         "roles": {
             "*": "tank",
@@ -7617,10 +7357,7 @@
             "speed": "NORMAL",
             "rangeMain": "LONG",
             "rangeSuper": "NORMAL",
-            "reload": "SLOW",
-            "tags": [
-                "Artillery"
-            ]
+            "reload": "SLOW"
         },
         "roles": {
             "*": "thrower",
@@ -7691,8 +7428,7 @@
             "rangeMain": "LONG",
             "rangeSuper": "VERY LONG",
             "reload": "NORMAL",
-            "speed": "FAST",
-            "tags": []
+            "speed": "FAST"
         },
         "roles": {
             "*": "thrower",
@@ -7779,10 +7515,7 @@
             "rangeMain": "VERY LONG",
             "rangeSuper": "NORMAL",
             "reload": "VERY FAST",
-            "speed": "FAST",
-            "tags": [
-                "control"
-            ]
+            "speed": "FAST"
         },
         "roles": {
             "*": "sniper",
@@ -7866,10 +7599,7 @@
             "rangeMain": "LONG",
             "rangeSuper": "LONG",
             "reload": "VERY FAST",
-            "speed": "VERY FAST",
-            "tags": [
-                "high-mobility"
-            ]
+            "speed": "VERY FAST"
         },
         "roles": {
             "*": "aggro",
@@ -7953,10 +7683,7 @@
             "rangeMain": "VERY SHORT",
             "rangeSuper": "NORMAL",
             "reload": "VERY SLOW",
-            "speed": "VERY FAST",
-            "tags": [
-                "brawler"
-            ]
+            "speed": "VERY FAST"
         },
         "roles": {
             "*": "tank",
@@ -8041,10 +7768,7 @@
             "rangeMain": "SHORT",
             "rangeSuper": "NORMAL",
             "reload": "VERY FAST",
-            "speed": "FAST",
-            "tags": [
-                "control"
-            ]
+            "speed": "FAST"
         },
         "roles": {
             "*": "tank",
@@ -8130,10 +7854,7 @@
             "rangeMain": "NORMAL",
             "rangeSuper": "LONG",
             "reload": "NORMAL",
-            "speed": "VERY FAST",
-            "tags": [
-                "high-mobility"
-            ]
+            "speed": "VERY FAST"
         },
         "roles": {
             "*": "aggro",
@@ -8216,10 +7937,7 @@
             "rangeMain": "LONG",
             "rangeSuper": "NORMAL",
             "reload": "NORMAL",
-            "speed": "FAST",
-            "tags": [
-                "gem-carrier"
-            ]
+            "speed": "FAST"
         },
         "roles": {
             "*": "thrower",
@@ -8309,10 +8027,7 @@
             "rangeMain": "LONG",
             "rangeSuper": "NORMAL",
             "reload": "FAST",
-            "speed": "FAST",
-            "tags": [
-                "heal"
-            ]
+            "speed": "FAST"
         },
         "roles": {
             "*": "support",
@@ -8396,13 +8111,10 @@
             "rangeMain": "LONG",
             "rangeSuper": "LONG",
             "reload": "NORMAL",
-            "speed": "NORMAL",
-            "tags": [
-                "anti-aggro"
-            ]
+            "speed": "NORMAL"
         },
         "roles": {
-            "*": "*",
+            "*": "controller",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
@@ -8481,10 +8193,7 @@
             "rangeMain": "LONG",
             "rangeSuper": "NORMAL",
             "reload": "NORMAL",
-            "speed": "NORMAL",
-            "tags": [
-                "area-control"
-            ]
+            "speed": "NORMAL"
         },
         "roles": {
             "*": "*",
