@@ -48,10 +48,10 @@ def test_build_master_document_preserves_source_order_inside_sorted_groups():
         'aggro', 'antiTank', 'controller', 'sniper', 'support', 'tank', 'thrower'
     ]
     assert document['globalRoles']['sniper'] == [
-        'Gus', 'Pierce', 'Najia', 'Byron', 'Brock', 'Piper', 'Bonnie',
-        'Bea', 'Belle', 'Darryl', 'Mandy', 'Nani', 'Rt',
+        'gus', 'pierce', 'najia', 'byron', 'brock', 'piper', 'bonnie',
+        'bea', 'belle', 'mandy', 'nani', 'r-t',
     ]
     assert document['originalTierlist'] == tierlist
     assert document['map'] == 'pinballDreams'
     assert document['mode'] == 'brawlBall'
-    assert '*' in document['mapRoles']
+    assert '*' not in document['mapRoles']
