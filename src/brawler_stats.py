@@ -54,21 +54,23 @@ def calculate_damage(base_damage, projectile):
     return damages if is_list else damages[0]
 
 
-def calculate_dps(damage, ammo, reload_seconds):
+def calculate_dps(damage, reload_seconds, duration_seconds=None):
     """Return integer DPS using deterministic positive half-up rounding."""
-    damage_values, ammo_values, is_list = _broadcast_pair(
-        damage, ammo, 'damage', 'ammo')
+    damage_values = damage if isinstance(damage, list) else [damage]
+    is_list = isinstance(damage, list)
     _validate_numeric_field(damage_values, 'damage', minimum=0)
-    _validate_integer_field(ammo_values, 'ammo')
     _validate_numeric_field(reload_seconds, 'reloadSeconds', minimum=0,
+                            strictly_positive=True)
+    denominator = reload_seconds if duration_seconds is None else duration_seconds
+    _validate_numeric_field(denominator, 'durationSeconds', minimum=0,
                             strictly_positive=True)
 
     dps_values = [
         _rounded_positive_ratio(
-            _to_decimal(damage_value) * _to_decimal(ammo_value),
-            reload_seconds,
+            _to_decimal(damage_value),
+            denominator,
         )
-        for damage_value, ammo_value in zip(damage_values, ammo_values)
+        for damage_value in damage_values
     ]
     return dps_values if is_list else dps_values[0]
 
@@ -84,7 +86,11 @@ def calculate_attack_stats(attack, reload_seconds=None):
         reload_seconds = attack.get('reloadSeconds')
     validate_attack(attack, reload_seconds)
     damage = calculate_damage(attack['baseDamage'], attack['projectile'])
-    dps = calculate_dps(damage, attack['ammo'], reload_seconds)
+    dps = calculate_dps(
+        damage,
+        reload_seconds,
+        attack.get('durationSeconds'),
+    )
     return {'damage': damage, 'dps': dps}
 
 

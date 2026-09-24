@@ -29,6 +29,8 @@ def test_brawler_spec_uses_derived_combat_schema():
             attack, spec['reloadSeconds'])
         assert attack['damage'] == derived['damage']
         assert attack['DPS'] == derived['dps']
+        if 'durationSeconds' in attack:
+            assert attack['durationSeconds'] > 0
 
 
 def test_scalar_attack_stats():
@@ -42,7 +44,7 @@ def test_scalar_attack_stats():
 
     assert brawler_stats.calculate_attack_stats(attack) == {
         'damage': 120,
-        'dps': 200,
+        'dps': 100,
     }
 
 
@@ -57,7 +59,7 @@ def test_array_attack_stats_are_aligned():
 
     assert brawler_stats.calculate_attack_stats(attack) == {
         'damage': [20, 60],
-        'dps': [30, 30],
+        'dps': [10, 30],
     }
 
 
@@ -68,12 +70,27 @@ def test_scalar_values_broadcast_to_arrays():
         'ammo': 3,
         'reloadSeconds': 2,
         'shape': ['singleShot', 'singleShot'],
-    }) == {'damage': [20, 40], 'dps': [30, 60]}
+    }) == {'damage': [20, 40], 'dps': [10, 20]}
 
 
 def test_dps_uses_positive_half_up_rounding():
-    assert brawler_stats.calculate_dps(5, 1, 2) == 3
-    assert brawler_stats.calculate_dps([1, 3], 1, 2) == [1, 2]
+    assert brawler_stats.calculate_dps(5, 2) == 3
+    assert brawler_stats.calculate_dps([1, 3], 2) == [1, 2]
+
+
+def test_continuous_attack_uses_duration_instead_of_reload_tick():
+    attack = {
+        'baseDamage': 420,
+        'projectile': 40,
+        'ammo': 3,
+        'shape': 'multiShot',
+        'durationSeconds': 6,
+    }
+
+    assert brawler_stats.calculate_attack_stats(attack, 0.2) == {
+        'damage': 16800,
+        'dps': 2800,
+    }
 
 
 @pytest.mark.parametrize('field, value', [
