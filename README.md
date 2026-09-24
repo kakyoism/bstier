@@ -72,7 +72,7 @@ The traditional waterfall tierlist format cannot answer these quesions and thus 
 - Defence: Brawlers that can defend the team safe by either defeating or disabling the opponent Safe-Damage brawlers but provide little to no value as Safe-Damage.
 
 ### HotZone
-- Zone-Time: High-HP (7000+) brawlers that can stand in the zone or with supers that can guarantee zone occupation.
+- Zone-Time: Brawlers with at least 7000 HP that can stand in the zone, or lower-HP brawlers with skills that control or deny the zone, force enemies out, secure enemy eliminations, or help teammates stay in the zone.
 - Damage: Same as in other modes.
 - Control: Same as in other modes.
 
