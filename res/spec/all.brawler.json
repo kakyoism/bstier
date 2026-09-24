@@ -58,9 +58,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "mid",
+        "DPS": 2720.0,
         "rating": {
             "class": "DamageDealer",
-            "position": "mid",
             "rangeMain": "VERY LONG",
             "rangeSuper": "NORMAL",
             "reload": "NORMAL",
@@ -133,9 +134,10 @@
                 "poison"
             ]
         },
+        "position": "lane",
+        "DPS": 1238.095238,
         "rating": {
             "class": "Assassin",
-            "position": "lane",
             "rangeMain": "SHORT",
             "rangeSuper": "VERY LONG",
             "reload": "FAST",
@@ -211,9 +213,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": 84000.0,
         "rating": {
             "class": "Controller",
-            "position": "lane",
             "rangeMain": "LONG",
             "rangeSuper": "LONG",
             "reload": "FAST",
@@ -288,9 +291,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "both",
+        "DPS": 2444.444444,
         "rating": {
             "class": "Marksman",
-            "position": "both",
             "rangeMain": "VERY LONG",
             "rangeSuper": "VERY LONG",
             "reload": "NORMAL",
@@ -359,9 +363,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": 2285.714286,
         "rating": {
             "class": "Tank",
-            "position": "lane",
             "rangeMain": "SHORT",
             "rangeSuper": "LONG",
             "reload": "VERY FAST",
@@ -439,9 +444,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "both",
+        "DPS": 800.0,
         "rating": {
             "class": "Artillery",
-            "position": "both",
             "rangeMain": "LONG",
             "rangeSuper": "LONG",
             "reload": "SLOW",
@@ -511,9 +517,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "both",
+        "DPS": 4444.444444,
         "rating": {
             "class": "Marksman",
-            "position": "both",
             "rangeMain": "VERY LONG",
             "rangeSuper": "LONG",
             "reload": "VERY FAST",
@@ -588,9 +595,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": 1485.714286,
         "rating": {
             "class": "Marksman",
-            "position": "lane",
             "rangeMain": "VERY LONG",
             "rangeSuper": "VERY LONG",
             "reload": "FAST",
@@ -671,9 +679,10 @@
                 "heal"
             ]
         },
+        "position": "mid",
+        "DPS": 550.0,
         "rating": {
             "class": "Support",
-            "position": "mid",
             "rangeMain": "NORMAL",
             "rangeSuper": "LONG",
             "reload": "VERY SLOW",
@@ -742,9 +751,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": 3500.0,
         "rating": {
             "class": "Tank",
-            "position": "lane",
             "rangeMain": "SHORT",
             "rangeSuper": "VERY LONG",
             "reload": "NORMAL",
@@ -822,9 +832,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "mid",
+        "DPS": 2258.823529,
         "rating": {
             "class": "Controller",
-            "position": "mid",
             "rangeMain": "LONG",
             "rangeSuper": "LONG",
             "reload": "NORMAL",
@@ -898,9 +909,10 @@
                 "stun"
             ]
         },
+        "position": "both",
+        "DPS": [1178.947368, 1831.578947],
         "rating": {
             "class": "Marksman",
-            "position": "both",
             "rangeMain": "LONG/NORMAL",
             "rangeSuper": "LONG",
             "reload": "VERY FAST/SLOW",
@@ -973,9 +985,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "both",
+        "DPS": 1104.761905,
         "rating": {
             "class": "Marksman",
-            "position": "both",
             "rangeMain": "LONG",
             "rangeSuper": "LONG",
             "reload": "SLOW",
@@ -1049,9 +1062,10 @@
                 "stun"
             ]
         },
+        "position": "lane",
+        "DPS": 2750.0,
         "rating": {
             "class": "Tank",
-            "position": "lane",
             "rangeMain": "NORMAL",
             "rangeSuper": "VERY LONG",
             "reload": "NORMAL",
@@ -1120,9 +1134,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": 1533.333333,
         "rating": {
             "class": "Tank",
-            "position": "lane",
             "rangeMain": "NORMAL",
             "rangeSuper": "SHORT",
             "reload": "NORMAL",
@@ -1197,9 +1212,10 @@
                 "teleport"
             ]
         },
+        "position": "lane",
+        "DPS": 4200.0,
         "rating": {
             "class": "Assassin",
-            "position": "lane",
             "rangeMain": "SHORT",
             "rangeSuper": "VERY LONG",
             "reload": "VERY FAST",
@@ -1280,9 +1296,10 @@
                 "poison"
             ]
         },
+        "position": "both",
+        "DPS": 1628.571429,
         "rating": {
             "class": "Support",
-            "position": "both",
             "rangeMain": "VERY LONG",
             "rangeSuper": "LONG",
             "reload": "FAST",
@@ -1355,9 +1372,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": 740.0,
         "rating": {
             "class": "DamageDealer",
-            "position": "lane",
             "rangeMain": "LONG",
             "rangeSuper": "SHORT",
             "reload": "SLOW",
@@ -1430,9 +1448,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": 800.0,
         "rating": {
             "class": "Controller",
-            "position": "lane",
             "rangeMain": "LONG",
             "rangeSuper": "LONG",
             "reload": "SLOW",
@@ -1501,9 +1520,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": 2021.052632,
         "rating": {
             "class": "DamageDealer",
-            "position": "lane",
             "rangeMain": "LONG",
             "rangeSuper": "NORMAL",
             "reload": "NORMAL",
@@ -1565,9 +1585,10 @@
             "shieldBuff": 0.05,
             "chargeRate": 1.0
         },
+        "position": "both",
+        "DPS": 1620.0,
         "rating": {
             "class": "Controller",
-            "position": "both",
             "rangeMain": "NORMAL",
             "rangeSuper": "VERY LONG",
             "reload": "SLOW",
@@ -1640,9 +1661,10 @@
                 "multi-shot"
             ]
         },
+        "position": "lane",
+        "DPS": 2400.0,
         "rating": {
             "class": "DamageDealer",
-            "position": "lane",
             "rangeMain": "LONG",
             "rangeSuper": "NORMAL",
             "reload": "SLOW",
@@ -1711,9 +1733,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": 1250.0,
         "rating": {
             "class": "DamageDealer",
-            "position": "lane",
             "rangeMain": "LONG",
             "rangeSuper": "VERY LONG",
             "reload": "NORMAL",
@@ -1786,9 +1809,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": 3323.076923,
         "rating": {
             "class": "DamageDealer",
-            "position": "lane",
             "rangeMain": "LONG",
             "rangeSuper": "VERY LONG",
             "reload": "FAST",
@@ -1857,9 +1881,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": 2666.666667,
         "rating": {
             "class": "Assassin",
-            "position": "lane",
             "rangeMain": "NORMAL",
             "rangeSuper": "LONG",
             "reload": "VERY FAST",
@@ -1928,9 +1953,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": 1371.428571,
         "rating": {
             "class": "Assassin",
-            "position": "lane",
             "rangeMain": "LONG",
             "rangeSuper": "LONG",
             "reload": "FAST",
@@ -2001,9 +2027,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": 2666.666667,
         "rating": {
             "class": "Tank",
-            "position": "lane",
             "rangeMain": "NORMAL",
             "rangeSuper": "LONG",
             "reload": "NORMAL",
@@ -2078,9 +2105,10 @@
                 "heal"
             ]
         },
+        "position": "lane",
+        "DPS": 1600.0,
         "rating": {
             "class": "Support",
-            "position": "lane",
             "rangeMain": "SHORT",
             "rangeSuper": "VERY LONG",
             "reload": "NORMAL",
@@ -2149,9 +2177,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": [1200.0, 2800.0],
         "rating": {
             "class": "Tank",
-            "position": "lane",
             "rangeMain": "NORMAL",
             "rangeSuper": "NORMAL",
             "reload": "VERY FAST",
@@ -2224,9 +2253,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": 2000.0,
         "rating": {
             "class": "Artillery",
-            "position": "lane",
             "rangeMain": "LONG",
             "rangeSuper": "LONG",
             "reload": "NORMAL",
@@ -2295,9 +2325,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": 3085.714286,
         "rating": {
             "class": "Assassin",
-            "position": "lane",
             "rangeMain": "SHORT",
             "rangeSuper": "NORMAL",
             "reload": "VERY FAST",
@@ -2369,9 +2400,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": 3800.0,
         "rating": {
             "class": "Tank",
-            "position": "lane",
             "rangeMain": "SHORT",
             "rangeSuper": "LONG",
             "reload": "VERY FAST",
@@ -2440,9 +2472,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": 1680.0,
         "rating": {
             "class": "Controller",
-            "position": "lane",
             "rangeMain": "NORMAL",
             "rangeSuper": "NORMAL",
             "reload": "SLOW",
@@ -2513,9 +2546,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": 800.0,
         "rating": {
             "class": "DamageDealer",
-            "position": "lane",
             "rangeMain": "VERY LONG",
             "rangeSuper": "LONG",
             "reload": "NORMAL",
@@ -2584,9 +2618,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": 2720.0,
         "rating": {
             "class": "Assassin",
-            "position": "lane",
             "rangeMain": "VERY LONG",
             "rangeSuper": "VERY LONG",
             "reload": "VERY FAST",
@@ -2659,9 +2694,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": 1384.615385,
         "rating": {
             "class": "Controller",
-            "position": "lane",
             "rangeMain": "LONG",
             "rangeSuper": "LONG",
             "reload": "VERY FAST",
@@ -2736,9 +2772,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": 2900.0,
         "rating": {
             "class": "Tank",
-            "position": "lane",
             "rangeMain": "NORMAL",
             "rangeSuper": "LONG",
             "reload": "VERY FAST",
@@ -2813,9 +2850,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": 3000.0,
         "rating": {
             "class": "Controller",
-            "position": "lane",
             "rangeMain": "LONG",
             "rangeSuper": "VERY LONG",
             "reload": "VERY FAST",
@@ -2891,9 +2929,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "mid",
+        "DPS": 1000.0,
         "rating": {
             "class": "Support",
-            "position": "mid",
             "rangeMain": "VERY LONG",
             "rangeSuper": "LONG",
             "reload": "SLOW",
@@ -2962,9 +3001,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": 6000.0,
         "rating": {
             "class": "Assassin",
-            "position": "lane",
             "rangeMain": "SHORT",
             "rangeSuper": "LONG",
             "reload": "VERY FAST",
@@ -3034,9 +3074,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "mid",
+        "DPS": 294.117647,
         "rating": {
             "class": "Support",
-            "position": "mid",
             "rangeMain": "LONG",
             "rangeSuper": "NORMAL",
             "reload": "NORMAL",
@@ -3115,9 +3156,10 @@
                 "wallpass"
             ]
         },
+        "position": "both",
+        "DPS": 1657.142857,
         "rating": {
             "class": "Support",
-            "position": "both",
             "rangeMain": "LONG",
             "rangeSuper": "NORMAL",
             "reload": "FAST",
@@ -3188,9 +3230,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": 2964.705882,
         "rating": {
             "class": "Controller",
-            "position": "lane",
             "rangeMain": "LONG",
             "rangeSuper": "LONG",
             "reload": "NORMAL",
@@ -3261,9 +3304,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": 1140.0,
         "rating": {
             "class": "Artillery",
-            "position": "lane",
             "rangeMain": "LONG",
             "rangeSuper": "LONG",
             "reload": "SLOW",
@@ -3340,9 +3384,10 @@
                 "heal"
             ]
         },
+        "position": "mid",
+        "DPS": 1440.0,
         "rating": {
             "class": "Support",
-            "position": "mid",
             "rangeMain": "LONG",
             "rangeSuper": "LONG",
             "reload": "FAST",
@@ -3414,9 +3459,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": 12000.0,
         "rating": {
             "class": "Tank",
-            "position": "lane",
             "rangeMain": "SHORT",
             "rangeSuper": "VERY LONG",
             "reload": "VERY FAST",
@@ -3491,9 +3537,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": 1377.777778,
         "rating": {
             "class": "Tank",
-            "position": "lane",
             "rangeMain": "SHORT",
             "rangeSuper": "SHORT",
             "reload": "NORMAL",
@@ -3567,9 +3614,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "mid",
+        "DPS": 1000.0,
         "rating": {
             "class": "Support",
-            "position": "mid",
             "rangeMain": "LONG",
             "rangeSuper": "SHORT",
             "reload": "FAST",
@@ -3642,9 +3690,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "both",
+        "DPS": 1333.333333,
         "rating": {
             "class": "Marksman",
-            "position": "both",
             "rangeMain": "NORMAL",
             "rangeSuper": "SHORT",
             "reload": "NORMAL",
@@ -3715,9 +3764,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "mid",
+        "DPS": 1177.777778,
         "rating": {
             "class": "Controller",
-            "position": "mid",
             "rangeMain": "LONG",
             "rangeSuper": "LONG",
             "reload": "NORMAL",
@@ -3794,9 +3844,10 @@
                 "summon"
             ]
         },
+        "position": "both",
+        "DPS": 1250.0,
         "rating": {
             "class": "Artillery",
-            "position": "both",
             "rangeMain": "NORMAL/LONG",
             "rangeSuper": "NORMAL",
             "reload": "NORMAL",
@@ -3867,9 +3918,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": [1500.0, 2475.0],
         "rating": {
             "class": "Assassin",
-            "position": "lane",
             "rangeMain": "SHORT/NORMAL",
             "rangeSuper": "LONG/LONG",
             "reload": "VERY FAST/NORMAL",
@@ -3946,9 +3998,10 @@
                 "stun"
             ]
         },
+        "position": "lane",
+        "DPS": 2000.0,
         "rating": {
             "class": "Assassin",
-            "position": "lane",
             "rangeMain": "SHORT",
             "rangeSuper": "LONG",
             "reload": "VERY FAST",
@@ -4025,9 +4078,10 @@
                 "stun"
             ]
         },
+        "position": "lane",
+        "DPS": 2500.0,
         "rating": {
             "class": "Support",
-            "position": "lane",
             "rangeMain": "SHORT",
             "rangeSuper": "NORMAL",
             "reload": "VERY FAST",
@@ -4096,9 +4150,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": 1272.727273,
         "rating": {
             "class": "Artillery",
-            "position": "lane",
             "rangeMain": "LONG",
             "rangeSuper": "NORMAL",
             "reload": "VERY SLOW",
@@ -4171,9 +4226,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": 2021.052632,
         "rating": {
             "class": "Assassin",
-            "position": "lane",
             "rangeMain": "VERY LONG",
             "rangeSuper": "VERY LONG",
             "reload": "NORMAL",
@@ -4247,9 +4303,10 @@
                 "teleport"
             ]
         },
+        "position": "lane",
+        "DPS": 2650.0,
         "rating": {
             "class": "Assassin",
-            "position": "lane",
             "rangeMain": "SHORT",
             "rangeSuper": "LONG",
             "reload": "VERY FAST",
@@ -4320,9 +4377,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": 1835.294118,
         "rating": {
             "class": "DamageDealer",
-            "position": "lane",
             "rangeMain": "LONG",
             "rangeSuper": "NORMAL",
             "reload": "NORMAL",
@@ -4395,9 +4453,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "both",
+        "DPS": 2400.0,
         "rating": {
             "class": "Controller",
-            "position": "both",
             "rangeMain": "VERY LONG",
             "rangeSuper": "LONG",
             "reload": "VERY FAST",
@@ -4476,9 +4535,10 @@
                 "stun"
             ]
         },
+        "position": "both",
+        "DPS": 1764.705882,
         "rating": {
             "class": "DamageDealer",
-            "position": "both",
             "rangeMain": "LONG",
             "rangeSuper": "LONG",
             "reload": "VERY FAST",
@@ -4549,9 +4609,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "both",
+        "DPS": 2000.0,
         "rating": {
             "class": "Marksman",
-            "position": "both",
             "rangeMain": "LONG",
             "rangeSuper": "SHORT",
             "reload": "NORMAL",
@@ -4629,9 +4690,10 @@
                 "wallpass"
             ]
         },
+        "position": "both",
+        "DPS": 1733.333333,
         "rating": {
             "class": "Marksman",
-            "position": "both",
             "rangeMain": "LONG",
             "rangeSuper": "VERY LONG",
             "reload": "NORMAL",
@@ -4702,9 +4764,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "both",
+        "DPS": 1969.230769,
         "rating": {
             "class": "Support",
-            "position": "both",
             "rangeMain": "LONG",
             "rangeSuper": "SHORT",
             "reload": "VERY FAST",
@@ -4775,9 +4838,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "mid",
+        "DPS": 1482.352941,
         "rating": {
             "class": "Controller",
-            "position": "mid",
             "rangeMain": "LONG",
             "rangeSuper": "NORMAL",
             "reload": "NORMAL",
@@ -4846,9 +4910,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": [1230.769231, 3692.307692],
         "rating": {
             "class": "Tank",
-            "position": "lane",
             "rangeMain": "LONG",
             "rangeSuper": "NORMAL",
             "reload": "VERY FAST",
@@ -4921,9 +4986,10 @@
                 "damage"
             ]
         },
+        "position": "lane",
+        "DPS": 613.333333,
         "rating": {
             "class": "Assassin",
-            "position": "lane",
             "rangeMain": "LONG",
             "rangeSuper": "NORMAL",
             "reload": "NORMAL",
@@ -5000,9 +5066,10 @@
                 "stun"
             ]
         },
+        "position": "lane",
+        "DPS": 950.0,
         "rating": {
             "class": "Assassin",
-            "position": "lane",
             "rangeMain": "NORMAL",
             "rangeSuper": "VERY LONG",
             "reload": "VERY SLOW",
@@ -5073,9 +5140,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": 1142.857143,
         "rating": {
             "class": "DamageDealer",
-            "position": "lane",
             "rangeMain": "LONG",
             "rangeSuper": "LONG",
             "reload": "FAST",
@@ -5149,9 +5217,10 @@
                 "wallpass"
             ]
         },
+        "position": "lane",
+        "DPS": 2000.0,
         "rating": {
             "class": "DamageDealer",
-            "position": "lane",
             "rangeMain": "LONG",
             "rangeSuper": "LONG",
             "reload": "NORMAL",
@@ -5220,9 +5289,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": 833.333333,
         "rating": {
             "class": "Assassin",
-            "position": "lane",
             "rangeMain": "SHORT",
             "rangeSuper": "VERY LONG",
             "reload": "VERY SLOW",
@@ -5299,9 +5369,10 @@
                 "spawn"
             ]
         },
+        "position": "lane",
+        "DPS": 1900.0,
         "rating": {
             "class": "Controller",
-            "position": "lane",
             "rangeMain": "LONG",
             "rangeSuper": "VERY LONG",
             "reload": "NORMAL",
@@ -5372,9 +5443,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "both",
+        "DPS": 2666.666667,
         "rating": {
             "class": "Marksman",
-            "position": "both",
             "rangeMain": "LONG",
             "rangeSuper": "VERY LONG",
             "reload": "NORMAL",
@@ -5451,9 +5523,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": 1745.454545,
         "rating": {
             "class": "DamageDealer",
-            "position": "lane",
             "rangeMain": "NORMAL",
             "rangeSuper": "SHORT",
             "reload": "VERY FAST",
@@ -5528,9 +5601,10 @@
                 "stun"
             ]
         },
+        "position": "lane",
+        "DPS": 1000.0,
         "rating": {
             "class": "Tank",
-            "position": "lane",
             "rangeMain": "NORMAL",
             "rangeSuper": "NORMAL",
             "reload": "NORMAL",
@@ -5599,9 +5673,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": 2000.0,
         "rating": {
             "class": "Controller",
-            "position": "lane",
             "rangeMain": "LONG",
             "rangeSuper": "LONG",
             "reload": "NORMAL",
@@ -5676,9 +5751,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "mid",
+        "DPS": 4153.846154,
         "rating": {
             "class": "Support",
-            "position": "mid",
             "rangeMain": "LONG",
             "rangeSuper": "NORMAL",
             "reload": "VERY FAST",
@@ -5753,9 +5829,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": 8800.0,
         "rating": {
             "class": "DamageDealer",
-            "position": "lane",
             "rangeMain": "LONG",
             "rangeSuper": "SHORT",
             "reload": "NORMAL",
@@ -5827,9 +5904,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "both",
+        "DPS": 980.0,
         "rating": {
             "class": "Controller",
-            "position": "both",
             "rangeMain": "LONG",
             "rangeSuper": "VERY LONG",
             "reload": "SLOW",
@@ -5898,9 +5976,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "mid",
+        "DPS": 475.0,
         "rating": {
             "class": "Marksman",
-            "position": "mid",
             "rangeMain": "VERY LONG",
             "rangeSuper": "LONG",
             "reload": "VERY SLOW",
@@ -5976,9 +6055,10 @@
                 "wallbreak"
             ]
         },
+        "position": "both",
+        "DPS": 1478.26087,
         "rating": {
             "class": "Marksman",
-            "position": "both",
             "rangeMain": "VERY LONG",
             "rangeSuper": "LONG",
             "reload": "VERY SLOW",
@@ -6058,9 +6138,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "mid",
+        "DPS": 950.0,
         "rating": {
             "class": "Support",
-            "position": "mid",
             "rangeMain": "LONG",
             "rangeSuper": "VERY LONG",
             "reload": "NORMAL",
@@ -6133,9 +6214,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": 933.333333,
         "rating": {
             "class": "DamageDealer",
-            "position": "lane",
             "rangeMain": "VERY LONG/SHORT",
             "rangeSuper": "N/A",
             "reload": "NORMAL",
@@ -6210,9 +6292,10 @@
                 "piercing"
             ]
         },
+        "position": "lane",
+        "DPS": 2666.666667,
         "rating": {
             "class": "DamageDealer",
-            "position": "lane",
             "rangeMain": "VERY LONG",
             "rangeSuper": "VERY LONG",
             "reload": "VERY FAST",
@@ -6286,9 +6369,10 @@
                 "slow"
             ]
         },
+        "position": "lane",
+        "DPS": 3000.0,
         "rating": {
             "class": "Tank",
-            "position": "lane",
             "rangeMain": "SHORT",
             "rangeSuper": "N/A",
             "reload": "VERY FAST",
@@ -6357,9 +6441,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": 1714.285714,
         "rating": {
             "class": "Support",
-            "position": "lane",
             "rangeMain": "LONG",
             "rangeSuper": "LONG",
             "reload": "FAST",
@@ -6432,9 +6517,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": 2000.0,
         "rating": {
             "class": "Assassin",
-            "position": "lane",
             "rangeMain": "SHORT",
             "rangeSuper": "LONG",
             "reload": "NORMAL",
@@ -6510,9 +6596,10 @@
                 "invisible"
             ]
         },
+        "position": "both",
+        "DPS": 1000.0,
         "rating": {
             "class": "Controller",
-            "position": "both",
             "rangeMain": "NORMAL",
             "rangeSuper": "LONG",
             "reload": "NORMAL",
@@ -6586,9 +6673,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": [2000.0, 4000.0],
         "rating": {
             "class": "Assassin",
-            "position": "lane",
             "rangeMain": "SHORT",
             "rangeSuper": "SHORT",
             "reload": "VERY FAST",
@@ -6657,9 +6745,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": 2000.0,
         "rating": {
             "class": "DamageDealer",
-            "position": "lane",
             "rangeMain": "LONG",
             "rangeSuper": "LONG",
             "reload": "NORMAL",
@@ -6736,9 +6825,10 @@
                 "slow"
             ]
         },
+        "position": "lane",
+        "DPS": 3780.0,
         "rating": {
             "class": "DamageDealer",
-            "position": "lane",
             "rangeMain": "LONG",
             "rangeSuper": "NORMAL",
             "reload": "SLOW",
@@ -6809,9 +6899,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "both",
+        "DPS": 1223.529412,
         "rating": {
             "class": "Artillery",
-            "position": "both",
             "rangeMain": "NORMAL",
             "rangeSuper": "LONG",
             "reload": "NORMAL",
@@ -6890,9 +6981,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "both",
+        "DPS": 1104.761905,
         "rating": {
             "class": "Controller",
-            "position": "both",
             "rangeMain": "LONG",
             "rangeSuper": "LONG",
             "reload": "SLOW",
@@ -6967,9 +7059,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": 1440.0,
         "rating": {
             "class": "Assassin",
-            "position": "lane",
             "rangeMain": "LONG",
             "rangeSuper": "SHORT",
             "reload": "NORMAL",
@@ -7042,9 +7135,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": 1180.0,
         "rating": {
             "class": "DamageDealer",
-            "position": "lane",
             "rangeMain": "NORMAL",
             "rangeSuper": "SHORT",
             "reload": "SLOW",
@@ -7127,9 +7221,10 @@
                 "stun"
             ]
         },
+        "position": "lane",
+        "DPS": 1440.0,
         "rating": {
             "class": "DamageDealer",
-            "position": "lane",
             "rangeMain": "LONG",
             "rangeSuper": "NORMAL",
             "reload": "SLOW",
@@ -7206,9 +7301,10 @@
                 "grassbreak"
             ]
         },
+        "position": "both",
+        "DPS": 1700.0,
         "rating": {
             "class": "Artillery",
-            "position": "both",
             "rangeMain": "LONG",
             "rangeSuper": "LONG",
             "reload": "VERY SLOW",
@@ -7279,9 +7375,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": [1866.666667, 2400.0],
         "rating": {
             "class": "Tank",
-            "position": "lane",
             "rangeMain": "SHORT",
             "rangeSuper": "LONG",
             "reload": "NORMAL",
@@ -7351,9 +7448,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": 1200.0,
         "rating": {
             "class": "Controller",
-            "position": "lane",
             "speed": "NORMAL",
             "rangeMain": "LONG",
             "rangeSuper": "NORMAL",
@@ -7422,9 +7520,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": 1000.0,
         "rating": {
             "class": "Artillery",
-            "position": "lane",
             "rangeMain": "LONG",
             "rangeSuper": "VERY LONG",
             "reload": "NORMAL",
@@ -7509,9 +7608,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": 2250.0,
         "rating": {
             "class": "DamageDealer",
-            "position": "lane",
             "rangeMain": "VERY LONG",
             "rangeSuper": "NORMAL",
             "reload": "VERY FAST",
@@ -7593,9 +7693,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": 20000.0,
         "rating": {
             "class": "Assassin",
-            "position": "lane",
             "rangeMain": "LONG",
             "rangeSuper": "LONG",
             "reload": "VERY FAST",
@@ -7677,9 +7778,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": 1345.454545,
         "rating": {
             "class": "Tank",
-            "position": "lane",
             "rangeMain": "VERY SHORT",
             "rangeSuper": "NORMAL",
             "reload": "VERY SLOW",
@@ -7762,9 +7864,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": 1166.666667,
         "rating": {
             "class": "Tank",
-            "position": "lane",
             "rangeMain": "SHORT",
             "rangeSuper": "NORMAL",
             "reload": "VERY FAST",
@@ -7848,9 +7951,10 @@
                 "invulnerability"
             ]
         },
+        "position": "lane",
+        "DPS": 1200.0,
         "rating": {
             "class": "Assassin",
-            "position": "lane",
             "rangeMain": "NORMAL",
             "rangeSuper": "LONG",
             "reload": "NORMAL",
@@ -7931,9 +8035,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "mid",
+        "DPS": 1500.0,
         "rating": {
             "class": "Controller",
-            "position": "mid",
             "rangeMain": "LONG",
             "rangeSuper": "NORMAL",
             "reload": "NORMAL",
@@ -8021,9 +8126,10 @@
                 "shield"
             ]
         },
+        "position": "mid",
+        "DPS": 1428.571429,
         "rating": {
             "class": "Support",
-            "position": "mid",
             "rangeMain": "LONG",
             "rangeSuper": "NORMAL",
             "reload": "FAST",
@@ -8105,9 +8211,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": 933.333333,
         "rating": {
             "class": "Controller",
-            "position": "lane",
             "rangeMain": "LONG",
             "rangeSuper": "LONG",
             "reload": "NORMAL",
@@ -8187,9 +8294,10 @@
             "chargeRate": 1.0,
             "tags": []
         },
+        "position": "lane",
+        "DPS": 1384.615385,
         "rating": {
             "class": "DamageDealer",
-            "position": "lane",
             "rangeMain": "LONG",
             "rangeSuper": "NORMAL",
             "reload": "NORMAL",
