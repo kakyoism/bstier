@@ -70,8 +70,9 @@
             ]
         },
         "roles": {
+            "*": "antiTank",
             "bounty": "flex",
-            "brawlBall": "anti-aggro",
+            "brawlBall": "antiAggro",
             "gemGrab": "carrier",
             "heist": "flex",
             "hotZone": "damage",
@@ -145,6 +146,7 @@
             "tags": []
         },
         "roles": {
+            "*": "aggro",
             "bounty": "*",
             "brawlBall": "*",
             "gemGrab": "pressure",
@@ -223,6 +225,7 @@
             "tags": []
         },
         "roles": {
+            "*": "controller",
             "bounty": "*",
             "brawlBall": "*",
             "gemGrab": "control",
@@ -303,6 +306,7 @@
             ]
         },
         "roles": {
+            "*": "thrower",
             "bounty": "range",
             "brawlBall": "*",
             "gemGrab": "*",
@@ -376,6 +380,7 @@
             ]
         },
         "roles": {
+            "*": "tank",
             "bounty": "pressure",
             "brawlBall": "pressure",
             "gemGrab": "pressure",
@@ -456,6 +461,7 @@
             "tags": []
         },
         "roles": {
+            "*": "thrower",
             "bounty": "*",
             "brawlBall": "control",
             "gemGrab": "*",
@@ -528,8 +534,9 @@
             "tags": ["anti-aggro"]
         },
         "roles": {
+            "*": "sniper",
             "bounty": "range",
-            "brawlBall": "anti-aggro",
+            "brawlBall": "antiAggro",
             "gemGrab": "*",
             "heist": "safeDamage",
             "hotZone": "damage",
@@ -607,6 +614,7 @@
             ]
         },
         "roles": {
+            "*": "sniper",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
@@ -693,6 +701,7 @@
             ]
         },
         "roles": {
+            "*": "thrower",
             "bounty": "support",
             "brawlBall": "control",
             "gemGrab": "*",
@@ -766,6 +775,7 @@
             ]
         },
         "roles": {
+            "*": "aggro",
             "bounty": "pressure",
             "brawlBall": "pressure",
             "gemGrab": "pressure",
@@ -846,6 +856,7 @@
             "tags": []
         },
         "roles": {
+            "*": "controller",
             "bounty": "*",
             "brawlBall": "control",
             "gemGrab": "carrier",
@@ -925,6 +936,7 @@
             ]
         },
         "roles": {
+            "*": "sniper",
             "bounty": "range",
             "brawlBall": "*",
             "gemGrab": "*",
@@ -1000,6 +1012,7 @@
             "tags": []
         },
         "roles": {
+            "*": "sniper",
             "bounty": "range",
             "brawlBall": "*",
             "gemGrab": "control",
@@ -1078,6 +1091,7 @@
             ]
         },
         "roles": {
+            "*": "aggro",
             "bounty": "*",
             "brawlBall": "pressure",
             "gemGrab": "pressure",
@@ -1151,6 +1165,7 @@
             ]
         },
         "roles": {
+            "*": "support",
             "bounty": "*",
             "brawlBall": "*",
             "gemGrab": "*",
@@ -1230,6 +1245,7 @@
             ]
         },
         "roles": {
+            "*": "aggro",
             "bounty": "*",
             "brawlBall": "*",
             "gemGrab": "pressure",
@@ -1316,6 +1332,7 @@
             ]
         },
         "roles": {
+            "*": "sniper",
             "bounty": "flex",
             "brawlBall": "*",
             "gemGrab": "*",
@@ -1391,6 +1408,7 @@
             "tags": []
         },
         "roles": {
+            "*": "aggro",
             "bounty": "blueStar",
             "brawlBall": "control",
             "gemGrab": "*",
@@ -1468,6 +1486,7 @@
             ]
         },
         "roles": {
+            "*": "antiTank",
             "bounty": "flex",
             "brawlBall": "control",
             "gemGrab": "carrier",
@@ -1541,8 +1560,9 @@
             ]
         },
         "roles": {
+            "*": "antiTank",
             "bounty": "*",
-            "brawlBall": "anti-aggro",
+            "brawlBall": "antiAggro",
             "gemGrab": "damage",
             "heist": "*",
             "hotZone": "damage",
@@ -1608,6 +1628,7 @@
             ]
         },
         "roles": {
+            "*": "aggro",
             "bounty": "*",
             "brawlBall": "*",
             "gemGrab": "carrier",
@@ -1685,8 +1706,9 @@
             ]
         },
         "roles": {
+            "*": "antiTank",
             "bounty": "*",
-            "brawlBall": "anti-aggro",
+            "brawlBall": "antiAggro",
             "gemGrab": "damage",
             "heist": "defender",
             "hotZone": "damage",
@@ -1758,8 +1780,9 @@
             ]
         },
         "roles": {
+            "*": "antiTank",
             "bounty": "*",
-            "brawlBall": "anti-aggro",
+            "brawlBall": "antiAggro",
             "gemGrab": "damage",
             "heist": "safeDamage",
             "hotZone": "damage",
@@ -1833,6 +1856,7 @@
             "tags": []
         },
         "roles": {
+            "*": "antiTank",
             "bounty": "*",
             "brawlBall": "*",
             "gemGrab": "*",
@@ -1906,11 +1930,12 @@
             ]
         },
         "roles": {
+            "*": "antiTank",
             "bounty": "*",
-            "brawlBall": "anti-aggro",
+            "brawlBall": "antiAggro",
             "gemGrab": "*",
             "heist": "defender",
-            "hotZone": "anti-aggro",
+            "hotZone": "antiAggro",
             "knockout": "*"
         }
     },
@@ -1979,6 +2004,7 @@
             ]
         },
         "roles": {
+            "*": "support",
             "bounty": "support",
             "brawlBall": "support",
             "gemGrab": "carrier",
@@ -2054,6 +2080,7 @@
             ]
         },
         "roles": {
+            "*": "sniper",
             "bounty": "*",
             "brawlBall": "*",
             "gemGrab": "*",
@@ -2134,6 +2161,7 @@
             ]
         },
         "roles": {
+            "*": "aggro",
             "bounty": "*",
             "brawlBall": "support",
             "gemGrab": "*",
@@ -2207,6 +2235,7 @@
             ]
         },
         "roles": {
+            "*": "tank",
             "bounty": "*",
             "brawlBall": "*",
             "gemGrab": "*",
@@ -2284,6 +2313,7 @@
             ]
         },
         "roles": {
+            "*": "thrower",
             "bounty": "*",
             "brawlBall": "control",
             "gemGrab": "*",
@@ -2357,6 +2387,7 @@
             ]
         },
         "roles": {
+            "*": "aggro",
             "bounty": "pressure",
             "brawlBall": "pressure",
             "gemGrab": "pressure",
@@ -2434,6 +2465,7 @@
             ]
         },
         "roles": {
+            "*": "tank",
             "bounty": "*",
             "brawlBall": "pressure",
             "gemGrab": "*",
@@ -2507,8 +2539,9 @@
             ]
         },
         "roles": {
+            "*": "antiTank",
             "bounty": "*",
-            "brawlBall": "anti-aggro",
+            "brawlBall": "antiAggro",
             "gemGrab": "damage",
             "heist": "*",
             "hotZone": "zoneTime",
@@ -2583,6 +2616,7 @@
             ]
         },
         "roles": {
+            "*": "controller",
             "bounty": "range",
             "brawlBall": "*",
             "gemGrab": "*",
@@ -2656,6 +2690,7 @@
             ]
         },
         "roles": {
+            "*": "tank",
             "bounty": "pressure",
             "brawlBall": "*",
             "gemGrab": "*",
@@ -2733,6 +2768,7 @@
             ]
         },
         "roles": {
+            "*": "support",
             "bounty": "support",
             "brawlBall": "control",
             "gemGrab": "carrier",
@@ -2810,6 +2846,7 @@
             "tags": []
         },
         "roles": {
+            "*": "tank",
             "bounty": "pressure",
             "brawlBall": "pressure",
             "gemGrab": "pressure",
@@ -2889,11 +2926,12 @@
             ]
         },
         "roles": {
-            "bounty": "anti-aggro",
-            "brawlBall": "anti-aggro",
-            "gemGrab": "anti-aggro",
+            "*": "antiTank",
+            "bounty": "antiAggro",
+            "brawlBall": "antiAggro",
+            "gemGrab": "antiAggro",
             "heist": "defender",
-            "hotZone": "anti-aggro",
+            "hotZone": "antiAggro",
             "knockout": "flex"
         }
     },
@@ -2968,6 +3006,7 @@
             ]
         },
         "roles": {
+            "*": "antiTank",
             "bounty": "support",
             "brawlBall": "support",
             "gemGrab": "carrier",
@@ -3039,6 +3078,7 @@
             "tags": []
         },
         "roles": {
+            "*": "aggro",
             "bounty": "pressure",
             "brawlBall": "pressure",
             "gemGrab": "pressure",
@@ -3047,7 +3087,7 @@
             "knockout": "pressure"
         }
     },
-    "glowbert": {
+    "glowy": {
         "power": 11,
         "health": 6800,
         "mainAttack": {
@@ -3113,6 +3153,7 @@
             ]
         },
         "roles": {
+            "*": "support",
             "bounty": "support",
             "brawlBall": "support",
             "gemGrab": "carrier",
@@ -3196,6 +3237,7 @@
             ]
         },
         "roles": {
+            "*": "support",
             "bounty": "range",
             "brawlBall": "support",
             "gemGrab": "carrier",
@@ -3273,9 +3315,10 @@
             ]
         },
         "roles": {
+            "*": "antiTank",
             "bounty": "flex",
-            "brawlBall": "anti-aggro",
-            "gemGrab": "anti-aggro",
+            "brawlBall": "antiAggro",
+            "gemGrab": "antiAggro",
             "heist": "*",
             "hotZone": "defender",
             "knockout": "flex"
@@ -3348,6 +3391,7 @@
             ]
         },
         "roles": {
+            "*": "thrower",
             "bounty": "range",
             "brawlBall": "control",
             "gemGrab": "control",
@@ -3430,6 +3474,7 @@
             ]
         },
         "roles": {
+            "*": "sniper",
             "bounty": "range",
             "brawlBall": "support",
             "gemGrab": "carrier",
@@ -3504,6 +3549,7 @@
             "tags": []
         },
         "roles": {
+            "*": "tank",
             "bounty": "pressure",
             "brawlBall": "pressure",
             "gemGrab": "pressure",
@@ -3580,6 +3626,7 @@
             ]
         },
         "roles": {
+            "*": "tank",
             "bounty": "pressure",
             "brawlBall": "pressure",
             "gemGrab": "pressure",
@@ -3657,6 +3704,7 @@
             ]
         },
         "roles": {
+            "*": "controller",
             "bounty": "flex",
             "brawlBall": "support",
             "gemGrab": "carrier",
@@ -3734,6 +3782,7 @@
             ]
         },
         "roles": {
+            "*": "controller",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "carrier",
@@ -3809,6 +3858,7 @@
             ]
         },
         "roles": {
+            "*": "controller",
             "bounty": "*",
             "brawlBall": "*",
             "gemGrab": "*",
@@ -3891,6 +3941,7 @@
             ]
         },
         "roles": {
+            "*": "thrower",
             "bounty": "*",
             "brawlBall": "*",
             "gemGrab": "*",
@@ -3966,6 +4017,7 @@
             ]
         },
         "roles": {
+            "*": "aggro",
             "bounty": "blueStar",
             "brawlBall": "*",
             "gemGrab": "pressure",
@@ -4047,6 +4099,7 @@
             ]
         },
         "roles": {
+            "*": "aggro",
             "bounty": "pressure",
             "brawlBall": "pressure",
             "gemGrab": "pressure",
@@ -4128,6 +4181,7 @@
             ]
         },
         "roles": {
+            "*": "support",
             "bounty": "blueStar",
             "brawlBall": "*",
             "gemGrab": "aggro",
@@ -4201,6 +4255,7 @@
             ]
         },
         "roles": {
+            "*": "thrower",
             "bounty": "*",
             "brawlBall": "control",
             "gemGrab": "control",
@@ -4276,6 +4331,7 @@
             "tags": []
         },
         "roles": {
+            "*": "controller",
             "bounty": "blueStar",
             "brawlBall": "control",
             "gemGrab": "pressure",
@@ -4355,6 +4411,7 @@
             ]
         },
         "roles": {
+            "*": "aggro",
             "bounty": "pressure",
             "brawlBall": "pressure",
             "gemGrab": "pressure",
@@ -4430,6 +4487,7 @@
             ]
         },
         "roles": {
+            "*": "antiTank",
             "bounty": "damage",
             "brawlBall": "damage",
             "gemGrab": "damage",
@@ -4508,12 +4566,13 @@
             ]
         },
         "roles": {
-            "bounty": "anti-aggro",
-            "brawlBall": "anti-aggro",
-            "gemGrab": "anti-aggro",
+            "*": "antiTank",
+            "bounty": "antiAggro",
+            "brawlBall": "antiAggro",
+            "gemGrab": "antiAggro",
             "heist": "flex",
             "hotZone": "zoneTime",
-            "knockout": "anti-aggro"
+            "knockout": "antiAggro"
         }
     },
     "lumi": {
@@ -4592,6 +4651,7 @@
             ]
         },
         "roles": {
+            "*": "controller",
             "bounty": "control",
             "brawlBall": "control",
             "gemGrab": "control",
@@ -4667,6 +4727,7 @@
             ]
         },
         "roles": {
+            "*": "antiTank",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
@@ -4747,6 +4808,7 @@
             "tags": []
         },
         "roles": {
+            "*": "sniper",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
@@ -4823,6 +4885,7 @@
             ]
         },
         "roles": {
+            "*": "support",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
@@ -4896,6 +4959,7 @@
             "tags": []
         },
         "roles": {
+            "*": "controller",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
@@ -4969,6 +5033,7 @@
             ]
         },
         "roles": {
+            "*": "antiTank",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
@@ -5047,6 +5112,7 @@
             ]
         },
         "roles": {
+            "*": "aggro",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
@@ -5129,6 +5195,7 @@
             ]
         },
         "roles": {
+            "*": "aggro",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
@@ -5204,6 +5271,7 @@
             ]
         },
         "roles": {
+            "*": "aggro",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
@@ -5282,6 +5350,7 @@
             ]
         },
         "roles": {
+            "*": "antiTank",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
@@ -5355,6 +5424,7 @@
             ]
         },
         "roles": {
+            "*": "aggro",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
@@ -5437,6 +5507,7 @@
             ]
         },
         "roles": {
+            "*": "controller",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
@@ -5513,6 +5584,7 @@
             ]
         },
         "roles": {
+            "*": "sniper",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
@@ -5595,6 +5667,7 @@
             ]
         },
         "roles": {
+            "*": "antiTank",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
@@ -5674,6 +5747,7 @@
             ]
         },
         "roles": {
+            "*": "aggro",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
@@ -5748,6 +5822,7 @@
             ]
         },
         "roles": {
+            "*": "antiTank",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
@@ -5827,6 +5902,7 @@
             ]
         },
         "roles": {
+            "*": "controller",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
@@ -5907,6 +5983,7 @@
             ]
         },
         "roles": {
+            "*": "controller",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
@@ -5981,6 +6058,7 @@
             "tags": []
         },
         "roles": {
+            "*": "controller",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
@@ -6052,6 +6130,7 @@
             "tags": []
         },
         "roles": {
+            "*": "sniper",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
@@ -6130,6 +6209,7 @@
             "tags": []
         },
         "roles": {
+            "*": "sniper",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
@@ -6215,6 +6295,7 @@
             ]
         },
         "roles": {
+            "*": "support",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
@@ -6293,6 +6374,7 @@
             ]
         },
         "roles": {
+            "*": "sniper",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
@@ -6372,6 +6454,7 @@
             ]
         },
         "roles": {
+            "*": "antiTank",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
@@ -6448,6 +6531,7 @@
             "tags": []
         },
         "roles": {
+            "*": "tank",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
@@ -6519,6 +6603,7 @@
             "tags": []
         },
         "roles": {
+            "*": "support",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
@@ -6596,6 +6681,7 @@
             ]
         },
         "roles": {
+            "*": "aggro",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
@@ -6674,6 +6760,7 @@
             "tags": []
         },
         "roles": {
+            "*": "antiTank",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
@@ -6750,6 +6837,7 @@
             "tags": []
         },
         "roles": {
+            "*": "aggro",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
@@ -6823,6 +6911,7 @@
             ]
         },
         "roles": {
+            "*": "antiTank",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
@@ -6904,6 +6993,7 @@
             ]
         },
         "roles": {
+            "*": "antiTank",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
@@ -6977,6 +7067,7 @@
             "tags": []
         },
         "roles": {
+            "*": "tank",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
@@ -7061,6 +7152,7 @@
             ]
         },
         "roles": {
+            "*": "controller",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
@@ -7138,6 +7230,7 @@
             "tags": []
         },
         "roles": {
+            "*": "controller",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
@@ -7215,6 +7308,7 @@
             ]
         },
         "roles": {
+            "*": "antiTank",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
@@ -7300,6 +7394,7 @@
             "tags": []
         },
         "roles": {
+            "*": "antiTank",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
@@ -7379,6 +7474,7 @@
             "tags": []
         },
         "roles": {
+            "*": "thrower",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
@@ -7452,6 +7548,7 @@
             "tags": []
         },
         "roles": {
+            "*": "tank",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
@@ -7526,6 +7623,7 @@
             ]
         },
         "roles": {
+            "*": "thrower",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
@@ -7597,6 +7695,7 @@
             "tags": []
         },
         "roles": {
+            "*": "thrower",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
@@ -7686,6 +7785,7 @@
             ]
         },
         "roles": {
+            "*": "sniper",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
@@ -7772,6 +7872,7 @@
             ]
         },
         "roles": {
+            "*": "aggro",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
@@ -7858,6 +7959,7 @@
             ]
         },
         "roles": {
+            "*": "tank",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
@@ -7945,6 +8047,7 @@
             ]
         },
         "roles": {
+            "*": "tank",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
@@ -8033,6 +8136,7 @@
             ]
         },
         "roles": {
+            "*": "aggro",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
@@ -8118,6 +8222,7 @@
             ]
         },
         "roles": {
+            "*": "thrower",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
@@ -8206,6 +8311,7 @@
             ]
         },
         "roles": {
+            "*": "support",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
@@ -8292,6 +8398,7 @@
             ]
         },
         "roles": {
+            "*": "*",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",
@@ -8376,6 +8483,7 @@
             ]
         },
         "roles": {
+            "*": "*",
             "bounty": "",
             "brawlBall": "",
             "gemGrab": "",

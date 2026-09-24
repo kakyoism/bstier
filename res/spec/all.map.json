@@ -1,5 +1,8 @@
 {
     "version": 1,
+    "pinballDreams": {
+        "mode": "brawlBall"
+    },
     "drySeason": {
         "mode": "bounty",
         "dimension": [21, 39],
