@@ -8247,7 +8247,7 @@
         "super": {
             "name": "Planet Protector",
             "damage": 0,
-            "breakdown": "Deploys a healing and protective zone for allies",
+            "breakdown": "Deploys a shield generator that absorbs 60% of damage taken by Wendy and her teammates within its range.",
             "range": 5.0,
             "chargeRate": 1.0,
             "tags": [
@@ -8259,46 +8259,49 @@
         "movementSpeedUnits": 800,
         "gadgets": [
             {
-                "name": "Instant Vaccine",
-                "effect": "Instantly heals self and nearby teammates for 1500 health.",
+                "name": "WIND-POWERED",
+                "effect": "Wendy's platform gives her a boost and she jumps a short distance.",
                 "tags": [
-                    "heal"
+                    "teleport"
                 ]
             },
             {
-                "name": "Corrosive Mix",
-                "effect": "Next main attack leaves a burning acid pool on the floor.",
+                "name": "GREEN GRENADE",
+                "effect": "Wendy launches a wind grenade that slows all enemies hit and stops them healing momentarily.",
                 "tags": [
-                    "control",
-                    "damageOverTime",
+                    "slow",
+                    "unheal",
                     "crowdControl"
                 ]
             }
         ],
         "starPowers": [
             {
-                "name": "Safe Laboratory",
-                "effect": "Allies inside the Protective Dome also receive a 25% damage boost.",
+                "name": "SLOWING SHIELD",
+                "effect": "Enemies in Wendy's shield generator are slowed.",
                 "tags": [
-                    "buffDamage"
+                    "slow",
+                    "crowdControl"
                 ]
             },
             {
-                "name": "Catalyst",
-                "effect": "Main attack healing/damage effectiveness increases by 15% per hit.",
+                "name": "SOLAR SHIELD",
+                "effect": "Wendy's shield generator gains an additional health.",
                 "tags": [
-                    "buffDamage"
+                    "buffHealth"
                 ]
             }
         ],
         "hypercharge": {
-            "name": "Super Serum",
-            "effect": "Protective Dome pulses continuously, pushing enemies away while healing allies.",
+            "name": "Green Energy",
+            "effect": "Increated shield generator health and absorb 90% of damage taken by Wendy or her teammates.",
             "damageBuff": 0.05,
             "speedBuff": 0.15,
             "shieldBuff": 0.15,
             "chargeRate": 1.0,
-            "tags": []
+            "tags": [
+                "shield"
+            ]
         },
         "rating": {
             "class": "Support",
