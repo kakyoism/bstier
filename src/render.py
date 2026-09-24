@@ -314,8 +314,8 @@ def _document_title(document):
 
 def _signature():
     return (
-        f'Produced by kakyo @ RedNote on {datetime.date.today().isoformat()} '
-        'based on DeepDraft'
+        f'Produced by kakyo on {datetime.date.today().isoformat()} '
+        '- Powered by DeepDraft'
     )
 
 

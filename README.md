@@ -29,28 +29,121 @@ The traditional waterfall tierlist format cannot answer these quesions and thus 
 - shuffle the recognized names to put them back in whatever shape based on sorting criteria, such as positioning, global roles, and map-mode roles.
 - create a new image tierlist based on the input text tierlist.
 
-### Deep-Draft M1 extraction
-To extract a Deep-Draft image and generate the map-aware M1 document, use the
-`--master` option:
+## Getting Started
 
-`poetry run bstier extract --source deepdraft --master --from tier.png --to master.json`
+### DeepDraft map tierlists
 
-This path requires the `tesseract` executable to be available on `PATH`. OCR
-returns raw text, which is resolved against `res/spec/all.map.json`; unknown
-maps fail instead of being silently assigned. Without `--master`, extraction
-continues to produce the original tierlist-only JSON output.
+This is the recommended workflow for turning a DeepDraft screenshot into a
+map-aware tierlist image. The process has two stages:
 
-### M1 rendering
-Render an M1 document as SVG or PNG with the existing `generate` command:
+1. **Extract** the brawler names and their S-to-F tiers from the screenshot.
+2. **Generate** an M1 document and render it as an SVG or PNG.
 
-`poetry run bstier generate --from master.json --to master.svg`
+Run these commands from the repository root. The `run.sh` and `run.bat`
+wrappers automatically enter the Poetry environment, so you do not need to
+type `poetry run bstier` for every command:
 
-`poetry run bstier generate --from master.json --to master.png`
+- macOS/Linux: use `./ci/run.sh ...`
+- Windows: use `ci\run.bat ...`
 
-PNG output defaults to `2048x1536`; use `--reso WIDTHxHEIGHT` to override it.
+#### 1. Set up the project
 
-Role panels preserve the source-tier order and use the source tier as the
-brawler tile border color. Missing avatar assets render as a placeholder.
+Run the setup script once. It checks for Python, Poetry, and Tesseract OCR,
+installs missing tools through the available system package manager, and then
+installs the Python project dependencies:
+
+macOS/Linux:
+
+`./ci/setup.sh`
+
+Windows:
+
+`ci\setup.bat`
+
+DeepDraft extraction needs Tesseract OCR because the map name is read from the
+screenshot. If automatic installation is not available on your system, install
+Python 3.11 or newer and Tesseract manually, then run the setup script again.
+
+#### 2. Extract a DeepDraft screenshot
+
+Replace `path/to/deepdraft-tierlist.png` with your screenshot path:
+
+macOS/Linux:
+
+`./ci/run.sh extract --source deepdraft --from path/to/deepdraft-tierlist.png --to /tmp/deepdraft-master.json --master`
+
+Windows:
+
+`ci\run.bat extract --source deepdraft --from path/to/deepdraft-tierlist.png --to deepdraft-master.json --master`
+
+What the options mean:
+
+- `extract` reads a tierlist image.
+- `--source deepdraft` selects the DeepDraft screenshot layout.
+- `--from` is the input image.
+- `--to` is the JSON file to create.
+- `--master` asks for the map-aware M1 document instead of the basic tierlist JSON.
+
+The M1 document combines the OCR map name, the source tierlist, common brawler
+classes, and map/mode roles. The OCR map name is checked against
+`res/spec/all.map.json`; an unknown map causes extraction to fail rather than
+silently assigning the wrong map.
+
+If you only want the original tierlist data without map and role information,
+omit `--master`:
+
+macOS/Linux:
+
+`./ci/run.sh extract --source deepdraft --from path/to/deepdraft-tierlist.png --to /tmp/deepdraft-tierlist.json`
+
+Windows:
+
+`ci\run.bat extract --source deepdraft --from path/to/deepdraft-tierlist.png --to deepdraft-tierlist.json`
+
+#### 3. Render the M1 document
+
+Create an SVG when you want a scalable image:
+
+macOS/Linux:
+
+`./ci/run.sh generate --from /tmp/deepdraft-master.json --to /tmp/deepdraft-master.svg`
+
+Windows:
+
+`ci\run.bat generate --from deepdraft-master.json --to deepdraft-master.svg`
+
+Create a PNG when you want a ready-to-share raster image:
+
+macOS/Linux:
+
+`./ci/run.sh generate --from /tmp/deepdraft-master.json --to /tmp/deepdraft-master.png`
+
+Windows:
+
+`ci\run.bat generate --from deepdraft-master.json --to deepdraft-master.png`
+
+PNG output defaults to `2048x1536`. To request another size, pass
+`--reso WIDTHxHEIGHT`, for example:
+
+`./ci/run.sh generate --from /tmp/deepdraft-master.json --to /tmp/deepdraft-master-small.png --reso 1024x768`
+
+The rendered result includes the `Common Classes` and `Map Roles` panels, a
+right-aligned S+ through F tier-color legend, the map and mode in the title,
+and a dated DeepDraft credit at the bottom. Missing avatar assets are rendered
+as placeholders.
+
+#### Complete example using the repository fixture
+
+The repository includes a DeepDraft-style example image at
+`test/extract/_org/bstier.png`. From the repository root, run:
+
+`./ci/run.sh extract --source deepdraft --master --from test/extract/_org/bstier.png --to /tmp/bstier-master.json`
+
+`./ci/run.sh generate --from /tmp/bstier-master.json --to /tmp/bstier-master.png`
+
+On macOS, open the generated image with:
+
+`open /tmp/bstier-master.png`
 
 ## Brawler Roles
 - The official brawler classes can be midleading in draft process, e.g., Najia is used as a Range brawler (sniper) in open maps rather than a Damage Dealer (the official class).

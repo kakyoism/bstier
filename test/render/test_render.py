@@ -46,8 +46,8 @@ def test_svg_uses_role_views_and_source_order():
     assert 'data-brawler="8bit"' in svg
     assert 'BrawlStars Tierlists: Pinball Dreams - Brawl Ball' in svg
     assert (
-        f'Produced by kakyo @ RedNote on {datetime.date.today().isoformat()} '
-        'based on DeepDraft'
+        f'Produced by kakyo on {datetime.date.today().isoformat()} '
+        '- Powered by DeepDraft'
     ) in svg
     assert f'fill="{render.SIGNATURE_COLOR}"' in svg
     assert 'Aggro' in svg
