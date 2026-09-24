@@ -26,3 +26,7 @@ uses a Tesseract subprocess adapter for raw title OCR, then resolves the map
 against `res/spec/all.map.json` before applying role metadata from
 `res/spec/all.brawler.json`. The existing extraction path remains tierlist-only
 unless `--master` is supplied.
+
+The generated master document can be rendered with `generate` to either SVG or
+PNG. Both formats use the same deterministic layout model, with global-role
+and map-role panels, source-tier border colors, and avatar placeholders.

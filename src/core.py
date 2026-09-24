@@ -29,6 +29,7 @@ class Worker:
         self.paths = types.SimpleNamespace(
             desktop=osp.join(util.get_platform_home_dir(), 'Desktop'),
             avatarDir=osp.join(self.repo.resDir, 'avatar'),
+            mapDir=osp.join(self.repo.resDir, 'map'),
         )
         self.logger = self.repo.logger
 
@@ -218,8 +219,19 @@ class Worker:
         )
 
     def _generate(self):
+        import render
+
+        document = util.load_json(self.args.fromPath)
+        render.render_document(
+            document,
+            self.paths.avatarDir,
+            self.args.toPath,
+            getattr(self.args, 'reso', None),
+            self.paths.mapDir,
+        )
+        self.out.toPath = self.args.toPath
         self.res.ok = True
-        self.res.detail = "Generation routine executed."
+        self.res.detail = 'Tierlist document rendered.'
         return self.res, self.out
 
     def _convert(self):

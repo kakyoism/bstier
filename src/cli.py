@@ -60,7 +60,10 @@ Examples:
     generate_parser = subparsers.add_parser('generate', help='Generate a tierlist picture from a text metadata file')
     generate_parser.add_argument('-f', '--from', dest='fromPath', required=True, help='Path to the input JSON file')
     generate_parser.add_argument('-t', '--to', dest='toPath', required=True, help='Path to save the output picture')
-    generate_parser.add_argument('--reso', help='Resolution for the rasterized picture (e.g., 1024x768)')
+    generate_parser.add_argument(
+        '--reso',
+        help='Resolution for the rasterized picture (default: 2048x1536)',
+    )
 
     # convert subcommand
     convert_parser = subparsers.add_parser('convert', help='Convert a tierlist format')

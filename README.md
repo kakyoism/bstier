@@ -40,6 +40,18 @@ returns raw text, which is resolved against `res/spec/all.map.json`; unknown
 maps fail instead of being silently assigned. Without `--master`, extraction
 continues to produce the original tierlist-only JSON output.
 
+### M1 rendering
+Render an M1 document as SVG or PNG with the existing `generate` command:
+
+`poetry run bstier generate --from master.json --to master.svg`
+
+`poetry run bstier generate --from master.json --to master.png`
+
+PNG output defaults to `2048x1536`; use `--reso WIDTHxHEIGHT` to override it.
+
+Role panels preserve the source-tier order and use the source tier as the
+brawler tile border color. Missing avatar assets render as a placeholder.
+
 ## Brawler Roles
 - The official brawler classes can be midleading in draft process, e.g., Najia is used as a Range brawler (sniper) in open maps rather than a Damage Dealer (the official class).
 - The same brawler may serve different purposes in different modes and maps, e.g., Barley can be a counter to other throwers when they are present, or a controller in a closed HotZone map.
