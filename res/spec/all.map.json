@@ -1,8 +1,5 @@
 {
     "version": 1,
-    "pinballDreams": {
-        "mode": "brawlBall"
-    },
     "drySeason": {
         "mode": "bounty",
         "dimension": [21, 39],
@@ -44,6 +41,22 @@
         "tags": [
             "open"
         ]
+    },
+    "hideout": {
+        "mode": "bounty",
+        "tag": "open"
+    },
+    "layerCake": {
+        "mode": "bounty",
+        "tag": "closed"
+    },
+    "shootingStar": {
+        "mode": "bounty",
+        "tag": "open"
+    },
+    "beachBall": {
+        "mode": "brawlBall",
+        "tag": "closed"
     },
     "centerStage": {
         "mode": "brawlBall",
@@ -87,6 +100,30 @@
             "bushy",
             "closed"
         ]
+    },
+    "pinballDreams": {
+        "mode": "brawlBall",
+        "tags": ["closed"]
+    },
+    "sneakyFields": {
+        "mode": "brawlBall",
+        "tags": ["bushy", "closed"]
+    },
+    "spiralingOut": {
+        "mode": "brawlBall",
+        "tags": ["closed"]
+    },
+    "tripleDribble": {
+        "mode": "brawlBall",
+        "dimensions": {
+            "width": 21,
+            "length": 33
+        },
+        "tags": ["closed"]
+    },
+    "crystalArcade": {
+        "mode": "gemGrab",
+        "tags": ["closed", "bushy"]
     },
     "deathcapTrap": {
         "mode": "gemGrab",
@@ -244,12 +281,56 @@
             "closed"
         ]
     },
-    "tripleDribble": {
-        "mode": "brawlBall",
-        "dimensions": {
-            "width": 21,
-            "length": 33
-        }
+    "bridgeTooFar": {
+        "mode": "heist",
+        "tags": ["open", "water"]
+    },
+    "hotPatato": {
+        "mode": "heist",
+        "tags": ["closed", "bushy"]
+    },
+    "kaboomCanyon": {
+        "mode": "heist",
+        "tags": ["open", "water"]
+    },
+    "safeZone": {
+        "mode": "heist",
+        "tags": ["open", "water"]
+    },
+    "duelingBeetles": {
+        "mode": "hotZone",
+        "tags": ["closed"]
+    },
+    "inTheLiminal": {
+        "mode": "hotZone",
+        "tags": ["open"]
+    },
+    "openBusiness": {
+        "mode": "hotZone",
+        "tags": ["open", "walled"]
+    },
+    "parallelPlays": {
+        "mode": "hotZone",
+        "tags": ["open", "water", "walled"]
+    },
+    "quickTravel": {
+        "mode": "hotZone",
+        "tags": ["closed", "bushy"]
+    },
+    "belle'sRock": {
+        "mode": "knockout",
+        "tags": ["closed"]
+    },
+    "Flaring Phoenix": {
+        "mode": "knockout",
+        "tags": ["closed", "bushy"]
+    },
+    "New Horizon": {
+        "mode": "knockout",
+        "tags": ["open", "water", "walled"]
+    },
+    "outInTheOpen": {
+        "mode": "knockout",
+        "tags": ["open", "water", "walled"]
     }
-
 }
