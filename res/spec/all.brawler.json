@@ -72,7 +72,7 @@
             "bounty": "flex",
             "brawlBall": "damage",
             "gemGrab": "carrier",
-            "heist": "flex",
+            "heist": "safeDamage",
             "hotZone": "damage",
             "knockout": "flex"
         }
@@ -145,8 +145,8 @@
         },
         "roles": {
             "*": "aggro",
-            "bounty": "*",
-            "brawlBall": "*",
+            "bounty": "blueStar",
+            "brawlBall": "pressure",
             "gemGrab": "pressure",
             "heist": "defence",
             "hotZone": "pressure",
@@ -224,12 +224,12 @@
         },
         "roles": {
             "*": "controller",
-            "bounty": "*",
-            "brawlBall": "*",
+            "bounty": "flex",
+            "brawlBall": "control",
             "gemGrab": "control",
             "heist": "safeDamage",
-            "hotZone": "zoneTime",
-            "knockout": "*"
+            "hotZone": "control",
+            "knockout": "flex"
         }
     },
     "angelo": {
@@ -303,10 +303,10 @@
         "roles": {
             "*": "thrower",
             "bounty": "range",
-            "brawlBall": "*",
-            "gemGrab": "*",
+            "brawlBall": "flex",
+            "gemGrab": "carrier",
             "heist": "defence",
-            "hotZone": "*",
+            "hotZone": "flex",
             "knockout": "range"
         }
     },
@@ -379,7 +379,7 @@
             "gemGrab": "pressure",
             "heist": "defence",
             "hotZone": "pressure",
-            "knockout": "*"
+            "knockout": "flex"
         }
     },
     "barley": {
@@ -455,14 +455,13 @@
         },
         "roles": {
             "*": "thrower",
-            "bounty": "*",
+            "bounty": "flex",
             "brawlBall": "control",
-            "gemGrab": "*",
+            "gemGrab": "control",
             "heist": "safeDamage",
             "hotZone": "control",
-            "knockout": "*"
+            "knockout": "flex"
         }
-        
     },
     "bea": {
         "power": 11,
@@ -530,10 +529,10 @@
             "*": "sniper",
             "bounty": "range",
             "brawlBall": "damage",
-            "gemGrab": "*",
+            "gemGrab": "carrier",
             "heist": "safeDamage",
             "hotZone": "damage",
-            "knockout": "*"
+            "knockout": "range"
         }
     },
     "belle": {
@@ -607,8 +606,8 @@
         "roles": {
             "*": "sniper",
             "bounty": "range",
-            "brawlBall": "damage",
-            "gemGrab": "damage",
+            "brawlBall": "control",
+            "gemGrab": "control",
             "heist": "safeDamage",
             "hotZone": "control",
             "knockout": "range"
@@ -692,10 +691,10 @@
             "*": "thrower",
             "bounty": "range",
             "brawlBall": "control",
-            "gemGrab": "*",
+            "gemGrab": "control",
             "heist": "safeDamage",
             "hotZone": "zoneTime",
-            "knockout": "*"
+            "knockout": "flex"
         }
     },
     "bibi": {
@@ -843,12 +842,12 @@
         },
         "roles": {
             "*": "controller",
-            "bounty": "*",
+            "bounty": "flex",
             "brawlBall": "control",
             "gemGrab": "carrier",
-            "heist": "control",
+            "heist": "flex",
             "hotZone": "zoneTime",
-            "knockout": "*"
+            "knockout": "flex"
         }
     },
     "bonnie": {
@@ -921,11 +920,11 @@
         "roles": {
             "*": "sniper",
             "bounty": "range",
-            "brawlBall": "*",
-            "gemGrab": "*",
+            "brawlBall": "control",
+            "gemGrab": "control",
             "heist": "safeDamage",
-            "hotZone": "*",
-            "knockout": "*"
+            "hotZone": "control",
+            "knockout": "range"
         }
     },
     "brock": {
@@ -997,7 +996,7 @@
         "roles": {
             "*": "sniper",
             "bounty": "range",
-            "brawlBall": "*",
+            "brawlBall": "flex",
             "gemGrab": "control",
             "heist": "safeDamage",
             "hotZone": "control",
@@ -1073,12 +1072,12 @@
         },
         "roles": {
             "*": "aggro",
-            "bounty": "*",
+            "bounty": "pressure",
             "brawlBall": "pressure",
             "gemGrab": "pressure",
             "heist": "safeDamage",
-            "hotZone": "*",
-            "knockout": "*"
+            "hotZone": "zoneTime",
+            "knockout": "pressure"
         }
     },
     "buster": {
@@ -1145,11 +1144,11 @@
         },
         "roles": {
             "*": "support",
-            "bounty": "*",
-            "brawlBall": "*",
-            "gemGrab": "*",
-            "heist": "*",
-            "hotZone": "*",
+            "bounty": "pressure",
+            "brawlBall": "pressure",
+            "gemGrab": "pressure",
+            "heist": "flex",
+            "hotZone": "zoneTime",
             "knockout": "pressure"
         }
     },
@@ -1223,12 +1222,12 @@
         },
         "roles": {
             "*": "aggro",
-            "bounty": "*",
-            "brawlBall": "*",
+            "bounty": "pressure",
+            "brawlBall": "pressure",
             "gemGrab": "pressure",
             "heist": "pressure",
-            "hotZone": "*",
-            "knockout": "*"
+            "hotZone": "pressure",
+            "knockout": "pressure"
         }
     },
     "byron": {
@@ -1308,10 +1307,10 @@
         "roles": {
             "*": "sniper",
             "bounty": "flex",
-            "brawlBall": "*",
-            "gemGrab": "*",
+            "brawlBall": "flex",
+            "gemGrab": "flex",
             "heist": "flex",
-            "hotZone": "control",
+            "hotZone": "flex",
             "knockout": "range"
         }
     },
@@ -1385,7 +1384,7 @@
             "*": "aggro",
             "bounty": "blueStar",
             "brawlBall": "control",
-            "gemGrab": "*",
+            "gemGrab": "pressure",
             "heist": "safeDamage",
             "hotZone": "pressure",
             "knockout": "flex"
@@ -1463,7 +1462,7 @@
             "brawlBall": "control",
             "gemGrab": "carrier",
             "heist": "defence",
-            "hotZone": "*",
+            "hotZone": "control",
             "knockout": "flex"
         }
     },
@@ -1531,12 +1530,12 @@
         },
         "roles": {
             "*": "antiTank",
-            "bounty": "*",
+            "bounty": "flex",
             "brawlBall": "damage",
             "gemGrab": "damage",
-            "heist": "*",
+            "heist": "flex",
             "hotZone": "damage",
-            "knockout": "*"
+            "knockout": "flex"
         }
     },
     "chuck": {
@@ -1596,12 +1595,12 @@
         },
         "roles": {
             "*": "aggro",
-            "bounty": "*",
-            "brawlBall": "*",
+            "bounty": "flex",
+            "brawlBall": "control",
             "gemGrab": "carrier",
             "heist": "safeDamage",
             "hotZone": "zoneTime",
-            "knockout": "*"
+            "knockout": "flex"
         }
     },
     "clancy": {
@@ -1672,12 +1671,12 @@
         },
         "roles": {
             "*": "antiTank",
-            "bounty": "*",
+            "bounty": "flex",
             "brawlBall": "damage",
             "gemGrab": "damage",
             "heist": "defence",
             "hotZone": "damage",
-            "knockout": "*"
+            "knockout": "flex"
         }
     },
     "colette": {
@@ -1744,12 +1743,12 @@
         },
         "roles": {
             "*": "antiTank",
-            "bounty": "*",
+            "bounty": "flex",
             "brawlBall": "damage",
             "gemGrab": "damage",
             "heist": "safeDamage",
             "hotZone": "damage",
-            "knockout": "*"
+            "knockout": "flex"
         }
     },
     "colt": {
@@ -1820,12 +1819,12 @@
         },
         "roles": {
             "*": "antiTank",
-            "bounty": "*",
-            "brawlBall": "*",
-            "gemGrab": "*",
+            "bounty": "range",
+            "brawlBall": "damage",
+            "gemGrab": "damage",
             "heist": "safeDamage",
-            "hotZone": "*",
-            "knockout": "*"
+            "hotZone": "damage",
+            "knockout": "range"
         }
     },
     "cordelius": {
@@ -1892,12 +1891,12 @@
         },
         "roles": {
             "*": "antiTank",
-            "bounty": "*",
+            "bounty": "flex",
             "brawlBall": "damage",
-            "gemGrab": "*",
+            "gemGrab": "damage",
             "heist": "defence",
             "hotZone": "damage",
-            "knockout": "*"
+            "knockout": "flex"
         }
     },
     "crow": {
@@ -1964,12 +1963,12 @@
         },
         "roles": {
             "*": "support",
-            "bounty": "pressure",
-            "brawlBall": "pressure",
+            "bounty": "flex",
+            "brawlBall": "control",
             "gemGrab": "carrier",
             "heist": "flex",
             "hotZone": "control",
-            "knockout": "pressure"
+            "knockout": "flex"
         }
     },
     "darryl": {
@@ -2037,10 +2036,10 @@
             "speed": "FAST"
         },
         "roles": {
-            "*": "sniper",
-            "bounty": "*",
-            "brawlBall": "*",
-            "gemGrab": "*",
+            "*": "aggro",
+            "bounty": "pressure",
+            "brawlBall": "pressure",
+            "gemGrab": "pressure",
             "heist": "safeDamage",
             "hotZone": "pressure",
             "knockout": "pressure"
@@ -2115,12 +2114,12 @@
             "speed": "FAST"
         },
         "roles": {
-            "*": "aggro",
-            "bounty": "*",
+            "*": "support",
+            "bounty": "pressure",
             "brawlBall": "pressure",
-            "gemGrab": "*",
-            "heist": "*",
-            "hotZone": "pressure",
+            "gemGrab": "pressure",
+            "heist": "flex",
+            "hotZone": "zoneTime",
             "knockout": "pressure"
         }
     },
@@ -2188,10 +2187,10 @@
         },
         "roles": {
             "*": "tank",
-            "bounty": "*",
-            "brawlBall": "*",
-            "gemGrab": "*",
-            "heist": "*",
+            "bounty": "pressure",
+            "brawlBall": "pressure",
+            "gemGrab": "pressure",
+            "heist": "safeDamage",
             "hotZone": "zoneTime",
             "knockout": "pressure"
         }
@@ -2264,12 +2263,12 @@
         },
         "roles": {
             "*": "thrower",
-            "bounty": "*",
+            "bounty": "flex",
             "brawlBall": "control",
-            "gemGrab": "*",
+            "gemGrab": "control",
             "heist": "safeDamage",
             "hotZone": "control",
-            "knockout": "*"
+            "knockout": "flex"
         }
     },
     "edgar": {
@@ -2336,7 +2335,7 @@
         },
         "roles": {
             "*": "aggro",
-            "bounty": "pressure",
+            "bounty": "blueStar",
             "brawlBall": "pressure",
             "gemGrab": "pressure",
             "heist": "safeDamage",
@@ -2411,12 +2410,12 @@
         },
         "roles": {
             "*": "tank",
-            "bounty": "*",
+            "bounty": "pressure",
             "brawlBall": "pressure",
-            "gemGrab": "*",
-            "heist": "*",
-            "hotZone": "*",
-            "knockout": "*"
+            "gemGrab": "pressure",
+            "heist": "safeDamage",
+            "hotZone": "zoneTime",
+            "knockout": "pressure"
         }
     },
     "emz": {
@@ -2483,12 +2482,12 @@
         },
         "roles": {
             "*": "antiTank",
-            "bounty": "*",
+            "bounty": "flex",
             "brawlBall": "damage",
             "gemGrab": "damage",
-            "heist": "*",
+            "heist": "flex",
             "hotZone": "zoneTime",
-            "knockout": "*"
+            "knockout": "flex"
         }
     },
     "eve": {
@@ -2558,11 +2557,11 @@
         "roles": {
             "*": "controller",
             "bounty": "range",
-            "brawlBall": "*",
-            "gemGrab": "*",
+            "brawlBall": "control",
+            "gemGrab": "control",
             "heist": "defence",
-            "hotZone": "*",
-            "knockout": "*"
+            "hotZone": "control",
+            "knockout": "range"
         }
     },
     "fang": {
@@ -2630,9 +2629,9 @@
         "roles": {
             "*": "tank",
             "bounty": "pressure",
-            "brawlBall": "*",
-            "gemGrab": "*",
-            "heist": "*",
+            "brawlBall": "pressure",
+            "gemGrab": "pressure",
+            "heist": "flex",
             "hotZone": "pressure",
             "knockout": "pressure"
         }
@@ -2861,11 +2860,11 @@
         },
         "roles": {
             "*": "antiTank",
-            "bounty": "damage",
-            "brawlBall": "damage",
+            "bounty": "flex",
+            "brawlBall": "control",
             "gemGrab": "damage",
             "heist": "defence",
-            "hotZone": "damage",
+            "hotZone": "control",
             "knockout": "flex"
         }
     },
@@ -2940,11 +2939,11 @@
         },
         "roles": {
             "*": "antiTank",
-            "bounty": "range",
+            "bounty": "flex",
             "brawlBall": "flex",
             "gemGrab": "carrier",
             "heist": "flex",
-            "hotZone": "*",
+            "hotZone": "control",
             "knockout": "flex"
         }
     },
@@ -3244,8 +3243,8 @@
             "bounty": "flex",
             "brawlBall": "damage",
             "gemGrab": "damage",
-            "heist": "*",
-            "hotZone": "defence",
+            "heist": "flex",
+            "hotZone": "damage",
             "knockout": "flex"
         }
     },
@@ -3399,7 +3398,7 @@
             "brawlBall": "flex",
             "gemGrab": "carrier",
             "heist": "flex",
-            "hotZone": "control",
+            "hotZone": "flex",
             "knockout": "flex"
         }
     },
@@ -3473,7 +3472,7 @@
             "bounty": "pressure",
             "brawlBall": "pressure",
             "gemGrab": "pressure",
-            "heist": "*",
+            "heist": "pressure",
             "hotZone": "zoneTime",
             "knockout": "pressure"
         }
@@ -3551,8 +3550,8 @@
             "bounty": "pressure",
             "brawlBall": "pressure",
             "gemGrab": "pressure",
-            "heist": "*",
-            "hotZone": "pressure",
+            "heist": "flex",
+            "hotZone": "zoneTime",
             "knockout": "pressure"
         }
     },
@@ -3628,7 +3627,7 @@
             "bounty": "flex",
             "brawlBall": "control",
             "gemGrab": "carrier",
-            "heist": "*",
+            "heist": "flex",
             "hotZone": "control",
             "knockout": "flex"
         }
@@ -3704,7 +3703,7 @@
             "bounty": "flex",
             "brawlBall": "control",
             "gemGrab": "carrier",
-            "heist": "*",
+            "heist": "flex",
             "hotZone": "zoneTime",
             "knockout": "flex"
         }
@@ -3775,12 +3774,12 @@
         },
         "roles": {
             "*": "controller",
-            "bounty": "*",
-            "brawlBall": "*",
-            "gemGrab": "*",
+            "bounty": "flex",
+            "brawlBall": "control",
+            "gemGrab": "control",
             "heist": "safeDamage",
             "hotZone": "control",
-            "knockout": "*"
+            "knockout": "flex"
         }
     },
     "juju": {
@@ -3855,12 +3854,12 @@
         },
         "roles": {
             "*": "thrower",
-            "bounty": "*",
-            "brawlBall": "*",
-            "gemGrab": "*",
-            "heist": "control",
+            "bounty": "flex",
+            "brawlBall": "control",
+            "gemGrab": "control",
+            "heist": "flex",
             "hotZone": "control",
-            "knockout": "*"
+            "knockout": "flex"
         }
     },
     "kaze": {
@@ -3930,10 +3929,10 @@
         "roles": {
             "*": "aggro",
             "bounty": "blueStar",
-            "brawlBall": "*",
+            "brawlBall": "pressure",
             "gemGrab": "pressure",
             "heist": "safeDamage",
-            "hotZone": "pressure",
+            "hotZone": "control",
             "knockout": "pressure"
         }
     },
@@ -4009,7 +4008,7 @@
         },
         "roles": {
             "*": "aggro",
-            "bounty": "pressure",
+            "bounty": "blueStar",
             "brawlBall": "pressure",
             "gemGrab": "pressure",
             "heist": "pressure",
@@ -4090,10 +4089,10 @@
         "roles": {
             "*": "support",
             "bounty": "blueStar",
-            "brawlBall": "*",
-            "gemGrab": "aggro",
+            "brawlBall": "pressure",
+            "gemGrab": "pressure",
             "heist": "flex",
-            "hotZone": "*",
+            "hotZone": "pressure",
             "knockout": "flex"
         }
     },
@@ -4161,12 +4160,12 @@
         },
         "roles": {
             "*": "thrower",
-            "bounty": "*",
+            "bounty": "flex",
             "brawlBall": "control",
             "gemGrab": "control",
-            "heist": "control",
+            "heist": "flex",
             "hotZone": "control",
-            "knockout": "control"
+            "knockout": "flex"
         }
     },
     "leon": {
@@ -4240,7 +4239,7 @@
             "bounty": "blueStar",
             "brawlBall": "control",
             "gemGrab": "pressure",
-            "heist": "*",
+            "heist": "flex",
             "hotZone": "pressure",
             "knockout": "pressure"
         }
@@ -4314,7 +4313,7 @@
         },
         "roles": {
             "*": "aggro",
-            "bounty": "pressure",
+            "bounty": "blueStar",
             "brawlBall": "pressure",
             "gemGrab": "pressure",
             "heist": "safeDamage",
@@ -4393,7 +4392,7 @@
             "gemGrab": "damage",
             "heist": "flex",
             "hotZone": "zoneTime",
-            "knockout": "*"
+            "knockout": "flex"
         }
     },
     "lou": {
@@ -4466,10 +4465,10 @@
             "*": "antiTank",
             "bounty": "damage",
             "brawlBall": "damage",
-            "gemGrab": "damage",
+            "gemGrab": "control",
             "heist": "flex",
             "hotZone": "zoneTime",
-            "knockout": "damage"
+            "knockout": "flex"
         }
     },
     "lumi": {
@@ -4551,7 +4550,7 @@
             "gemGrab": "control",
             "heist": "control",
             "hotZone": "control",
-            "knockout": "control"
+            "knockout": "flex"
         }
     },
     "maisie": {
@@ -4620,10 +4619,10 @@
         },
         "roles": {
             "*": "antiTank",
-            "bounty": "flex",
+            "bounty": "damage",
             "brawlBall": "damage",
-            "gemGrab": "damage",
-            "heist": "*",
+            "gemGrab": "carrier",
+            "heist": "safeDamage",
             "hotZone": "damage",
             "knockout": "flex"
         }
@@ -4702,9 +4701,9 @@
         "roles": {
             "*": "sniper",
             "bounty": "range",
-            "brawlBall": "damage",
-            "gemGrab": "damage",
-            "heist": "safeDamage",
+            "brawlBall": "control",
+            "gemGrab": "control",
+            "heist": "flex",
             "hotZone": "control",
             "knockout": "range"
         }
@@ -4775,9 +4774,9 @@
         },
         "roles": {
             "*": "support",
-            "bounty": "range",
+            "bounty": "blueStar",
             "brawlBall": "flex",
-            "gemGrab": "control",
+            "gemGrab": "carrier",
             "heist": "flex",
             "hotZone": "zoneTime",
             "knockout": "flex"
@@ -4851,9 +4850,9 @@
             "*": "controller",
             "bounty": "flex",
             "brawlBall": "control",
-            "gemGrab": "control",
-            "heist": "safeDamage",
-            "hotZone": "zoneTime",
+            "gemGrab": "carrier",
+            "heist": "flex",
+            "hotZone": "control",
             "knockout": "flex"
         }
     },
@@ -4923,7 +4922,7 @@
             "*": "antiTank",
             "bounty": "flex",
             "brawlBall": "damage",
-            "gemGrab": "damage",
+            "gemGrab": "carrier",
             "heist": "flex",
             "hotZone": "damage",
             "knockout": "flex"
@@ -5151,10 +5150,10 @@
         },
         "roles": {
             "*": "aggro",
-            "bounty": "pressure",
+            "bounty": "blueStar",
             "brawlBall": "pressure",
             "gemGrab": "pressure",
-            "heist": "safeDamage",
+            "heist": "flex",
             "hotZone": "pressure",
             "knockout": "pressure"
         }
@@ -5300,10 +5299,10 @@
         },
         "roles": {
             "*": "aggro",
-            "bounty": "pressure",
+            "bounty": "blueStar",
             "brawlBall": "pressure",
             "gemGrab": "pressure",
-            "heist": "safeDamage",
+            "heist": "pressure",
             "hotZone": "pressure",
             "knockout": "pressure"
         }
@@ -5383,8 +5382,8 @@
             "bounty": "flex",
             "brawlBall": "control",
             "gemGrab": "control",
-            "heist": "safeDamage",
-            "hotZone": "zoneTime",
+            "heist": "flex",
+            "hotZone": "control",
             "knockout": "flex"
         }
     },
@@ -5457,7 +5456,7 @@
             "bounty": "range",
             "brawlBall": "damage",
             "gemGrab": "damage",
-            "heist": "safeDamage",
+            "heist": "flex",
             "hotZone": "control",
             "knockout": "range"
         }
@@ -5615,7 +5614,7 @@
             "bounty": "pressure",
             "brawlBall": "pressure",
             "gemGrab": "pressure",
-            "heist": "safeDamage",
+            "heist": "flex",
             "hotZone": "pressure",
             "knockout": "pressure"
         }
@@ -5687,7 +5686,7 @@
             "bounty": "flex",
             "brawlBall": "damage",
             "gemGrab": "damage",
-            "heist": "flex",
+            "heist": "defence",
             "hotZone": "damage",
             "knockout": "flex"
         }
@@ -5765,7 +5764,7 @@
             "bounty": "flex",
             "brawlBall": "control",
             "gemGrab": "control",
-            "heist": "safeDamage",
+            "heist": "flex",
             "hotZone": "zoneTime",
             "knockout": "flex"
         }
@@ -5840,10 +5839,10 @@
         },
         "roles": {
             "*": "controller",
-            "bounty": "flex",
+            "bounty": "damage",
             "brawlBall": "control",
-            "gemGrab": "control",
-            "heist": "safeDamage",
+            "gemGrab": "carrier",
+            "heist": "flex",
             "hotZone": "zoneTime",
             "knockout": "flex"
         }
@@ -5988,9 +5987,9 @@
         "roles": {
             "*": "sniper",
             "bounty": "range",
-            "brawlBall": "damage",
-            "gemGrab": "damage",
-            "heist": "safeDamage",
+            "brawlBall": "control",
+            "gemGrab": "carrier",
+            "heist": "flex",
             "hotZone": "control",
             "knockout": "range"
         }
@@ -6067,9 +6066,9 @@
         "roles": {
             "*": "sniper",
             "bounty": "range",
-            "brawlBall": "damage",
-            "gemGrab": "damage",
-            "heist": "safeDamage",
+            "brawlBall": "flex",
+            "gemGrab": "carrier",
+            "heist": "flex",
             "hotZone": "control",
             "knockout": "range"
         }
@@ -6151,7 +6150,7 @@
             "*": "support",
             "bounty": "range",
             "brawlBall": "flex",
-            "gemGrab": "control",
+            "gemGrab": "carrier",
             "heist": "flex",
             "hotZone": "zoneTime",
             "knockout": "flex"
@@ -7962,7 +7961,7 @@
         },
         "roles": {
             "*": "aggro",
-            "bounty": "pressure",
+            "bounty": "blueStar",
             "brawlBall": "pressure",
             "gemGrab": "pressure",
             "heist": "defence",
