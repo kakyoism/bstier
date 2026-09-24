@@ -50,6 +50,9 @@ The traditional waterfall tierlist format cannot answer these quesions and thus 
   - Knockout: Range, Flex, Pressure
 - `all.brawler.json` contains all the brawler data regarding the latest meta, including the said labels.
 
+### Main-attack statistics
+Each brawler's `mainAttack` stores `baseDamage` for one damage unit, `projectile` for the number of damage units in one shot, `damage` as the derived per-shot total, `ammo` for the number of stored shots, and `shape` as `singleShot`, `multiShot`, or `scattered`. `baseDamage`, `damage`, `projectile`, and `DPS` may be aligned arrays for alternate attack modes or values. Top-level `reloadSeconds` and `speedUnits` store reload time and movement speed. Derived statistics use `damage = baseDamage * projectile` and `mainAttack.DPS = damage * ammo / reloadSeconds`, rounded to the nearest integer.
+
 ### Bounty
 - BlueStar: the brawlers that can easily grab the blue star at the beginning, usually those with swift movement such as Mortis, Max, or someone with a special teleport gadget such as Carl.
 - Range: usually a Sniper (Marksman) or a support with long-range attack such as Gus and Byron.
