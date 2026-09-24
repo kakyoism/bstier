@@ -59,7 +59,7 @@
             "tags": []
         },
         "position": "mid",
-        "DPS": 2720.0,
+        "DPS": 2720,
         "rating": {
             "class": "DamageDealer",
             "rangeMain": "VERY LONG",
@@ -135,7 +135,7 @@
             ]
         },
         "position": "lane",
-        "DPS": 1238.095238,
+        "DPS": 1238,
         "rating": {
             "class": "Assassin",
             "rangeMain": "SHORT",
@@ -148,7 +148,7 @@
             "bounty": "*",
             "brawlBall": "*",
             "gemGrab": "pressure",
-            "heist": "defender",
+            "heist": "defence",
             "hotZone": "pressure",
             "knockout": "pressure"
         }
@@ -214,7 +214,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": 84000.0,
+        "DPS": 84000,
         "rating": {
             "class": "Controller",
             "rangeMain": "LONG",
@@ -292,7 +292,7 @@
             "tags": []
         },
         "position": "both",
-        "DPS": 2444.444444,
+        "DPS": 2444,
         "rating": {
             "class": "Marksman",
             "rangeMain": "VERY LONG",
@@ -305,7 +305,7 @@
             "bounty": "range",
             "brawlBall": "*",
             "gemGrab": "*",
-            "heist": "defender",
+            "heist": "defence",
             "hotZone": "*",
             "knockout": "range"
         }
@@ -364,7 +364,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": 2285.714286,
+        "DPS": 2286,
         "rating": {
             "class": "Tank",
             "rangeMain": "SHORT",
@@ -377,7 +377,7 @@
             "bounty": "pressure",
             "brawlBall": "pressure",
             "gemGrab": "pressure",
-            "heist": "defender",
+            "heist": "defence",
             "hotZone": "pressure",
             "knockout": "*"
         }
@@ -445,7 +445,7 @@
             "tags": []
         },
         "position": "both",
-        "DPS": 800.0,
+        "DPS": 800,
         "rating": {
             "class": "Artillery",
             "rangeMain": "LONG",
@@ -518,7 +518,7 @@
             "tags": []
         },
         "position": "both",
-        "DPS": 4444.444444,
+        "DPS": 4444,
         "rating": {
             "class": "Marksman",
             "rangeMain": "VERY LONG",
@@ -596,7 +596,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": 1485.714286,
+        "DPS": 1486,
         "rating": {
             "class": "Marksman",
             "rangeMain": "VERY LONG",
@@ -680,7 +680,7 @@
             ]
         },
         "position": "mid",
-        "DPS": 550.0,
+        "DPS": 550,
         "rating": {
             "class": "Support",
             "rangeMain": "NORMAL",
@@ -690,7 +690,7 @@
         },
         "roles": {
             "*": "thrower",
-            "bounty": "support",
+            "bounty": "range",
             "brawlBall": "control",
             "gemGrab": "*",
             "heist": "safeDamage",
@@ -752,7 +752,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": 3500.0,
+        "DPS": 3500,
         "rating": {
             "class": "Tank",
             "rangeMain": "SHORT",
@@ -833,7 +833,7 @@
             "tags": []
         },
         "position": "mid",
-        "DPS": 2258.823529,
+        "DPS": 2259,
         "rating": {
             "class": "Controller",
             "rangeMain": "LONG",
@@ -910,7 +910,7 @@
             ]
         },
         "position": "both",
-        "DPS": [1178.947368, 1831.578947],
+        "DPS": [1179, 1832],
         "rating": {
             "class": "Marksman",
             "rangeMain": "LONG/NORMAL",
@@ -986,7 +986,7 @@
             "tags": []
         },
         "position": "both",
-        "DPS": 1104.761905,
+        "DPS": 1105,
         "rating": {
             "class": "Marksman",
             "rangeMain": "LONG",
@@ -1063,7 +1063,7 @@
             ]
         },
         "position": "lane",
-        "DPS": 2750.0,
+        "DPS": 2750,
         "rating": {
             "class": "Tank",
             "rangeMain": "NORMAL",
@@ -1135,7 +1135,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": 1533.333333,
+        "DPS": 1533,
         "rating": {
             "class": "Tank",
             "rangeMain": "NORMAL",
@@ -1213,7 +1213,7 @@
             ]
         },
         "position": "lane",
-        "DPS": 4200.0,
+        "DPS": 4200,
         "rating": {
             "class": "Assassin",
             "rangeMain": "SHORT",
@@ -1297,7 +1297,7 @@
             ]
         },
         "position": "both",
-        "DPS": 1628.571429,
+        "DPS": 1629,
         "rating": {
             "class": "Support",
             "rangeMain": "VERY LONG",
@@ -1373,7 +1373,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": 740.0,
+        "DPS": 740,
         "rating": {
             "class": "DamageDealer",
             "rangeMain": "LONG",
@@ -1449,7 +1449,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": 800.0,
+        "DPS": 800,
         "rating": {
             "class": "Controller",
             "rangeMain": "LONG",
@@ -1462,7 +1462,7 @@
             "bounty": "flex",
             "brawlBall": "control",
             "gemGrab": "carrier",
-            "heist": "defender",
+            "heist": "defence",
             "hotZone": "*",
             "knockout": "flex"
         }
@@ -1521,7 +1521,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": 2021.052632,
+        "DPS": 2021,
         "rating": {
             "class": "DamageDealer",
             "rangeMain": "LONG",
@@ -1586,7 +1586,7 @@
             "chargeRate": 1.0
         },
         "position": "both",
-        "DPS": 1620.0,
+        "DPS": 1620,
         "rating": {
             "class": "Controller",
             "rangeMain": "NORMAL",
@@ -1662,7 +1662,7 @@
             ]
         },
         "position": "lane",
-        "DPS": 2400.0,
+        "DPS": 2400,
         "rating": {
             "class": "DamageDealer",
             "rangeMain": "LONG",
@@ -1675,7 +1675,7 @@
             "bounty": "*",
             "brawlBall": "damage",
             "gemGrab": "damage",
-            "heist": "defender",
+            "heist": "defence",
             "hotZone": "damage",
             "knockout": "*"
         }
@@ -1734,7 +1734,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": 1250.0,
+        "DPS": 1250,
         "rating": {
             "class": "DamageDealer",
             "rangeMain": "LONG",
@@ -1810,7 +1810,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": 3323.076923,
+        "DPS": 3323,
         "rating": {
             "class": "DamageDealer",
             "rangeMain": "LONG",
@@ -1882,7 +1882,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": 2666.666667,
+        "DPS": 2667,
         "rating": {
             "class": "Assassin",
             "rangeMain": "NORMAL",
@@ -1895,7 +1895,7 @@
             "bounty": "*",
             "brawlBall": "damage",
             "gemGrab": "*",
-            "heist": "defender",
+            "heist": "defence",
             "hotZone": "damage",
             "knockout": "*"
         }
@@ -1954,7 +1954,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": 1371.428571,
+        "DPS": 1371,
         "rating": {
             "class": "Assassin",
             "rangeMain": "LONG",
@@ -1964,12 +1964,12 @@
         },
         "roles": {
             "*": "support",
-            "bounty": "support",
-            "brawlBall": "support",
+            "bounty": "pressure",
+            "brawlBall": "pressure",
             "gemGrab": "carrier",
             "heist": "flex",
             "hotZone": "control",
-            "knockout": "support"
+            "knockout": "pressure"
         }
     },
     "darryl": {
@@ -2028,7 +2028,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": 2666.666667,
+        "DPS": 2667,
         "rating": {
             "class": "Tank",
             "rangeMain": "NORMAL",
@@ -2106,7 +2106,7 @@
             ]
         },
         "position": "lane",
-        "DPS": 1600.0,
+        "DPS": 1600,
         "rating": {
             "class": "Support",
             "rangeMain": "SHORT",
@@ -2117,10 +2117,10 @@
         "roles": {
             "*": "aggro",
             "bounty": "*",
-            "brawlBall": "support",
+            "brawlBall": "pressure",
             "gemGrab": "*",
             "heist": "*",
-            "hotZone": "support",
+            "hotZone": "pressure",
             "knockout": "pressure"
         }
     },
@@ -2178,7 +2178,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": [1200.0, 2800.0],
+        "DPS": [1200, 2800],
         "rating": {
             "class": "Tank",
             "rangeMain": "NORMAL",
@@ -2254,7 +2254,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": 2000.0,
+        "DPS": 2000,
         "rating": {
             "class": "Artillery",
             "rangeMain": "LONG",
@@ -2326,7 +2326,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": 3085.714286,
+        "DPS": 3086,
         "rating": {
             "class": "Assassin",
             "rangeMain": "SHORT",
@@ -2401,7 +2401,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": 3800.0,
+        "DPS": 3800,
         "rating": {
             "class": "Tank",
             "rangeMain": "SHORT",
@@ -2473,7 +2473,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": 1680.0,
+        "DPS": 1680,
         "rating": {
             "class": "Controller",
             "rangeMain": "NORMAL",
@@ -2547,7 +2547,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": 800.0,
+        "DPS": 800,
         "rating": {
             "class": "DamageDealer",
             "rangeMain": "VERY LONG",
@@ -2560,7 +2560,7 @@
             "bounty": "range",
             "brawlBall": "*",
             "gemGrab": "*",
-            "heist": "defender",
+            "heist": "defence",
             "hotZone": "*",
             "knockout": "*"
         }
@@ -2619,7 +2619,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": 2720.0,
+        "DPS": 2720,
         "rating": {
             "class": "Assassin",
             "rangeMain": "VERY LONG",
@@ -2695,7 +2695,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": 1384.615385,
+        "DPS": 1385,
         "rating": {
             "class": "Controller",
             "rangeMain": "LONG",
@@ -2705,10 +2705,10 @@
         },
         "roles": {
             "*": "support",
-            "bounty": "support",
+            "bounty": "range",
             "brawlBall": "control",
             "gemGrab": "carrier",
-            "heist": "defender",
+            "heist": "defence",
             "hotZone": "zoneTime",
             "knockout": "flex"
         }
@@ -2773,7 +2773,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": 2900.0,
+        "DPS": 2900,
         "rating": {
             "class": "Tank",
             "rangeMain": "NORMAL",
@@ -2851,7 +2851,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": 3000.0,
+        "DPS": 3000,
         "rating": {
             "class": "Controller",
             "rangeMain": "LONG",
@@ -2864,7 +2864,7 @@
             "bounty": "damage",
             "brawlBall": "damage",
             "gemGrab": "damage",
-            "heist": "defender",
+            "heist": "defence",
             "hotZone": "damage",
             "knockout": "flex"
         }
@@ -2930,7 +2930,7 @@
             "tags": []
         },
         "position": "mid",
-        "DPS": 1000.0,
+        "DPS": 1000,
         "rating": {
             "class": "Support",
             "rangeMain": "VERY LONG",
@@ -2940,12 +2940,12 @@
         },
         "roles": {
             "*": "antiTank",
-            "bounty": "support",
-            "brawlBall": "support",
+            "bounty": "range",
+            "brawlBall": "flex",
             "gemGrab": "carrier",
-            "heist": "support",
+            "heist": "flex",
             "hotZone": "*",
-            "knockout": "support"
+            "knockout": "flex"
         }
     },
     "gigi": {
@@ -3002,7 +3002,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": 6000.0,
+        "DPS": 6000,
         "rating": {
             "class": "Assassin",
             "rangeMain": "SHORT",
@@ -3015,7 +3015,7 @@
             "bounty": "pressure",
             "brawlBall": "pressure",
             "gemGrab": "pressure",
-            "heist": "defender",
+            "heist": "defence",
             "hotZone": "pressure",
             "knockout": "pressure"
         }
@@ -3075,7 +3075,7 @@
             "tags": []
         },
         "position": "mid",
-        "DPS": 294.117647,
+        "DPS": 294,
         "rating": {
             "class": "Support",
             "rangeMain": "LONG",
@@ -3085,12 +3085,12 @@
         },
         "roles": {
             "*": "support",
-            "bounty": "support",
-            "brawlBall": "support",
+            "bounty": "range",
+            "brawlBall": "flex",
             "gemGrab": "carrier",
             "heist": "flex",
             "hotZone": "zoneTime",
-            "knockout": "support"
+            "knockout": "flex"
         }
     },
     "gray": {
@@ -3157,7 +3157,7 @@
             ]
         },
         "position": "both",
-        "DPS": 1657.142857,
+        "DPS": 1657,
         "rating": {
             "class": "Support",
             "rangeMain": "LONG",
@@ -3168,9 +3168,9 @@
         "roles": {
             "*": "support",
             "bounty": "range",
-            "brawlBall": "support",
+            "brawlBall": "flex",
             "gemGrab": "carrier",
-            "heist": "support",
+            "heist": "flex",
             "hotZone": "zoneTime",
             "knockout": "flex"
         }
@@ -3231,7 +3231,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": 2964.705882,
+        "DPS": 2965,
         "rating": {
             "class": "Controller",
             "rangeMain": "LONG",
@@ -3245,7 +3245,7 @@
             "brawlBall": "damage",
             "gemGrab": "damage",
             "heist": "*",
-            "hotZone": "defender",
+            "hotZone": "defence",
             "knockout": "flex"
         }
     },
@@ -3305,7 +3305,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": 1140.0,
+        "DPS": 1140,
         "rating": {
             "class": "Artillery",
             "rangeMain": "LONG",
@@ -3385,7 +3385,7 @@
             ]
         },
         "position": "mid",
-        "DPS": 1440.0,
+        "DPS": 1440,
         "rating": {
             "class": "Support",
             "rangeMain": "LONG",
@@ -3396,10 +3396,10 @@
         "roles": {
             "*": "sniper",
             "bounty": "range",
-            "brawlBall": "support",
+            "brawlBall": "flex",
             "gemGrab": "carrier",
-            "heist": "support",
-            "hotZone": "support",
+            "heist": "flex",
+            "hotZone": "control",
             "knockout": "flex"
         }
     },
@@ -3460,7 +3460,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": 12000.0,
+        "DPS": 12000,
         "rating": {
             "class": "Tank",
             "rangeMain": "SHORT",
@@ -3538,7 +3538,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": 1377.777778,
+        "DPS": 1378,
         "rating": {
             "class": "Tank",
             "rangeMain": "SHORT",
@@ -3615,7 +3615,7 @@
             "tags": []
         },
         "position": "mid",
-        "DPS": 1000.0,
+        "DPS": 1000,
         "rating": {
             "class": "Support",
             "rangeMain": "LONG",
@@ -3626,10 +3626,10 @@
         "roles": {
             "*": "controller",
             "bounty": "flex",
-            "brawlBall": "support",
+            "brawlBall": "control",
             "gemGrab": "carrier",
             "heist": "*",
-            "hotZone": "support",
+            "hotZone": "control",
             "knockout": "flex"
         }
     },
@@ -3691,7 +3691,7 @@
             "tags": []
         },
         "position": "both",
-        "DPS": 1333.333333,
+        "DPS": 1333,
         "rating": {
             "class": "Marksman",
             "rangeMain": "NORMAL",
@@ -3765,7 +3765,7 @@
             "tags": []
         },
         "position": "mid",
-        "DPS": 1177.777778,
+        "DPS": 1178,
         "rating": {
             "class": "Controller",
             "rangeMain": "LONG",
@@ -3845,7 +3845,7 @@
             ]
         },
         "position": "both",
-        "DPS": 1250.0,
+        "DPS": 1250,
         "rating": {
             "class": "Artillery",
             "rangeMain": "NORMAL/LONG",
@@ -3919,7 +3919,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": [1500.0, 2475.0],
+        "DPS": [1500, 2475],
         "rating": {
             "class": "Assassin",
             "rangeMain": "SHORT/NORMAL",
@@ -3999,7 +3999,7 @@
             ]
         },
         "position": "lane",
-        "DPS": 2000.0,
+        "DPS": 2000,
         "rating": {
             "class": "Assassin",
             "rangeMain": "SHORT",
@@ -4079,7 +4079,7 @@
             ]
         },
         "position": "lane",
-        "DPS": 2500.0,
+        "DPS": 2500,
         "rating": {
             "class": "Support",
             "rangeMain": "SHORT",
@@ -4094,7 +4094,7 @@
             "gemGrab": "aggro",
             "heist": "flex",
             "hotZone": "*",
-            "knockout": "support"
+            "knockout": "flex"
         }
     },
     "larry&Lawrie": {
@@ -4151,7 +4151,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": 1272.727273,
+        "DPS": 1273,
         "rating": {
             "class": "Artillery",
             "rangeMain": "LONG",
@@ -4227,7 +4227,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": 2021.052632,
+        "DPS": 2021,
         "rating": {
             "class": "Assassin",
             "rangeMain": "VERY LONG",
@@ -4304,7 +4304,7 @@
             ]
         },
         "position": "lane",
-        "DPS": 2650.0,
+        "DPS": 2650,
         "rating": {
             "class": "Assassin",
             "rangeMain": "SHORT",
@@ -4378,7 +4378,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": 1835.294118,
+        "DPS": 1835,
         "rating": {
             "class": "DamageDealer",
             "rangeMain": "LONG",
@@ -4454,7 +4454,7 @@
             "tags": []
         },
         "position": "both",
-        "DPS": 2400.0,
+        "DPS": 2400,
         "rating": {
             "class": "Controller",
             "rangeMain": "VERY LONG",
@@ -4536,7 +4536,7 @@
             ]
         },
         "position": "both",
-        "DPS": 1764.705882,
+        "DPS": 1765,
         "rating": {
             "class": "DamageDealer",
             "rangeMain": "LONG",
@@ -4610,7 +4610,7 @@
             "tags": []
         },
         "position": "both",
-        "DPS": 2000.0,
+        "DPS": 2000,
         "rating": {
             "class": "Marksman",
             "rangeMain": "LONG",
@@ -4691,7 +4691,7 @@
             ]
         },
         "position": "both",
-        "DPS": 1733.333333,
+        "DPS": 1733,
         "rating": {
             "class": "Marksman",
             "rangeMain": "LONG",
@@ -4765,7 +4765,7 @@
             "tags": []
         },
         "position": "both",
-        "DPS": 1969.230769,
+        "DPS": 1969,
         "rating": {
             "class": "Support",
             "rangeMain": "LONG",
@@ -4775,12 +4775,12 @@
         },
         "roles": {
             "*": "support",
-            "bounty": "support",
-            "brawlBall": "support",
+            "bounty": "range",
+            "brawlBall": "flex",
             "gemGrab": "control",
             "heist": "flex",
             "hotZone": "zoneTime",
-            "knockout": "support"
+            "knockout": "flex"
         }
     },
     "meeple": {
@@ -4839,7 +4839,7 @@
             "tags": []
         },
         "position": "mid",
-        "DPS": 1482.352941,
+        "DPS": 1482,
         "rating": {
             "class": "Controller",
             "rangeMain": "LONG",
@@ -4911,7 +4911,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": [1230.769231, 3692.307692],
+        "DPS": [1231, 3692],
         "rating": {
             "class": "Tank",
             "rangeMain": "LONG",
@@ -4987,7 +4987,7 @@
             ]
         },
         "position": "lane",
-        "DPS": 613.333333,
+        "DPS": 613,
         "rating": {
             "class": "Assassin",
             "rangeMain": "LONG",
@@ -5067,7 +5067,7 @@
             ]
         },
         "position": "lane",
-        "DPS": 950.0,
+        "DPS": 950,
         "rating": {
             "class": "Assassin",
             "rangeMain": "NORMAL",
@@ -5141,7 +5141,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": 1142.857143,
+        "DPS": 1143,
         "rating": {
             "class": "DamageDealer",
             "rangeMain": "LONG",
@@ -5218,7 +5218,7 @@
             ]
         },
         "position": "lane",
-        "DPS": 2000.0,
+        "DPS": 2000,
         "rating": {
             "class": "DamageDealer",
             "rangeMain": "LONG",
@@ -5290,7 +5290,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": 833.333333,
+        "DPS": 833,
         "rating": {
             "class": "Assassin",
             "rangeMain": "SHORT",
@@ -5370,7 +5370,7 @@
             ]
         },
         "position": "lane",
-        "DPS": 1900.0,
+        "DPS": 1900,
         "rating": {
             "class": "Controller",
             "rangeMain": "LONG",
@@ -5444,7 +5444,7 @@
             "tags": []
         },
         "position": "both",
-        "DPS": 2666.666667,
+        "DPS": 2667,
         "rating": {
             "class": "Marksman",
             "rangeMain": "LONG",
@@ -5524,7 +5524,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": 1745.454545,
+        "DPS": 1745,
         "rating": {
             "class": "DamageDealer",
             "rangeMain": "NORMAL",
@@ -5602,7 +5602,7 @@
             ]
         },
         "position": "lane",
-        "DPS": 1000.0,
+        "DPS": 1000,
         "rating": {
             "class": "Tank",
             "rangeMain": "NORMAL",
@@ -5674,7 +5674,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": 2000.0,
+        "DPS": 2000,
         "rating": {
             "class": "Controller",
             "rangeMain": "LONG",
@@ -5752,7 +5752,7 @@
             "tags": []
         },
         "position": "mid",
-        "DPS": 4153.846154,
+        "DPS": 4154,
         "rating": {
             "class": "Support",
             "rangeMain": "LONG",
@@ -5830,7 +5830,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": 8800.0,
+        "DPS": 8800,
         "rating": {
             "class": "DamageDealer",
             "rangeMain": "LONG",
@@ -5905,7 +5905,7 @@
             "tags": []
         },
         "position": "both",
-        "DPS": 980.0,
+        "DPS": 980,
         "rating": {
             "class": "Controller",
             "rangeMain": "LONG",
@@ -5977,7 +5977,7 @@
             "tags": []
         },
         "position": "mid",
-        "DPS": 475.0,
+        "DPS": 475,
         "rating": {
             "class": "Marksman",
             "rangeMain": "VERY LONG",
@@ -6056,7 +6056,7 @@
             ]
         },
         "position": "both",
-        "DPS": 1478.26087,
+        "DPS": 1478,
         "rating": {
             "class": "Marksman",
             "rangeMain": "VERY LONG",
@@ -6139,7 +6139,7 @@
             "tags": []
         },
         "position": "mid",
-        "DPS": 950.0,
+        "DPS": 950,
         "rating": {
             "class": "Support",
             "rangeMain": "LONG",
@@ -6149,12 +6149,12 @@
         },
         "roles": {
             "*": "support",
-            "bounty": "support",
-            "brawlBall": "support",
+            "bounty": "range",
+            "brawlBall": "flex",
             "gemGrab": "control",
             "heist": "flex",
             "hotZone": "zoneTime",
-            "knockout": "support"
+            "knockout": "flex"
         }
     },
     "r-t": {
@@ -6215,7 +6215,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": 933.333333,
+        "DPS": 933,
         "rating": {
             "class": "DamageDealer",
             "rangeMain": "VERY LONG/SHORT",
@@ -6228,7 +6228,7 @@
             "bounty": "range",
             "brawlBall": "damage",
             "gemGrab": "damage",
-            "heist": "safeDamage",
+            "heist": "defence",
             "hotZone": "control",
             "knockout": "range"
         }
@@ -6293,7 +6293,7 @@
             ]
         },
         "position": "lane",
-        "DPS": 2666.666667,
+        "DPS": 2667,
         "rating": {
             "class": "DamageDealer",
             "rangeMain": "VERY LONG",
@@ -6370,7 +6370,7 @@
             ]
         },
         "position": "lane",
-        "DPS": 3000.0,
+        "DPS": 3000,
         "rating": {
             "class": "Tank",
             "rangeMain": "SHORT",
@@ -6442,7 +6442,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": 1714.285714,
+        "DPS": 1714,
         "rating": {
             "class": "Support",
             "rangeMain": "LONG",
@@ -6452,12 +6452,12 @@
         },
         "roles": {
             "*": "support",
-            "bounty": "support",
-            "brawlBall": "support",
+            "bounty": "flex",
+            "brawlBall": "flex",
             "gemGrab": "control",
             "heist": "flex",
             "hotZone": "zoneTime",
-            "knockout": "support"
+            "knockout": "flex"
         }
     },
     "sam": {
@@ -6518,7 +6518,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": 2000.0,
+        "DPS": 2000,
         "rating": {
             "class": "Assassin",
             "rangeMain": "SHORT",
@@ -6531,7 +6531,7 @@
             "bounty": "pressure",
             "brawlBall": "pressure",
             "gemGrab": "pressure",
-            "heist": "safeDamage",
+            "heist": "pressure",
             "hotZone": "pressure",
             "knockout": "pressure"
         }
@@ -6597,7 +6597,7 @@
             ]
         },
         "position": "both",
-        "DPS": 1000.0,
+        "DPS": 1000,
         "rating": {
             "class": "Controller",
             "rangeMain": "NORMAL",
@@ -6608,10 +6608,10 @@
         "roles": {
             "*": "antiTank",
             "bounty": "flex",
-            "brawlBall": "damage",
-            "gemGrab": "damage",
+            "brawlBall": "control",
+            "gemGrab": "control",
             "heist": "flex",
-            "hotZone": "damage",
+            "hotZone": "zoneTime",
             "knockout": "flex"
         }
     },
@@ -6674,7 +6674,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": [2000.0, 4000.0],
+        "DPS": [2000, 4000],
         "rating": {
             "class": "Assassin",
             "rangeMain": "SHORT",
@@ -6687,7 +6687,7 @@
             "bounty": "pressure",
             "brawlBall": "pressure",
             "gemGrab": "pressure",
-            "heist": "safeDamage",
+            "heist": "pressure",
             "hotZone": "pressure",
             "knockout": "pressure"
         }
@@ -6746,7 +6746,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": 2000.0,
+        "DPS": 2000,
         "rating": {
             "class": "DamageDealer",
             "rangeMain": "LONG",
@@ -6826,7 +6826,7 @@
             ]
         },
         "position": "lane",
-        "DPS": 3780.0,
+        "DPS": 3780,
         "rating": {
             "class": "DamageDealer",
             "rangeMain": "LONG",
@@ -6900,7 +6900,7 @@
             "tags": []
         },
         "position": "both",
-        "DPS": 1223.529412,
+        "DPS": 1224,
         "rating": {
             "class": "Artillery",
             "rangeMain": "NORMAL",
@@ -6913,7 +6913,7 @@
             "bounty": "range",
             "brawlBall": "control",
             "gemGrab": "control",
-            "heist": "safeDamage",
+            "heist": "flex",
             "hotZone": "control",
             "knockout": "flex"
         }
@@ -6982,7 +6982,7 @@
             "tags": []
         },
         "position": "both",
-        "DPS": 1104.761905,
+        "DPS": 1105,
         "rating": {
             "class": "Controller",
             "rangeMain": "LONG",
@@ -6994,8 +6994,8 @@
             "*": "controller",
             "bounty": "flex",
             "brawlBall": "control",
-            "gemGrab": "carrier",
-            "heist": "safeDamage",
+            "gemGrab": "control",
+            "heist": "flex",
             "hotZone": "zoneTime",
             "knockout": "flex"
         }
@@ -7060,7 +7060,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": 1440.0,
+        "DPS": 1440,
         "rating": {
             "class": "Assassin",
             "rangeMain": "LONG",
@@ -7072,8 +7072,8 @@
             "*": "controller",
             "bounty": "flex",
             "brawlBall": "control",
-            "gemGrab": "control",
-            "heist": "safeDamage",
+            "gemGrab": "carrier",
+            "heist": "flex",
             "hotZone": "zoneTime",
             "knockout": "flex"
         }
@@ -7136,7 +7136,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": 1180.0,
+        "DPS": 1180,
         "rating": {
             "class": "DamageDealer",
             "rangeMain": "NORMAL",
@@ -7222,7 +7222,7 @@
             ]
         },
         "position": "lane",
-        "DPS": 1440.0,
+        "DPS": 1440,
         "rating": {
             "class": "DamageDealer",
             "rangeMain": "LONG",
@@ -7302,7 +7302,7 @@
             ]
         },
         "position": "both",
-        "DPS": 1700.0,
+        "DPS": 1700,
         "rating": {
             "class": "Artillery",
             "rangeMain": "LONG",
@@ -7315,7 +7315,7 @@
             "bounty": "range",
             "brawlBall": "control",
             "gemGrab": "carrier",
-            "heist": "safeDamage",
+            "heist": "flex",
             "hotZone": "control",
             "knockout": "flex"
         }
@@ -7376,7 +7376,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": [1866.666667, 2400.0],
+        "DPS": [1867, 2400],
         "rating": {
             "class": "Tank",
             "rangeMain": "SHORT",
@@ -7449,7 +7449,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": 1200.0,
+        "DPS": 1200,
         "rating": {
             "class": "Controller",
             "speed": "NORMAL",
@@ -7521,7 +7521,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": 1000.0,
+        "DPS": 1000,
         "rating": {
             "class": "Artillery",
             "rangeMain": "LONG",
@@ -7534,7 +7534,7 @@
             "bounty": "range",
             "brawlBall": "control",
             "gemGrab": "control",
-            "heist": "safeDamage",
+            "heist": "flex",
             "hotZone": "control",
             "knockout": "flex"
         }
@@ -7609,7 +7609,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": 2250.0,
+        "DPS": 2250,
         "rating": {
             "class": "DamageDealer",
             "rangeMain": "VERY LONG",
@@ -7694,7 +7694,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": 20000.0,
+        "DPS": 20000,
         "rating": {
             "class": "Assassin",
             "rangeMain": "LONG",
@@ -7779,7 +7779,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": 1345.454545,
+        "DPS": 1345,
         "rating": {
             "class": "Tank",
             "rangeMain": "VERY SHORT",
@@ -7865,7 +7865,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": 1166.666667,
+        "DPS": 1167,
         "rating": {
             "class": "Tank",
             "rangeMain": "SHORT",
@@ -7952,7 +7952,7 @@
             ]
         },
         "position": "lane",
-        "DPS": 1200.0,
+        "DPS": 1200,
         "rating": {
             "class": "Assassin",
             "rangeMain": "NORMAL",
@@ -7965,7 +7965,7 @@
             "bounty": "pressure",
             "brawlBall": "pressure",
             "gemGrab": "pressure",
-            "heist": "safeDamage",
+            "heist": "defence",
             "hotZone": "pressure",
             "knockout": "pressure"
         }
@@ -8036,7 +8036,7 @@
             "tags": []
         },
         "position": "mid",
-        "DPS": 1500.0,
+        "DPS": 1500,
         "rating": {
             "class": "Controller",
             "rangeMain": "LONG",
@@ -8049,7 +8049,7 @@
             "bounty": "range",
             "brawlBall": "control",
             "gemGrab": "control",
-            "heist": "safeDamage",
+            "heist": "flex",
             "hotZone": "control",
             "knockout": "flex"
         }
@@ -8127,7 +8127,7 @@
             ]
         },
         "position": "mid",
-        "DPS": 1428.571429,
+        "DPS": 1429,
         "rating": {
             "class": "Support",
             "rangeMain": "LONG",
@@ -8137,12 +8137,12 @@
         },
         "roles": {
             "*": "support",
-            "bounty": "support",
-            "brawlBall": "support",
+            "bounty": "range",
+            "brawlBall": "flex",
             "gemGrab": "carrier",
             "heist": "flex",
             "hotZone": "zoneTime",
-            "knockout": "support"
+            "knockout": "flex"
         }
     },
     "cosmo": {
@@ -8212,7 +8212,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": 933.333333,
+        "DPS": 933,
         "rating": {
             "class": "Controller",
             "rangeMain": "LONG",
@@ -8295,7 +8295,7 @@
             "tags": []
         },
         "position": "lane",
-        "DPS": 1384.615385,
+        "DPS": 1385,
         "rating": {
             "class": "DamageDealer",
             "rangeMain": "LONG",

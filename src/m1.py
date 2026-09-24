@@ -20,7 +20,7 @@ MODE_ROLES = {
     'bounty': ('range', 'blueStar', 'pressure'),
     'brawlBall': ('damage', 'flex', 'pressure'),
     'gemGrab': ('carrier', 'damage', 'control', 'pressure'),
-    'heist': ('safeDamage', 'flex', 'defender'),
+    'heist': ('safeDamage', 'flex', 'defence'),
     'hotZone': ('zoneTime', 'damage', 'control'),
     'knockout': ('range', 'flex', 'pressure'),
 }

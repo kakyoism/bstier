@@ -45,7 +45,7 @@ The traditional waterfall tierlist format cannot answer these quesions and thus 
   - Bounty: Range, BlueStar, Pressure
   - Brawl Ball: Damage, Flex, Pressure
   - Gem Grab: Carrier, Damage, Control, Pressure
-  - Heist: Safe-Damage, Flex, Defender
+  - Heist: Safe-Damage, Flex, Defence
   - HotZone: Zone-Time, Damage, Control
   - Knockout: Range, Flex, Pressure
 - `all.brawler.json` contains all the brawler data regarding the latest meta, including the said labels.
@@ -69,7 +69,7 @@ The traditional waterfall tierlist format cannot answer these quesions and thus 
 ### Heist
 - Safe-Damage: High-DPS brawlers, or certain brawler that can deal high damage to non-brawler objects (Mico using his second Starr Power).
 - Flex: Brawlers that can both defend the team safe and damage the opponent safe, often those that can charge high-DPS super or teleport super, through defending the team safe, e.g., Nita, Bull, Crow.
-- Defender: Brawlers that can defend the team safe by either defeating or disabling the opponent Safe-Damage brawlers but provide little to no value as Safe-Damage.
+- Defence: Brawlers that can defend the team safe by either defeating or disabling the opponent Safe-Damage brawlers but provide little to no value as Safe-Damage.
 
 ### HotZone
 - Zone-Time: High-HP (7000+) brawlers that can stand in the zone or with supers that can guarantee zone occupation.
