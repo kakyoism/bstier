@@ -17,6 +17,44 @@ from .common import (
 from .labels import recognize_tier_label
 
 
+DEEPDRAFT_TIER_ORDERS = (
+    ('S', 'A', 'B', 'C', 'D', 'F'),
+    ('S+', 'S', 'A', 'B', 'C', 'D', 'F'),
+)
+
+
+def resolve_deepdraft_tier_labels(labels):
+    """Repair one OCR duplicate using DeepDraft's fixed vertical tier order.
+
+    DeepDraft rows are ordered from the highest tier through F, with S+
+    optional. If OCR confuses one row with another, retain the OCR result
+    unless exactly one expected label is missing and the missing label belongs
+    at the duplicated row's position.
+    """
+    tier_order = next(
+        (order for order in DEEPDRAFT_TIER_ORDERS if len(order) == len(labels)),
+        None,
+    )
+    if tier_order is None:
+        return labels
+
+    missing = [label for label in tier_order if label not in labels]
+    if len(missing) != 1:
+        return labels
+
+    duplicate_positions = [
+        index for index, label in enumerate(labels)
+        if labels.count(label) > 1
+    ]
+    expected_position = tier_order.index(missing[0])
+    if expected_position not in duplicate_positions:
+        return labels
+
+    resolved = list(labels)
+    resolved[expected_position] = missing[0]
+    return resolved
+
+
 class DeepDraftExtractor(TierlistExtractor):
     """Extract DeepDraft's wide rows using its template-matching layout."""
 
@@ -33,11 +71,15 @@ class DeepDraftExtractor(TierlistExtractor):
         if not regions:
             raise ValueError('Unable to detect DeepDraft tier rows')
 
-        tier_boundaries = {}
+        labels = []
         for x, y, width, height in regions:
             crop = image[y:y + height, x:x + width]
-            label = recognize_tier_label(
-                crop, self.context.tier_label_adapter)
+            labels.append(recognize_tier_label(
+                crop, self.context.tier_label_adapter))
+
+        labels = resolve_deepdraft_tier_labels(labels)
+        tier_boundaries = {}
+        for (x, y, width, height), label in zip(regions, labels):
             if label in tier_boundaries:
                 raise ValueError(f'Duplicate DeepDraft tier label: {label}')
             tier_boundaries[label] = (y, y + height)

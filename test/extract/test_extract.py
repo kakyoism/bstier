@@ -30,6 +30,7 @@ _paths.caseGenDir = osp.join(_paths.caseDir, '_gen')
 _paths.caseRefDir = osp.join(_paths.caseDir, '_ref')
 core = importlib.import_module('core')
 from extractors.common import assign_unique_candidates
+from extractors.deepdraft import resolve_deepdraft_tier_labels
 
 
 def setup_function():
@@ -160,3 +161,30 @@ def test_candidate_assignment_retries_displaced_tiles():
         'first': (3, 'fallback'),
         'second': (5, 'shared'),
     }
+
+
+def test_deepdraft_label_resolution_repairs_s_plus_and_s_confusion():
+    labels = ['S', 'S', 'A', 'B', 'C', 'D', 'F']
+
+    assert resolve_deepdraft_tier_labels(labels) == [
+        'S+', 'S', 'A', 'B', 'C', 'D', 'F']
+
+
+def test_deepdraft_label_resolution_supports_s_max_without_s_plus():
+    labels = ['S', 'A', 'B', 'S', 'D', 'F']
+
+    assert resolve_deepdraft_tier_labels(labels) == [
+        'S', 'A', 'B', 'C', 'D', 'F']
+
+
+def test_deepdraft_label_resolution_repairs_misread_c_row():
+    labels = ['S+', 'S', 'A', 'B', 'S', 'D', 'F']
+
+    assert resolve_deepdraft_tier_labels(labels) == [
+        'S+', 'S', 'A', 'B', 'C', 'D', 'F']
+
+
+def test_deepdraft_label_resolution_keeps_ambiguous_duplicates():
+    labels = ['S', 'S', 'A', 'B', 'S', 'D', 'F']
+
+    assert resolve_deepdraft_tier_labels(labels) == labels

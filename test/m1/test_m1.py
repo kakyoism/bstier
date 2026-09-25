@@ -26,6 +26,15 @@ def test_normalize_map_name_keeps_ocr_separate_from_canonicalization():
     ) == 'pinballDreams'
 
 
+def test_normalize_map_name_resolves_hot_potato_and_ring_of_fire():
+    map_catalog = util.load_json(_MAP_PATH)
+
+    assert m1.normalize_map_name(
+        'Brawl Stars Tier List — Hot Potato', map_catalog) == 'hotPotato'
+    assert m1.normalize_map_name(
+        'Brawl Stars Tier List — Ring of Fire', map_catalog) == 'ringOfFire'
+
+
 def test_resolve_map_context_normalizes_map_and_tags():
     map_catalog = util.load_json(_MAP_PATH)
 

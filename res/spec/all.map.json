@@ -285,7 +285,7 @@
         "mode": "heist",
         "tags": ["open", "water"]
     },
-    "hotPatato": {
+    "hotPotato": {
         "mode": "heist",
         "tags": ["closed", "bushy"]
     },
@@ -317,15 +317,19 @@
         "mode": "hotZone",
         "tags": ["closed", "bushy"]
     },
+    "ringOfFire": {
+        "mode": "hotZone",
+        "tags": ["open", "bushy"]
+    },
     "belle'sRock": {
         "mode": "knockout",
         "tags": ["closed"]
     },
-    "Flaring Phoenix": {
+    "flaringPhoenix": {
         "mode": "knockout",
         "tags": ["closed", "bushy"]
     },
-    "New Horizon": {
+    "newHorizons": {
         "mode": "knockout",
         "tags": ["open", "water", "walled"]
     },
