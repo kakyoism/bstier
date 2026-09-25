@@ -17,7 +17,7 @@ GLOBAL_ROLES = (
 )
 
 MODE_ROLES = {
-    'bounty': ('range', 'blueStar', 'pressure'),
+    'bounty': ('range', 'blueStar/pressure'),
     'brawlBall': ('damage', 'flex', 'pressure'),
     'gemGrab': ('carrier', 'damage', 'control', 'pressure'),
     'heist': ('safeDamage', 'flex', 'defence'),

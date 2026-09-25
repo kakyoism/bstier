@@ -1205,7 +1205,7 @@
         },
         "roles": {
             "*": "tank",
-            "bounty": "pressure",
+            "bounty": "blueStar/pressure",
             "brawlBall": "pressure",
             "gemGrab": "pressure",
             "heist": "flex",
@@ -2146,7 +2146,7 @@
         },
         "roles": {
             "*": "aggro",
-            "bounty": "pressure",
+            "bounty": "blueStar/pressure",
             "brawlBall": "pressure",
             "gemGrab": "pressure",
             "heist": "safeDamage",
@@ -2304,7 +2304,7 @@
         },
         "roles": {
             "*": "tank",
-            "bounty": "pressure",
+            "bounty": "blueStar/pressure",
             "brawlBall": "pressure",
             "gemGrab": "pressure",
             "heist": "safeDamage",
@@ -2539,7 +2539,7 @@
         },
         "roles": {
             "*": "tank",
-            "bounty": "pressure",
+            "bounty": "blueStar/pressure",
             "brawlBall": "pressure",
             "gemGrab": "pressure",
             "heist": "safeDamage",
@@ -2769,7 +2769,7 @@
         },
         "roles": {
             "*": "tank",
-            "bounty": "pressure",
+            "bounty": "blueStar/pressure",
             "brawlBall": "pressure",
             "gemGrab": "pressure",
             "heist": "flex",
@@ -2931,7 +2931,7 @@
         },
         "roles": {
             "*": "tank",
-            "bounty": "pressure",
+            "bounty": "blueStar/pressure",
             "brawlBall": "pressure",
             "gemGrab": "pressure",
             "heist": "pressure",
@@ -3172,7 +3172,7 @@
         },
         "roles": {
             "*": "aggro",
-            "bounty": "pressure",
+            "bounty": "blueStar/pressure",
             "brawlBall": "pressure",
             "gemGrab": "pressure",
             "heist": "flex",
@@ -3654,7 +3654,7 @@
         },
         "roles": {
             "*": "tank",
-            "bounty": "pressure",
+            "bounty": "blueStar/pressure",
             "brawlBall": "pressure",
             "gemGrab": "pressure",
             "heist": "pressure",
@@ -3736,7 +3736,7 @@
         },
         "roles": {
             "*": "tank",
-            "bounty": "pressure",
+            "bounty": "blueStar/pressure",
             "brawlBall": "pressure",
             "gemGrab": "pressure",
             "heist": "flex",
