@@ -1,0 +1,141 @@
+#!/usr/bin/env python3
+"""Batch-extract and render DeepDraft tierlist images."""
+
+import argparse
+import pathlib
+import shutil
+import sys
+import types
+
+
+PROJECT_ROOT = pathlib.Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(PROJECT_ROOT / 'src'))
+
+import core
+
+
+IMAGE_SUFFIXES = {'.bmp', '.jpeg', '.jpg', '.png', '.webp'}
+OUTPUT_DIRS = ('json', 'svg', 'png')
+
+
+def discover_images(input_dir):
+    """Return supported image files directly inside ``input_dir``."""
+    input_dir = pathlib.Path(input_dir)
+    if not input_dir.is_dir():
+        raise ValueError(f'Input folder does not exist: {input_dir}')
+    images = sorted(
+        path for path in input_dir.iterdir()
+        if path.is_file() and path.suffix.casefold() in IMAGE_SUFFIXES
+    )
+    if not images:
+        raise ValueError(f'No supported images found in: {input_dir}')
+    stems = [path.stem.casefold() for path in images]
+    if len(stems) != len(set(stems)):
+        raise ValueError('Input images must have unique basenames')
+    return images
+
+
+def output_paths(input_dir, image_path):
+    """Return JSON, SVG, and PNG destinations for one input image."""
+    stem = image_path.stem
+    return {
+        'json': input_dir / 'json' / f'{stem}.json',
+        'svg': input_dir / 'svg' / f'{stem}.svg',
+        'png': input_dir / 'png' / f'{stem}.png',
+    }
+
+
+def clear_outputs(input_dir):
+    """Remove all previous batch outputs while preserving their directories."""
+    for name in OUTPUT_DIRS:
+        output_dir = pathlib.Path(input_dir) / name
+        if output_dir.is_symlink() or output_dir.is_file():
+            output_dir.unlink()
+        elif output_dir.is_dir():
+            shutil.rmtree(output_dir)
+        output_dir.mkdir(parents=True, exist_ok=True)
+
+
+def _run_extract(image_path, json_path):
+    args = types.SimpleNamespace(
+        command='extract',
+        fromPath=str(image_path),
+        toPath=str(json_path),
+        source='deepdraft',
+        title=None,
+        master=True,
+    )
+    result, _ = core.main(args)
+    if not result.ok:
+        raise RuntimeError(result.detail or 'DeepDraft extraction failed')
+
+
+def _run_generate(json_path, output_path, resolution):
+    args = types.SimpleNamespace(
+        command='generate',
+        fromPath=str(json_path),
+        toPath=str(output_path),
+        reso=resolution,
+    )
+    result, _ = core.main(args)
+    if not result.ok:
+        raise RuntimeError(result.detail or 'Tierlist rendering failed')
+
+
+def process_image(image_path, input_dir, resolution=None):
+    """Extract and render one image, returning its output paths."""
+    paths = output_paths(input_dir, image_path)
+    for path in paths.values():
+        path.parent.mkdir(parents=True, exist_ok=True)
+    _run_extract(image_path, paths['json'])
+    _run_generate(paths['json'], paths['svg'], resolution)
+    _run_generate(paths['json'], paths['png'], resolution)
+    return paths
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser(
+        description='Batch-process DeepDraft tierlist images.',
+    )
+    parser.add_argument(
+        'input_folder',
+        help='Folder containing DeepDraft tierlist images.',
+    )
+    parser.add_argument(
+        '--reso',
+        help='PNG resolution in WIDTHxHEIGHT format; uses the default otherwise.',
+    )
+    args = parser.parse_args(argv)
+
+    input_dir = pathlib.Path(args.input_folder).expanduser().resolve()
+    try:
+        images = discover_images(input_dir)
+    except ValueError as exc:
+        parser.error(str(exc))
+
+    clear_outputs(input_dir)
+
+    failures = []
+    for image_path in images:
+        print(f'Processing {image_path.name}...')
+        try:
+            paths = process_image(image_path, input_dir, args.reso)
+        except Exception as exc:  # Keep processing the remaining images.
+            failures.append((image_path.name, exc))
+            print(f'  FAILED: {exc}', file=sys.stderr)
+            continue
+        print(f'  JSON: {paths["json"]}')
+        print(f'  SVG:  {paths["svg"]}')
+        print(f'  PNG:  {paths["png"]}')
+
+    print(f'Processed {len(images) - len(failures)}/{len(images)} image(s).')
+    if failures:
+        print('Failed images:', file=sys.stderr)
+        for name, error in failures:
+            print(f'  {name}: {error}', file=sys.stderr)
+        return 1
+    return 0
+
+
+if __name__ == '__main__':
+    raise SystemExit(main())

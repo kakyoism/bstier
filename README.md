@@ -145,6 +145,31 @@ On macOS, open the generated image with:
 
 `open /tmp/deepdraft-master.png`
 
+#### Batch-process a folder of DeepDraft images
+
+To process every supported image directly inside a folder, run:
+
+macOS/Linux:
+
+`./ci/deepdraft.sh path/to/deepdraft-images`
+
+Windows:
+
+`ci\deepdraft.bat path\to\deepdraft-images`
+
+The batch command extracts each image as a DeepDraft M1 JSON document and then
+renders matching SVG and PNG files. Outputs are written under the input folder:
+
+- `json/<basename>.json`
+- `svg/<basename>.svg`
+- `png/<basename>.png`
+
+Each run clears the existing `json/`, `svg/`, and `png/` output folders first;
+input images directly in the selected folder are not removed.
+
+Use `--reso WIDTHxHEIGHT` to select the PNG resolution, for example
+`./ci/deepdraft.sh path/to/deepdraft-images --reso 1024x768`.
+
 ### TierMaker global tierlists
 
 TierMaker screenshots use a different layout and produce a global-only
