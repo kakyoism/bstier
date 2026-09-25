@@ -318,7 +318,7 @@
             "speed": "VERY FAST"
         },
         "roles": {
-            "*": "thrower",
+            "*": "sniper",
             "bounty": "range",
             "brawlBall": "flex",
             "gemGrab": "carrier",
@@ -1204,7 +1204,7 @@
             "speed": "FAST"
         },
         "roles": {
-            "*": "support",
+            "*": "tank",
             "bounty": "pressure",
             "brawlBall": "pressure",
             "gemGrab": "pressure",
@@ -2848,7 +2848,7 @@
             "speed": "FAST"
         },
         "roles": {
-            "*": "support",
+            "*": "antiTank",
             "bounty": "range",
             "brawlBall": "control",
             "gemGrab": "carrier",
@@ -3095,7 +3095,7 @@
             "speed": "NORMAL"
         },
         "roles": {
-            "*": "antiTank",
+            "*": "controller",
             "bounty": "flex",
             "brawlBall": "flex",
             "gemGrab": "carrier",
@@ -3816,7 +3816,7 @@
             "speed": "FAST"
         },
         "roles": {
-            "*": "controller",
+            "*": "support",
             "bounty": "flex",
             "brawlBall": "control",
             "gemGrab": "carrier",
@@ -7273,7 +7273,7 @@
             "speed": "NORMAL"
         },
         "roles": {
-            "*": "tank",
+            "*": "thrower",
             "bounty": "range",
             "brawlBall": "control",
             "gemGrab": "control",

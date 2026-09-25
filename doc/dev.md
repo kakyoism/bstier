@@ -3,7 +3,7 @@
 ## Overview
 This doc is the single source of truth of R&D plan, research findings, and design/implementation decisions.
 
-## Milestone 1 (M1): Deep-Draft reshuffling by combat functions
+## Milestone 1 (M1): Deep-Draft reshuffling by combat and map roles
 Because deep-draft support is our major feature for the first release, we must make sure we can shuffle the Deep-Draft map tierlist based on Brawler's Global Roles and Map-Mode Roles, see README.md for details. This can thus serve as our vertical slice.
 
 The required tech:
@@ -30,3 +30,12 @@ unless `--master` is supplied.
 The generated master document can be rendered with `generate` to either SVG or
 PNG. Both formats use the same deterministic layout model, with global-role
 and map-role panels, source-tier border colors, and avatar placeholders.
+
+## Milestone 2 (M2): TierMaker reshuffling by combat roles
+
+Similar to M1, this milestone will use a different source `--source tiermaker` with the same logic, except that it's a global tierlist without map info. 
+
+So we only need to create the Common Classes version of the reshuffled tierlist.
+
+But we likely need to use a different image recognition implementation geared towards the TierMaker tierlist format.
+
