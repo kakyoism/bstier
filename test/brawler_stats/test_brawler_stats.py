@@ -167,3 +167,15 @@ def test_brawler_catalog_keys_are_sorted_after_version():
 
     assert list(data)[0] == 'version'
     assert keys == sorted(keys, key=str.casefold)
+
+
+def test_brawler_catalog_marks_waterborne_brawlers():
+    data = json.loads((_ROOT / 'res/spec/all.brawler.json').read_text())
+    expected = {'alli', 'angelo', 'eve', 'juju', 'r-t', 'shade', 'wendy'}
+
+    assert all(isinstance(spec['waterborne'], bool)
+               for name, spec in data.items() if name != 'version')
+    assert {
+        name for name, spec in data.items()
+        if name != 'version' and spec['waterborne']
+    } == expected

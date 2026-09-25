@@ -79,7 +79,8 @@
             "heist": "safeDamage",
             "hotZone": "damage",
             "knockout": "range"
-        }
+        },
+        "waterborne": false
     },
     "alli": {
         "power": 11,
@@ -159,7 +160,8 @@
             "heist": "flex",
             "hotZone": "pressure",
             "knockout": "pressure"
-        }
+        },
+        "waterborne": true
     },
     "amber": {
         "power": 11,
@@ -243,7 +245,8 @@
             "heist": "safeDamage",
             "hotZone": "control",
             "knockout": "flex"
-        }
+        },
+        "waterborne": false
     },
     "angelo": {
         "power": 11,
@@ -325,7 +328,8 @@
             "heist": "flex",
             "hotZone": "damage",
             "knockout": "range"
-        }
+        },
+        "waterborne": true
     },
     "ash": {
         "power": 11,
@@ -401,7 +405,8 @@
             "heist": "flex",
             "hotZone": "pressure",
             "knockout": "pressure"
-        }
+        },
+        "waterborne": false
     },
     "barley": {
         "power": 11,
@@ -486,7 +491,8 @@
             "heist": "safeDamage",
             "hotZone": "control",
             "knockout": "flex"
-        }
+        },
+        "waterborne": false
     },
     "bea": {
         "power": 11,
@@ -562,7 +568,8 @@
             "heist": "safeDamage",
             "hotZone": "damage",
             "knockout": "range"
-        }
+        },
+        "waterborne": false
     },
     "belle": {
         "power": 11,
@@ -644,7 +651,8 @@
             "heist": "flex",
             "hotZone": "control",
             "knockout": "range"
-        }
+        },
+        "waterborne": false
     },
     "berry": {
         "power": 11,
@@ -732,7 +740,8 @@
             "heist": "safeDamage",
             "hotZone": "zoneTime",
             "knockout": "flex"
-        }
+        },
+        "waterborne": false
     },
     "bibi": {
         "power": 11,
@@ -808,7 +817,8 @@
             "heist": "safeDamage",
             "hotZone": "pressure",
             "knockout": "pressure"
-        }
+        },
+        "waterborne": false
     },
     "bo": {
         "power": 11,
@@ -893,7 +903,8 @@
             "heist": "flex",
             "hotZone": "zoneTime",
             "knockout": "flex"
-        }
+        },
+        "waterborne": false
     },
     "bolt": {
         "power": 11,
@@ -982,7 +993,8 @@
             "heist": "flex",
             "hotZone": "pressure",
             "knockout": "pressure"
-        }
+        },
+        "waterborne": false
     },
     "bonnie": {
         "power": 11,
@@ -1063,7 +1075,8 @@
             "heist": "safeDamage",
             "hotZone": "control",
             "knockout": "range"
-        }
+        },
+        "waterborne": false
     },
     "brock": {
         "power": 11,
@@ -1143,7 +1156,8 @@
             "heist": "safeDamage",
             "hotZone": "control",
             "knockout": "range"
-        }
+        },
+        "waterborne": false
     },
     "bull": {
         "power": 11,
@@ -1224,7 +1238,8 @@
             "heist": "safeDamage",
             "hotZone": "pressure",
             "knockout": "pressure"
-        }
+        },
+        "waterborne": false
     },
     "buster": {
         "power": 11,
@@ -1300,7 +1315,8 @@
             "heist": "flex",
             "hotZone": "zoneTime",
             "knockout": "pressure"
-        }
+        },
+        "waterborne": false
     },
     "buzz": {
         "power": 11,
@@ -1382,7 +1398,8 @@
             "heist": "flex",
             "hotZone": "pressure",
             "knockout": "pressure"
-        }
+        },
+        "waterborne": false
     },
     "byron": {
         "power": 11,
@@ -1470,7 +1487,8 @@
             "heist": "flex",
             "hotZone": "control",
             "knockout": "range"
-        }
+        },
+        "waterborne": false
     },
     "carl": {
         "power": 11,
@@ -1550,7 +1568,8 @@
             "heist": "safeDamage",
             "hotZone": "pressure",
             "knockout": "flex"
-        }
+        },
+        "waterborne": false
     },
     "charlie": {
         "power": 11,
@@ -1630,7 +1649,8 @@
             "heist": "flex",
             "hotZone": "damage",
             "knockout": "flex"
-        }
+        },
+        "waterborne": false
     },
     "chester": {
         "power": 11,
@@ -1706,7 +1726,8 @@
             "heist": "flex",
             "hotZone": "damage",
             "knockout": "flex"
-        }
+        },
+        "waterborne": false
     },
     "chuck": {
         "power": 11,
@@ -1775,7 +1796,8 @@
             "heist": "safeDamage",
             "hotZone": "zoneTime",
             "knockout": "flex"
-        }
+        },
+        "waterborne": false
     },
     "clancy": {
         "power": 11,
@@ -1855,7 +1877,8 @@
             "heist": "flex",
             "hotZone": "damage",
             "knockout": "flex"
-        }
+        },
+        "waterborne": false
     },
     "colette": {
         "power": 11,
@@ -1931,7 +1954,8 @@
             "heist": "safeDamage",
             "hotZone": "damage",
             "knockout": "flex"
-        }
+        },
+        "waterborne": false
     },
     "colt": {
         "power": 11,
@@ -2011,7 +2035,8 @@
             "heist": "safeDamage",
             "hotZone": "damage",
             "knockout": "range"
-        }
+        },
+        "waterborne": false
     },
     "cordelius": {
         "power": 11,
@@ -2087,7 +2112,8 @@
             "heist": "flex",
             "hotZone": "damage",
             "knockout": "flex"
-        }
+        },
+        "waterborne": false
     },
     "cosmo": {
         "power": 11,
@@ -2176,7 +2202,8 @@
             "heist": "safeDamage",
             "hotZone": "zoneTime",
             "knockout": "flex"
-        }
+        },
+        "waterborne": false
     },
     "crow": {
         "power": 11,
@@ -2252,7 +2279,8 @@
             "heist": "safeDamage",
             "hotZone": "control",
             "knockout": "flex"
-        }
+        },
+        "waterborne": false
     },
     "damian": {
         "power": 11,
@@ -2342,7 +2370,8 @@
             "heist": "flex",
             "hotZone": "pressure",
             "knockout": "pressure"
-        }
+        },
+        "waterborne": false
     },
     "darryl": {
         "power": 11,
@@ -2420,7 +2449,8 @@
             "heist": "safeDamage",
             "hotZone": "pressure",
             "knockout": "pressure"
-        }
+        },
+        "waterborne": false
     },
     "doug": {
         "power": 11,
@@ -2502,7 +2532,8 @@
             "heist": "flex",
             "hotZone": "zoneTime",
             "knockout": "pressure"
-        }
+        },
+        "waterborne": false
     },
     "draco": {
         "power": 11,
@@ -2578,7 +2609,8 @@
             "heist": "safeDamage",
             "hotZone": "zoneTime",
             "knockout": "pressure"
-        }
+        },
+        "waterborne": false
     },
     "dynamike": {
         "power": 11,
@@ -2658,7 +2690,8 @@
             "heist": "safeDamage",
             "hotZone": "control",
             "knockout": "range"
-        }
+        },
+        "waterborne": false
     },
     "edgar": {
         "power": 11,
@@ -2734,7 +2767,8 @@
             "heist": "safeDamage",
             "hotZone": "pressure",
             "knockout": "pressure"
-        }
+        },
+        "waterborne": false
     },
     "elprimo": {
         "power": 11,
@@ -2813,7 +2847,8 @@
             "heist": "safeDamage",
             "hotZone": "pressure",
             "knockout": "pressure"
-        }
+        },
+        "waterborne": false
     },
     "emz": {
         "power": 11,
@@ -2889,7 +2924,8 @@
             "heist": "flex",
             "hotZone": "zoneTime",
             "knockout": "flex"
-        }
+        },
+        "waterborne": false
     },
     "eve": {
         "power": 11,
@@ -2967,7 +3003,8 @@
             "heist": "flex",
             "hotZone": "control",
             "knockout": "range"
-        }
+        },
+        "waterborne": true
     },
     "fang": {
         "power": 11,
@@ -3043,7 +3080,8 @@
             "heist": "flex",
             "hotZone": "pressure",
             "knockout": "pressure"
-        }
+        },
+        "waterborne": false
     },
     "finx": {
         "power": 11,
@@ -3123,7 +3161,8 @@
             "heist": "flex",
             "hotZone": "zoneTime",
             "knockout": "flex"
-        }
+        },
+        "waterborne": false
     },
     "frank": {
         "power": 11,
@@ -3205,7 +3244,8 @@
             "heist": "pressure",
             "hotZone": "pressure",
             "knockout": "pressure"
-        }
+        },
+        "waterborne": false
     },
     "gale": {
         "power": 11,
@@ -3287,7 +3327,8 @@
             "heist": "flex",
             "hotZone": "control",
             "knockout": "flex"
-        }
+        },
+        "waterborne": false
     },
     "gene": {
         "power": 11,
@@ -3370,7 +3411,8 @@
             "heist": "flex",
             "hotZone": "control",
             "knockout": "flex"
-        }
+        },
+        "waterborne": false
     },
     "gigi": {
         "power": 11,
@@ -3446,7 +3488,8 @@
             "heist": "flex",
             "hotZone": "pressure",
             "knockout": "pressure"
-        }
+        },
+        "waterborne": false
     },
     "glowy": {
         "power": 11,
@@ -3523,7 +3566,8 @@
             "heist": "flex",
             "hotZone": "zoneTime",
             "knockout": "range"
-        }
+        },
+        "waterborne": false
     },
     "gray": {
         "power": 11,
@@ -3609,7 +3653,8 @@
             "heist": "flex",
             "hotZone": "zoneTime",
             "knockout": "flex"
-        }
+        },
+        "waterborne": false
     },
     "griff": {
         "power": 11,
@@ -3687,7 +3732,8 @@
             "heist": "flex",
             "hotZone": "damage",
             "knockout": "flex"
-        }
+        },
+        "waterborne": false
     },
     "grom": {
         "power": 11,
@@ -3765,7 +3811,8 @@
             "heist": "safeDamage",
             "hotZone": "control",
             "knockout": "range"
-        }
+        },
+        "waterborne": false
     },
     "gus": {
         "power": 11,
@@ -3849,7 +3896,8 @@
             "heist": "flex",
             "hotZone": "control",
             "knockout": "flex"
-        }
+        },
+        "waterborne": false
     },
     "hank": {
         "power": 11,
@@ -3928,7 +3976,8 @@
             "heist": "pressure",
             "hotZone": "zoneTime",
             "knockout": "pressure"
-        }
+        },
+        "waterborne": false
     },
     "jacky": {
         "power": 11,
@@ -4010,7 +4059,8 @@
             "heist": "flex",
             "hotZone": "pressure",
             "knockout": "pressure"
-        }
+        },
+        "waterborne": false
     },
     "jaeyong": {
         "power": 11,
@@ -4091,7 +4141,8 @@
             "heist": "flex",
             "hotZone": "zoneTime",
             "knockout": "flex"
-        }
+        },
+        "waterborne": false
     },
     "janet": {
         "power": 11,
@@ -4171,7 +4222,8 @@
             "heist": "flex",
             "hotZone": "zoneTime",
             "knockout": "flex"
-        }
+        },
+        "waterborne": false
     },
     "jessie": {
         "power": 11,
@@ -4249,7 +4301,8 @@
             "heist": "safeDamage",
             "hotZone": "control",
             "knockout": "flex"
-        }
+        },
+        "waterborne": false
     },
     "juju": {
         "power": 11,
@@ -4333,7 +4386,8 @@
             "heist": "flex",
             "hotZone": "control",
             "knockout": "flex"
-        }
+        },
+        "waterborne": true
     },
     "kaze": {
         "power": 11,
@@ -4411,7 +4465,8 @@
             "heist": "safeDamage",
             "hotZone": "pressure",
             "knockout": "pressure"
-        }
+        },
+        "waterborne": false
     },
     "kenji": {
         "power": 11,
@@ -4495,7 +4550,8 @@
             "heist": "flex",
             "hotZone": "pressure",
             "knockout": "pressure"
-        }
+        },
+        "waterborne": false
     },
     "kit": {
         "power": 11,
@@ -4579,7 +4635,8 @@
             "heist": "flex",
             "hotZone": "pressure",
             "knockout": "pressure"
-        }
+        },
+        "waterborne": false
     },
     "larry&Lawrie": {
         "power": 11,
@@ -4655,7 +4712,8 @@
             "heist": "flex",
             "hotZone": "control",
             "knockout": "range"
-        }
+        },
+        "waterborne": false
     },
     "leon": {
         "power": 11,
@@ -4735,7 +4793,8 @@
             "heist": "flex",
             "hotZone": "control",
             "knockout": "pressure"
-        }
+        },
+        "waterborne": false
     },
     "lily": {
         "power": 11,
@@ -4816,7 +4875,8 @@
             "heist": "safeDamage",
             "hotZone": "pressure",
             "knockout": "pressure"
-        }
+        },
+        "waterborne": false
     },
     "lola": {
         "power": 11,
@@ -4894,7 +4954,8 @@
             "heist": "flex",
             "hotZone": "zoneTime",
             "knockout": "flex"
-        }
+        },
+        "waterborne": false
     },
     "lou": {
         "power": 11,
@@ -4974,7 +5035,8 @@
             "heist": "flex",
             "hotZone": "zoneTime",
             "knockout": "flex"
-        }
+        },
+        "waterborne": false
     },
     "lumi": {
         "power": 11,
@@ -5060,7 +5122,8 @@
             "heist": "flex",
             "hotZone": "control",
             "knockout": "flex"
-        }
+        },
+        "waterborne": false
     },
     "maisie": {
         "power": 11,
@@ -5138,7 +5201,8 @@
             "heist": "safeDamage",
             "hotZone": "damage",
             "knockout": "flex"
-        }
+        },
+        "waterborne": false
     },
     "mandy": {
         "power": 11,
@@ -5223,7 +5287,8 @@
             "heist": "flex",
             "hotZone": "control",
             "knockout": "range"
-        }
+        },
+        "waterborne": false
     },
     "max": {
         "power": 11,
@@ -5301,7 +5366,8 @@
             "heist": "flex",
             "hotZone": "zoneTime",
             "knockout": "flex"
-        }
+        },
+        "waterborne": false
     },
     "meeple": {
         "power": 11,
@@ -5379,7 +5445,8 @@
             "heist": "flex",
             "hotZone": "control",
             "knockout": "flex"
-        }
+        },
+        "waterborne": false
     },
     "meg": {
         "power": 11,
@@ -5455,7 +5522,8 @@
             "heist": "flex",
             "hotZone": "zoneTime",
             "knockout": "flex"
-        }
+        },
+        "waterborne": false
     },
     "melodie": {
         "power": 11,
@@ -5535,7 +5603,8 @@
             "heist": "safeDamage",
             "hotZone": "pressure",
             "knockout": "pressure"
-        }
+        },
+        "waterborne": false
     },
     "mico": {
         "power": 11,
@@ -5619,7 +5688,8 @@
             "heist": "safeDamage",
             "hotZone": "pressure",
             "knockout": "pressure"
-        }
+        },
+        "waterborne": false
     },
     "mina": {
         "power": 11,
@@ -5697,7 +5767,8 @@
             "heist": "flex",
             "hotZone": "pressure",
             "knockout": "pressure"
-        }
+        },
+        "waterborne": false
     },
     "moe": {
         "power": 11,
@@ -5778,7 +5849,8 @@
             "heist": "flex",
             "hotZone": "damage",
             "knockout": "flex"
-        }
+        },
+        "waterborne": false
     },
     "mortis": {
         "power": 11,
@@ -5854,7 +5926,8 @@
             "heist": "flex",
             "hotZone": "pressure",
             "knockout": "pressure"
-        }
+        },
+        "waterborne": false
     },
     "mr.p": {
         "power": 11,
@@ -5938,7 +6011,8 @@
             "heist": "flex",
             "hotZone": "control",
             "knockout": "flex"
-        }
+        },
+        "waterborne": false
     },
     "najia": {
         "power": 11,
@@ -6030,7 +6104,8 @@
             "heist": "flex",
             "hotZone": "control",
             "knockout": "range"
-        }
+        },
+        "waterborne": false
     },
     "nani": {
         "power": 11,
@@ -6108,7 +6183,8 @@
             "heist": "flex",
             "hotZone": "control",
             "knockout": "range"
-        }
+        },
+        "waterborne": false
     },
     "nita": {
         "power": 11,
@@ -6192,7 +6268,8 @@
             "heist": "flex",
             "hotZone": "damage",
             "knockout": "flex"
-        }
+        },
+        "waterborne": false
     },
     "nori": {
         "power": 11,
@@ -6281,7 +6358,8 @@
             "heist": "safeDamage",
             "hotZone": "pressure",
             "knockout": "pressure"
-        }
+        },
+        "waterborne": false
     },
     "ollie": {
         "power": 11,
@@ -6363,7 +6441,8 @@
             "heist": "flex",
             "hotZone": "pressure",
             "knockout": "pressure"
-        }
+        },
+        "waterborne": false
     },
     "otis": {
         "power": 11,
@@ -6439,7 +6518,8 @@
             "heist": "flex",
             "hotZone": "damage",
             "knockout": "flex"
-        }
+        },
+        "waterborne": false
     },
     "pam": {
         "power": 11,
@@ -6521,7 +6601,8 @@
             "heist": "flex",
             "hotZone": "zoneTime",
             "knockout": "flex"
-        }
+        },
+        "waterborne": false
     },
     "pearl": {
         "power": 11,
@@ -6603,7 +6684,8 @@
             "heist": "flex",
             "hotZone": "zoneTime",
             "knockout": "flex"
-        }
+        },
+        "waterborne": false
     },
     "penny": {
         "power": 11,
@@ -6682,7 +6764,8 @@
             "heist": "safeDamage",
             "hotZone": "control",
             "knockout": "flex"
-        }
+        },
+        "waterborne": false
     },
     "pierce": {
         "power": 11,
@@ -6758,7 +6841,8 @@
             "heist": "flex",
             "hotZone": "control",
             "knockout": "range"
-        }
+        },
+        "waterborne": false
     },
     "piper": {
         "power": 11,
@@ -6841,7 +6925,8 @@
             "heist": "flex",
             "hotZone": "damage",
             "knockout": "range"
-        }
+        },
+        "waterborne": false
     },
     "poco": {
         "power": 11,
@@ -6928,7 +7013,8 @@
             "heist": "flex",
             "hotZone": "zoneTime",
             "knockout": "flex"
-        }
+        },
+        "waterborne": false
     },
     "r-t": {
         "power": 11,
@@ -7008,7 +7094,8 @@
             "heist": "flex",
             "hotZone": "damage",
             "knockout": "range"
-        }
+        },
+        "waterborne": true
     },
     "rico": {
         "power": 11,
@@ -7090,7 +7177,8 @@
             "heist": "flex",
             "hotZone": "damage",
             "knockout": "flex"
-        }
+        },
+        "waterborne": false
     },
     "rosa": {
         "power": 11,
@@ -7171,7 +7259,8 @@
             "heist": "flex",
             "hotZone": "pressure",
             "knockout": "pressure"
-        }
+        },
+        "waterborne": false
     },
     "ruffs": {
         "power": 11,
@@ -7247,7 +7336,8 @@
             "heist": "flex",
             "hotZone": "control",
             "knockout": "flex"
-        }
+        },
+        "waterborne": false
     },
     "sam": {
         "power": 11,
@@ -7327,7 +7417,8 @@
             "heist": "flex",
             "hotZone": "pressure",
             "knockout": "pressure"
-        }
+        },
+        "waterborne": false
     },
     "sandy": {
         "power": 11,
@@ -7410,7 +7501,8 @@
             "heist": "flex",
             "hotZone": "zoneTime",
             "knockout": "flex"
-        }
+        },
+        "waterborne": false
     },
     "shade": {
         "power": 11,
@@ -7491,7 +7583,8 @@
             "heist": "flex",
             "hotZone": "pressure",
             "knockout": "pressure"
-        }
+        },
+        "waterborne": true
     },
     "shelly": {
         "power": 11,
@@ -7567,7 +7660,8 @@
             "heist": "flex",
             "hotZone": "damage",
             "knockout": "flex"
-        }
+        },
+        "waterborne": false
     },
     "sirius": {
         "power": 11,
@@ -7655,7 +7749,8 @@
             "heist": "flex",
             "hotZone": "control",
             "knockout": "range"
-        }
+        },
+        "waterborne": false
     },
     "spike": {
         "power": 11,
@@ -7739,7 +7834,8 @@
             "heist": "flex",
             "hotZone": "damage",
             "knockout": "flex"
-        }
+        },
+        "waterborne": false
     },
     "sprout": {
         "power": 11,
@@ -7817,7 +7913,8 @@
             "heist": "flex",
             "hotZone": "control",
             "knockout": "flex"
-        }
+        },
+        "waterborne": false
     },
     "squeak": {
         "power": 11,
@@ -7903,7 +8000,8 @@
             "heist": "flex",
             "hotZone": "control",
             "knockout": "flex"
-        }
+        },
+        "waterborne": false
     },
     "starrNova": {
         "power": 11,
@@ -7994,7 +8092,8 @@
             "heist": "flex",
             "hotZone": "pressure",
             "knockout": "pressure"
-        }
+        },
+        "waterborne": false
     },
     "stu": {
         "power": 11,
@@ -8076,7 +8175,8 @@
             "heist": "flex",
             "hotZone": "zoneTime",
             "knockout": "flex"
-        }
+        },
+        "waterborne": false
     },
     "surge": {
         "power": 11,
@@ -8156,7 +8256,8 @@
             "heist": "flex",
             "hotZone": "damage",
             "knockout": "flex"
-        }
+        },
+        "waterborne": false
     },
     "tara": {
         "power": 11,
@@ -8246,7 +8347,8 @@
             "heist": "flex",
             "hotZone": "damage",
             "knockout": "flex"
-        }
+        },
+        "waterborne": false
     },
     "tick": {
         "power": 11,
@@ -8330,7 +8432,8 @@
             "heist": "flex",
             "hotZone": "control",
             "knockout": "range"
-        }
+        },
+        "waterborne": false
     },
     "trunk": {
         "power": 11,
@@ -8408,7 +8511,8 @@
             "heist": "flex",
             "hotZone": "pressure",
             "knockout": "pressure"
-        }
+        },
+        "waterborne": false
     },
     "vince": {
         "power": 11,
@@ -8495,7 +8599,8 @@
             "heist": "flex",
             "hotZone": "damage",
             "knockout": "flex"
-        }
+        },
+        "waterborne": false
     },
     "wendy": {
         "power": 11,
@@ -8590,7 +8695,8 @@
             "heist": "flex",
             "hotZone": "control",
             "knockout": "flex"
-        }
+        },
+        "waterborne": true
     },
     "willow": {
         "power": 11,
@@ -8667,7 +8773,8 @@
             "heist": "flex",
             "hotZone": "control",
             "knockout": "flex"
-        }
+        },
+        "waterborne": false
     },
     "ziggy": {
         "power": 11,
@@ -8743,6 +8850,7 @@
             "heist": "flex",
             "hotZone": "control",
             "knockout": "range"
-        }
+        },
+        "waterborne": false
     }
 }
