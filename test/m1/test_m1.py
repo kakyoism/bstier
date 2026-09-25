@@ -72,7 +72,7 @@ def test_build_master_document_preserves_source_order_inside_sorted_groups():
     ]
     assert document['globalRoles']['sniper'] == [
         'gus', 'pierce', 'najia', 'byron', 'brock', 'piper', 'bonnie',
-        'bea', 'belle', 'mandy', 'nani', 'r-t',
+        'bea', 'angelo', 'belle', 'mandy', 'nani', 'r-t',
     ]
     assert document['originalTierlist'] == tierlist
     assert document['map'] == 'pinballDreams'

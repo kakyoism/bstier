@@ -39,3 +39,18 @@ So we only need to create the Common Classes version of the reshuffled tierlist.
 
 But we likely need to use a different image recognition implementation geared towards the TierMaker tierlist format.
 
+The implementation uses a source-extractor factory with independent
+`DeepDraftExtractor` and `TierMakerExtractor` strategies. Both return a
+normalized tierlist result, while keeping layout detection and avatar matching
+source-specific.
+
+TierMaker extraction requires `--title`. Its JSON document contains:
+
+- `title`, preserved from the command line;
+- `originalTierlist`, with dynamically recognized tier labels and source order;
+- `globalRoles`, grouped using the M1 combat-role catalog.
+
+TierMaker has no `map` or `mode` fields and therefore renders only the
+`Common Classes` panel. DeepDraft continues to support its existing basic
+extraction output and optional `--master` map-aware document.
+

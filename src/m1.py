@@ -169,6 +169,15 @@ def build_master_document(tierlist, map_name, mode, global_roles, mode_roles):
     }
 
 
+def build_global_document(tierlist, title, global_roles):
+    """Build the M2 document for a title-bearing, map-independent tierlist."""
+    return {
+        'title': str(title).strip(),
+        'originalTierlist': copy.deepcopy(tierlist),
+        'globalRoles': group_brawlers_by_role(tierlist, global_roles),
+    }
+
+
 def build_master_document_from_ocr(
         tierlist, image_path, ocr_adapter, map_catalog, global_roles, mode_roles):
     """Build the M1 document using raw map-title text from an OCR adapter.

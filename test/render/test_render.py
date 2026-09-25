@@ -24,6 +24,14 @@ def _master_document():
     }
 
 
+def _tiermaker_document():
+    return {
+        'title': 'June 2026',
+        'originalTierlist': {'S': ['gus'], 'F': ['8bit']},
+        'globalRoles': {'sniper': ['gus'], 'support': ['8bit']},
+    }
+
+
 def test_svg_uses_role_views_and_source_order():
     svg = render.render_master_svg(
         _master_document(),
@@ -72,6 +80,20 @@ def test_caption_values_use_title_case():
     assert render._title_case('pinballDreams') == 'Pinball Dreams'
     assert render._title_case('brawlBall') == 'Brawl Ball'
     assert render._title_case('antiTank') == 'Anti Tank'
+
+
+def test_svg_renders_tiermaker_as_one_common_classes_panel():
+    svg = render.render_master_svg(
+        _tiermaker_document(),
+        _ROOT / 'res/avatar',
+        _ROOT / 'res/map',
+        width=900,
+    )
+
+    assert 'BrawlStars Tierlist: June 2026' in svg
+    assert 'Common Classes' in svg
+    assert 'Map Roles' not in svg
+    assert svg.count('<rect x=') >= 3
 
 
 def test_png_uses_same_layout_and_requested_resolution(tmp_path):

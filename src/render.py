@@ -129,6 +129,8 @@ def _panel_groups(document):
             ('Common Classes', document['globalRoles']),
             ('Map Roles', document['mapRoles']),
         )
+    if 'globalRoles' in document:
+        return (('Common Classes', document['globalRoles']),)
     return (('Tierlist', document.get('originalTierlist', document)),)
 
 
@@ -306,6 +308,8 @@ def _role_color(index):
 
 
 def _document_title(document):
+    if document.get('title'):
+        return f'BrawlStars Tierlist: {document["title"]}'
     title = f'BrawlStars Tierlists: {_title_case(document.get("map", "Tierlist"))}'
     if document.get('mode'):
         title = f'{title} - {_title_case(document["mode"])}'

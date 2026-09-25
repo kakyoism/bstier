@@ -18,3 +18,15 @@ def test_extract_parser_supports_master_output():
 
     assert args.master is True
     assert args.source == 'deepdraft'
+
+
+def test_extract_parser_supports_tiermaker_title():
+    args = cli.create_parser().parse_args([
+        'extract',
+        '--source', 'tiermaker',
+        '--title', 'June 2026',
+        '--from', 'input.jpg',
+    ])
+
+    assert args.source == 'tiermaker'
+    assert args.title == 'June 2026'

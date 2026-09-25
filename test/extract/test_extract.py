@@ -79,3 +79,42 @@ def test_master_document_uses_injected_ocr_adapter():
     assert document['map'] == 'pinballDreams'
     assert document['mode'] == 'brawlBall'
     assert document['originalTierlist'] == {'S': ['gus', 'bull']}
+
+
+def test_tiermaker_extraction_builds_title_bearing_global_document(tmp_path):
+    args = types.SimpleNamespace(
+        command='extract',
+        fromPath=osp.join(_paths.appRoot, 'res', 'example', 'tiermaker.jpg'),
+        toPath=str(tmp_path / 'tiermaker.json'),
+        source='tiermaker',
+        title='June 2026',
+        master=False,
+    )
+    labels = iter(('S', 'A', 'B', 'C', 'D', 'F'))
+    worker = core.Worker(args, tier_label_adapter=lambda crop: next(labels))
+
+    result, output = worker.main()
+    document = util.load_json(output.toPath)
+
+    assert result.ok is True
+    assert result.detail == 'TierMaker global document generated.'
+    assert document['title'] == 'June 2026'
+    assert list(document['originalTierlist']) == ['S', 'A', 'B', 'C', 'D', 'F']
+    assert document['originalTierlist']['S']
+    assert 'globalRoles' in document
+    assert 'map' not in document
+    assert 'mapRoles' not in document
+
+
+def test_tiermaker_extraction_requires_title():
+    args = types.SimpleNamespace(
+        command='extract',
+        fromPath=osp.join(_paths.appRoot, 'res', 'example', 'tiermaker.jpg'),
+        toPath=None,
+        source='tiermaker',
+        title=None,
+        master=False,
+    )
+
+    with pytest.raises(ValueError, match='--title'):
+        core.Worker(args).validate_args()

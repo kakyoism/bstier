@@ -30,6 +30,9 @@ Examples:
   # Extract a Deepdraft tierlist and generate the M1 map-role document
   bstier extract --source deepdraft --master --from /path/to/tier.png --to /path/to/master.json
 
+  # Extract a TierMaker global tierlist with a user-provided title
+  bstier extract --source tiermaker --title "June 2026" --from /path/to/tier.png --to /path/to/tiermaker.json
+
   # Same as above, but print to screen only without saving as a file
   bstier extract --source deepdraft --from /path/to/tier.png 
 
@@ -54,6 +57,7 @@ Examples:
     extract_parser.add_argument('-f', '--from', dest='fromPath', required=True, help='Path to the input tierlist picture')
     extract_parser.add_argument('-t', '--to', dest='toPath', help='Path to save the output JSON file')
     extract_parser.add_argument('-s', '--source', dest='source', choices=('deepdraft', 'tiermaker', ), default='deepdraft', required=True, help='Source tag that defines the tierlist image format')
+    extract_parser.add_argument('--title', help='Title to persist for TierMaker global documents')
     extract_parser.add_argument('--master', action='store_true', help='Generate the M1 map and role document; currently supported for Deep-Draft input')
 
     # generate subcommand

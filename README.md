@@ -145,6 +145,30 @@ On macOS, open the generated image with:
 
 `open /tmp/bstier-master.png`
 
+### TierMaker global tierlists
+
+TierMaker screenshots use a different layout and produce a global-only
+document. The title is required because TierMaker images do not contain map or
+mode metadata:
+
+macOS/Linux:
+
+`./ci/run.sh extract --source tiermaker --title "June 2026" --from path/to/tiermaker.jpg --to /tmp/tiermaker.json`
+
+Windows:
+
+`ci\run.bat extract --source tiermaker --title "June 2026" --from path\to\tiermaker.jpg --to tiermaker.json`
+
+The extractor detects the colored tier column, recognizes the labels, handles
+wrapped avatar rows, and preserves the source order. The generated JSON stores
+the supplied `title`, the `originalTierlist`, and the `globalRoles` view. Render
+it with the same `generate` command:
+
+`./ci/run.sh generate --from /tmp/tiermaker.json --to /tmp/tiermaker.svg`
+
+The rendered title uses the prefix `BrawlStars Tierlist:` and the output has a
+single `Common Classes` panel.
+
 ## Brawler Roles
 - The official brawler classes can be midleading in draft process, e.g., Najia is used as a Range brawler (sniper) in open maps rather than a Damage Dealer (the official class).
 - The same brawler may serve different purposes in different modes and maps, e.g., Barley can be a counter to other throwers when they are present, or a controller in a closed HotZone map.

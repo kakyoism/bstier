@@ -1,17 +1,8 @@
 import copy
-import logging
-import os
 import os.path as osp
+import pathlib
 import types
-# 3rd party
-import cv2
 import kkpyutil as util
-import numpy as np
-
-
-def _normalize_identifier(value):
-    return ''.join(character.casefold() for character in str(value)
-                   if character.isalnum())
 
 
 def main(args):
@@ -20,9 +11,10 @@ def main(args):
 
 
 class Worker:
-    def __init__(self, args, ocr_adapter=None):
+    def __init__(self, args, ocr_adapter=None, tier_label_adapter=None):
         self.args = args
         self.ocr_adapter = ocr_adapter
+        self.tier_label_adapter = tier_label_adapter
         self.res = types.SimpleNamespace(ok=False, detail='', advice='')
         self.out = types.SimpleNamespace(toPath='')
         self.repo = util.init_repo(__file__, organization='kakyoism', repodepth=2)
@@ -49,8 +41,14 @@ class Worker:
     def validate_args(self):
         fixed_args = copy.deepcopy(self.args)
         if (getattr(fixed_args, 'master', False)
-                and fixed_args.source != 'deepdraft'):
+                and getattr(fixed_args, 'source', None) != 'deepdraft'):
             raise ValueError('The --master option requires --source deepdraft')
+        if (getattr(fixed_args, 'command', None) == 'extract'
+                and getattr(fixed_args, 'source', None) == 'tiermaker'):
+            title = getattr(fixed_args, 'title', '') or ''
+            if not str(title).strip():
+                raise ValueError(
+                    'The --title option is required for TierMaker extraction')
 
         # Validate input path (--from) exists
         if fixed_args.fromPath:
@@ -65,124 +63,26 @@ class Worker:
         return fixed_args
 
     def _extract(self):
-        tier_pic = self.args.fromPath # "bstier.png"
-        template_dir = self.paths.avatarDir
-        threshold = 0.40
+        import ocr
+        from extractors import ExtractionContext, create_extractor
 
-        # ==========================================
-        # CONSTANT: Set this to your discovered scale 
-        # after the first run (e.g., OPTIMAL_SCALE = 0.55)
-        # Set to None to auto-calibrate on the first run.
-        # ==========================================
-        OPTIMAL_SCALE = 0.55 
-
-        # 1. Load main image
-        img = cv2.imread(tier_pic)
-        if img is None:
-            self.logger.error(f"ERROR: Could not load main tier list image from '{tier_pic}'")
-            exit()
-
-        img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-
-        # 2. Dynamic Boundary Detection
-        _, thresh = cv2.threshold(img_gray, 80, 255, cv2.THRESH_BINARY)
-        left_column = thresh[:, :120]
-        contours, _ = cv2.findContours(left_column, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-
-        valid_contours = [c for c in contours if cv2.contourArea(c) > 500]
-        valid_contours = sorted(valid_contours, key=lambda c: cv2.boundingRect(c)[1])
-
-        tier_names = ["S+", "S", "A", "B", "C", "D", "F"]
-        tier_boundaries = {}
-
-        for i, contour in enumerate(valid_contours):
-            if i < len(tier_names):
-                x, y, w, h = cv2.boundingRect(contour)
-                tier_boundaries[tier_names[i]] = (y, y + h)
-
-        results = {tier: [] for tier in tier_boundaries.keys()}
-        template_files = [f for f in os.listdir(template_dir) if f.endswith(('.png', '.jpg'))]
-        brawler_data = util.load_json(
-            osp.join(self.repo.resDir, 'spec', 'all.brawler.json'))
-        canonical_names = {
-            _normalize_identifier(name): name
-            for name in brawler_data
-            if name != 'version'
-        }
-
-        # If scale is not yet hardcoded, calibrate by finding the most frequently occurring best scale
-        if OPTIMAL_SCALE is None:
-            self.logger.info("Calibrating optimal scale across templates (runs only once)...")
-            scale_votes = []
-            scales_to_test = np.linspace(0.3, 1.0, num=15)
-            
-            # Sample up to 5 templates for quick calibration
-            sample_templates = template_files[:5]
-            for tf in sample_templates:
-                template = cv2.imread(os.path.join(template_dir, tf), 0)
-                if template is None: continue
-                best_s, best_m = 1.0, 0
-                for s in scales_to_test:
-                    rw, rh = int(template.shape[1] * s), int(template.shape[0] * s)
-                    if rw < 5 or rh < 5: continue
-                    res = cv2.matchTemplate(img_gray, cv2.resize(template, (rw, rh)), cv2.TM_CCOEFF_NORMED)
-                    _, max_val, _, _ = cv2.minMaxLoc(res)
-                    if max_val > best_m:
-                        best_m, best_s = max_val, s
-                scale_votes.append(best_s)
-            
-            OPTIMAL_SCALE = float(np.median(scale_votes))
-            self.logger.info(f"\n>>> CALIBRATION COMPLETE! Hardcode this at the top of your script:")
-            self.logger.info(f">>> OPTIMAL_SCALE = {OPTIMAL_SCALE:.2f}\n")
-
-        # 3. Main Fast-Path Execution using the Global Constant Scale
-        self.logger.info(f"Running extraction using fixed OPTIMAL_SCALE = {OPTIMAL_SCALE:.2f}...")
-        matched_count = 0
-
-        for template_file in template_files:
-            template_name = os.path.splitext(template_file)[0]
-            brawler_name = canonical_names.get(
-                _normalize_identifier(template_name))
-            if brawler_name is None:
-                continue
-            template_path = os.path.join(template_dir, template_file)
-            template = cv2.imread(template_path, 0)
-            
-            if template is None:
-                continue
-                
-            rw = int(template.shape[1] * OPTIMAL_SCALE)
-            rh = int(template.shape[0] * OPTIMAL_SCALE)
-            
-            if rw < 5 or rh < 5:
-                continue
-                
-            resized_template = cv2.resize(template, (rw, rh))
-            res = cv2.matchTemplate(img_gray, resized_template, cv2.TM_CCOEFF_NORMED)
-            _, max_val, _, max_loc = cv2.minMaxLoc(res)
-            
-            if max_val >= threshold and max_loc is not None:
-                x_match, y_match = max_loc
-                for tier, (y_min, y_max) in tier_boundaries.items():
-                    if y_min <= y_match < y_max:
-                        if not any(b[2] == brawler_name for b in results[tier]):
-                            results[tier].append((x_match, y_match, brawler_name))
-                            matched_count += 1
-                        break
-
-        self.logger.info(f"Successfully matched {matched_count} out of {len(template_files)} brawlers.")
-
-        # 4. Final Output in exact left-to-right layout order
-        self.logger.info("\n--- Final Tier List Extraction ---")
-        export_data = {}
-        for tier, brawlers in results.items():
-            brawlers.sort(key=lambda item: (item[1] // 40, item[0]))
-            names_only = [b[2] for b in brawlers]
-            export_data[tier] = names_only
-            self.logger.info(f"{tier} Tier: {', '.join(names_only) if names_only else 'None'}")
+        tier_pic = self.args.fromPath
+        context = ExtractionContext(
+            avatar_dir=pathlib.Path(self.paths.avatarDir),
+            brawler_spec_path=pathlib.Path(
+                osp.join(self.repo.resDir, 'spec', 'all.brawler.json')),
+            tier_label_adapter=(
+                self.tier_label_adapter or ocr.TesseractTierLabelAdapter()),
+            logger=self.logger,
+        )
+        extractor = create_extractor(self.args.source, context)
+        export_data = extractor.extract(tier_pic).tiers
 
         output_data = export_data
-        if getattr(self.args, 'master', False):
+        if self.args.source == 'tiermaker':
+            output_data = self._build_tiermaker_document(
+                export_data, self.args.title)
+        elif getattr(self.args, 'master', False):
             output_data = self._build_m1_document(export_data, tier_pic)
 
         # Conditionally export to JSON if destination path is specified
@@ -195,9 +95,18 @@ class Worker:
         self.res.detail = (
             'M1 master document generated.'
             if getattr(self.args, 'master', False)
+            else 'TierMaker global document generated.'
+            if self.args.source == 'tiermaker'
             else 'Extraction routine executed.'
         )
         return self.res, self.out
+
+    def _build_tiermaker_document(self, tierlist, title):
+        import m1
+
+        brawler_path = osp.join(self.repo.resDir, 'spec', 'all.brawler.json')
+        global_roles = m1.load_global_roles(brawler_path)
+        return m1.build_global_document(tierlist, title, global_roles)
 
     def _build_m1_document(self, tierlist, image_path):
         import m1
