@@ -135,15 +135,15 @@ as placeholders.
 #### Complete example using the repository fixture
 
 The repository includes a DeepDraft-style example image at
-`test/extract/_org/bstier.png`. From the repository root, run:
+`test/extract/_org/deepdraft.png`. From the repository root, run:
 
-`./ci/run.sh extract --source deepdraft --master --from test/extract/_org/bstier.png --to /tmp/bstier-master.json`
+`./ci/run.sh extract --source deepdraft --master --from test/extract/_org/deepdraft.png --to /tmp/bstier-master.json`
 
-`./ci/run.sh generate --from /tmp/bstier-master.json --to /tmp/bstier-master.png`
+`./ci/run.sh generate --from /tmp/deepdraft-master.json --to /tmp/deepdraft-master.png`
 
 On macOS, open the generated image with:
 
-`open /tmp/bstier-master.png`
+`open /tmp/deepdraft-master.png`
 
 ### TierMaker global tierlists
 

@@ -7,8 +7,10 @@ import cv2
 
 from .base import ExtractedTierlist, TierlistExtractor
 from .common import (
+    BrawlerMatcher,
     detect_deepdraft_regions,
     detect_header_column,
+    load_asset_descriptors,
     load_brawler_catalog,
     normalize_identifier,
 )
@@ -41,8 +43,11 @@ class DeepDraftExtractor(TierlistExtractor):
             tier_boundaries[label] = (y, y + height)
 
         catalog = load_brawler_catalog(self.context.brawler_spec_path)
+        detector, assets = load_asset_descriptors(
+            self.context.avatar_dir, catalog)
+        matcher = BrawlerMatcher(detector, assets)
         gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-        results = {label: [] for label in tier_boundaries}
+        tiles = []
         for path in sorted(os.listdir(self.context.avatar_dir)):
             if osp.splitext(path)[1].casefold() not in {'.png', '.jpg', '.jpeg'}:
                 continue
@@ -63,15 +68,25 @@ class DeepDraftExtractor(TierlistExtractor):
             if score < self.match_threshold:
                 continue
             center_y = location[1] + height / 2
-            for label, (y_min, y_max) in tier_boundaries.items():
+            region_index = None
+            for index, (label, (y_min, y_max)) in enumerate(
+                    tier_boundaries.items()):
                 if y_min <= center_y < y_max:
-                    results[label].append((location[0], location[1], name))
+                    region_index = index
                     break
-
-        return ExtractedTierlist({
-            label: [
-                name for _, _, name in sorted(
-                    items, key=lambda item: (item[1] // 40, item[0]))
+            if region_index is None:
+                continue
+            tile = image[
+                location[1]:location[1] + height,
+                location[0]:location[0] + width,
             ]
-            for label, items in results.items()
-        })
+            tiles.append(((location[0], location[1], region_index), tile))
+
+        selected = matcher.assign(tiles, 1)
+
+        tiers = {label: [] for label in tier_boundaries}
+        for x, y, region_index in sorted(
+                selected, key=lambda key: (key[1] // 40, key[0])):
+            label = list(tier_boundaries)[region_index]
+            tiers[label].append(selected[(x, y, region_index)][1])
+        return ExtractedTierlist(tiers)

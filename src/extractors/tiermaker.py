@@ -5,6 +5,7 @@ import numpy as np
 
 from .base import ExtractedTierlist, TierlistExtractor
 from .common import (
+    BrawlerMatcher,
     detect_header_column,
     detect_tiermaker_regions,
     estimate_grid_period,
@@ -42,9 +43,10 @@ class TierMakerExtractor(TierlistExtractor):
         catalog = load_brawler_catalog(self.context.brawler_spec_path)
         detector, assets = load_asset_descriptors(
             self.context.avatar_dir, catalog)
-        matcher = cv2.BFMatcher(cv2.NORM_L2)
+        matcher = BrawlerMatcher(
+            detector, assets, self.ratio_test, use_variants=True)
         period = estimate_grid_period(image, header[1])
-        candidates = []
+        tiles = []
         for row in range((image.shape[0] + period - 1) // period):
             for column in range(
                     (image.shape[1] - header[1] + period - 1) // period):
@@ -62,13 +64,6 @@ class TierMakerExtractor(TierlistExtractor):
                 if np.mean(tile > 30) < 0.4:
                     continue
                 tile = self._pad_tile(tile, period)
-                _, descriptors = detector.detectAndCompute(
-                    cv2.cvtColor(tile, cv2.COLOR_BGR2GRAY), None)
-                if descriptors is None:
-                    continue
-                best = self._match_tile(descriptors, assets, matcher)
-                if best is None or best[0] < self.min_good_matches:
-                    continue
                 center_y = row * period + period / 2
                 region_index = next(
                     (index for index, (_, y, _, height) in enumerate(regions)
@@ -76,20 +71,14 @@ class TierMakerExtractor(TierlistExtractor):
                     None,
                 )
                 if region_index is not None:
-                    candidates.append((*best, row, column, region_index))
+                    tiles.append(((row, column, region_index), tile))
 
-        selected = []
-        used_names = set()
-        for score, name, row, column, region_index in sorted(
-                candidates, key=lambda item: item[0], reverse=True):
-            if name in used_names:
-                continue
-            used_names.add(name)
-            selected.append((row, column, region_index, name))
+        selected = matcher.assign(tiles, self.min_good_matches)
 
         tiers = {label: [] for label in labels}
-        for row, column, region_index, name in sorted(selected):
-            tiers[labels[region_index]].append(name)
+        for row, column, region_index in sorted(selected):
+            tiers[labels[region_index]].append(
+                selected[(row, column, region_index)][1])
         return ExtractedTierlist(tiers)
 
     @staticmethod
@@ -101,17 +90,3 @@ class TierMakerExtractor(TierlistExtractor):
         padded = np.zeros(shape, dtype=tile.dtype)
         padded[:tile.shape[0], :tile.shape[1]] = tile
         return padded
-
-    def _match_tile(self, descriptors, assets, matcher):
-        best = None
-        for name, asset_descriptors in assets:
-            matches = matcher.knnMatch(descriptors, asset_descriptors, k=2)
-            good = [
-                pair[0] for pair in matches
-                if len(pair) == 2
-                and pair[0].distance < self.ratio_test * pair[1].distance
-            ]
-            score = len(good)
-            if best is None or score > best[0]:
-                best = (score, name)
-        return best

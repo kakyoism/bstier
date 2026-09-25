@@ -29,6 +29,7 @@ _paths.caseOrgDir = osp.join(_paths.caseDir, '_org')
 _paths.caseGenDir = osp.join(_paths.caseDir, '_gen')
 _paths.caseRefDir = osp.join(_paths.caseDir, '_ref')
 core = importlib.import_module('core')
+from extractors.common import assign_unique_candidates
 
 
 def setup_function():
@@ -44,7 +45,7 @@ def teardown_function():
 def test_extract_from_deepdraft_matches_expected():
     args = types.SimpleNamespace(
         command='extract',
-        fromPath=osp.join(_paths.caseOrgDir, 'bstier.png'),
+        fromPath=osp.join(_paths.caseOrgDir, 'deepdraft.png'),
         toPath=osp.join(_paths.caseGenDir, 'bstier.json'),
         source='deepdraft'
     )
@@ -58,7 +59,7 @@ def test_extract_from_deepdraft_matches_expected():
 def test_master_document_uses_injected_ocr_adapter():
     args = types.SimpleNamespace(
         command='extract',
-        fromPath=osp.join(_paths.caseOrgDir, 'bstier.png'),
+        fromPath=osp.join(_paths.caseOrgDir, 'deepdraft.png'),
         toPath=None,
         source='deepdraft',
         master=True,
@@ -118,3 +119,44 @@ def test_tiermaker_extraction_requires_title():
 
     with pytest.raises(ValueError, match='--title'):
         core.Worker(args).validate_args()
+
+
+def test_tiermaker_extraction_resolves_known_ambiguous_tiles(tmp_path):
+    args = types.SimpleNamespace(
+        command='extract',
+        fromPath=osp.join(_paths.appRoot, 'res', 'example', 'tiermaker.jpg'),
+        toPath=str(tmp_path / 'tiermaker.json'),
+        source='tiermaker',
+        title='June 2026',
+        master=False,
+    )
+    labels = iter(('S', 'A', 'B', 'C', 'D', 'F'))
+    worker = core.Worker(args, tier_label_adapter=lambda crop: next(labels))
+
+    result, output = worker.main()
+    document = util.load_json(output.toPath)
+
+    assert result.ok is True
+    assert document['originalTierlist']['A'][-2] == 'gene'
+    assert document['originalTierlist']['C'][-8] == 'squeak'
+    assert document['originalTierlist']['C'][-9] == 'sprout'
+    assert document['originalTierlist']['D'][-5] == 'hank'
+    names = [
+        name
+        for values in document['originalTierlist'].values()
+        for name in values
+    ]
+    assert {'colt', 'otis'} <= set(names)
+    assert len(names) == len(set(names))
+
+
+def test_candidate_assignment_retries_displaced_tiles():
+    selected = assign_unique_candidates([
+        ('first', [(4, 'shared', 0), (3, 'fallback', 1)]),
+        ('second', [(5, 'shared', 0), (4, 'other', 2)]),
+    ], min_score=3)
+
+    assert selected == {
+        'first': (3, 'fallback'),
+        'second': (5, 'shared'),
+    }

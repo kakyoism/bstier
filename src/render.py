@@ -25,6 +25,15 @@ TIER_COLORS = {
     'D': '#61a8f4',
     'F': '#9c91f4',
 }
+TIERMAKER_TIER_COLORS = {
+    'S+': '#e87582',
+    'S': '#ee8582',
+    'A': '#f5c388',
+    'B': '#f9df8b',
+    'C': '#fdff91',
+    'D': '#cbfd8e',
+    'F': '#a0fc8f',
+}
 TIER_ORDER = ('S+', 'S', 'A', 'B', 'C', 'D', 'F')
 ROLE_COLORS = ('#51469d', '#3b65a0', '#34836f', '#966539', '#854876')
 ROLE_WIDTH = 108
@@ -316,11 +325,25 @@ def _document_title(document):
     return title
 
 
-def _signature():
-    return (
-        f'Produced by kakyo on {datetime.date.today().isoformat()} '
-        '- Powered by DeepDraft'
+def _is_tiermaker_document(document):
+    source = document.get('source')
+    return source == 'tiermaker' or (
+        'title' in document
+        and 'map' not in document
+        and 'mode' not in document
     )
+
+
+def _tier_colors(document):
+    """Return the source palette used for tier emphasis."""
+    return TIERMAKER_TIER_COLORS if _is_tiermaker_document(document) else TIER_COLORS
+
+
+def _signature(document):
+    signature = f'Produced by kakyo on {datetime.date.today().isoformat()}'
+    if _is_tiermaker_document(document):
+        return signature
+    return f'{signature} - Powered by DeepDraft'
 
 
 def _fit_caption(draw, text, width, preferred_size):
@@ -376,6 +399,7 @@ def render_master_svg(document, avatar_dir, map_dir=None, width=1600):
     """Return a deterministic SVG for a master or tierlist document."""
     layout = build_layout(document, width, map_dir)
     avatars = _avatar_files(avatar_dir)
+    tier_colors = _tier_colors(document)
     title = _document_title(document)
     panel_padding = _scaled(14, layout.scale)
     text_draw = ImageDraw.Draw(Image.new('RGB', (1, 1)))
@@ -401,7 +425,7 @@ def render_master_svg(document, avatar_dir, map_dir=None, width=1600):
             f'<rect data-tier-legend="{html.escape(tier, quote=True)}" '
             f'x="{x}" y="{y}" width="{legend_width}" '
             f'height="{legend_height}" rx="{_scaled(4, layout.scale)}" '
-            f'fill="{TIER_COLORS[tier]}"/>')
+            f'fill="{tier_colors[tier]}"/>')
         parts.append(
             f'<text x="{x + legend_width // 2}" '
             f'y="{y + legend_height - _scaled(4, layout.scale)}" '
@@ -466,7 +490,7 @@ def render_master_svg(document, avatar_dir, map_dir=None, width=1600):
                 f'font-size="{role_font.size}" '
                 f'font-weight="bold" fill="#ffffff">{html.escape(role_label)}</text>')
             for tile in row.tiles:
-                tier_color = TIER_COLORS.get(tile.tier, '#aaaaaa')
+                tier_color = tier_colors.get(tile.tier, '#aaaaaa')
                 visuals = _tile_visuals(tile, layout.scale)
                 parts.append(
                     f'<rect data-brawler="{html.escape(str(tile.name), quote=True)}" '
@@ -496,7 +520,7 @@ def render_master_svg(document, avatar_dir, map_dir=None, width=1600):
                         'text-anchor="middle" font-family="sans-serif" '
                         f'font-size="{_scaled(20, layout.scale)}" '
                         'fill="#ffffff">?</text>')
-    signature = html.escape(_signature())
+    signature = html.escape(_signature(document))
     parts.append(
         f'<text x="{layout.width // 2}" '
         f'y="{layout.height - _scaled(24, layout.scale)}" '
@@ -526,6 +550,7 @@ def render_master_png(document, avatar_dir, output_path, resolution=None, map_di
     draw = ImageDraw.Draw(image)
     panel_padding = _scaled(14, layout.scale)
     avatars = _avatar_files(avatar_dir)
+    tier_colors = _tier_colors(document)
     title, title_font = _fit_caption(
         draw,
         _document_title(document),
@@ -542,7 +567,7 @@ def render_master_png(document, avatar_dir, output_path, resolution=None, map_di
         draw.rounded_rectangle(
             (x, y, x + legend_width, y + legend_height),
             radius=_scaled(4, layout.scale),
-            fill=TIER_COLORS[tier],
+            fill=tier_colors[tier],
         )
         tier_box = draw.textbbox((0, 0), tier, font=legend_font)
         draw.text(
@@ -627,7 +652,7 @@ def render_master_png(document, avatar_dir, output_path, resolution=None, map_di
                 font=role_font,
             )
             for tile in row.tiles:
-                tier_color = TIER_COLORS.get(tile.tier, '#aaaaaa')
+                tier_color = tier_colors.get(tile.tier, '#aaaaaa')
                 visuals = _tile_visuals(tile, layout.scale)
                 draw.rounded_rectangle(
                     (tile.x, tile.y, tile.x + tile.width, tile.y + tile.height),
@@ -658,7 +683,7 @@ def render_master_png(document, avatar_dir, output_path, resolution=None, map_di
 
     signature, signature_font = _fit_caption(
         draw,
-        _signature(),
+        _signature(document),
         max(1, layout.width - 2 * panel_padding),
         _scaled(24, layout.scale),
     )

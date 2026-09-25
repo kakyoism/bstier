@@ -93,7 +93,21 @@ def test_svg_renders_tiermaker_as_one_common_classes_panel():
     assert 'BrawlStars Tierlist: June 2026' in svg
     assert 'Common Classes' in svg
     assert 'Map Roles' not in svg
+    assert '- Powered by DeepDraft' not in svg
+    assert f'Produced by kakyo on {datetime.date.today().isoformat()}' in svg
     assert svg.count('<rect x=') >= 3
+
+
+def test_svg_uses_tiermaker_colors_for_tier_underlines():
+    svg = render.render_master_svg(
+        _tiermaker_document(),
+        _ROOT / 'res/avatar',
+        _ROOT / 'res/map',
+        width=900,
+    )
+
+    assert f'stroke="{render.TIERMAKER_TIER_COLORS["S"]}"' in svg
+    assert f'stroke="{render.TIER_COLORS["S"]}"' not in svg
 
 
 def test_png_uses_same_layout_and_requested_resolution(tmp_path):
