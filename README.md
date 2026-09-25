@@ -207,11 +207,11 @@ single `Common Classes` panel.
   - Tank: High-HP slow-or-normal movement human-shields that counter low-HP brawlers (Snipers, Controllers, Throwers) on closed maps
   - Thrower: Countering everyone on walled maps, including Artillery brawlers and certain Support and Controllers such as Berry, Mr.P, Sirius, and Willow
 - The mode functions, inspired by SpenLC, are (Flex means the brawler can either enhance the teammate as a support, or makes the opponent hard to counter due to its hybrid spec, e.g., Emz has high damage and controlling attack with certain self-defence skills, making her a Flex hard to counter):
-  - Bounty: Range, BlueStar, Pressure
-  - Brawl Ball: Damage, Flex, Pressure
+  - Bounty: Damage, Support, Flex, Range, BlueStar/Pressure
+  - Brawl Ball: Damage, Flex, Control, Pressure
   - Gem Grab: Carrier, Damage, Control, Pressure
-  - Heist: Safe-Damage, Flex, Defence
-  - HotZone: Zone-Time, Damage, Control
+  - Heist: Safe-Damage, Flex
+  - HotZone: Zone-Time, Damage, Control, Pressure
   - Knockout: Range, Flex, Pressure
 - `all.brawler.json` contains all the brawler data regarding the latest meta, including the said labels.
 
