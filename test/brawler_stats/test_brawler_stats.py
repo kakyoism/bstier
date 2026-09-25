@@ -159,3 +159,11 @@ def test_invalid_shapes_raise_value_error(shape):
 
     with pytest.raises(ValueError):
         brawler_stats.validate_attack(attack)
+
+
+def test_brawler_catalog_keys_are_sorted_after_version():
+    data = json.loads((_ROOT / 'res/spec/all.brawler.json').read_text())
+    keys = [name for name in data if name != 'version']
+
+    assert list(data)[0] == 'version'
+    assert keys == sorted(keys, key=str.casefold)

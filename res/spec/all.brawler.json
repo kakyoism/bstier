@@ -895,6 +895,95 @@
             "knockout": "flex"
         }
     },
+    "bolt": {
+        "power": 11,
+        "health": 10000,
+        "mainAttack": {
+            "name": "Bumper Roll",
+            "baseDamage": 2960,
+            "damage": 2960,
+            "DPS": 1345,
+            "ammo": 3,
+            "projectile": 1,
+            "shape": "singleShot",
+            "breakdown": "Rolling impact damage",
+            "range": 1.0,
+            "tags": [
+                "dash"
+            ]
+        },
+        "super": {
+            "name": "Turbo Charge",
+            "damage": 2600,
+            "breakdown": "High-speed crash dealing knockback",
+            "range": 8.0,
+            "chargeRate": 1.0,
+            "tags": [
+                "knockback",
+                "shield"
+            ]
+        },
+        "reloadSeconds": 2.2,
+        "speedUnits": 545,
+        "gadgets": [
+            {
+                "name": "OIL CHANGE",
+                "effect": "Bolt gains a 1 - 2 health shield based on his current speed.",
+                "tags": [
+                    "shield"
+                ]
+            },
+            {
+                "name": "BOUNCY BALL",
+                "effect": "Bolt jumps to a target location and deals area damage. Breaks environments but loses all speed when landing.",
+                "tags": [
+                    "jump"
+                ]
+            }
+        ],
+        "starPowers": [
+            {
+                "name": "TOSS UP",
+                "effect": "Bolt will knock enemies upwards when he's at full speed.",
+                "tags": [
+                    "stun"
+                ]
+            },
+            {
+                "name": "UNSTOPPABALL",
+                "effect": "Bolt is immune to crowd control onds after activating his Super.",
+                "tags": [
+                    "immune"
+                ]
+            }
+        ],
+        "hypercharge": {
+            "name": "Overdrive",
+            "effect": "Gain speed and damage reduction and leaving damaging trail behind.",
+            "damageBuff": 0.05,
+            "speedBuff": 0.25,
+            "shieldBuff": 0.1,
+            "chargeRate": 1.0,
+            "tags": []
+        },
+        "position": "lane",
+        "rating": {
+            "class": "Tank",
+            "rangeMain": "VERY SHORT",
+            "rangeSuper": "NORMAL",
+            "reload": "VERY SLOW",
+            "speed": "VERY FAST"
+        },
+        "roles": {
+            "*": "tank",
+            "bounty": "blueStar/pressure",
+            "brawlBall": "pressure",
+            "gemGrab": "pressure",
+            "heist": "flex",
+            "hotZone": "pressure",
+            "knockout": "pressure"
+        }
+    },
     "bonnie": {
         "power": 11,
         "health": 10000,
@@ -2000,6 +2089,95 @@
             "knockout": "flex"
         }
     },
+    "cosmo": {
+        "power": 11,
+        "health": 6400,
+        "mainAttack": {
+            "name": "Orbit Shot",
+            "baseDamage": 1400,
+            "damage": 1400,
+            "DPS": 933,
+            "ammo": 3,
+            "projectile": 1,
+            "shape": "multiShot",
+            "breakdown": "Fires projectiles that orbit outwards, scaling in size and damage",
+            "range": 9.0,
+            "tags": [
+                "curved"
+            ]
+        },
+        "super": {
+            "name": "Gravity Magnet",
+            "damage": 500,
+            "breakdown": "Attracts all allied and enemy projectiles toward target enemy",
+            "range": 8.0,
+            "chargeRate": 1.0,
+            "tags": [
+                "control",
+                "pull"
+            ]
+        },
+        "reloadSeconds": 1.5,
+        "speedUnits": 770,
+        "gadgets": [
+            {
+                "name": "Orbital Pulse",
+                "effect": "Instantly forces orbiting projectiles to expand to maximum radius.",
+                "tags": [
+                    "control"
+                ]
+            },
+            {
+                "name": "Zero-G",
+                "effect": "Cosmo floats over obstacles for 3 seconds.",
+                "tags": [
+                    "movement"
+                ]
+            }
+        ],
+        "starPowers": [
+            {
+                "name": "Expanding Universe",
+                "effect": "Orbiting attacks deal up to 30% more damage at maximum distance.",
+                "tags": [
+                    "buffDamage"
+                ]
+            },
+            {
+                "name": "Magnetic Pull",
+                "effect": "Targets hit by Gravity Magnet are slowed by 40% for 2 seconds.",
+                "tags": [
+                    "slow"
+                ]
+            }
+        ],
+        "hypercharge": {
+            "name": "Black Hole",
+            "effect": "Gravity Magnet now pulls surrounding enemy brawlers slightly toward the target.",
+            "damageBuff": 0.1,
+            "speedBuff": 0.1,
+            "shieldBuff": 0.1,
+            "chargeRate": 1.0,
+            "tags": []
+        },
+        "position": "lane",
+        "rating": {
+            "class": "Controller",
+            "rangeMain": "LONG",
+            "rangeSuper": "LONG",
+            "reload": "NORMAL",
+            "speed": "NORMAL"
+        },
+        "roles": {
+            "*": "controller",
+            "bounty": "flex",
+            "brawlBall": "control",
+            "gemGrab": "control",
+            "heist": "safeDamage",
+            "hotZone": "zoneTime",
+            "knockout": "flex"
+        }
+    },
     "crow": {
         "power": 11,
         "health": 6000,
@@ -2074,6 +2252,96 @@
             "heist": "safeDamage",
             "hotZone": "control",
             "knockout": "flex"
+        }
+    },
+    "damian": {
+        "power": 11,
+        "health": 11200,
+        "mainAttack": {
+            "name": "Power Trio",
+            "baseDamage": 1400,
+            "damage": 1400,
+            "DPS": 1167,
+            "ammo": 3,
+            "projectile": 1,
+            "shape": "singleShot",
+            "breakdown": "Damian throws a vicious punch. After 2 punches in a row, his next attack is an explosive kick that knocks back enemies and sets them on fire. After a delay, this fire explodes and spreads to nearby enemies.",
+            "range": 2.7,
+            "tags": [
+                "area",
+                "delayed"
+            ]
+        },
+        "super": {
+            "name": "Mosh Pit",
+            "damage": 1000,
+            "breakdown": "Damian leaps and creates a personal Mosh Pit lasting seconds. Inside the pit, enemies are knocked back when hitting speakers, dealing Damage.",
+            "range": 6.0,
+            "chargeRate": 1.0,
+            "tags": [
+                "turret",
+                "knockback"
+            ]
+        },
+        "reloadSeconds": 1.2,
+        "speedUnits": 800,
+        "gadgets": [
+            {
+                "name": "SPIRITUAL HEALING",
+                "effect": "Damian throws his microphone to a target location. The first teammate to pick it up is healed for health.",
+                "tags": [
+                    "heal"
+                ]
+            },
+            {
+                "name": "WALL OF SOUND",
+                "effect": "Damian summons a temporary wall of indestructible amps!",
+                "tags": [
+                    "wall"
+                ]
+            }
+        ],
+        "starPowers": [
+            {
+                "name": "CROWDKILL",
+                "effect": "Knocking a target into a wall stuns them.",
+                "tags": [
+                    "stun"
+                ]
+            },
+            {
+                "name": "VULGAR DISPLAY OF PUNCH",
+                "effect": "Damian has a flaming fist during his Super, which burns enemies.",
+                "tags": [
+                    "burn"
+                ]
+            }
+        ],
+        "hypercharge": {
+            "name": "Jump in the Fire",
+            "effect": "Super also sets the ground on fire, dealing 300 dps caught in the mosh pit.",
+            "damageBuff": 0.1,
+            "speedBuff": 0.1,
+            "shieldBuff": 0.1,
+            "chargeRate": 1.0,
+            "tags": []
+        },
+        "position": "lane",
+        "rating": {
+            "class": "Tank",
+            "rangeMain": "SHORT",
+            "rangeSuper": "NORMAL",
+            "reload": "VERY FAST",
+            "speed": "FAST"
+        },
+        "roles": {
+            "*": "tank",
+            "bounty": "blueStar/pressure",
+            "brawlBall": "pressure",
+            "gemGrab": "pressure",
+            "heist": "flex",
+            "hotZone": "pressure",
+            "knockout": "pressure"
         }
     },
     "darryl": {
@@ -2384,12 +2652,12 @@
         },
         "roles": {
             "*": "thrower",
-            "bounty": "flex",
+            "bounty": "range",
             "brawlBall": "control",
             "gemGrab": "control",
             "heist": "safeDamage",
             "hotZone": "control",
-            "knockout": "flex"
+            "knockout": "range"
         }
     },
     "edgar": {
@@ -3491,12 +3759,12 @@
         },
         "roles": {
             "*": "thrower",
-            "bounty": "flex",
+            "bounty": "range",
             "brawlBall": "control",
             "gemGrab": "control",
             "heist": "safeDamage",
             "hotZone": "control",
-            "knockout": "flex"
+            "knockout": "range"
         }
     },
     "gus": {
@@ -4381,12 +4649,12 @@
         },
         "roles": {
             "*": "thrower",
-            "bounty": "flex",
+            "bounty": "range",
             "brawlBall": "control",
             "gemGrab": "control",
             "heist": "flex",
             "hotZone": "control",
-            "knockout": "flex"
+            "knockout": "range"
         }
     },
     "leon": {
@@ -5672,6 +5940,98 @@
             "knockout": "flex"
         }
     },
+    "najia": {
+        "power": 11,
+        "health": 6800,
+        "mainAttack": {
+            "name": "Ssssnake Delivery",
+            "baseDamage": 600,
+            "damage": 1800,
+            "DPS": 2250,
+            "ammo": 1,
+            "projectile": 3,
+            "shape": "multiShot",
+            "breakdown": "600 (Jar) + 1200 (Snake poison)",
+            "range": 6.0,
+            "tags": [
+                "piercing",
+                "poison"
+            ]
+        },
+        "super": {
+            "name": "Danger Noodles",
+            "damage": 2900,
+            "breakdown": "500 (Jar) +800 x 3 (Snake explosions)",
+            "range": 5.33,
+            "chargeRate": 1.0,
+            "tags": [
+                "summon",
+                "poison"
+            ]
+        },
+        "reloadSeconds": 0.8,
+        "speedUnits": 770,
+        "gadgets": [
+            {
+                "name": "Poison Puddles",
+                "effect": "All enemies currently poisoned by Najia create poisonous puddles for 2 seconds.",
+                "tags": [
+                    "slow",
+                    "control"
+                ]
+            },
+            {
+                "name": "Najia Jar",
+                "effect": "Najia hides inside a vase; when broken, it knocks back nearby enemies.",
+                "tags": [
+                    "knockback",
+                    "shield"
+                ]
+            }
+        ],
+        "starPowers": [
+            {
+                "name": "Poisonous Protector",
+                "effect": "Brawlers defeated while poisoned by Najia spawn a snake in their place.",
+                "tags": [
+                    "summon"
+                ]
+            },
+            {
+                "name": "Venomous",
+                "effect": "Poison damage scales with the target's current percentage health.",
+                "tags": [
+                    "buffDamage"
+                ]
+            }
+        ],
+        "hypercharge": {
+            "name": "Python Swarm",
+            "effect": "Throws 6 jars for her Super instead of 3, leaving poisonous trails.",
+            "damageBuff": 0.05,
+            "speedBuff": 0.2,
+            "shieldBuff": 0.05,
+            "chargeRate": 1.0,
+            "tags": []
+        },
+        "position": "lane",
+        "rating": {
+            "class": "DamageDealer",
+            "rangeMain": "VERY LONG",
+            "rangeSuper": "NORMAL",
+            "reload": "VERY FAST",
+            "speed": "FAST"
+        },
+        "roles": {
+            "*": "sniper",
+            "bounty": "range",
+            "brawlBall": "damage",
+            "gemGrab": "damage",
+            "heist": "flex",
+            "hotZone": "control",
+            "knockout": "range"
+        }
+    },
     "nani": {
         "power": 11,
         "health": 5000,
@@ -5832,6 +6192,95 @@
             "heist": "flex",
             "hotZone": "damage",
             "knockout": "flex"
+        }
+    },
+    "nori": {
+        "power": 11,
+        "health": 7000,
+        "mainAttack": {
+            "name": "Fishing Fury",
+            "baseDamage": 2000,
+            "damage": 2000,
+            "DPS": 20000,
+            "ammo": 3,
+            "projectile": 1,
+            "shape": "singleShot",
+            "breakdown": "Hook strike and stretch",
+            "range": 3.7,
+            "tags": [
+                "pull"
+            ]
+        },
+        "super": {
+            "name": "Catch of the Day",
+            "damage": 2500,
+            "breakdown": "Dives and emerge, dealing delayed area damage",
+            "range": 7.0,
+            "chargeRate": 1.0,
+            "tags": [
+                "area",
+                "delayed"
+            ]
+        },
+        "reloadSeconds": 0.1,
+        "speedUnits": 855,
+        "gadgets": [
+            {
+                "name": "Sushi Snack",
+                "effect": "Eats up to 3 fish to heal for 1000 per fish.",
+                "tags": [
+                    "heal"
+                ]
+            },
+            {
+                "name": "Gonna Need a Bigger Net",
+                "effect": "Aims a fishing net that roots the first Brawler hit for 1.25s and deals 520 damage",
+                "tags": [
+                    "stun"
+                ]
+            }
+        ],
+        "starPowers": [
+            {
+                "name": "Big Haul",
+                "effect": "Nori catches fish when his Super hits enemy Brawlers.",
+                "tags": [
+                    "buffDamage"
+                ]
+            },
+            {
+                "name": "His Mother's Son",
+                "effect": "Nori gains +% speed whenever he hits an enemy with his Main Attack.",
+                "tags": [
+                    "buff.speed"
+                ]
+            }
+        ],
+        "hypercharge": {
+            "name": "Abyssal Fury",
+            "effect": "Monster fish summons create a permanent slow zone on impact.",
+            "damageBuff": 0.1,
+            "speedBuff": 0.15,
+            "shieldBuff": 0.1,
+            "chargeRate": 1.0,
+            "tags": []
+        },
+        "position": "lane",
+        "rating": {
+            "class": "Assassin",
+            "rangeMain": "LONG",
+            "rangeSuper": "LONG",
+            "reload": "VERY FAST",
+            "speed": "VERY FAST"
+        },
+        "roles": {
+            "*": "aggro",
+            "bounty": "blueStar/pressure",
+            "brawlBall": "pressure",
+            "gemGrab": "pressure",
+            "heist": "safeDamage",
+            "hotZone": "pressure",
+            "knockout": "pressure"
         }
     },
     "ollie": {
@@ -7120,6 +7569,94 @@
             "knockout": "flex"
         }
     },
+    "sirius": {
+        "power": 11,
+        "health": 6800,
+        "mainAttack": {
+            "name": "BINARY STARR",
+            "baseDamage": 600,
+            "damage": 1200,
+            "DPS": 750,
+            "ammo": 3,
+            "projectile": 2,
+            "shape": "multiShot",
+            "breakdown": "Sirius conjures two projectiles, a Starr Bomb that deals area damage and a Shadow Strike that hits a single target. Sirius will collect a Brawler Shadow on every 4th hit. Sirius can store 3 Brawler Shadows at a time.",
+            "range": 7.3,
+            "tags": [
+                "piercing"
+            ]
+        },
+        "super": {
+            "name": "SHADOW SUMMON",
+            "damage": -1,
+            "breakdown": "Sirius unleashes all collected Brawler Shadows into the world. Shadows will take on the characteristics of their Brawler counterpart, like attacks and health. Sirius can instruct Shadows to do his bidding! Tap for them to return and follow Sirius, or aim to give them an area to guard. Brawler Shadow stats are a 55% of their base Brawler.",
+            "range": 7.0,
+            "chargeRate": 1.0,
+            "tags": [
+                "summon"
+            ]
+        },
+        "reloadSeconds": 1.6,
+        "speedUnits": 750,
+        "gadgets": [
+            {
+                "name": "A STARR IS BORN",
+                "effect": "Sirius fires a projectile that summons a Shadow on hit, also slowing the hit target.",
+                "tags": [
+                    "summon"
+                ]
+            },
+            {
+                "name": "MASTER OF SHADOWS",
+                "effect": "Summoned Shadows return to Sirius, who heals them for of their health.",
+                "tags": [
+                    "buffDamage"
+                ]
+            }
+        ],
+        "starPowers": [
+            {
+                "name": "DUSK RUNNERS",
+                "effect": "Shadows have +% movement speed.",
+                "tags": [
+                    "debuff"
+                ]
+            },
+            {
+                "name": "THE DARKEST STARR",
+                "effect": "Each hit with a Shadow Strike counts as 2 to collect Brawler Shadows, instead of 1.",
+                "tags": [
+                    "shield"
+                ]
+            }
+        ],
+        "hypercharge": {
+            "name": "Event Horizon",
+            "effect": "Super gravitational pull strength is doubled and lasts 2 seconds longer.",
+            "damageBuff": 0.1,
+            "speedBuff": 0.15,
+            "shieldBuff": 0.1,
+            "chargeRate": 1.0,
+            "tags": []
+        },
+        "position": "mid",
+        "rating": {
+            "class": "Controller",
+            "rangeMain": "LONG",
+            "rangeSuper": "NORMAL",
+            "reload": "NORMAL",
+            "speed": "FAST"
+        },
+        "roles": {
+            "*": "thrower",
+            "bounty": "range",
+            "brawlBall": "control",
+            "gemGrab": "control",
+            "heist": "flex",
+            "hotZone": "control",
+            "knockout": "range"
+        }
+    },
     "spike": {
         "power": 11,
         "health": 6000,
@@ -7366,6 +7903,97 @@
             "heist": "flex",
             "hotZone": "control",
             "knockout": "flex"
+        }
+    },
+    "starrNova": {
+        "power": 11,
+        "health": 7400,
+        "mainAttack": {
+            "name": "NOVA HAIR, GO!",
+            "baseDamage": 480,
+            "damage": 960,
+            "DPS": 600,
+            "ammo": 3,
+            "projectile": 2,
+            "shape": "multiShot",
+            "breakdown": "Starr Nova uses her glorious anime hair as a weapon, firing 2 blonde projectiles.",
+            "range": 5.7,
+            "tags": [
+                "straight"
+            ]
+        },
+        "super": {
+            "name": "NOVA CRYSTAL, TRANSFORM!",
+            "damage": 4200,
+            "breakdown": "Starr Nova dashes and transforms into her ultimate form, conjuring her Nova sword! She gains movement speed, converts dealt damage to health, and her main attack changes shape. Transformation lasts sec., healing from damage bt 30% per hit",
+            "range": 9.0,
+            "chargeRate": 1.0,
+            "tags": [
+                "dash"
+            ]
+        },
+        "reloadSeconds": 1.6,
+        "speedUnits": 855,
+        "gadgets": [
+            {
+                "name": "FLOATY TIME",
+                "effect": "Starr Nova deploys an anti-gravity device, allowing teammates to float inside of the area!",
+                "tags": [
+                    "turret",
+                    "immune"
+                ]
+            },
+            {
+                "name": "SHINING STARR OF FRIENDSHIP AND JUSTICE",
+                "effect": "Starr Nova fires an energy ball that damages enemies and heals teammates for . This energy ball can also be teleported to before it hits a target!",
+                "tags": [
+                    "heal"
+                ]
+            }
+        ],
+        "starPowers": [
+            {
+                "name": "POWER LEVEL: MAXIMUM",
+                "effect": "Hitting an enemy Brawler while transformed increases your damage by 4% to a maximum of 20%.",
+                "tags": [
+                    "buffDamage"
+                ]
+            },
+            {
+                "name": "MYSTICAL STARR TECHNIQUE",
+                "effect": "Starr Nova's main attack also heals teammates for 249, charging her Super based on healing.",
+                "tags": [
+                    "heal"
+                ]
+            }
+        ],
+        "hypercharge": {
+            "name": "Starr Nova: The Hypercharge",
+            "effect": "Gain invulnerability and unlimited ammo",
+            "damageBuff": 0.15,
+            "speedBuff": 0.2,
+            "shieldBuff": 0.05,
+            "chargeRate": 1.0,
+            "tags": [
+                "invulnerability"
+            ]
+        },
+        "position": "lane",
+        "rating": {
+            "class": "Assassin",
+            "rangeMain": "NORMAL",
+            "rangeSuper": "LONG",
+            "reload": "NORMAL",
+            "speed": "VERY FAST"
+        },
+        "roles": {
+            "*": "aggro",
+            "bounty": "blueStar/pressure",
+            "brawlBall": "pressure",
+            "gemGrab": "pressure",
+            "heist": "flex",
+            "hotZone": "pressure",
+            "knockout": "pressure"
         }
     },
     "stu": {
@@ -7782,6 +8410,188 @@
             "knockout": "pressure"
         }
     },
+    "vince": {
+        "power": 11,
+        "health": 7400,
+        "mainAttack": {
+            "name": "Coffee Mug",
+            "baseDamage": 1800,
+            "damage": 1800,
+            "DPS": 1385,
+            "ammo": 3,
+            "projectile": 1,
+            "shape": "singleShot",
+            "breakdown": "Throws a straight-flying, far-reaching coffee cup",
+            "range": 8.5,
+            "tags": []
+        },
+        "super": {
+            "name": "Barista Barrage",
+            "damage": 3200,
+            "breakdown": "Fires projectiles that debuff enemies, empowered by collected caterpillars/moths",
+            "range": 7.0,
+            "chargeRate": 1.0,
+            "tags": [
+                "debuff",
+                "control"
+            ]
+        },
+        "reloadSeconds": 1.3,
+        "speedUnits": 770,
+        "gadgets": [
+            {
+                "name": "Hot Coffee",
+                "effect": "Tosses a projectile in an arc that deals high area damage.",
+                "tags": [
+                    "control"
+                ]
+            },
+            {
+                "name": "Metamothosis",
+                "effect": "Turns nearby spawned caterpillars into moths instantly, doubling your collection.",
+                "tags": [
+                    "summon"
+                ]
+            }
+        ],
+        "starPowers": [
+            {
+                "name": "Caffeine Rush",
+                "effect": "Increases reload speed by 20% while holding maximum moth collection stages.",
+                "tags": [
+                    "buff.reload"
+                ]
+            },
+            {
+                "name": "Creepy Crawlies",
+                "effect": "Enemies afflicted with caterpillar debuffs have their movement speed reduced by 25%.",
+                "tags": [
+                    "slow"
+                ]
+            }
+        ],
+        "hypercharge": {
+            "name": "Café Chaos",
+            "effect": "Barista Barrage fires additional moth projectiles that track nearby targets automatically.",
+            "damageBuff": 0.1,
+            "speedBuff": 0.15,
+            "shieldBuff": 0.05,
+            "chargeRate": 1.0,
+            "tags": []
+        },
+        "position": "lane",
+        "rating": {
+            "class": "DamageDealer",
+            "rangeMain": "LONG",
+            "rangeSuper": "NORMAL",
+            "reload": "NORMAL",
+            "speed": "NORMAL"
+        },
+        "roles": {
+            "*": "*",
+            "bounty": "flex",
+            "brawlBall": "damage",
+            "gemGrab": "damage",
+            "heist": "flex",
+            "hotZone": "damage",
+            "knockout": "flex"
+        }
+    },
+    "wendy": {
+        "power": 11,
+        "health": 4000,
+        "mainAttack": {
+            "name": "Blow Dryer",
+            "baseDamage": 2000,
+            "damage": 2000,
+            "DPS": 1429,
+            "ammo": 3,
+            "projectile": 1,
+            "shape": "singleShot",
+            "breakdown": "A wind blast in straight line",
+            "range": 8,
+            "tags": [
+                "singleShot",
+                "shield"
+            ]
+        },
+        "super": {
+            "name": "Planet Protector",
+            "damage": 0,
+            "breakdown": "Deploys a shield generator that absorbs 60% of damage taken by Wendy and her teammates within its range.",
+            "range": 5.0,
+            "chargeRate": 1.0,
+            "tags": [
+                "heal",
+                "shield"
+            ]
+        },
+        "reloadSeconds": 1.4,
+        "speedUnits": 800,
+        "gadgets": [
+            {
+                "name": "WIND-POWERED",
+                "effect": "Wendy's platform gives her a boost and she jumps a short distance.",
+                "tags": [
+                    "teleport"
+                ]
+            },
+            {
+                "name": "GREEN GRENADE",
+                "effect": "Wendy launches a wind grenade that slows all enemies hit and stops them healing momentarily.",
+                "tags": [
+                    "slow",
+                    "unheal",
+                    "crowdControl"
+                ]
+            }
+        ],
+        "starPowers": [
+            {
+                "name": "SLOWING SHIELD",
+                "effect": "Enemies in Wendy's shield generator are slowed.",
+                "tags": [
+                    "slow",
+                    "crowdControl"
+                ]
+            },
+            {
+                "name": "SOLAR SHIELD",
+                "effect": "Wendy's shield generator gains an additional health.",
+                "tags": [
+                    "buffHealth"
+                ]
+            }
+        ],
+        "hypercharge": {
+            "name": "Green Energy",
+            "effect": "Increated shield generator health and absorb 90% of damage taken by Wendy or her teammates.",
+            "damageBuff": 0.05,
+            "speedBuff": 0.15,
+            "shieldBuff": 0.15,
+            "chargeRate": 1.0,
+            "tags": [
+                "shield"
+            ]
+        },
+        "position": "mid",
+        "rating": {
+            "class": "Support",
+            "rangeMain": "LONG",
+            "rangeSuper": "NORMAL",
+            "reload": "FAST",
+            "speed": "FAST"
+        },
+        "roles": {
+            "*": "support",
+            "bounty": "flex",
+            "brawlBall": "flex",
+            "gemGrab": "carrier",
+            "heist": "flex",
+            "hotZone": "control",
+            "knockout": "flex"
+        }
+    },
     "willow": {
         "power": 11,
         "health": 6600,
@@ -7933,816 +8743,6 @@
             "heist": "flex",
             "hotZone": "control",
             "knockout": "range"
-        }
-    },
-    "najia": {
-        "power": 11,
-        "health": 6800,
-        "mainAttack": {
-            "name": "Ssssnake Delivery",
-            "baseDamage": 600,
-            "damage": 1800,
-            "DPS": 2250,
-            "ammo": 1,
-            "projectile": 3,
-            "shape": "multiShot",
-            "breakdown": "600 (Jar) + 1200 (Snake poison)",
-            "range": 6.0,
-            "tags": [
-                "piercing",
-                "poison"
-            ]
-        },
-        "super": {
-            "name": "Danger Noodles",
-            "damage": 2900,
-            "breakdown": "500 (Jar) +800 x 3 (Snake explosions)",
-            "range": 5.33,
-            "chargeRate": 1.0,
-            "tags": [
-                "summon",
-                "poison"
-            ]
-        },
-        "reloadSeconds": 0.8,
-        "speedUnits": 770,
-        "gadgets": [
-            {
-                "name": "Poison Puddles",
-                "effect": "All enemies currently poisoned by Najia create poisonous puddles for 2 seconds.",
-                "tags": [
-                    "slow",
-                    "control"
-                ]
-            },
-            {
-                "name": "Najia Jar",
-                "effect": "Najia hides inside a vase; when broken, it knocks back nearby enemies.",
-                "tags": [
-                    "knockback",
-                    "shield"
-                ]
-            }
-        ],
-        "starPowers": [
-            {
-                "name": "Poisonous Protector",
-                "effect": "Brawlers defeated while poisoned by Najia spawn a snake in their place.",
-                "tags": [
-                    "summon"
-                ]
-            },
-            {
-                "name": "Venomous",
-                "effect": "Poison damage scales with the target's current percentage health.",
-                "tags": [
-                    "buffDamage"
-                ]
-            }
-        ],
-        "hypercharge": {
-            "name": "Python Swarm",
-            "effect": "Throws 6 jars for her Super instead of 3, leaving poisonous trails.",
-            "damageBuff": 0.05,
-            "speedBuff": 0.2,
-            "shieldBuff": 0.05,
-            "chargeRate": 1.0,
-            "tags": []
-        },
-        "position": "lane",
-        "rating": {
-            "class": "DamageDealer",
-            "rangeMain": "VERY LONG",
-            "rangeSuper": "NORMAL",
-            "reload": "VERY FAST",
-            "speed": "FAST"
-        },
-        "roles": {
-            "*": "sniper",
-            "bounty": "range",
-            "brawlBall": "damage",
-            "gemGrab": "damage",
-            "heist": "flex",
-            "hotZone": "control",
-            "knockout": "range"
-        }
-    },
-    "nori": {
-        "power": 11,
-        "health": 7000,
-        "mainAttack": {
-            "name": "Fishing Fury",
-            "baseDamage": 2000,
-            "damage": 2000,
-            "DPS": 20000,
-            "ammo": 3,
-            "projectile": 1,
-            "shape": "singleShot",
-            "breakdown": "Hook strike and stretch",
-            "range": 3.7,
-            "tags": [
-                "pull"
-            ]
-        },
-        "super": {
-            "name": "Catch of the Day",
-            "damage": 2500,
-            "breakdown": "Dives and emerge, dealing delayed area damage",
-            "range": 7.0,
-            "chargeRate": 1.0,
-            "tags": [
-                "area",
-                "delayed"
-            ]
-        },
-        "reloadSeconds": 0.1,
-        "speedUnits": 855,
-        "gadgets": [
-            {
-                "name": "Sushi Snack",
-                "effect": "Eats up to 3 fish to heal for 1000 per fish.",
-                "tags": [
-                    "heal"
-                ]
-            },
-            {
-                "name": "Gonna Need a Bigger Net",
-                "effect": "Aims a fishing net that roots the first Brawler hit for 1.25s and deals 520 damage",
-                "tags": [
-                    "stun"
-                ]
-            }
-        ],
-        "starPowers": [
-            {
-                "name": "Big Haul",
-                "effect": "Nori catches fish when his Super hits enemy Brawlers.",
-                "tags": [
-                    "buffDamage"
-                ]
-            },
-            {
-                "name": "His Mother's Son",
-                "effect": "Nori gains +% speed whenever he hits an enemy with his Main Attack.",
-                "tags": [
-                    "buff.speed"
-                ]
-            }
-        ],
-        "hypercharge": {
-            "name": "Abyssal Fury",
-            "effect": "Monster fish summons create a permanent slow zone on impact.",
-            "damageBuff": 0.1,
-            "speedBuff": 0.15,
-            "shieldBuff": 0.1,
-            "chargeRate": 1.0,
-            "tags": []
-        },
-        "position": "lane",
-        "rating": {
-            "class": "Assassin",
-            "rangeMain": "LONG",
-            "rangeSuper": "LONG",
-            "reload": "VERY FAST",
-            "speed": "VERY FAST"
-        },
-        "roles": {
-            "*": "aggro",
-            "bounty": "blueStar/pressure",
-            "brawlBall": "pressure",
-            "gemGrab": "pressure",
-            "heist": "safeDamage",
-            "hotZone": "pressure",
-            "knockout": "pressure"
-        }
-    },
-    "bolt": {
-        "power": 11,
-        "health": 10000,
-        "mainAttack": {
-            "name": "Bumper Roll",
-            "baseDamage": 2960,
-            "damage": 2960,
-            "DPS": 1345,
-            "ammo": 3,
-            "projectile": 1,
-            "shape": "singleShot",
-            "breakdown": "Rolling impact damage",
-            "range": 1.0,
-            "tags": [
-                "dash"
-            ]
-        },
-        "super": {
-            "name": "Turbo Charge",
-            "damage": 2600,
-            "breakdown": "High-speed crash dealing knockback",
-            "range": 8.0,
-            "chargeRate": 1.0,
-            "tags": [
-                "knockback",
-                "shield"
-            ]
-        },
-        "reloadSeconds": 2.2,
-        "speedUnits": 545,
-        "gadgets": [
-            {
-                "name": "OIL CHANGE",
-                "effect": "Bolt gains a 1 - 2 health shield based on his current speed.",
-                "tags": [
-                    "shield"
-                ]
-            },
-            {
-                "name": "BOUNCY BALL",
-                "effect": "Bolt jumps to a target location and deals area damage. Breaks environments but loses all speed when landing.",
-                "tags": [
-                    "jump"
-                ]
-            }
-        ],
-        "starPowers": [
-            {
-                "name": "TOSS UP",
-                "effect": "Bolt will knock enemies upwards when he's at full speed.",
-                "tags": [
-                    "stun"
-                ]
-            },
-            {
-                "name": "UNSTOPPABALL",
-                "effect": "Bolt is immune to crowd control onds after activating his Super.",
-                "tags": [
-                    "immune"
-                ]
-            }
-        ],
-        "hypercharge": {
-            "name": "Overdrive",
-            "effect": "Gain speed and damage reduction and leaving damaging trail behind.",
-            "damageBuff": 0.05,
-            "speedBuff": 0.25,
-            "shieldBuff": 0.1,
-            "chargeRate": 1.0,
-            "tags": []
-        },
-        "position": "lane",
-        "rating": {
-            "class": "Tank",
-            "rangeMain": "VERY SHORT",
-            "rangeSuper": "NORMAL",
-            "reload": "VERY SLOW",
-            "speed": "VERY FAST"
-        },
-        "roles": {
-            "*": "tank",
-            "bounty": "blueStar/pressure",
-            "brawlBall": "pressure",
-            "gemGrab": "pressure",
-            "heist": "flex",
-            "hotZone": "pressure",
-            "knockout": "pressure"
-        }
-    },
-    "damian": {
-        "power": 11,
-        "health": 11200,
-        "mainAttack": {
-            "name": "Power Trio",
-            "baseDamage": 1400,
-            "damage": 1400,
-            "DPS": 1167,
-            "ammo": 3,
-            "projectile": 1,
-            "shape": "singleShot",
-            "breakdown": "Damian throws a vicious punch. After 2 punches in a row, his next attack is an explosive kick that knocks back enemies and sets them on fire. After a delay, this fire explodes and spreads to nearby enemies.",
-            "range": 2.7,
-            "tags": [
-                "area",
-                "delayed"
-            ]
-        },
-        "super": {
-            "name": "Mosh Pit",
-            "damage": 1000,
-            "breakdown": "Damian leaps and creates a personal Mosh Pit lasting seconds. Inside the pit, enemies are knocked back when hitting speakers, dealing Damage.",
-            "range": 6.0,
-            "chargeRate": 1.0,
-            "tags": [
-                "turret",
-                "knockback"
-            ]
-        },
-        "reloadSeconds": 1.2,
-        "speedUnits": 800,
-        "gadgets": [
-            {
-                "name": "SPIRITUAL HEALING",
-                "effect": "Damian throws his microphone to a target location. The first teammate to pick it up is healed for health.",
-                "tags": [
-                    "heal"
-                ]
-            },
-            {
-                "name": "WALL OF SOUND",
-                "effect": "Damian summons a temporary wall of indestructible amps!",
-                "tags": [
-                    "wall"
-                ]
-            }
-        ],
-        "starPowers": [
-            {
-                "name": "CROWDKILL",
-                "effect": "Knocking a target into a wall stuns them.",
-                "tags": [
-                    "stun"
-                ]
-            },
-            {
-                "name": "VULGAR DISPLAY OF PUNCH",
-                "effect": "Damian has a flaming fist during his Super, which burns enemies.",
-                "tags": [
-                    "burn"
-                ]
-            }
-        ],
-        "hypercharge": {
-            "name": "Jump in the Fire",
-            "effect": "Super also sets the ground on fire, dealing 300 dps caught in the mosh pit.",
-            "damageBuff": 0.1,
-            "speedBuff": 0.1,
-            "shieldBuff": 0.1,
-            "chargeRate": 1.0,
-            "tags": []
-        },
-        "position": "lane",
-        "rating": {
-            "class": "Tank",
-            "rangeMain": "SHORT",
-            "rangeSuper": "NORMAL",
-            "reload": "VERY FAST",
-            "speed": "FAST"
-        },
-        "roles": {
-            "*": "tank",
-            "bounty": "blueStar/pressure",
-            "brawlBall": "pressure",
-            "gemGrab": "pressure",
-            "heist": "flex",
-            "hotZone": "pressure",
-            "knockout": "pressure"
-        }
-    },
-    "starrNova": {
-        "power": 11,
-        "health": 7400,
-        "mainAttack": {
-            "name": "NOVA HAIR, GO!",
-            "baseDamage": 480,
-            "damage": 960,
-            "DPS": 600,
-            "ammo": 3,
-            "projectile": 2,
-            "shape": "multiShot",
-            "breakdown": "Starr Nova uses her glorious anime hair as a weapon, firing 2 blonde projectiles.",
-            "range": 5.7,
-            "tags": [
-                "straight"
-            ]
-        },
-        "super": {
-            "name": "NOVA CRYSTAL, TRANSFORM!",
-            "damage": 4200,
-            "breakdown": "Starr Nova dashes and transforms into her ultimate form, conjuring her Nova sword! She gains movement speed, converts dealt damage to health, and her main attack changes shape. Transformation lasts sec., healing from damage bt 30% per hit",
-            "range": 9.0,
-            "chargeRate": 1.0,
-            "tags": [
-                "dash"
-            ]
-        },
-        "reloadSeconds": 1.6,
-        "speedUnits": 855,
-        "gadgets": [
-            {
-                "name": "FLOATY TIME",
-                "effect": "Starr Nova deploys an anti-gravity device, allowing teammates to float inside of the area!",
-                "tags": [
-                    "turret",
-                    "immune"
-                ]
-            },
-            {
-                "name": "SHINING STARR OF FRIENDSHIP AND JUSTICE",
-                "effect": "Starr Nova fires an energy ball that damages enemies and heals teammates for . This energy ball can also be teleported to before it hits a target!",
-                "tags": [
-                    "heal"
-                ]
-            }
-        ],
-        "starPowers": [
-            {
-                "name": "POWER LEVEL: MAXIMUM",
-                "effect": "Hitting an enemy Brawler while transformed increases your damage by 4% to a maximum of 20%.",
-                "tags": [
-                    "buffDamage"
-                ]
-            },
-            {
-                "name": "MYSTICAL STARR TECHNIQUE",
-                "effect": "Starr Nova's main attack also heals teammates for 249, charging her Super based on healing.",
-                "tags": [
-                    "heal"
-                ]
-            }
-        ],
-        "hypercharge": {
-            "name": "Starr Nova: The Hypercharge",
-            "effect": "Gain invulnerability and unlimited ammo",
-            "damageBuff": 0.15,
-            "speedBuff": 0.2,
-            "shieldBuff": 0.05,
-            "chargeRate": 1.0,
-            "tags": [
-                "invulnerability"
-            ]
-        },
-        "position": "lane",
-        "rating": {
-            "class": "Assassin",
-            "rangeMain": "NORMAL",
-            "rangeSuper": "LONG",
-            "reload": "NORMAL",
-            "speed": "VERY FAST"
-        },
-        "roles": {
-            "*": "aggro",
-            "bounty": "blueStar/pressure",
-            "brawlBall": "pressure",
-            "gemGrab": "pressure",
-            "heist": "flex",
-            "hotZone": "pressure",
-            "knockout": "pressure"
-        }
-    },
-    "sirius": {
-        "power": 11,
-        "health": 6800,
-        "mainAttack": {
-            "name": "BINARY STARR",
-            "baseDamage": 600,
-            "damage": 1200,
-            "DPS": 750,
-            "ammo": 3,
-            "projectile": 2,
-            "shape": "multiShot",
-            "breakdown": "Sirius conjures two projectiles, a Starr Bomb that deals area damage and a Shadow Strike that hits a single target. Sirius will collect a Brawler Shadow on every 4th hit. Sirius can store 3 Brawler Shadows at a time.",
-            "range": 7.3,
-            "tags": [
-                "piercing"
-            ]
-        },
-        "super": {
-            "name": "SHADOW SUMMON",
-            "damage": -1,
-            "breakdown": "Sirius unleashes all collected Brawler Shadows into the world. Shadows will take on the characteristics of their Brawler counterpart, like attacks and health. Sirius can instruct Shadows to do his bidding! Tap for them to return and follow Sirius, or aim to give them an area to guard. Brawler Shadow stats are a 55% of their base Brawler.",
-            "range": 7.0,
-            "chargeRate": 1.0,
-            "tags": [
-                "summon"
-            ]
-        },
-        "reloadSeconds": 1.6,
-        "speedUnits": 750,
-        "gadgets": [
-            {
-                "name": "A STARR IS BORN",
-                "effect": "Sirius fires a projectile that summons a Shadow on hit, also slowing the hit target.",
-                "tags": [
-                    "summon"
-                ]
-            },
-            {
-                "name": "MASTER OF SHADOWS",
-                "effect": "Summoned Shadows return to Sirius, who heals them for of their health.",
-                "tags": [
-                    "buffDamage"
-                ]
-            }
-        ],
-        "starPowers": [
-            {
-                "name": "DUSK RUNNERS",
-                "effect": "Shadows have +% movement speed.",
-                "tags": [
-                    "debuff"
-                ]
-            },
-            {
-                "name": "THE DARKEST STARR",
-                "effect": "Each hit with a Shadow Strike counts as 2 to collect Brawler Shadows, instead of 1.",
-                "tags": [
-                    "shield"
-                ]
-            }
-        ],
-        "hypercharge": {
-            "name": "Event Horizon",
-            "effect": "Super gravitational pull strength is doubled and lasts 2 seconds longer.",
-            "damageBuff": 0.1,
-            "speedBuff": 0.15,
-            "shieldBuff": 0.1,
-            "chargeRate": 1.0,
-            "tags": []
-        },
-        "position": "mid",
-        "rating": {
-            "class": "Controller",
-            "rangeMain": "LONG",
-            "rangeSuper": "NORMAL",
-            "reload": "NORMAL",
-            "speed": "FAST"
-        },
-        "roles": {
-            "*": "thrower",
-            "bounty": "range",
-            "brawlBall": "control",
-            "gemGrab": "control",
-            "heist": "flex",
-            "hotZone": "control",
-            "knockout": "range"
-        }
-    },
-    "wendy": {
-        "power": 11,
-        "health": 4000,
-        "mainAttack": {
-            "name": "Blow Dryer",
-            "baseDamage": 2000,
-            "damage": 2000,
-            "DPS": 1429,
-            "ammo": 3,
-            "projectile": 1,
-            "shape": "singleShot",
-            "breakdown": "A wind blast in straight line",
-            "range": 8,
-            "tags": [
-                "singleShot",
-                "shield"
-            ]
-        },
-        "super": {
-            "name": "Planet Protector",
-            "damage": 0,
-            "breakdown": "Deploys a shield generator that absorbs 60% of damage taken by Wendy and her teammates within its range.",
-            "range": 5.0,
-            "chargeRate": 1.0,
-            "tags": [
-                "heal",
-                "shield"
-            ]
-        },
-        "reloadSeconds": 1.4,
-        "speedUnits": 800,
-        "gadgets": [
-            {
-                "name": "WIND-POWERED",
-                "effect": "Wendy's platform gives her a boost and she jumps a short distance.",
-                "tags": [
-                    "teleport"
-                ]
-            },
-            {
-                "name": "GREEN GRENADE",
-                "effect": "Wendy launches a wind grenade that slows all enemies hit and stops them healing momentarily.",
-                "tags": [
-                    "slow",
-                    "unheal",
-                    "crowdControl"
-                ]
-            }
-        ],
-        "starPowers": [
-            {
-                "name": "SLOWING SHIELD",
-                "effect": "Enemies in Wendy's shield generator are slowed.",
-                "tags": [
-                    "slow",
-                    "crowdControl"
-                ]
-            },
-            {
-                "name": "SOLAR SHIELD",
-                "effect": "Wendy's shield generator gains an additional health.",
-                "tags": [
-                    "buffHealth"
-                ]
-            }
-        ],
-        "hypercharge": {
-            "name": "Green Energy",
-            "effect": "Increated shield generator health and absorb 90% of damage taken by Wendy or her teammates.",
-            "damageBuff": 0.05,
-            "speedBuff": 0.15,
-            "shieldBuff": 0.15,
-            "chargeRate": 1.0,
-            "tags": [
-                "shield"
-            ]
-        },
-        "position": "mid",
-        "rating": {
-            "class": "Support",
-            "rangeMain": "LONG",
-            "rangeSuper": "NORMAL",
-            "reload": "FAST",
-            "speed": "FAST"
-        },
-        "roles": {
-            "*": "support",
-            "bounty": "flex",
-            "brawlBall": "flex",
-            "gemGrab": "carrier",
-            "heist": "flex",
-            "hotZone": "control",
-            "knockout": "flex"
-        }
-    },
-    "cosmo": {
-        "power": 11,
-        "health": 6400,
-        "mainAttack": {
-            "name": "Orbit Shot",
-            "baseDamage": 1400,
-            "damage": 1400,
-            "DPS": 933,
-            "ammo": 3,
-            "projectile": 1,
-            "shape": "multiShot",
-            "breakdown": "Fires projectiles that orbit outwards, scaling in size and damage",
-            "range": 9.0,
-            "tags": [
-                "curved"
-            ]
-        },
-        "super": {
-            "name": "Gravity Magnet",
-            "damage": 500,
-            "breakdown": "Attracts all allied and enemy projectiles toward target enemy",
-            "range": 8.0,
-            "chargeRate": 1.0,
-            "tags": [
-                "control",
-                "pull"
-            ]
-        },
-        "reloadSeconds": 1.5,
-        "speedUnits": 770,
-        "gadgets": [
-            {
-                "name": "Orbital Pulse",
-                "effect": "Instantly forces orbiting projectiles to expand to maximum radius.",
-                "tags": [
-                    "control"
-                ]
-            },
-            {
-                "name": "Zero-G",
-                "effect": "Cosmo floats over obstacles for 3 seconds.",
-                "tags": [
-                    "movement"
-                ]
-            }
-        ],
-        "starPowers": [
-            {
-                "name": "Expanding Universe",
-                "effect": "Orbiting attacks deal up to 30% more damage at maximum distance.",
-                "tags": [
-                    "buffDamage"
-                ]
-            },
-            {
-                "name": "Magnetic Pull",
-                "effect": "Targets hit by Gravity Magnet are slowed by 40% for 2 seconds.",
-                "tags": [
-                    "slow"
-                ]
-            }
-        ],
-        "hypercharge": {
-            "name": "Black Hole",
-            "effect": "Gravity Magnet now pulls surrounding enemy brawlers slightly toward the target.",
-            "damageBuff": 0.1,
-            "speedBuff": 0.1,
-            "shieldBuff": 0.1,
-            "chargeRate": 1.0,
-            "tags": []
-        },
-        "position": "lane",
-        "rating": {
-            "class": "Controller",
-            "rangeMain": "LONG",
-            "rangeSuper": "LONG",
-            "reload": "NORMAL",
-            "speed": "NORMAL"
-        },
-        "roles": {
-            "*": "controller",
-            "bounty": "flex",
-            "brawlBall": "control",
-            "gemGrab": "control",
-            "heist": "safeDamage",
-            "hotZone": "zoneTime",
-            "knockout": "flex"
-        }
-    },
-    "vince": {
-        "power": 11,
-        "health": 7400,
-        "mainAttack": {
-            "name": "Coffee Mug",
-            "baseDamage": 1800,
-            "damage": 1800,
-            "DPS": 1385,
-            "ammo": 3,
-            "projectile": 1,
-            "shape": "singleShot",
-            "breakdown": "Throws a straight-flying, far-reaching coffee cup",
-            "range": 8.5,
-            "tags": []
-        },
-        "super": {
-            "name": "Barista Barrage",
-            "damage": 3200,
-            "breakdown": "Fires projectiles that debuff enemies, empowered by collected caterpillars/moths",
-            "range": 7.0,
-            "chargeRate": 1.0,
-            "tags": [
-                "debuff",
-                "control"
-            ]
-        },
-        "reloadSeconds": 1.3,
-        "speedUnits": 770,
-        "gadgets": [
-            {
-                "name": "Hot Coffee",
-                "effect": "Tosses a projectile in an arc that deals high area damage.",
-                "tags": [
-                    "control"
-                ]
-            },
-            {
-                "name": "Metamothosis",
-                "effect": "Turns nearby spawned caterpillars into moths instantly, doubling your collection.",
-                "tags": [
-                    "summon"
-                ]
-            }
-        ],
-        "starPowers": [
-            {
-                "name": "Caffeine Rush",
-                "effect": "Increases reload speed by 20% while holding maximum moth collection stages.",
-                "tags": [
-                    "buff.reload"
-                ]
-            },
-            {
-                "name": "Creepy Crawlies",
-                "effect": "Enemies afflicted with caterpillar debuffs have their movement speed reduced by 25%.",
-                "tags": [
-                    "slow"
-                ]
-            }
-        ],
-        "hypercharge": {
-            "name": "Café Chaos",
-            "effect": "Barista Barrage fires additional moth projectiles that track nearby targets automatically.",
-            "damageBuff": 0.1,
-            "speedBuff": 0.15,
-            "shieldBuff": 0.05,
-            "chargeRate": 1.0,
-            "tags": []
-        },
-        "position": "lane",
-        "rating": {
-            "class": "DamageDealer",
-            "rangeMain": "LONG",
-            "rangeSuper": "NORMAL",
-            "reload": "NORMAL",
-            "speed": "NORMAL"
-        },
-        "roles": {
-            "*": "*",
-            "bounty": "flex",
-            "brawlBall": "damage",
-            "gemGrab": "damage",
-            "heist": "flex",
-            "hotZone": "damage",
-            "knockout": "flex"
         }
     }
 }
