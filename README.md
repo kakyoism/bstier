@@ -157,15 +157,25 @@ Windows:
 
 `ci\deepdraft.bat path\to\deepdraft-images`
 
-The batch command extracts each image as a DeepDraft M1 JSON document and then
-renders matching SVG and PNG files. Outputs are written under the input folder:
+The batch command extracts each image as a DeepDraft M1 JSON document, renders
+matching SVG and PNG files, and stitches the source tierlist beside its map
+image. Outputs are written under the input folder:
 
 - `json/<basename>.json`
-- `svg/<basename>.svg`
-- `png/<basename>.png`
+- `svg/<mode>-<map>.svg`
+- `png/<mode>-<map>.png`
+- `org/<mode>-<map>.png` (lowercase; map at left, source tierlist at right)
 
-Each run clears the existing `json/`, `svg/`, and `png/` output folders first;
-input images directly in the selected folder are not removed.
+For example, a Brawl Ball tierlist for Pinball Dreams produces
+`svg/brawlball-pinballdreams.svg`, `png/brawlball-pinballdreams.png`, and
+`org/brawlball-pinballdreams.png`; its JSON keeps the input basename.
+Transparent map pixels use the fixed `#2b2b2b` title-background color. Each
+run clears the existing `json/`,
+`svg/`, `png/`, and `org/` output folders first; input images directly in the
+selected folder are not removed. If multiple inputs resolve to the same
+mode-map filename, the later one is reported as a failure rather than
+overwriting the first. The `--reso` option applies to the rendered `png/`
+output; the stitched `org/` image follows the source tierlist height.
 
 Use `--reso WIDTHxHEIGHT` to select the PNG resolution, for example
 `./ci/deepdraft.sh path/to/deepdraft-images --reso 1024x768`.
