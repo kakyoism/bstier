@@ -29,19 +29,12 @@ def test_discover_images_rejects_duplicate_basenames(tmp_path):
         _BATCH.discover_images(tmp_path)
 
 
-def test_output_paths_use_input_subdirectories(tmp_path):
-    paths = _BATCH.output_paths(tmp_path, tmp_path / 'tier.png')
-
-    assert paths == {
-        'json': tmp_path / 'json' / 'tier.json',
-    }
-
-
 def test_image_output_paths_use_lowercase_mode_map_stem(tmp_path):
     paths = _BATCH.image_output_paths(
         tmp_path, 'brawlBall', 'pinballDreams')
 
     assert paths == {
+        'json': tmp_path / 'json' / 'brawlball-pinballdreams.json',
         'svg': tmp_path / 'svg' / 'brawlball-pinballdreams.svg',
         'png': tmp_path / 'png' / 'brawlball-pinballdreams.png',
         'org': tmp_path / 'org' / 'brawlball-pinballdreams.png',
@@ -93,6 +86,9 @@ def test_process_image_stitches_map_left_of_tierlist(tmp_path, monkeypatch):
 
     paths = _BATCH.process_image(image_path, tmp_path)
 
+    assert paths['json'] == tmp_path / 'json' / 'brawlball-pinballdreams.json'
+    assert paths['json'].is_file()
+    assert not (tmp_path / 'json' / 'raw-tierlist.json').exists()
     assert paths['svg'] == tmp_path / 'svg' / 'brawlball-pinballdreams.svg'
     assert paths['png'] == tmp_path / 'png' / 'brawlball-pinballdreams.png'
     assert paths['org'] == tmp_path / 'org' / 'brawlball-pinballdreams.png'
@@ -125,6 +121,8 @@ def test_process_image_rejects_duplicate_mode_map_output(tmp_path, monkeypatch):
     _BATCH.process_image(first_image, tmp_path)
     with pytest.raises(FileExistsError, match='same stitched output'):
         _BATCH.process_image(second_image, tmp_path)
+    assert [path.name for path in (tmp_path / 'json').iterdir()] == [
+        'brawlball-pinballdreams.json']
 
 
 def test_clear_outputs_removes_stale_files_and_preserves_inputs(tmp_path):

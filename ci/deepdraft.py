@@ -6,6 +6,7 @@ import json
 import pathlib
 import shutil
 import sys
+import tempfile
 import types
 
 from PIL import Image, ImageOps
@@ -40,12 +41,6 @@ def discover_images(input_dir):
     return images
 
 
-def output_paths(input_dir, image_path):
-    """Return the JSON destination for one input image."""
-    stem = image_path.stem
-    return {'json': input_dir / 'json' / f'{stem}.json'}
-
-
 def _normalize_identifier(value):
     return ''.join(character.casefold() for character in str(value)
                    if character.isalnum())
@@ -63,10 +58,11 @@ def stitched_output_path(input_dir, mode, map_name):
 
 
 def image_output_paths(input_dir, mode, map_name):
-    """Return all image destinations using the lowercase mode-map stem."""
+    """Return all output destinations using the lowercase mode-map stem."""
     org_path = stitched_output_path(input_dir, mode, map_name)
     stem = org_path.stem
     return {
+        'json': pathlib.Path(input_dir) / 'json' / f'{stem}.json',
         'svg': pathlib.Path(input_dir) / 'svg' / f'{stem}.svg',
         'png': pathlib.Path(input_dir) / 'png' / f'{stem}.png',
         'org': org_path,
@@ -157,22 +153,20 @@ def _run_generate(json_path, output_path, resolution):
 
 def process_image(image_path, input_dir, resolution=None):
     """Extract and render one image, returning its output paths."""
-    paths = output_paths(input_dir, image_path)
-    for path in paths.values():
-        path.parent.mkdir(parents=True, exist_ok=True)
-    _run_extract(image_path, paths['json'])
-    document = json.loads(paths['json'].read_text(encoding='utf-8'))
-    map_name = document.get('map')
-    mode = document.get('mode')
-    image_paths = image_output_paths(input_dir, mode, map_name)
-    paths.update(image_paths)
-    paths['org'].parent.mkdir(parents=True, exist_ok=True)
-    paths['svg'].parent.mkdir(parents=True, exist_ok=True)
-    paths['png'].parent.mkdir(parents=True, exist_ok=True)
-    if paths['org'].exists():
-        raise FileExistsError(
-            f'Multiple input images resolve to the same stitched output: '
-            f'{paths["org"]}')
+    with tempfile.TemporaryDirectory() as temp_dir:
+        temp_json_path = pathlib.Path(temp_dir) / f'{image_path.stem}.json'
+        _run_extract(image_path, temp_json_path)
+        document = json.loads(temp_json_path.read_text(encoding='utf-8'))
+        map_name = document.get('map')
+        mode = document.get('mode')
+        paths = image_output_paths(input_dir, mode, map_name)
+        for path in paths.values():
+            path.parent.mkdir(parents=True, exist_ok=True)
+        if paths['org'].exists():
+            raise FileExistsError(
+                f'Multiple input images resolve to the same stitched output: '
+                f'{paths["org"]}')
+        shutil.move(str(temp_json_path), str(paths['json']))
     map_path = find_map_image(map_name)
     stitch_map_and_tierlist(map_path, image_path, paths['org'])
     _run_generate(paths['json'], paths['svg'], resolution)
