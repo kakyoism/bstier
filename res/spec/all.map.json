@@ -250,6 +250,10 @@
             "closed"
         ]
     },
+    "rusticArcade": {
+        "mode": "gemGrab",
+        "tags": ["open", "bushy", "walled"]
+    },
     "undermine": {
         "mode": "gemGrab",
         "mid": {
@@ -293,7 +297,15 @@
         "mode": "heist",
         "tags": ["open", "water"]
     },
+    "pitStop": {
+        "mode": "heist",
+        "tags": ["closed"]
+    },
     "safeZone": {
+        "mode": "heist",
+        "tags": ["open", "water"]
+    },
+    "saferZone": {
         "mode": "heist",
         "tags": ["open", "water"]
     },
@@ -328,6 +340,14 @@
     "flaringPhoenix": {
         "mode": "knockout",
         "tags": ["closed", "bushy"]
+    },
+    "flowingSprings": {
+        "mode": "knockout",
+        "tags": ["closed", "bushy", "water"]
+    },
+    "goldarmGulch": {
+        "mode": "knockout",
+        "tags": ["closed", "bushy", "water"]
     },
     "newHorizons": {
         "mode": "knockout",

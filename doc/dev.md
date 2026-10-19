@@ -3,6 +3,9 @@
 ## Overview
 This doc is the single source of truth of R&D plan, research findings, and design/implementation decisions.
 
+## Maintenance
+New maps will be added over time. We need to add those map pictures to `res/mp/` and also the map metadata to `res/spec/all.map.json` before running any map commnads.
+
 ## Milestone 1 (M1): Deep-Draft reshuffling by combat and map roles
 Because deep-draft support is our major feature for the first release, we must make sure we can shuffle the Deep-Draft map tierlist based on Brawler's Global Roles and Map-Mode Roles, see README.md for details. This can thus serve as our vertical slice.
 
