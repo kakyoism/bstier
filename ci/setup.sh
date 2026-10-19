@@ -60,5 +60,16 @@ if ! command -v tesseract >/dev/null 2>&1; then
     fi
 fi
 
+if ! command -v magick >/dev/null 2>&1 && ! command -v convert >/dev/null 2>&1; then
+    if command -v brew >/dev/null 2>&1; then
+        brew install imagemagick
+    elif command -v apt-get >/dev/null 2>&1; then
+        install_apt_packages imagemagick
+    else
+        echo 'Error: ImageMagick is missing and no supported package manager was found.' >&2
+        exit 1
+    fi
+fi
+
 "$poetry_bin" install
 echo 'Setup complete. Use ./ci/run.sh for bstier commands.'

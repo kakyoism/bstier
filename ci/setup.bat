@@ -51,10 +51,23 @@ if errorlevel 1 (
     if errorlevel 1 goto :fail
 )
 
+where magick >nul 2>&1
+if errorlevel 1 (
+    where winget >nul 2>&1
+    if errorlevel 1 (
+        echo Error: ImageMagick is missing and winget is not available.
+        echo Install ImageMagick, then run this script again.
+        goto :fail
+    )
+    winget install --id ImageMagick.Q16-HDRI -e --accept-source-agreements --accept-package-agreements
+    if errorlevel 1 goto :fail
+)
+
 %PYTHON_CMD% -m poetry install
 if errorlevel 1 goto :fail
 
 echo Setup complete. Use ci\run.bat for bstier commands.
+echo Open a new terminal if ImageMagick or Tesseract was just installed.
 popd >nul
 exit /b 0
 

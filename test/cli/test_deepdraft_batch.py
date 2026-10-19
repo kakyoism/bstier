@@ -79,12 +79,19 @@ def test_process_image_stitches_map_left_of_tierlist(tmp_path, monkeypatch):
             encoding='utf-8',
         )
 
+    conversions = []
+
+    def fake_convert(png_path, jpg_path, magick_cmd):
+        conversions.append((png_path, jpg_path, magick_cmd))
+
     monkeypatch.setattr(_BATCH, '_run_extract', fake_extract)
     monkeypatch.setattr(_BATCH, '_run_generate', lambda *args: None)
     monkeypatch.setattr(
         _BATCH, 'find_map_image', lambda _map_name: map_path)
+    monkeypatch.setattr(_BATCH, 'convert_png_to_jpg', fake_convert)
 
-    paths = _BATCH.process_image(image_path, tmp_path)
+    paths = _BATCH.process_image(
+        image_path, tmp_path, magick_cmd=['magick'])
 
     assert paths['json'] == tmp_path / 'json' / 'brawlball-pinballdreams.json'
     assert paths['json'].is_file()
@@ -92,6 +99,14 @@ def test_process_image_stitches_map_left_of_tierlist(tmp_path, monkeypatch):
     assert paths['svg'] == tmp_path / 'svg' / 'brawlball-pinballdreams.svg'
     assert paths['png'] == tmp_path / 'png' / 'brawlball-pinballdreams.png'
     assert paths['org'] == tmp_path / 'org' / 'brawlball-pinballdreams.png'
+    assert paths['orgJpg'] == (
+        tmp_path / 'org' / 'jpg' / 'brawlball-pinballdreams.jpg')
+    assert paths['pngJpg'] == (
+        tmp_path / 'png' / 'jpg' / 'brawlball-pinballdreams.jpg')
+    assert conversions == [
+        (paths['org'], paths['orgJpg'], ['magick']),
+        (paths['png'], paths['pngJpg'], ['magick']),
+    ]
     with Image.open(paths['org']) as stitched:
         assert stitched.format == 'PNG'
         assert stitched.size == (6, 2)
@@ -117,10 +132,11 @@ def test_process_image_rejects_duplicate_mode_map_output(tmp_path, monkeypatch):
     monkeypatch.setattr(_BATCH, '_run_generate', lambda *args: None)
     monkeypatch.setattr(
         _BATCH, 'find_map_image', lambda _map_name: map_path)
+    monkeypatch.setattr(_BATCH, 'convert_png_to_jpg', lambda *args: None)
 
-    _BATCH.process_image(first_image, tmp_path)
+    _BATCH.process_image(first_image, tmp_path, magick_cmd=['magick'])
     with pytest.raises(FileExistsError, match='same stitched output'):
-        _BATCH.process_image(second_image, tmp_path)
+        _BATCH.process_image(second_image, tmp_path, magick_cmd=['magick'])
     assert [path.name for path in (tmp_path / 'json').iterdir()] == [
         'brawlball-pinballdreams.json']
 
@@ -140,3 +156,83 @@ def test_clear_outputs_removes_stale_files_and_preserves_inputs(tmp_path):
         output_dir = tmp_path / name
         assert output_dir.is_dir()
         assert list(output_dir.iterdir()) == []
+
+
+def test_jpg_output_path_uses_jpg_subfolder(tmp_path):
+    png_path = tmp_path / 'org' / 'brawlball-pinballdreams.png'
+
+    assert _BATCH.jpg_output_path(png_path) == (
+        tmp_path / 'org' / 'jpg' / 'brawlball-pinballdreams.jpg')
+
+
+def test_find_imagemagick_prefers_magick(monkeypatch):
+    monkeypatch.setattr(
+        _BATCH.shutil, 'which', lambda name: f'/bin/{name}')
+
+    assert _BATCH.find_imagemagick() == ['magick']
+
+
+def test_find_imagemagick_falls_back_to_convert_off_windows(monkeypatch):
+    monkeypatch.setattr(
+        _BATCH.shutil, 'which',
+        lambda name: '/bin/convert' if name == 'convert' else None)
+    monkeypatch.setattr(_BATCH.sys, 'platform', 'darwin')
+
+    assert _BATCH.find_imagemagick() == ['convert']
+
+
+def test_find_imagemagick_ignores_convert_on_windows(monkeypatch):
+    monkeypatch.setattr(
+        _BATCH.shutil, 'which',
+        lambda name: 'C:/convert.exe' if name == 'convert' else None)
+    monkeypatch.setattr(_BATCH.sys, 'platform', 'win32')
+
+    assert _BATCH.find_imagemagick() is None
+
+
+def test_convert_png_to_jpg_builds_flatten_command(tmp_path, monkeypatch):
+    calls = []
+
+    def fake_run(command, **kwargs):
+        calls.append((command, kwargs))
+        return _BATCH.subprocess.CompletedProcess(command, 0, '', '')
+
+    monkeypatch.setattr(_BATCH.subprocess, 'run', fake_run)
+    png_path = tmp_path / 'a.png'
+    jpg_path = tmp_path / 'jpg' / 'a.jpg'
+
+    _BATCH.convert_png_to_jpg(png_path, jpg_path, ['magick'])
+
+    assert jpg_path.parent.is_dir()
+    assert calls[0][0] == [
+        'magick', str(png_path),
+        '-background', '#2b2b2b', '-alpha', 'remove', '-alpha', 'off',
+        '-quality', '92', str(jpg_path),
+    ]
+    assert 'shell' not in calls[0][1]
+
+
+def test_convert_png_to_jpg_raises_on_failure(tmp_path, monkeypatch):
+    monkeypatch.setattr(
+        _BATCH.subprocess, 'run',
+        lambda command, **kwargs: _BATCH.subprocess.CompletedProcess(
+            command, 1, '', 'bad input'))
+
+    with pytest.raises(RuntimeError, match='bad input'):
+        _BATCH.convert_png_to_jpg(
+            tmp_path / 'a.png', tmp_path / 'jpg' / 'a.jpg', ['magick'])
+
+
+@pytest.mark.skipif(
+    _BATCH.find_imagemagick() is None, reason='ImageMagick not installed')
+def test_convert_png_to_jpg_flattens_transparency(tmp_path):
+    png_path = tmp_path / 'a.png'
+    jpg_path = tmp_path / 'jpg' / 'a.jpg'
+    Image.new('RGBA', (8, 8), (0, 0, 255, 0)).save(png_path)
+
+    _BATCH.convert_png_to_jpg(png_path, jpg_path, _BATCH.find_imagemagick())
+
+    with Image.open(jpg_path) as converted:
+        assert converted.format == 'JPEG'
+        red, green, blue = converted.convert('RGB').getpixel((4, 4))
+        assert all(abs(value - 43) <= 2 for value in (red, green, blue))

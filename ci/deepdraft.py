@@ -5,6 +5,7 @@ import argparse
 import json
 import pathlib
 import shutil
+import subprocess
 import sys
 import tempfile
 import types
@@ -22,6 +23,7 @@ IMAGE_SUFFIXES = {'.bmp', '.jpeg', '.jpg', '.png', '.webp'}
 OUTPUT_DIRS = ('json', 'svg', 'png', 'org')
 MAP_DIR = PROJECT_ROOT / 'res' / 'map'
 STITCH_BACKGROUND_COLOR = (43, 43, 43)
+JPG_QUALITY = 92
 
 
 def discover_images(input_dir):
@@ -151,8 +153,47 @@ def _run_generate(json_path, output_path, resolution):
         raise RuntimeError(result.detail or 'Tierlist rendering failed')
 
 
-def process_image(image_path, input_dir, resolution=None):
+def find_imagemagick():
+    """Return the ImageMagick command prefix on PATH, or ``None``."""
+    if shutil.which('magick'):
+        return ['magick']
+    # On Windows, ``convert`` is the system filesystem tool, not ImageMagick 6.
+    if sys.platform != 'win32' and shutil.which('convert'):
+        return ['convert']
+    return None
+
+
+def jpg_output_path(png_path):
+    """Return the JPG destination inside a ``jpg`` subfolder of the PNG."""
+    png_path = pathlib.Path(png_path)
+    return png_path.parent / 'jpg' / f'{png_path.stem}.jpg'
+
+
+def convert_png_to_jpg(png_path, jpg_path, magick_cmd):
+    """Convert a PNG to JPG, flattening transparency onto the stitch color."""
+    background = '#{:02x}{:02x}{:02x}'.format(*STITCH_BACKGROUND_COLOR)
+    jpg_path = pathlib.Path(jpg_path)
+    jpg_path.parent.mkdir(parents=True, exist_ok=True)
+    command = [
+        *magick_cmd, str(png_path),
+        '-background', background, '-alpha', 'remove', '-alpha', 'off',
+        '-quality', str(JPG_QUALITY),
+        str(jpg_path),
+    ]
+    completed = subprocess.run(
+        command, capture_output=True, text=True, check=False)
+    if completed.returncode != 0:
+        raise RuntimeError(
+            f'ImageMagick failed to convert {png_path}: '
+            f'{completed.stderr.strip() or completed.returncode}')
+
+
+def process_image(image_path, input_dir, resolution=None, magick_cmd=None):
     """Extract and render one image, returning its output paths."""
+    if magick_cmd is None:
+        magick_cmd = find_imagemagick()
+        if magick_cmd is None:
+            raise RuntimeError('ImageMagick was not found on PATH')
     with tempfile.TemporaryDirectory() as temp_dir:
         temp_json_path = pathlib.Path(temp_dir) / f'{image_path.stem}.json'
         _run_extract(image_path, temp_json_path)
@@ -171,6 +212,10 @@ def process_image(image_path, input_dir, resolution=None):
     stitch_map_and_tierlist(map_path, image_path, paths['org'])
     _run_generate(paths['json'], paths['svg'], resolution)
     _run_generate(paths['json'], paths['png'], resolution)
+    paths['orgJpg'] = jpg_output_path(paths['org'])
+    paths['pngJpg'] = jpg_output_path(paths['png'])
+    convert_png_to_jpg(paths['org'], paths['orgJpg'], magick_cmd)
+    convert_png_to_jpg(paths['png'], paths['pngJpg'], magick_cmd)
     return paths
 
 
@@ -193,6 +238,9 @@ def main(argv=None):
         images = discover_images(input_dir)
     except ValueError as exc:
         parser.error(str(exc))
+    magick_cmd = find_imagemagick()
+    if magick_cmd is None:
+        parser.error('ImageMagick was not found on PATH; install it first')
 
     clear_outputs(input_dir)
 
@@ -200,7 +248,8 @@ def main(argv=None):
     for image_path in images:
         print(f'Processing {image_path.name}...')
         try:
-            paths = process_image(image_path, input_dir, args.reso)
+            paths = process_image(
+                image_path, input_dir, args.reso, magick_cmd)
         except Exception as exc:  # Keep processing the remaining images.
             failures.append((image_path.name, exc))
             print(f'  FAILED: {exc}', file=sys.stderr)
@@ -209,6 +258,8 @@ def main(argv=None):
         print(f'  SVG:  {paths["svg"]}')
         print(f'  PNG:  {paths["png"]}')
         print(f'  ORG:  {paths["org"]}')
+        print(f'  JPG:  {paths["orgJpg"]}')
+        print(f'  JPG:  {paths["pngJpg"]}')
 
     print(f'Processed {len(images) - len(failures)}/{len(images)} image(s).')
     if failures:

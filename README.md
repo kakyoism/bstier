@@ -48,8 +48,9 @@ type `poetry run bstier` for every command:
 
 #### 1. Set up the project
 
-Run the setup script once. It checks for Python, Poetry, and Tesseract OCR,
-installs missing tools through the available system package manager, and then
+Run the setup script once. It checks for Python, Poetry, Tesseract OCR, and
+ImageMagick, installs missing tools through the available system package
+manager (Homebrew or apt-get on macOS/Linux, winget on Windows), and then
 installs the Python project dependencies:
 
 macOS/Linux:
@@ -165,6 +166,14 @@ image. Outputs are written under the input folder:
 - `svg/<mode>-<map>.svg`
 - `png/<mode>-<map>.png`
 - `org/<mode>-<map>.png` (lowercase; map at left, source tierlist at right)
+- `png/jpg/<mode>-<map>.jpg` and `org/jpg/<mode>-<map>.jpg` (JPG copies of the
+  PNG outputs)
+
+The JPG conversion requires [ImageMagick](https://imagemagick.org) on `PATH`
+(`magick`, or `convert` for ImageMagick 6 on macOS/Linux). The batch stops
+before touching existing outputs if ImageMagick is missing; run
+`./ci/setup.sh` or `ci\setup.bat` to install it. Transparent pixels
+are flattened onto `#2b2b2b`, and JPGs use quality 92.
 
 For example, a Brawl Ball tierlist for Pinball Dreams produces
 `json/brawlball-pinballdreams.json`, `svg/brawlball-pinballdreams.svg`,
