@@ -110,6 +110,18 @@ def test_svg_uses_tiermaker_colors_for_tier_underlines():
     assert f'stroke="{render.TIER_COLORS["S"]}"' not in svg
 
 
+def test_svg_uses_extracted_tiermaker_header_color():
+    document = _tiermaker_document()
+    document['tierColors'] = {'S': '#fa8582'}
+
+    svg = render.render_master_svg(
+        document, _ROOT / 'res/avatar', _ROOT / 'res/map', width=900)
+
+    assert 'data-tier-legend="S"' in svg
+    assert 'stroke="#fa8582"' in svg
+    assert 'fill="#fa8582"' in svg
+
+
 def test_png_uses_same_layout_and_requested_resolution(tmp_path):
     output_path = tmp_path / 'master.png'
 

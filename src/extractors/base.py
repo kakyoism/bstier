@@ -15,6 +15,7 @@ class ExtractionContext:
 @dataclasses.dataclass(frozen=True)
 class ExtractedTierlist:
     tiers: dict
+    tier_colors: dict | None = None
 
 
 class TierlistExtractor:

@@ -6,6 +6,20 @@ This doc is the single source of truth of R&D plan, research findings, and desig
 ## Maintenance
 New maps will be added over time. We need to add those map pictures to `res/mp/` and also the map metadata to `res/spec/all.map.json` before running any map commnads.
 
+### TierMaker extraction: duplicate label and cropped last row
+
+An October 2026 TierMaker screenshot failed with `Duplicate TierMaker tier label: A`.
+The OCR adapter tries several image variants for each tier label; on the B row,
+its first result was `A`, while four later results were `B`. Label recognition
+now selects the most frequent valid result instead of the first one, while
+keeping the first result as the tie-breaker.
+
+The same screenshot exposed a second issue: its bottom F row was 78 pixels high
+in a grid with an estimated 100-pixel cell size. TierMaker extraction now
+accepts a bottom-edge tile when at least 70% of its height remains; other rows
+still require 80%. The screenshot now extracts all six tiers, including nine
+brawlers in F. The OCR regression test and full test suite pass (72 tests).
+
 ## Milestone 1 (M1): Deep-Draft reshuffling by combat and map roles
 Because deep-draft support is our major feature for the first release, we must make sure we can shuffle the Deep-Draft map tierlist based on Brawler's Global Roles and Map-Mode Roles, see README.md for details. This can thus serve as our vertical slice.
 

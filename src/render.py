@@ -336,7 +336,12 @@ def _is_tiermaker_document(document):
 
 def _tier_colors(document):
     """Return the source palette used for tier emphasis."""
-    return TIERMAKER_TIER_COLORS if _is_tiermaker_document(document) else TIER_COLORS
+    palette = (TIERMAKER_TIER_COLORS if _is_tiermaker_document(document)
+               else TIER_COLORS).copy()
+    for tier, color in document.get('tierColors', {}).items():
+        if tier in palette and re.fullmatch(r'#[0-9a-fA-F]{6}', str(color)):
+            palette[tier] = color
+    return palette
 
 
 def _signature(document):

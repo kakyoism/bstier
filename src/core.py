@@ -76,12 +76,13 @@ class Worker:
             logger=self.logger,
         )
         extractor = create_extractor(self.args.source, context)
-        export_data = extractor.extract(tier_pic).tiers
+        extracted = extractor.extract(tier_pic)
+        export_data = extracted.tiers
 
         output_data = export_data
         if self.args.source == 'tiermaker':
             output_data = self._build_tiermaker_document(
-                export_data, self.args.title)
+                export_data, self.args.title, extracted.tier_colors)
         elif getattr(self.args, 'master', False):
             output_data = self._build_m1_document(export_data, tier_pic)
 
@@ -101,12 +102,15 @@ class Worker:
         )
         return self.res, self.out
 
-    def _build_tiermaker_document(self, tierlist, title):
+    def _build_tiermaker_document(self, tierlist, title, tier_colors=None):
         import m1
 
         brawler_path = osp.join(self.repo.resDir, 'spec', 'all.brawler.json')
         global_roles = m1.load_global_roles(brawler_path)
-        return m1.build_global_document(tierlist, title, global_roles)
+        document = m1.build_global_document(tierlist, title, global_roles)
+        if tier_colors:
+            document['tierColors'] = tier_colors
+        return document
 
     def _build_m1_document(self, tierlist, image_path):
         import m1

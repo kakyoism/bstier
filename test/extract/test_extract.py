@@ -31,6 +31,7 @@ _paths.caseRefDir = osp.join(_paths.caseDir, '_ref')
 core = importlib.import_module('core')
 from extractors.common import assign_unique_candidates
 from extractors.deepdraft import resolve_deepdraft_tier_labels
+from extractors.labels import recognize_tier_label
 
 
 def setup_function():
@@ -103,6 +104,8 @@ def test_tiermaker_extraction_builds_title_bearing_global_document(tmp_path):
     assert document['title'] == 'June 2026'
     assert list(document['originalTierlist']) == ['S', 'A', 'B', 'C', 'D', 'F']
     assert document['originalTierlist']['S']
+    assert document['tierColors']['S'].startswith('#')
+    assert len(document['tierColors']['S']) == 7
     assert 'globalRoles' in document
     assert 'map' not in document
     assert 'mapRoles' not in document
@@ -161,6 +164,10 @@ def test_candidate_assignment_retries_displaced_tiles():
         'first': (3, 'fallback'),
         'second': (5, 'shared'),
     }
+
+
+def test_tier_label_uses_ocr_consensus_when_first_variant_is_wrong():
+    assert recognize_tier_label(None, lambda crop: ['A', 'B', 'B', 'B', 'B', '7']) == 'B'
 
 
 def test_deepdraft_label_resolution_repairs_s_plus_and_s_confusion():

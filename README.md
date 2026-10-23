@@ -213,6 +213,43 @@ it with the same `generate` command:
 The rendered title uses the prefix `BrawlStars Tierlist:` and the output has a
 single `Common Classes` panel.
 
+#### Batch-process TierMaker images
+
+Use the TierMaker workflow to extract and render the Common Classes view in
+one command. For example, process the sample image included in this repository
+with a custom title:
+
+macOS/Linux:
+
+`./ci/tiermaker.sh res/example/tiermaker.jpg --title "June 2026"`
+
+Windows:
+
+`ci\tiermaker.bat res\example\tiermaker.jpg --title "June 2026"`
+
+These commands create `res/example/tiermaker/json/tiermaker.json`,
+`res/example/tiermaker/svg/tiermaker.svg`,
+`res/example/tiermaker/png/tiermaker.png`, and
+`res/example/tiermaker/png/jpg/tiermaker.jpg`.
+
+To process every supported image directly inside a folder, use:
+
+- macOS/Linux: `./ci/tiermaker.sh path/to/tiermaker-images --reso 1024x768`
+- Windows: `ci\tiermaker.bat path\to\tiermaker-images --reso 1024x768`
+
+For one image, use `--title "October 2026 A"` to set its displayed title.
+Otherwise, each image's filename stem is used as its title. The optional
+`--reso WIDTHxHEIGHT` sets the PNG resolution. Outputs are placed under the
+input image's folder in `tiermaker/json/`, `tiermaker/svg/`,
+`tiermaker/png/`, and `tiermaker/png/jpg/`. Rerunning replaces outputs for the
+same source filename; it leaves other files in those folders alone.
+
+The extracted JSON stores the source tier order and tier-header colors. Within
+each class, brawlers keep their order from the original S-to-F tierlist. The
+rendered tier legend and avatar underlines use the source header colors, with
+the standard TierMaker palette as a fallback. JPG copies are created from PNGs
+with ImageMagick, which must be installed and available on `PATH`.
+
 ## Brawler Roles
 - The official brawler classes can be midleading in draft process, e.g., Najia is used as a Range brawler (sniper) in open maps rather than a Damage Dealer (the official class).
 - The same brawler may serve different purposes in different modes and maps, e.g., Barley can be a counter to other throwers when they are present, or a controller in a closed HotZone map.

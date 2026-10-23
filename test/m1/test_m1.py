@@ -89,6 +89,18 @@ def test_build_master_document_preserves_source_order_inside_sorted_groups():
     assert '*' not in document['mapRoles']
 
 
+def test_global_document_preserves_tier_ranking_within_each_class():
+    document = m1.build_global_document(
+        {'S': ['gus', 'piper'], 'A': ['brock', 'bull'], 'B': ['belle']},
+        'October 2026 A',
+        {'gus': 'sniper', 'piper': 'sniper', 'brock': 'sniper',
+         'bull': 'tank', 'belle': 'sniper'},
+    )
+
+    assert document['globalRoles']['sniper'] == [
+        'gus', 'piper', 'brock', 'belle']
+
+
 def test_build_master_document_from_ocr_uses_injected_adapter():
     tierlist = {'S': ['gus', 'bull']}
     map_catalog = util.load_json(_MAP_PATH)
