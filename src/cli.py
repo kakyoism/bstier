@@ -66,7 +66,7 @@ Examples:
     generate_parser.add_argument('-t', '--to', dest='toPath', required=True, help='Path to save the output picture')
     generate_parser.add_argument(
         '--reso',
-        help='Resolution for the rasterized picture (default: 2048x1536)',
+        help='PNG resolution (DeepDraft default: 2048x1536; TierMaker: content height at 2048 wide)',
     )
 
     # convert subcommand

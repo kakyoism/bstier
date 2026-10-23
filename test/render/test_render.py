@@ -152,6 +152,33 @@ def test_png_uses_high_resolution_default(tmp_path):
         assert image.size == render.DEFAULT_PNG_RESOLUTION
 
 
+def test_tiermaker_png_default_fits_content_and_footer(tmp_path):
+    document = _tiermaker_document()
+    output_path = tmp_path / 'tiermaker.png'
+    expected_layout = render.build_layout(
+        document, render.DEFAULT_PNG_RESOLUTION[0], _ROOT / 'res/map')
+
+    render.render_document(
+        document, _ROOT / 'res/avatar', output_path, map_dir=_ROOT / 'res/map')
+
+    with Image.open(output_path) as image:
+        assert image.size == (expected_layout.width, expected_layout.height)
+        assert image.height < render.DEFAULT_PNG_RESOLUTION[1]
+        assert image.height - max(
+            panel.y + panel.height for panel in expected_layout.panels) == 72
+
+
+def test_tiermaker_png_respects_explicit_resolution(tmp_path):
+    output_path = tmp_path / 'tiermaker-explicit.png'
+
+    render.render_document(
+        _tiermaker_document(), _ROOT / 'res/avatar', output_path,
+        resolution='1024x768', map_dir=_ROOT / 'res/map')
+
+    with Image.open(output_path) as image:
+        assert image.size == (1024, 768)
+
+
 def test_requested_png_resolution_reflows_without_stretching_avatars():
     dense_document = _master_document()
     names = [f'brawler-{index}' for index in range(24)]

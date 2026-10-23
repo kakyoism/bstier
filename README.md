@@ -244,6 +244,10 @@ input image's folder in `tiermaker/json/`, `tiermaker/svg/`,
 `tiermaker/png/`, and `tiermaker/png/jpg/`. Rerunning replaces outputs for the
 same source filename; it leaves other files in those folders alone.
 
+Without `--reso`, TierMaker PNGs are 2048 pixels wide and fit their height to
+the class panel and credits. An explicit resolution uses the exact dimensions
+requested.
+
 The extracted JSON stores the source tier order and tier-header colors. Within
 each class, brawlers keep their order from the original S-to-F tierlist. The
 rendered tier legend and avatar underlines use the source header colors, with

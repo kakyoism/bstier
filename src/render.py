@@ -548,8 +548,15 @@ def _fit_text(draw, text, width, font):
 
 def render_master_png(document, avatar_dir, output_path, resolution=None, map_dir=None):
     """Render a master or tierlist document as PNG using the shared layout."""
-    target = parse_resolution(resolution) or DEFAULT_PNG_RESOLUTION
-    layout = build_layout(document, target[0], map_dir, target[1])
+    target = parse_resolution(resolution)
+    if target is None and _is_tiermaker_document(document):
+        # A single Common Classes panel is often much shorter than the
+        # two-panel DeepDraft canvas. Keep its footer close to the content.
+        layout = build_layout(document, DEFAULT_PNG_RESOLUTION[0], map_dir)
+        target = (layout.width, layout.height)
+    else:
+        target = target or DEFAULT_PNG_RESOLUTION
+        layout = build_layout(document, target[0], map_dir, target[1])
     canvas_size = target
     image = Image.new('RGB', canvas_size, BACKGROUND)
     draw = ImageDraw.Draw(image)
