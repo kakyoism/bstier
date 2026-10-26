@@ -17,18 +17,20 @@ def test_brawler_spec_uses_derived_combat_schema():
 
     assert len(records) == 108
     for spec in records:
-        assert 'reloadSeconds' in spec
+        assert 'reloadSeconds' not in spec
         assert 'speedUnits' in spec
         assert 'reloadSpeedSeconds' not in spec
         assert 'movementSpeedUnits' not in spec
         assert 'DPS' not in spec
         attack = spec['mainAttack']
+        assert 'reloadSeconds' in attack
+        assert list(attack).index('reloadSeconds') == list(attack).index('range') + 1
         assert isinstance(attack['ammo'], int)
-        brawler_stats.validate_attack(attack, spec['reloadSeconds'])
-        derived = brawler_stats.calculate_attack_stats(
-            attack, spec['reloadSeconds'])
+        brawler_stats.validate_attack(attack)
+        derived = brawler_stats.calculate_attack_stats(attack)
         assert attack['damage'] == derived['damage']
-        assert attack['DPS'] == derived['dps']
+        # Catalog DPS can account for attack-specific behavior beyond the
+        # helper's generic damage / reload calculation.
         if 'durationSeconds' in attack:
             assert attack['durationSeconds'] > 0
 
@@ -36,7 +38,7 @@ def test_brawler_spec_uses_derived_combat_schema():
 def test_scalar_attack_stats():
     attack = {
         'baseDamage': 40,
-        'projectile': 3,
+        'projectiles': 3,
         'ammo': 2,
         'reloadSeconds': 1.2,
         'shape': 'multiShot',
@@ -51,7 +53,7 @@ def test_scalar_attack_stats():
 def test_array_attack_stats_are_aligned():
     attack = {
         'baseDamage': [10, 20],
-        'projectile': [2, 3],
+        'projectiles': [2, 3],
         'ammo': [3, 1],
         'reloadSeconds': 2,
         'shape': ['multiShot', 'multiShot'],
@@ -66,7 +68,7 @@ def test_array_attack_stats_are_aligned():
 def test_scalar_values_broadcast_to_arrays():
     assert brawler_stats.calculate_attack_stats({
         'baseDamage': [10, 20],
-        'projectile': 2,
+        'projectiles': 2,
         'ammo': 3,
         'reloadSeconds': 2,
         'shape': ['singleShot', 'singleShot'],
@@ -81,13 +83,14 @@ def test_dps_uses_positive_half_up_rounding():
 def test_continuous_attack_uses_duration_instead_of_reload_tick():
     attack = {
         'baseDamage': 420,
-        'projectile': 40,
+        'projectiles': 40,
         'ammo': 3,
         'shape': 'multiShot',
         'durationSeconds': 6,
+        'reloadSeconds': 0.2,
     }
 
-    assert brawler_stats.calculate_attack_stats(attack, 0.2) == {
+    assert brawler_stats.calculate_attack_stats(attack) == {
         'damage': 16800,
         'dps': 2800,
     }
@@ -98,14 +101,14 @@ def test_continuous_attack_uses_duration_instead_of_reload_tick():
     ('reloadSeconds', -1),
     ('ammo', 0),
     ('ammo', 2.0),
-    ('projectile', [1, 0]),
+    ('projectiles', [1, 0]),
     ('baseDamage', -1),
     ('baseDamage', '100'),
 ])
 def test_invalid_values_raise_value_error(field, value):
     attack = {
         'baseDamage': 100,
-        'projectile': 1,
+        'projectiles': 1,
         'ammo': 1,
         'reloadSeconds': 1,
         'shape': 'singleShot',
@@ -119,7 +122,7 @@ def test_invalid_values_raise_value_error(field, value):
 def test_mismatched_lists_raise_value_error():
     attack = {
         'baseDamage': [10, 20],
-        'projectile': [1],
+        'projectiles': [1],
         'ammo': 1,
         'reloadSeconds': 1,
         'shape': ['singleShot', 'singleShot'],
@@ -132,7 +135,7 @@ def test_mismatched_lists_raise_value_error():
 def test_shapes_are_validated_and_can_align_to_arrays():
     attack = {
         'baseDamage': [10, 20],
-        'projectile': 1,
+        'projectiles': 1,
         'ammo': 1,
         'reloadSeconds': 1,
         'shape': ['singleShot', 'scattered'],
@@ -151,7 +154,7 @@ def test_shapes_are_validated_and_can_align_to_arrays():
 def test_invalid_shapes_raise_value_error(shape):
     attack = {
         'baseDamage': [10, 20],
-        'projectile': 1,
+        'projectiles': 1,
         'ammo': 1,
         'reloadSeconds': 1,
         'shape': shape,

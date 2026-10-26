@@ -269,7 +269,8 @@ fits the content at 2048 pixels wide.
 
 Each image has rating tiers on the left and Common Classes on the right. Both
 panels rank by rating tier first, then by numeric stat within each tier.
-Reload speed is `1 / reloadSeconds`, so a faster reload appears farther left.
+Reload speed is `1 / mainAttack.reloadSeconds`, so a faster reload appears
+farther left.
 The underline and legend colors show the rating tier. For consecutive brawlers
 with the same numeric value in a row, only the first keeps its underline; the
 others have transparent underlines to show the tie. Slash ratings use their
@@ -298,7 +299,7 @@ first label, `N/A` is last, and health uses 1000-HP bands with `5000-` and
 - `all.brawler.json` contains all the brawler data regarding the latest meta, including the said labels.
 
 ### Main-attack statistics
-Each brawler's `mainAttack` stores `baseDamage` for one damage unit, `projectile` for the number of damage units in one shot, `damage` as the derived per-shot total, `ammo` for the number of stored shots, and `shape` as `singleShot`, `multiShot`, or `scattered`. Continuous attacks may also provide `durationSeconds` when their full stream has a different duration from the reload tick. `baseDamage`, `damage`, `projectile`, and `DPS` may be aligned arrays for alternate attack modes or values. Top-level `reloadSeconds` and `speedUnits` store reload time and movement speed. Derived statistics use `damage = baseDamage * projectile` and sustained `mainAttack.DPS = damage / (durationSeconds or reloadSeconds)`, rounded to the nearest integer; `ammo` describes magazine capacity and is not multiplied into sustained DPS.
+Each brawler's `mainAttack` stores `baseDamage` for one damage unit, `projectiles` for the number of damage units in one shot, `damage` as the per-shot total, `ammo` for the number of stored shots, `shape` as `singleShot`, `multiShot`, or `scattered`, and `reloadSeconds` immediately after `range`. Continuous attacks may also provide `durationSeconds` when their full stream has a different duration from the reload tick. `baseDamage`, `damage`, `projectiles`, and `DPS` may be aligned arrays for alternate attack modes or values. Top-level `speedUnits` stores movement speed. The generic helper calculates `damage = baseDamage * projectiles` and sustained DPS as `damage / (durationSeconds or mainAttack.reloadSeconds)`, rounded to the nearest integer; catalog DPS may account for attack-specific behavior. `ammo` describes magazine capacity and is not multiplied into sustained DPS.
 
 ### Bounty
 - BlueStar: the brawlers that can easily grab the blue star at the beginning, usually those with swift movement such as Mortis, Max, or someone with a special teleport gadget such as Carl.

@@ -32,7 +32,7 @@ STATS = (
     Stat('movement-speed', 'Movement Speed', 'speed',
          ('speedUnits',), SPEED_TIERS),
     Stat('reload-speed', 'Reload Speed', 'reload',
-         ('reloadSeconds',), SPEED_TIERS),
+         ('mainAttack', 'reloadSeconds'), SPEED_TIERS),
 )
 ROLE_ORDER = ('aggro', 'antiTank', 'controller', 'sniper',
               'support', 'tank', 'thrower', 'Unclassified')

@@ -14,10 +14,10 @@ def _spec(health, main_range, super_range, speed, reload_seconds,
           speed_rating='NORMAL', reload_rating='NORMAL'):
     return {
         'health': health,
-        'mainAttack': {'range': main_range},
+        'mainAttack': {'range': main_range,
+                       'reloadSeconds': reload_seconds},
         'super': {'range': super_range},
         'speedUnits': speed,
-        'reloadSeconds': reload_seconds,
         'rating': {
             'rangeMain': main_rating, 'rangeSuper': super_rating,
             'speed': speed_rating, 'reload': reload_rating,

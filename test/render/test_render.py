@@ -183,9 +183,9 @@ def test_tiermaker_png_respects_explicit_resolution(tmp_path):
 def test_stats_svg_has_two_panels_dynamic_legend_and_plain_credit():
     catalog = {
         'gus': {
-            'health': 5000, 'mainAttack': {'range': 9},
+            'health': 5000,
+            'mainAttack': {'range': 9, 'reloadSeconds': 1.5},
             'super': {'range': 7}, 'speedUnits': 720,
-            'reloadSeconds': 1.5,
             'rating': {'rangeMain': 'LONG', 'rangeSuper': 'LONG',
                        'speed': 'NORMAL', 'reload': 'NORMAL'},
             'roles': {'*': 'sniper'},

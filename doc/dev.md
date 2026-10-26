@@ -80,7 +80,7 @@ extraction output and optional `--master` map-aware document.
   the right panel groups them by the project's Common Classes. In both panels,
   rating tier takes priority, then brawlers within a tier are sorted by
   descending numeric value. There is no cross-row alignment.
-  `reloadSpeed = 1 / reloadSeconds` makes faster reloads rank farther left.
+  `reloadSpeed = 1 / mainAttack.reloadSeconds` makes faster reloads rank farther left.
 - Ratings come from `rating.rangeMain`, `rating.rangeSuper`, `rating.speed`, and
   `rating.reload`. For slash-separated ratings, only the first label is used.
   `N/A` is its own last tier. Health uses `5000-` for values below 5000,

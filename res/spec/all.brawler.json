@@ -9,10 +9,11 @@
             "damage": 4080,
             "DPS": 2720,
             "ammo": 3,
-            "projectile": 6,
+            "projectiles": 6,
             "shape": "multiShot",
             "breakdown": "680 x 6 (Laser shots)",
             "range": 10.0,
+            "reloadSeconds": 1.5,
             "tags": []
         },
         "super": {
@@ -26,8 +27,7 @@
                 "buffDamage"
             ]
         },
-        "reloadSeconds": 1.5,
-        "speedUnits": 580,
+        "speedUnits": 600,
         "gadgets": [
             {
                 "name": "Cheat Cartridge",
@@ -91,10 +91,11 @@
             "damage": 2600,
             "DPS": 1238,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "singleShot",
             "breakdown": "Dash/Jump Attack (Increases when Enraged)",
             "range": 2.0,
+            "reloadSeconds": 2.1,
             "tags": []
         },
         "super": {
@@ -107,8 +108,7 @@
                 "invisible"
             ]
         },
-        "reloadSeconds": 2.1,
-        "speedUnits": 770,
+        "speedUnits": 800,
         "gadgets": [
             {
                 "name": "Feed the Gators",
@@ -173,10 +173,11 @@
             "DPS": 2800,
             "durationSeconds": 6,
             "ammo": 3,
-            "projectile": 40,
+            "projectiles": 40,
             "shape": "multiShot",
             "breakdown": "420 x 40 (Continuous stream)",
             "range": 8.33,
+            "reloadSeconds": 0.2,
             "tags": [
                 "piercing"
             ]
@@ -192,8 +193,7 @@
                 "control"
             ]
         },
-        "reloadSeconds": 0.2,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Fire Starters",
@@ -257,10 +257,11 @@
             "damage": 4400,
             "DPS": 2444,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "singleShot",
             "breakdown": "Min 440 to Max 4400 (Charge-based)",
             "range": 10.0,
+            "reloadSeconds": 1.8,
             "tags": []
         },
         "super": {
@@ -273,7 +274,6 @@
                 "poison"
             ]
         },
-        "reloadSeconds": 1.8,
         "speedUnits": 820,
         "gadgets": [
             {
@@ -340,10 +340,11 @@
             "damage": 3200,
             "DPS": 2286,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "scattered",
             "breakdown": "Cone Damage (Increases with Rage)",
             "range": 4.67,
+            "reloadSeconds": 1.4,
             "tags": []
         },
         "super": {
@@ -354,8 +355,7 @@
             "chargeRate": 1.0,
             "tags": []
         },
-        "reloadSeconds": 1.4,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Chill Pill",
@@ -417,22 +417,22 @@
             "damage": 1600,
             "DPS": 800,
             "ammo": 3,
-            "projectile": 2,
+            "projectiles": 2,
             "shape": "singleShot",
             "breakdown": "800 x 2 (Area/Damage over Time)",
-            "range": 7.33,
+            "range": 7.3,
+            "reloadSeconds": 2.0,
             "tags": []
         },
         "super": {
             "name": "Last Call",
-            "damage": 4000,
-            "breakdown": "800 x 5 (Damage over Time)",
-            "range": 7.33,
+            "damage": 8000,
+            "breakdown": "800 x 2 x 5 (Area/Damage over Time)",
+            "range": 7.3,
             "chargeRate": 1.0,
             "tags": []
         },
-        "reloadSeconds": 2.0,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Sticky Syrup Mixer",
@@ -503,10 +503,11 @@
             "damage": 4000,
             "DPS": 4444,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "singleShot",
             "breakdown": "Charged Shot (1600 base)",
             "range": 10.0,
+            "reloadSeconds": 0.9,
             "tags": []
         },
         "super": {
@@ -517,8 +518,7 @@
             "chargeRate": 1.0,
             "tags": []
         },
-        "reloadSeconds": 0.9,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Honey Molasses",
@@ -580,10 +580,11 @@
             "damage": 2080,
             "DPS": 1486,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "singleShot",
             "breakdown": "Piercing Projectile (Bounces to enemies)",
             "range": 10.0,
+            "reloadSeconds": 1.4,
             "tags": [
                 "crowdControl"
             ]
@@ -596,8 +597,7 @@
             "chargeRate": 1.0,
             "tags": []
         },
-        "reloadSeconds": 1.4,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Nest Egg",
@@ -663,11 +663,12 @@
             "damage": 1320,
             "DPS": 550,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "scattered",
             "heal": 660,
             "breakdown": "Area Projectile (Leaves damaging/healing puddle)",
             "range": 6.33,
+            "reloadSeconds": 2.4,
             "tags": [
                 "heal"
             ]
@@ -683,8 +684,7 @@
                 "heal"
             ]
         },
-        "reloadSeconds": 2.4,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Friendship is Great",
@@ -752,10 +752,11 @@
             "damage": 2800,
             "DPS": 3500,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "singleShot",
             "breakdown": "Melee Swipe",
             "range": 3.67,
+            "reloadSeconds": 0.8,
             "tags": []
         },
         "super": {
@@ -766,7 +767,6 @@
             "chargeRate": 1.0,
             "tags": []
         },
-        "reloadSeconds": 0.8,
         "speedUnits": 820,
         "gadgets": [
             {
@@ -829,10 +829,11 @@
             "damage": 3840,
             "DPS": 2259,
             "ammo": 3,
-            "projectile": 3,
+            "projectiles": 3,
             "shape": "multiShot",
             "breakdown": "1280 x 3 (Arrows)",
             "range": 8.67,
+            "reloadSeconds": 1.7,
             "tags": [
                 "multi-shot"
             ]
@@ -848,8 +849,7 @@
                 "grassbreak"
             ]
         },
-        "reloadSeconds": 1.7,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Super Totem",
@@ -915,10 +915,11 @@
             "damage": 2960,
             "DPS": 1345,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "singleShot",
             "breakdown": "Rolling impact damage",
             "range": 1.0,
+            "reloadSeconds": 2.2,
             "tags": [
                 "dash"
             ]
@@ -934,7 +935,6 @@
                 "shield"
             ]
         },
-        "reloadSeconds": 2.2,
         "speedUnits": 545,
         "gadgets": [
             {
@@ -1005,10 +1005,11 @@
             "damage": [2240, 3480],
             "DPS": [1179, 1832],
             "ammo": 3,
-            "projectile": [1, 3],
+            "projectiles": [1, 3],
             "shape": ["singleShot", "multiShot"],
             "breakdown": "Under assassin (Clyde) mode 1160 x 3 (Slow Projectiles) - *Clyde Mode*",
             "range": 9.0,
+            "reloadSeconds": 1.9,
             "tags": [
                 "singleShot",
                 "multi-shot"
@@ -1022,7 +1023,6 @@
             "chargeRate": 1.0,
             "tags": []
         },
-        "reloadSeconds": 1.9,
         "speedUnits": 620,
         "gadgets": [
             {
@@ -1085,12 +1085,13 @@
             "name": "Rockin' Rocket",
             "baseDamage": 2320,
             "damage": 2320,
-            "DPS": 1105,
+            "DPS": 1190,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "singleShot",
             "breakdown": "Single Missile + Splash",
             "range": 9.0,
+            "reloadSeconds": 1.9,
             "tags": []
         },
         "super": {
@@ -1103,8 +1104,7 @@
                 "wallbreak"
             ]
         },
-        "reloadSeconds": 2.1,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Rocket Laces",
@@ -1161,22 +1161,23 @@
     },
     "bull": {
         "power": 11,
-        "health": 10600,
+        "health": 10000,
         "mainAttack": {
             "name": "Close-Range Shotgun",
             "baseDamage": 880,
             "damage": 4400,
             "DPS": 2750,
             "ammo": 3,
-            "projectile": 5,
+            "projectiles": 5,
             "shape": "scattered",
             "breakdown": "880 x 5",
-            "range": 5.33,
+            "range": 5.3,
+            "reloadSeconds": 1.6,
             "tags": []
         },
         "super": {
             "name": "Takedown",
-            "damage": 1920,
+            "damage": 2000,
             "breakdown": "Charge Damage",
             "range": 11.67,
             "chargeRate": 1.0,
@@ -1185,8 +1186,7 @@
                 "wallbreak"
             ]
         },
-        "reloadSeconds": 1.6,
-        "speedUnits": 770,
+        "speedUnits": 800,
         "gadgets": [
             {
                 "name": "T-Bone Injector",
@@ -1250,10 +1250,11 @@
             "damage": 2760,
             "DPS": 1533,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "scattered",
             "breakdown": "Max damage (Closer deals more)",
             "range": 5.33,
+            "reloadSeconds": 1.8,
             "tags": []
         },
         "super": {
@@ -1264,8 +1265,7 @@
             "chargeRate": 1.0,
             "tags": []
         },
-        "reloadSeconds": 1.8,
-        "speedUnits": 770,
+        "speedUnits": 800,
         "gadgets": [
             {
                 "name": "Utility Belt",
@@ -1327,10 +1327,11 @@
             "damage": 4200,
             "DPS": 4200,
             "ammo": 3,
-            "projectile": 5,
+            "projectiles": 5,
             "shape": "multiShot",
             "breakdown": "840 x 5 (Melee Swipes)",
             "range": 3.0,
+            "reloadSeconds": 1.0,
             "tags": []
         },
         "super": {
@@ -1344,8 +1345,7 @@
                 "teleport"
             ]
         },
-        "reloadSeconds": 1.0,
-        "speedUnits": 770,
+        "speedUnits": 800,
         "gadgets": [
             {
                 "name": "Reserve Buoy",
@@ -1410,10 +1410,11 @@
             "damage": 2040,
             "DPS": 1457,
             "ammo": 3,
-            "projectile": 3,
+            "projectiles": 3,
             "shape": "multiShot",
             "breakdown": "680 x 3 (Damage/Heal over Time)",
             "range": 10.0,
+            "reloadSeconds": 1.4,
             "tags": [
                 "singleShot",
                 "heal",
@@ -1432,8 +1433,7 @@
                 "wallpass"
             ]
         },
-        "reloadSeconds": 1.4,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Shot In The Arm",
@@ -1495,14 +1495,15 @@
         "health": 8400,
         "mainAttack": {
             "name": "Pickaxe",
-            "baseDamage": [1480, 1480],
-            "damage": [1480, 2960],
-            "DPS": [740, 1480],
+            "baseDamage": 1640,
+            "damage": 3280,
+            "DPS": 820,
             "ammo": 1,
-            "projectile": [1, 2],
+            "projectiles": 2,
             "shape": ["singleShot", "singleShot"],
             "breakdown": "Piercing Throw (x2 damage on return)",
-            "range": 8.33,
+            "range": 8.3,
+            "reloadSeconds": 2.0,
             "tags": []
         },
         "super": {
@@ -1513,8 +1514,7 @@
             "chargeRate": 1.0,
             "tags": []
         },
-        "reloadSeconds": 2.0,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Heat Ejector",
@@ -1580,10 +1580,11 @@
             "damage": 1600,
             "DPS": 800,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "singleShot",
             "breakdown": "Piercing Projectile (Returns to Charlie)",
             "range": 8.33,
+            "reloadSeconds": 2.0,
             "tags": [
                 "singleShot"
             ]
@@ -1598,8 +1599,7 @@
                 "stun"
             ]
         },
-        "reloadSeconds": 2.0,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Spiders",
@@ -1661,10 +1661,11 @@
             "damage": [1280, 2560, 3840, 5120],
             "DPS": [674, 1347, 2021, 2695],
             "ammo": 3,
-            "projectile": [1, 2, 3, 4],
+            "projectiles": [1, 2, 3, 4],
             "shape": ["singleShot", "multiShot", "multiShot", "multiShot"],
             "breakdown": "1280 x 1-4 (Random number of bells)",
             "range": 8.33,
+            "reloadSeconds": 1.9,
             "tags": []
         },
         "super": {
@@ -1675,8 +1676,7 @@
             "chargeRate": 1.0,
             "tags": []
         },
-        "reloadSeconds": 1.9,
-        "speedUnits": 770,
+        "speedUnits": 800,
         "gadgets": [
             {
                 "name": "Spicy Dice",
@@ -1738,10 +1738,11 @@
             "damage": 3240,
             "DPS": 1620,
             "ammo": 3,
-            "projectile": 3,
+            "projectiles": 3,
             "shape": "multiShot",
             "breakdown": "3x1080 (Min Range Damage)",
-            "range": 6.67
+            "range": 6.67,
+            "reloadSeconds": 2.0
         },
         "super": {
             "name": "Choo-Choo!",
@@ -1750,8 +1751,7 @@
             "range": 100.0,
             "chargeRate": 1.0
         },
-        "reloadSeconds": 2.0,
-        "speedUnits": 770,
+        "speedUnits": 800,
         "gadgets": [
             {
                 "name": "Rerouting",
@@ -1808,10 +1808,11 @@
             "damage": [1200, 2400, 3600, 4800],
             "DPS": [600, 1200, 1800, 2400],
             "ammo": 3,
-            "projectile": [1, 2, 3, 4],
+            "projectiles": [1, 2, 3, 4],
             "shape": ["singleShot", "multiShot", "multiShot", "multiShot"],
             "breakdown": "Varies by Stage (Max 4 projectiles)",
             "range": 7.67,
+            "reloadSeconds": 2.0,
             "tags": []
         },
         "super": {
@@ -1824,8 +1825,7 @@
                 "multi-shot"
             ]
         },
-        "reloadSeconds": 2.0,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Snappy Shooting",
@@ -1889,10 +1889,11 @@
             "damage": 2000,
             "DPS": 1250,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "singleShot",
             "breakdown": "Percentage-based damage (High/Low HP)",
             "range": 8.67,
+            "reloadSeconds": 1.6,
             "tags": []
         },
         "super": {
@@ -1903,8 +1904,7 @@
             "chargeRate": 1.0,
             "tags": []
         },
-        "reloadSeconds": 1.6,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Na-ah!",
@@ -1966,10 +1966,11 @@
             "damage": 4320,
             "DPS": 3323,
             "ammo": 3,
-            "projectile": 6,
+            "projectiles": 6,
             "shape": "multiShot",
             "breakdown": "720 x 6",
-            "range": 8.67,
+            "range": 9,
+            "reloadSeconds": 1.3,
             "tags": []
         },
         "super": {
@@ -1982,8 +1983,7 @@
                 "wallbreak"
             ]
         },
-        "reloadSeconds": 1.3,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Speedloader",
@@ -2047,10 +2047,11 @@
             "damage": 3200,
             "DPS": 2667,
             "ammo": 3,
-            "projectile": 2,
+            "projectiles": 2,
             "shape": "multiShot",
             "breakdown": "1600 x 2 (Mushroom projectiles)",
             "range": 5.33,
+            "reloadSeconds": 1.2,
             "tags": []
         },
         "super": {
@@ -2061,7 +2062,6 @@
             "chargeRate": 1.0,
             "tags": []
         },
-        "reloadSeconds": 1.2,
         "speedUnits": 820,
         "gadgets": [
             {
@@ -2124,10 +2124,11 @@
             "damage": 1400,
             "DPS": 933,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "multiShot",
             "breakdown": "Fires projectiles that orbit outwards, scaling in size and damage",
             "range": 9.0,
+            "reloadSeconds": 1.5,
             "tags": [
                 "curved"
             ]
@@ -2143,8 +2144,7 @@
                 "pull"
             ]
         },
-        "reloadSeconds": 1.5,
-        "speedUnits": 770,
+        "speedUnits": 800,
         "gadgets": [
             {
                 "name": "Orbital Pulse",
@@ -2214,10 +2214,11 @@
             "damage": 1920,
             "DPS": 1371,
             "ammo": 3,
-            "projectile": 3,
+            "projectiles": 3,
             "shape": "multiShot",
             "breakdown": "640 x 3 (Poison Damage Over Time)",
             "range": 8.67,
+            "reloadSeconds": 1.4,
             "tags": []
         },
         "super": {
@@ -2228,7 +2229,6 @@
             "chargeRate": 1.0,
             "tags": []
         },
-        "reloadSeconds": 1.4,
         "speedUnits": 820,
         "gadgets": [
             {
@@ -2291,10 +2291,11 @@
             "damage": 1400,
             "DPS": 1167,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "singleShot",
             "breakdown": "Damian throws a vicious punch. After 2 punches in a row, his next attack is an explosive kick that knocks back enemies and sets them on fire. After a delay, this fire explodes and spreads to nearby enemies.",
             "range": 2.7,
+            "reloadSeconds": 1.2,
             "tags": [
                 "area",
                 "delayed"
@@ -2311,7 +2312,6 @@
                 "knockback"
             ]
         },
-        "reloadSeconds": 1.2,
         "speedUnits": 800,
         "gadgets": [
             {
@@ -2380,12 +2380,13 @@
             "name": "Double Barrel",
             "baseDamage": 480,
             "damage": 4800,
-            "DPS": 2667,
+            "DPS": 2668,
             "ammo": 3,
-            "projectile": 10,
+            "projectiles": 10,
             "shape": "scattered",
             "breakdown": "480 x 10 (5 per shotgun)",
             "range": 6.0,
+            "reloadSeconds": 1.8,
             "tags": []
         },
         "super": {
@@ -2396,8 +2397,7 @@
             "chargeRate": 1.0,
             "tags": []
         },
-        "reloadSeconds": 1.8,
-        "speedUnits": 770,
+        "speedUnits": 800,
         "gadgets": [
             {
                 "name": "Recoiling Rotator",
@@ -2461,10 +2461,11 @@
             "damage": 2400,
             "DPS": 1600,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "scattered",
             "breakdown": "Area Damage/Heal (Closer deals more)",
             "range": 3.33,
+            "reloadSeconds": 1.5,
             "tags": [
                 "heal"
             ]
@@ -2479,8 +2480,7 @@
                 "heal"
             ]
         },
-        "reloadSeconds": 1.5,
-        "speedUnits": 770,
+        "speedUnits": 800,
         "gadgets": [
             {
                 "name": "Double Sausage",
@@ -2544,10 +2544,11 @@
             "damage": [1200, 2800],
             "DPS": [1200, 2800],
             "ammo": 3,
-            "projectile": [1, 1],
+            "projectiles": [1, 1],
             "shape": ["singleShot", "singleShot"],
             "breakdown": "Melee/Ranged (Swings + Projectile)",
             "range": 4.0,
+            "reloadSeconds": 1.0,
             "tags": []
         },
         "super": {
@@ -2558,8 +2559,7 @@
             "chargeRate": 1.0,
             "tags": []
         },
-        "reloadSeconds": 1.0,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Firecracker",
@@ -2619,26 +2619,26 @@
             "name": "Short Fuse",
             "baseDamage": 1600,
             "damage": 3200,
-            "DPS": 2000,
+            "DPS": 2285,
             "ammo": 3,
-            "projectile": 2,
+            "projectiles": 2,
             "shape": "scattered",
             "breakdown": "1600 x 2 (Explosion)",
-            "range": 7.33,
+            "range": 7.3,
+            "reloadSeconds": 1.6,
             "tags": []
         },
         "super": {
             "name": "Big Barrel o' Boom",
             "damage": 4400,
             "breakdown": "Large Explosion + Knockback",
-            "range": 7.33,
+            "range": 7.3,
             "chargeRate": 1.0,
             "tags": [
                 "wallbreak"
             ]
         },
-        "reloadSeconds": 1.6,
-        "speedUnits": 770,
+        "speedUnits": 800,
         "gadgets": [
             {
                 "name": "Fidget Spinner",
@@ -2702,10 +2702,11 @@
             "damage": 2160,
             "DPS": 3086,
             "ammo": 3,
-            "projectile": 2,
+            "projectiles": 2,
             "shape": "multiShot",
             "breakdown": "1080 x 2 (Punch)",
             "range": 2.0,
+            "reloadSeconds": 0.7,
             "tags": []
         },
         "super": {
@@ -2716,7 +2717,6 @@
             "chargeRate": 1.0,
             "tags": []
         },
-        "reloadSeconds": 0.7,
         "speedUnits": 820,
         "gadgets": [
             {
@@ -2777,12 +2777,13 @@
             "name": "Fists of Fury",
             "baseDamage": 760,
             "damage": 3040,
-            "DPS": 3800,
+            "DPS": 3040,
             "ammo": 3,
-            "projectile": 4,
+            "projectiles": 4,
             "shape": "multiShot",
             "breakdown": "760 x 4",
             "range": 3.0,
+            "reloadSeconds": 0.8,
             "tags": []
         },
         "super": {
@@ -2796,8 +2797,7 @@
                 "burn"
             ]
         },
-        "reloadSeconds": 0.8,
-        "speedUnits": 770,
+        "speedUnits": 800,
         "gadgets": [
             {
                 "name": "Suplex Supplement",
@@ -2859,10 +2859,11 @@
             "damage": 3360,
             "DPS": 1680,
             "ammo": 3,
-            "projectile": 3,
+            "projectiles": 3,
             "shape": "multiShot",
             "breakdown": "1120 x 3 (Damage over Time ticks)",
             "range": 6.67,
+            "reloadSeconds": 2.0,
             "tags": []
         },
         "super": {
@@ -2873,8 +2874,7 @@
             "chargeRate": 1.0,
             "tags": []
         },
-        "reloadSeconds": 2.0,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Friend Zoner",
@@ -2936,10 +2936,11 @@
             "damage": 1280,
             "DPS": 800,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "singleShot",
             "breakdown": "Small (800) to Large (1280) Eggs",
             "range": 9.33,
+            "reloadSeconds": 1.6,
             "tags": []
         },
         "super": {
@@ -2952,8 +2953,7 @@
                 "poison"
             ]
         },
-        "reloadSeconds": 1.6,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Slick Shell",
@@ -3015,10 +3015,11 @@
             "damage": 2720,
             "DPS": 2720,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "singleShot",
             "breakdown": "Kick (Failsafe Shoe: 700)",
             "range": 2.67,
+            "reloadSeconds": 1.0,
             "tags": []
         },
         "super": {
@@ -3029,8 +3030,7 @@
             "chargeRate": 1.0,
             "tags": []
         },
-        "reloadSeconds": 1.0,
-        "speedUnits": 770,
+        "speedUnits": 800,
         "gadgets": [
             {
                 "name": "A-Roundhouse Kick",
@@ -3092,10 +3092,11 @@
             "damage": 1800,
             "DPS": 1385,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "singleShot",
             "breakdown": "Single piercing projectile (Slows enemies)",
             "range": 9.0,
+            "reloadSeconds": 1.3,
             "tags": []
         },
         "super": {
@@ -3106,8 +3107,7 @@
             "chargeRate": 1.0,
             "tags": []
         },
-        "reloadSeconds": 1.3,
-        "speedUnits": 770,
+        "speedUnits": 800,
         "gadgets": [
             {
                 "name": "Time Reversal",
@@ -3173,10 +3173,11 @@
             "damage": 2320,
             "DPS": 2900,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "scattered",
             "breakdown": "Area of Effect (brief delay)",
             "range": 4.67,
+            "reloadSeconds": 0.8,
             "tags": []
         },
         "super": {
@@ -3189,8 +3190,7 @@
                 "stun"
             ]
         },
-        "reloadSeconds": 0.8,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Active Noise Canceling",
@@ -3256,10 +3256,11 @@
             "damage": 3600,
             "DPS": 3000,
             "ammo": 3,
-            "projectile": 6,
+            "projectiles": 6,
             "shape": "scattered",
             "breakdown": "600 x 6 (Wide spread)",
             "range": 8.67,
+            "reloadSeconds": 1.2,
             "tags": []
         },
         "super": {
@@ -3270,8 +3271,7 @@
             "chargeRate": 1.0,
             "tags": []
         },
-        "reloadSeconds": 1.2,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Spring Ejector",
@@ -3339,10 +3339,11 @@
             "damage": 2000,
             "DPS": 1000,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "singleShot",
             "breakdown": "Single target (splits into 6 at range)",
             "range": 7.0,
+            "reloadSeconds": 2.0,
             "tags": [
                 "singleShot",
                 "vision"
@@ -3356,8 +3357,7 @@
             "chargeRate": 1.0,
             "tags": []
         },
-        "reloadSeconds": 2.0,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Magic Puffs",
@@ -3423,10 +3423,11 @@
             "damage": 1200,
             "DPS": 6000,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "scattered",
             "breakdown": "Area of Effect around self",
             "range": 2.0,
+            "reloadSeconds": 0.2,
             "tags": []
         },
         "super": {
@@ -3437,8 +3438,7 @@
             "chargeRate": 8.0,
             "tags": []
         },
-        "reloadSeconds": 0.2,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Longer Strings",
@@ -3500,11 +3500,12 @@
             "damage": 500,
             "DPS": 294,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "singleShot",
             "heal": 900,
             "breakdown": "Damages enemy and heals ally continuously while in contact, and stops when contact is lost",
             "range": 7.0,
+            "reloadSeconds": 1.7,
             "tags": ["heal"]
         },
         "super": {
@@ -3515,8 +3516,7 @@
             "chargeRate": 15.0,
             "tags": []
         },
-        "reloadSeconds": 1.7,
-        "speedUnits": 770,
+        "speedUnits": 800,
         "gadgets": [
             {
                 "name": "SLIPPERY SAVIOR",
@@ -3578,10 +3578,11 @@
             "damage": 2320,
             "DPS": 1657,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "singleShot",
             "breakdown": "Linear Projectile",
             "range": 10.0,
+            "reloadSeconds": 1.4,
             "tags": [
                 "singleShot"
             ]
@@ -3597,8 +3598,7 @@
                 "wallpass"
             ]
         },
-        "reloadSeconds": 1.4,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Walking Cane",
@@ -3665,10 +3665,11 @@
             "damage": 5040,
             "DPS": 2965,
             "ammo": 3,
-            "projectile": 9,
+            "projectiles": 9,
             "shape": "scattered",
             "breakdown": "560 x 9 (Coins)",
             "range": 7.0,
+            "reloadSeconds": 1.7,
             "tags": []
         },
         "super": {
@@ -3679,8 +3680,7 @@
             "chargeRate": 1.0,
             "tags": []
         },
-        "reloadSeconds": 1.7,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Piggy Bank",
@@ -3744,10 +3744,11 @@
             "damage": 2280,
             "DPS": 1140,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "scattered",
             "breakdown": "X-Shaped Explosion (Area Damage)",
             "range": 7.7,
+            "reloadSeconds": 2.0,
             "tags": []
         },
         "super": {
@@ -3760,8 +3761,7 @@
                 "wallbreak"
             ]
         },
-        "reloadSeconds": 2.0,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Watching Machine",
@@ -3823,10 +3823,11 @@
             "damage": 2160,
             "DPS": 1440,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "singleShot",
             "breakdown": "Pierces through enemies.",
-            "range": 7.33,
+            "range": 9.3,
+            "reloadSeconds": 1.5,
             "tags": []
         },
         "super": {
@@ -3837,8 +3838,7 @@
             "chargeRate": 1.0,
             "tags": []
         },
-        "reloadSeconds": 1.5,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Spirit Animal",
@@ -3908,10 +3908,11 @@
             "damage": 3600,
             "DPS": 12000,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "singleShot",
             "breakdown": "Min 900 to Max 3600 (Charge-based)",
             "range": 4.67,
+            "reloadSeconds": 0.3,
             "tags": [
                 "piercing",
                 "wallpass"
@@ -3925,8 +3926,7 @@
             "chargeRate": 1.0,
             "tags": []
         },
-        "reloadSeconds": 0.3,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Water Balloon",
@@ -3981,17 +3981,18 @@
     },
     "jacky": {
         "power": 11,
-        "health": 10000,
+        "health": 10400,
         "mainAttack": {
             "name": "Groundbreaker",
             "baseDamage": 2480,
             "damage": 2480,
             "DPS": 1378,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "scattered",
             "breakdown": "Area of Effect around self",
-            "range": 3.0,
+            "range": 3.3,
+            "reloadSeconds": 1.8,
             "tags": [
                 "wallpass"
             ]
@@ -4004,8 +4005,7 @@
             "chargeRate": 1.0,
             "tags": []
         },
-        "reloadSeconds": 1.8,
-        "speedUnits": 720,
+        "speedUnits": 800,
         "gadgets": [
             {
                 "name": "PNEUMATIC BOOSTER",
@@ -4071,10 +4071,11 @@
             "damage": 1500,
             "DPS": 1000,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "singleShot",
             "breakdown": "Switches between Damage (Work Mode) and Heal (Party Mode)",
             "range": 8.33,
+            "reloadSeconds": 1.5,
             "tags": [
                 "singleShot",
                 "heal"
@@ -4088,8 +4089,7 @@
             "chargeRate": 1.0,
             "tags": []
         },
-        "reloadSeconds": 1.5,
-        "speedUnits": 770,
+        "speedUnits": 800,
         "gadgets": [
             {
                 "name": "Weekend Warrior",
@@ -4153,10 +4153,11 @@
             "damage": 2000,
             "DPS": 1333,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "scattered",
             "breakdown": "Linear Cone (Range increases with charge)",
             "range": 9.0,
+            "reloadSeconds": 1.5,
             "tags": [
                 "piercing"
             ]
@@ -4171,8 +4172,7 @@
                 "teleport"
             ]
         },
-        "reloadSeconds": 1.5,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Drop the Beat",
@@ -4234,10 +4234,11 @@
             "damage": 2120,
             "DPS": 1178,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "singleShot",
             "breakdown": "Single Projectile (Bounces to 2 targets)",
             "range": 9.0,
+            "reloadSeconds": 1.8,
             "tags": [
                 "crowdControl"
             ]
@@ -4250,8 +4251,7 @@
             "chargeRate": 1.0,
             "tags": []
         },
-        "reloadSeconds": 1.8,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Spark Plug",
@@ -4313,10 +4313,11 @@
             "damage": 2000,
             "DPS": 1250,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "scattered",
             "breakdown": "Artillery (Varies by terrain)",
             "range": 7.33,
+            "reloadSeconds": 1.6,
             "tags": []
         },
         "super": {
@@ -4329,8 +4330,7 @@
                 "summon"
             ]
         },
-        "reloadSeconds": 1.6,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Voodoo Chile",
@@ -4398,10 +4398,11 @@
             "damage": [1500, 2475],
             "DPS": [1500, 2475],
             "ammo": 3,
-            "projectile": [1, 1],
+            "projectiles": [1, 1],
             "shape": ["singleShot", "singleShot"],
             "breakdown": "Single Projectile (Returns to Kaze)",
             "range": 8.33,
+            "reloadSeconds": 1.0,
             "tags": []
         },
         "super": {
@@ -4414,7 +4415,6 @@
                 "control"
             ]
         },
-        "reloadSeconds": 1.0,
         "speedUnits": 820,
         "gadgets": [
             {
@@ -4477,10 +4477,11 @@
             "damage": [1500, 2000],
             "DPS": [1500, 2000],
             "ammo": 3,
-            "projectile": [1, 1],
+            "projectiles": [1, 1],
             "shape": ["singleShot", "singleShot"],
             "breakdown": "Alternates: Dash (1500) / Slash (2000)",
             "range": 2.67,
+            "reloadSeconds": 1.0,
             "tags": [
                 "singleShot",
                 "piercing"
@@ -4497,8 +4498,7 @@
                 "piercing"
             ]
         },
-        "reloadSeconds": 1.0,
-        "speedUnits": 770,
+        "speedUnits": 800,
         "gadgets": [
             {
                 "name": "Dashi Dash",
@@ -4562,10 +4562,11 @@
             "damage": 2000,
             "DPS": 2500,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "singleShot",
             "breakdown": "Melee (Claws) / Area (Yarn Balls)",
             "range": 1.0,
+            "reloadSeconds": 0.8,
             "tags": []
         },
         "super": {
@@ -4580,7 +4581,6 @@
                 "heal"
             ]
         },
-        "reloadSeconds": 0.8,
         "speedUnits": 820,
         "gadgets": [
             {
@@ -4647,10 +4647,11 @@
             "damage": 2800,
             "DPS": 1273,
             "ammo": 3,
-            "projectile": 2,
+            "projectiles": 2,
             "shape": "scattered",
             "breakdown": "1400 x 2 (Double explosion)",
             "range": 7.33,
+            "reloadSeconds": 2.2,
             "tags": []
         },
         "super": {
@@ -4661,8 +4662,7 @@
             "chargeRate": 1.0,
             "tags": []
         },
-        "reloadSeconds": 2.2,
-        "speedUnits": 770,
+        "speedUnits": 800,
         "gadgets": [
             {
                 "name": "Order: Fall Back",
@@ -4724,10 +4724,11 @@
             "damage": 3840,
             "DPS": 2021,
             "ammo": 3,
-            "projectile": 4,
+            "projectiles": 4,
             "shape": "multiShot",
             "breakdown": "960 x 4 (Decreases with distance)",
             "range": 9.67,
+            "reloadSeconds": 1.9,
             "tags": []
         },
         "super": {
@@ -4740,7 +4741,6 @@
                 "invisible"
             ]
         },
-        "reloadSeconds": 1.9,
         "speedUnits": 820,
         "gadgets": [
             {
@@ -4805,10 +4805,11 @@
             "damage": 2120,
             "DPS": 2650,
             "ammo": 2,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "singleShot",
             "breakdown": "Piercing (Super charges on proximity)",
             "range": 7.67,
+            "reloadSeconds": 0.8,
             "tags": [
                 "piercing"
             ]
@@ -4823,7 +4824,6 @@
                 "teleport"
             ]
         },
-        "reloadSeconds": 0.8,
         "speedUnits": 820,
         "gadgets": [
             {
@@ -4887,10 +4887,11 @@
             "damage": 3360,
             "DPS": 1976,
             "ammo": 3,
-            "projectile": 6,
+            "projectiles": 6,
             "shape": "multiShot",
             "breakdown": "560 x 6 (Piercing Projectiles)",
             "range": 8.67,
+            "reloadSeconds": 1.7,
             "tags": []
         },
         "super": {
@@ -4903,8 +4904,7 @@
                 "turret"
             ]
         },
-        "reloadSeconds": 1.7,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Freeze Frame",
@@ -4966,10 +4966,11 @@
             "damage": 2640,
             "DPS": 2400,
             "ammo": 3,
-            "projectile": 3,
+            "projectiles": 3,
             "shape": "multiShot",
             "breakdown": "880 x 3 (Freeze effect)",
             "range": 7.33,
+            "reloadSeconds": 1.1,
             "tags": [
                 "stun"
             ]
@@ -4984,8 +4985,7 @@
                 "stun"
             ]
         },
-        "reloadSeconds": 1.1,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Hypothermia",
@@ -5047,10 +5047,11 @@
             "damage": 3000,
             "DPS": 1765,
             "ammo": 3,
-            "projectile": 2,
+            "projectiles": 2,
             "shape": "multiShot",
             "breakdown": "1200 (Throw) + 1800 (Return)",
             "range": 8.67,
+            "reloadSeconds": 1.7,
             "tags": [
                 "piercing"
             ]
@@ -5066,8 +5067,7 @@
                 "stun"
             ]
         },
-        "reloadSeconds": 1.7,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Hit the Lights",
@@ -5134,10 +5134,11 @@
             "damage": 3000,
             "DPS": 2000,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "singleShot",
             "breakdown": "Projectile (Faster further away)",
             "range": 8.33,
+            "reloadSeconds": 1.5,
             "tags": []
         },
         "super": {
@@ -5148,8 +5149,7 @@
             "chargeRate": 1.0,
             "tags": []
         },
-        "reloadSeconds": 1.5,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Vented",
@@ -5213,10 +5213,11 @@
             "damage": 2600,
             "DPS": 1733,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "singleShot",
             "breakdown": "Max damage (Charged shot)",
             "range": 10.0,
+            "reloadSeconds": 1.5,
             "tags": []
         },
         "super": {
@@ -5231,8 +5232,7 @@
                 "heist-attacker"
             ]
         },
-        "reloadSeconds": 1.5,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Caramelize",
@@ -5299,10 +5299,11 @@
             "damage": 2560,
             "DPS": 1969,
             "ammo": 3,
-            "projectile": 4,
+            "projectiles": 4,
             "shape": "multiShot",
             "breakdown": "640 x 4 (Shots)",
             "range": 8.33,
+            "reloadSeconds": 1.3,
             "tags": [
                 "multi-shot"
             ]
@@ -5315,7 +5316,6 @@
             "chargeRate": 1.0,
             "tags": []
         },
-        "reloadSeconds": 1.3,
         "speedUnits": 820,
         "gadgets": [
             {
@@ -5378,10 +5378,11 @@
             "damage": 2520,
             "DPS": 1482,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "singleShot",
             "breakdown": "",
             "range": 7.0,
+            "reloadSeconds": 1.7,
             "tags": []
         },
         "super": {
@@ -5394,8 +5395,7 @@
                 "wallpass"
             ]
         },
-        "reloadSeconds": 1.7,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Mansions of Meeple",
@@ -5457,10 +5457,11 @@
             "damage": [1600, 4800],
             "DPS": [1231, 3692],
             "ammo": 3,
-            "projectile": [2, 16],
+            "projectiles": [2, 16],
             "shape": ["multiShot", "multiShot"],
             "breakdown": "300 x 16 (Projectiles) - *Mech Mode*; 800 x 2 - *Pilot Mode*",
             "range": 8.33,
+            "reloadSeconds": 1.3,
             "tags": []
         },
         "super": {
@@ -5471,8 +5472,7 @@
             "chargeRate": 1.0,
             "tags": []
         },
-        "reloadSeconds": 1.3,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Force Field",
@@ -5534,10 +5534,11 @@
             "damage": 920,
             "DPS": 613,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "singleShot",
             "breakdown": "Creates a rotating note on hit",
             "range": 7.0,
+            "reloadSeconds": 1.5,
             "tags": [
                 "singleShot"
             ]
@@ -5550,8 +5551,7 @@
             "chargeRate": 1.0,
             "tags": []
         },
-        "reloadSeconds": 1.5,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Perfect Pitch",
@@ -5615,10 +5615,11 @@
             "damage": 2280,
             "DPS": 950,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "scattered",
             "breakdown": "Jump + Area Damage on Landing",
             "range": 4.0,
+            "reloadSeconds": 2.4,
             "tags": [
                 "wallpass"
             ]
@@ -5633,7 +5634,6 @@
                 "teleport"
             ]
         },
-        "reloadSeconds": 2.4,
         "speedUnits": 820,
         "gadgets": [
             {
@@ -5700,10 +5700,11 @@
             "damage": 1600,
             "DPS": 1143,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "singleShot",
             "breakdown": "3-stage Melee Combo (Heals on 3rd hit)",
             "range": 3.0,
+            "reloadSeconds": 1.4,
             "tags": []
         },
         "super": {
@@ -5716,8 +5717,7 @@
                 "stun"
             ]
         },
-        "reloadSeconds": 1.4,
-        "speedUnits": 770,
+        "speedUnits": 800,
         "gadgets": [
             {
                 "name": "Windmill",
@@ -5779,10 +5779,11 @@
             "damage": [1000, 3000],
             "DPS": [667, 2000],
             "ammo": 3,
-            "projectile": [1, 3],
+            "projectiles": [1, 3],
             "shape": ["singleShot", "multiShot"],
             "breakdown": "Single projectile (splits into 3 on contact)",
             "range": 8.33,
+            "reloadSeconds": 1.5,
             "tags": [
                 "multi-shot",
                 "piercing"
@@ -5799,8 +5800,7 @@
                 "wallpass"
             ]
         },
-        "reloadSeconds": 1.5,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Dodgy Digging",
@@ -5861,10 +5861,11 @@
             "damage": 2000,
             "DPS": 833,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "singleShot",
             "breakdown": "Dash Attack + Heal (Trait)",
             "range": 2.67,
+            "reloadSeconds": 2.4,
             "tags": []
         },
         "super": {
@@ -5875,7 +5876,6 @@
             "chargeRate": 1.0,
             "tags": []
         },
-        "reloadSeconds": 2.4,
         "speedUnits": 820,
         "gadgets": [
             {
@@ -5938,10 +5938,11 @@
             "damage": 3040,
             "DPS": 1900,
             "ammo": 3,
-            "projectile": 2,
+            "projectiles": 2,
             "shape": "multiShot",
             "breakdown": "1520 x 2 (Bounce/Split Damage)",
             "range": 8.0,
+            "reloadSeconds": 1.6,
             "tags": [
                 "wallpass"
             ]
@@ -5956,8 +5957,7 @@
                 "spawn"
             ]
         },
-        "reloadSeconds": 1.6,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Service Bell",
@@ -6023,10 +6023,11 @@
             "damage": 1800,
             "DPS": 2250,
             "ammo": 1,
-            "projectile": 3,
+            "projectiles": 3,
             "shape": "multiShot",
             "breakdown": "600 (Jar) + 1200 (Snake poison)",
             "range": 6.0,
+            "reloadSeconds": 0.8,
             "tags": [
                 "piercing",
                 "poison"
@@ -6043,8 +6044,7 @@
                 "poison"
             ]
         },
-        "reloadSeconds": 0.8,
-        "speedUnits": 770,
+        "speedUnits": 800,
         "gadgets": [
             {
                 "name": "Poison Puddles",
@@ -6116,10 +6116,11 @@
             "damage": 4800,
             "DPS": 2667,
             "ammo": 3,
-            "projectile": 3,
+            "projectiles": 3,
             "shape": "multiShot",
             "breakdown": "1600 x 3 (Projectiles)",
             "range": 8.67,
+            "reloadSeconds": 1.8,
             "tags": []
         },
         "super": {
@@ -6130,8 +6131,7 @@
             "chargeRate": 1.0,
             "tags": []
         },
-        "reloadSeconds": 1.8,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Warp Blast",
@@ -6193,12 +6193,13 @@
             "name": "Shockwave",
             "baseDamage": 1920,
             "damage": 1920,
-            "DPS": 1745,
+            "DPS": 1746,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "singleShot",
             "breakdown": "Piercing Shockwave",
-            "range": 7.67,
+            "range": 6,
+            "reloadSeconds": 1.1,
             "tags": [
                 "piercing",
                 "singleShot"
@@ -6215,8 +6216,7 @@
                 "spawn"
             ]
         },
-        "reloadSeconds": 1.1,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Bear Paws",
@@ -6280,10 +6280,11 @@
             "damage": 2000,
             "DPS": 20000,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "singleShot",
             "breakdown": "Hook strike and stretch",
             "range": 3.7,
+            "reloadSeconds": 0.1,
             "tags": [
                 "pull"
             ]
@@ -6299,7 +6300,6 @@
                 "delayed"
             ]
         },
-        "reloadSeconds": 0.1,
         "speedUnits": 855,
         "gadgets": [
             {
@@ -6370,10 +6370,11 @@
             "damage": 1800,
             "DPS": 1000,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "singleShot",
             "breakdown": "Single Projectile (Damage over Time on hit)",
             "range": 7.67,
+            "reloadSeconds": 1.8,
             "tags": []
         },
         "super": {
@@ -6386,8 +6387,7 @@
                 "stun"
             ]
         },
-        "reloadSeconds": 1.8,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Regulate",
@@ -6453,10 +6453,11 @@
             "damage": 3000,
             "DPS": 2000,
             "ammo": 3,
-            "projectile": 3,
+            "projectiles": 3,
             "shape": "multiShot",
             "breakdown": "1000 x 3 (Projectiles)",
             "range": 7.33,
+            "reloadSeconds": 1.5,
             "tags": []
         },
         "super": {
@@ -6467,8 +6468,7 @@
             "chargeRate": 1.0,
             "tags": []
         },
-        "reloadSeconds": 1.5,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Ink Refills",
@@ -6530,10 +6530,11 @@
             "damage": 5400,
             "DPS": 4154,
             "ammo": 3,
-            "projectile": 9,
+            "projectiles": 9,
             "shape": "scattered",
             "breakdown": "600 x 9 (Scraps)",
             "range": 8.67,
+            "reloadSeconds": 1.3,
             "tags": [
                 "multi-shot"
             ]
@@ -6548,8 +6549,7 @@
                 "heal"
             ]
         },
-        "reloadSeconds": 1.3,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Mama's Squeeze",
@@ -6613,10 +6613,11 @@
             "damage": 13200,
             "DPS": 8800,
             "ammo": 3,
-            "projectile": 6,
+            "projectiles": 6,
             "shape": "multiShot",
             "breakdown": "Fires 6 cookies (Heat Meter effect)",
             "range": 8.33,
+            "reloadSeconds": 1.5,
             "tags": [
                 "multi-shot"
             ]
@@ -6629,8 +6630,7 @@
             "chargeRate": 1.0,
             "tags": []
         },
-        "reloadSeconds": 1.5,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Overcooked",
@@ -6696,10 +6696,11 @@
             "damage": 1960,
             "DPS": 980,
             "ammo": 3,
-            "projectile": 2,
+            "projectiles": 2,
             "shape": "scattered",
             "breakdown": "Primary, plus area splash damage",
-            "range": 9.0,
+            "range": 8.7,
+            "reloadSeconds": 2.0,
             "tags": []
         },
         "super": {
@@ -6713,8 +6714,7 @@
                 "wallpass"
             ]
         },
-        "reloadSeconds": 2.0,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Salty Barrel",
@@ -6776,10 +6776,11 @@
             "damage": 1900,
             "DPS": 475,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "singleShot",
             "breakdown": "Generates another ammo around self on hit for pick up; shooting a piercing shot on pick up; otherwise slowly reloads all three shots after out of ammo",
             "range": 7.0,
+            "reloadSeconds": 4.0,
             "tags": []
         },
         "super": {
@@ -6790,8 +6791,7 @@
             "chargeRate": 1.0,
             "tags": []
         },
-        "reloadSeconds": 4.0,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "BOTTOMLESS MAGS",
@@ -6853,10 +6853,11 @@
             "damage": 3400,
             "DPS": 1478,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "singleShot",
             "breakdown": "Min 960 to Max 3400 (Distance-based)",
             "range": 9.0,
+            "reloadSeconds": 2.3,
             "tags": [
                 "singleShot"
             ]
@@ -6871,8 +6872,7 @@
                 "wallbreak"
             ]
         },
-        "reloadSeconds": 2.3,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Auto Aimer",
@@ -6935,12 +6935,13 @@
             "name": "Power Chord",
             "baseDamage": 1520,
             "damage": 1520,
-            "DPS": 950,
+            "DPS": 3800,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "singleShot",
             "breakdown": "Single Target/Piercing",
-            "range": 7.33,
+            "range": 7,
+            "reloadSeconds": 1.6,
             "tags": [
                 "multi-shot",
                 "piercing"
@@ -6958,8 +6959,7 @@
                 "wallpass"
             ]
         },
-        "reloadSeconds": 1.6,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Tuning Fork",
@@ -7025,10 +7025,11 @@
             "damage": 1400,
             "DPS": 933,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "singleShot",
             "breakdown": "Marks enemy (2-stage attack)",
             "range": 8.67,
+            "reloadSeconds": 1.5,
             "tags": [
                 "singleShot"
             ]
@@ -7043,8 +7044,7 @@
                 "wallpass"
             ]
         },
-        "reloadSeconds": 1.5,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "In The Matrix",
@@ -7106,10 +7106,11 @@
             "damage": 3200,
             "DPS": 2667,
             "ammo": 3,
-            "projectile": 5,
+            "projectiles": 5,
             "shape": "multiShot",
             "breakdown": "640 x 5",
-            "range": 8.67,
+            "range": 9.7,
+            "reloadSeconds": 1.1,
             "tags": [
                 "bouncy"
             ]
@@ -7124,8 +7125,7 @@
                 "bouncy"
             ]
         },
-        "reloadSeconds": 1.2,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Multiball Launcher",
@@ -7189,10 +7189,11 @@
             "damage": 3000,
             "DPS": 3000,
             "ammo": 3,
-            "projectile": 3,
+            "projectiles": 3,
             "shape": "multiShot",
             "breakdown": "1000 x 3",
-            "range": 3.0,
+            "range": 3.7,
+            "reloadSeconds": 1.0,
             "tags": [
                 "multi-shot",
                 "piercing"
@@ -7206,8 +7207,7 @@
             "chargeRate": 1.0,
             "tags": []
         },
-        "reloadSeconds": 1.0,
-        "speedUnits": 770,
+        "speedUnits": 800,
         "gadgets": [
             {
                 "name": "Grow-Light",
@@ -7271,10 +7271,11 @@
             "damage": 2400,
             "DPS": 1714,
             "ammo": 3,
-            "projectile": 2,
+            "projectiles": 2,
             "shape": "multiShot",
             "breakdown": "1200 x 2 (Bouncing Projectiles)",
             "range": 8.33,
+            "reloadSeconds": 1.4,
             "tags": []
         },
         "super": {
@@ -7285,8 +7286,7 @@
             "chargeRate": 1.0,
             "tags": []
         },
-        "reloadSeconds": 1.4,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Supply Drop",
@@ -7348,10 +7348,11 @@
             "damage": 3200,
             "DPS": 2000,
             "ammo": 3,
-            "projectile": 2,
+            "projectiles": 2,
             "shape": "multiShot",
             "breakdown": "1600 x 2 (Melee Swings)",
             "range": 3.33,
+            "reloadSeconds": 1.6,
             "tags": [
                 "multi-shot"
             ]
@@ -7366,8 +7367,7 @@
                 "piercing"
             ]
         },
-        "reloadSeconds": 1.6,
-        "speedUnits": 770,
+        "speedUnits": 800,
         "gadgets": [
             {
                 "name": "Magnetic Field",
@@ -7429,10 +7429,11 @@
             "damage": 1800,
             "DPS": 1000,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "singleShot",
             "breakdown": "Piercing Projectile",
             "range": 8.33,
+            "reloadSeconds": 1.8,
             "tags": [
                 "multi-shot",
                 "piercing"
@@ -7448,8 +7449,7 @@
                 "invisible"
             ]
         },
-        "reloadSeconds": 1.8,
-        "speedUnits": 770,
+        "speedUnits": 800,
         "gadgets": [
             {
                 "name": "Sleep Stimulator",
@@ -7513,10 +7513,11 @@
             "damage": [1600, 3200],
             "DPS": [2000, 4000],
             "ammo": 3,
-            "projectile": [1, 1],
+            "projectiles": [1, 1],
             "shape": ["singleShot", "singleShot"],
             "breakdown": "Single piercing projectile (Decays over distance)",
             "range": 3.7,
+            "reloadSeconds": 0.8,
             "tags": [
                 "piercing",
                 "wallpass"
@@ -7532,7 +7533,6 @@
                 "wallpass"
             ]
         },
-        "reloadSeconds": 0.8,
         "speedUnits": 820,
         "gadgets": [
             {
@@ -7595,10 +7595,11 @@
             "damage": 3000,
             "DPS": 2000,
             "ammo": 3,
-            "projectile": 5,
+            "projectiles": 5,
             "shape": "scattered",
             "breakdown": "600 x 5",
             "range": 7.67,
+            "reloadSeconds": 1.5,
             "tags": []
         },
         "super": {
@@ -7609,8 +7610,7 @@
             "chargeRate": 1.0,
             "tags": []
         },
-        "reloadSeconds": 1.5,
-        "speedUnits": 770,
+        "speedUnits": 800,
         "gadgets": [
             {
                 "name": "FAST FORWARD",
@@ -7672,10 +7672,11 @@
             "damage": 1200,
             "DPS": 750,
             "ammo": 3,
-            "projectile": 2,
+            "projectiles": 2,
             "shape": "multiShot",
             "breakdown": "Sirius conjures two projectiles, a Starr Bomb that deals area damage and a Shadow Strike that hits a single target. Sirius will collect a Brawler Shadow on every 4th hit. Sirius can store 3 Brawler Shadows at a time.",
             "range": 7.3,
+            "reloadSeconds": 1.6,
             "tags": [
                 "piercing"
             ]
@@ -7690,7 +7691,6 @@
                 "summon"
             ]
         },
-        "reloadSeconds": 1.6,
         "speedUnits": 750,
         "gadgets": [
             {
@@ -7761,10 +7761,11 @@
             "damage": 7560,
             "DPS": 3780,
             "ammo": 3,
-            "projectile": 7,
+            "projectiles": 7,
             "shape": "scattered",
             "breakdown": "1080 x 7 (Main + Spikes)",
             "range": 7.33,
+            "reloadSeconds": 2.0,
             "tags": [
                 "singleShot"
             ]
@@ -7779,8 +7780,7 @@
                 "slow"
             ]
         },
-        "reloadSeconds": 2.0,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Life Plant",
@@ -7846,10 +7846,11 @@
             "damage": 2080,
             "DPS": 1224,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "singleShot",
             "breakdown": "Explosive Seed",
             "range": 8.33,
+            "reloadSeconds": 1.7,
             "tags": [
                 "singleShot"
             ]
@@ -7862,8 +7863,7 @@
             "chargeRate": 1.0,
             "tags": []
         },
-        "reloadSeconds": 1.7,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Garden Mulcher",
@@ -7925,10 +7925,11 @@
             "damage": 2320,
             "DPS": 1105,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "singleShot",
             "breakdown": "Delayed Area Explosion",
             "range": 8.67,
+            "reloadSeconds": 2.1,
             "tags": [
                 "singleShot"
             ]
@@ -7943,8 +7944,7 @@
                 "slow"
             ]
         },
-        "reloadSeconds": 2.1,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Windup",
@@ -8012,10 +8012,11 @@
             "damage": 960,
             "DPS": 600,
             "ammo": 3,
-            "projectile": 2,
+            "projectiles": 2,
             "shape": "multiShot",
             "breakdown": "Starr Nova uses her glorious anime hair as a weapon, firing 2 blonde projectiles.",
             "range": 5.7,
+            "reloadSeconds": 1.6,
             "tags": [
                 "straight"
             ]
@@ -8030,7 +8031,6 @@
                 "dash"
             ]
         },
-        "reloadSeconds": 1.6,
         "speedUnits": 855,
         "gadgets": [
             {
@@ -8104,10 +8104,11 @@
             "damage": 2160,
             "DPS": 1440,
             "ammo": 3,
-            "projectile": 2,
+            "projectiles": 2,
             "shape": "multiShot",
             "breakdown": "1080 x 2 (Projectiles)",
             "range": 7.33,
+            "reloadSeconds": 1.5,
             "tags": [
                 "multi-shot"
             ]
@@ -8122,7 +8123,6 @@
                 "burn"
             ]
         },
-        "reloadSeconds": 1.5,
         "speedUnits": 820,
         "gadgets": [
             {
@@ -8187,10 +8187,11 @@
             "damage": 2360,
             "DPS": 1180,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "singleShot",
             "breakdown": "Single Shot (splits on contact)",
             "range": 7.0,
+            "reloadSeconds": 2.0,
             "tags": [
                 "singleShot"
             ]
@@ -8205,7 +8206,6 @@
                 "wallpass"
             ]
         },
-        "reloadSeconds": 2.0,
         "speedUnits": 650,
         "gadgets": [
             {
@@ -8268,10 +8268,11 @@
             "damage": 2880,
             "DPS": 1440,
             "ammo": 3,
-            "projectile": 3,
+            "projectiles": 3,
             "shape": "multiShot",
             "breakdown": "960 x 3 (Piercing Cards)",
             "range": 7.67,
+            "reloadSeconds": 2.0,
             "tags": [
                 "multi-shot"
             ]
@@ -8287,8 +8288,7 @@
                 "stun"
             ]
         },
-        "reloadSeconds": 2.0,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Psychic Enhancer",
@@ -8357,12 +8357,13 @@
             "name": "Minimines",
             "baseDamage": 1360,
             "damage": 4080,
-            "DPS": 1700,
+            "DPS": 566,
             "ammo": 3,
-            "projectile": 3,
+            "projectiles": 3,
             "shape": "scattered",
             "breakdown": "1360 x 3 (Mines)",
-            "range": 7.33,
+            "range": 8.7,
+            "reloadSeconds": 2.4,
             "tags": [
                 "control"
             ]
@@ -8378,8 +8379,7 @@
                 "grassbreak"
             ]
         },
-        "reloadSeconds": 2.4,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Mine Mania",
@@ -8444,10 +8444,11 @@
             "damage": [2800, 3600],
             "DPS": [1867, 2400],
             "ammo": 3,
-            "projectile": [1, 1],
+            "projectiles": [1, 1],
             "shape": ["scattered", "scattered"],
             "breakdown": "Area Damage (Deals more at the edge)",
             "range": 4.67,
+            "reloadSeconds": 1.5,
             "tags": [
                 "wallpass"
             ]
@@ -8460,8 +8461,7 @@
             "chargeRate": 1.0,
             "tags": []
         },
-        "reloadSeconds": 1.5,
-        "speedUnits": 770,
+        "speedUnits": 800,
         "gadgets": [
             {
                 "name": "Ant Hill",
@@ -8523,10 +8523,11 @@
             "damage": 2200,
             "DPS": 1518,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "singleShot",
             "breakdown": "Throws a straight-flying, far-reaching coffee cup",
             "range": 8.3,
+            "reloadSeconds": 1.4,
             "tags": []
         },
         "super": {
@@ -8540,7 +8541,6 @@
                 "control"
             ]
         },
-        "reloadSeconds": 1.4,
         "speedUnits": 750,
         "gadgets": [
             {
@@ -8611,10 +8611,11 @@
             "damage": 2000,
             "DPS": 1429,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "singleShot",
             "breakdown": "A wind blast in straight line",
             "range": 8,
+            "reloadSeconds": 1.4,
             "tags": [
                 "singleShot",
                 "shield"
@@ -8631,7 +8632,6 @@
                 "shield"
             ]
         },
-        "reloadSeconds": 1.4,
         "speedUnits": 800,
         "gadgets": [
             {
@@ -8707,10 +8707,11 @@
             "damage": 2400,
             "DPS": 1200,
             "ammo": 3,
-            "projectile": 3,
+            "projectiles": 3,
             "shape": "multiShot",
             "breakdown": "800 x 3 (Damage over Time ticks)",
             "range": 7.67,
+            "reloadSeconds": 2.0,
             "tags": [
                 "singleShot",
                 "poison"
@@ -8724,8 +8725,7 @@
             "chargeRate": 1.0,
             "tags": []
         },
-        "reloadSeconds": 2.0,
-        "speedUnits": 720,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Spellbound",
@@ -8785,10 +8785,11 @@
             "damage": 1900,
             "DPS": 1000,
             "ammo": 3,
-            "projectile": 1,
+            "projectiles": 1,
             "shape": "scattered",
             "breakdown": "Lightning Strike (Area Damage)",
             "range": 7.33,
+            "reloadSeconds": 1.9,
             "tags": []
         },
         "super": {
@@ -8799,8 +8800,7 @@
             "chargeRate": 1.0,
             "tags": []
         },
-        "reloadSeconds": 1.9,
-        "speedUnits": 770,
+        "speedUnits": 800,
         "gadgets": [
             {
                 "name": "Electric Shuffle",

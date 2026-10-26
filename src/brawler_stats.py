@@ -5,11 +5,12 @@ import math
 
 
 ALLOWED_SHAPES = frozenset(('singleShot', 'multiShot', 'scattered'))
-_REQUIRED_FIELDS = ('baseDamage', 'projectile', 'ammo', 'shape')
+_REQUIRED_FIELDS = ('baseDamage', 'projectiles', 'ammo', 'shape',
+                    'reloadSeconds')
 _NUMERIC_TYPES = (int, float, decimal.Decimal)
 
 
-def validate_attack(attack, reload_seconds=None):
+def validate_attack(attack):
     """Validate an attack specification, raising ``ValueError`` if invalid."""
     if not isinstance(attack, dict):
         raise ValueError('attack must be a dictionary')
@@ -19,18 +20,14 @@ def validate_attack(attack, reload_seconds=None):
         raise ValueError(f'missing attack fields: {", ".join(missing)}')
 
     _validate_numeric_field(attack['baseDamage'], 'baseDamage', minimum=0)
-    _validate_integer_field(attack['projectile'], 'projectile')
+    _validate_integer_field(attack['projectiles'], 'projectiles')
     _validate_integer_field(attack['ammo'], 'ammo')
-    if reload_seconds is None:
-        reload_seconds = attack.get('reloadSeconds')
-    if reload_seconds is None:
-        raise ValueError('missing attack field: reloadSeconds')
-    _validate_numeric_field(reload_seconds, 'reloadSeconds', minimum=0,
+    _validate_numeric_field(attack['reloadSeconds'], 'reloadSeconds', minimum=0,
                             strictly_positive=True)
 
     list_lengths = [
         len(attack[field])
-        for field in ('baseDamage', 'projectile', 'ammo')
+        for field in ('baseDamage', 'projectiles', 'ammo')
         if isinstance(attack[field], list)
     ]
     if list_lengths and any(length == 0 for length in list_lengths):
@@ -41,15 +38,15 @@ def validate_attack(attack, reload_seconds=None):
     _validate_shape(attack['shape'], list_lengths[0] if list_lengths else None)
 
 
-def calculate_damage(base_damage, projectile):
+def calculate_damage(base_damage, projectiles):
     """Return per-shot damage, supporting scalar/list broadcasting."""
-    base_values, projectile_values, is_list = _broadcast_pair(
-        base_damage, projectile, 'baseDamage', 'projectile')
+    base_values, projectiles_values, is_list = _broadcast_pair(
+        base_damage, projectiles, 'baseDamage', 'projectiles')
     _validate_numeric_field(base_values, 'baseDamage', minimum=0)
-    _validate_integer_field(projectile_values, 'projectile')
+    _validate_integer_field(projectiles_values, 'projectiles')
     damages = [
-        _number_from_decimal(_to_decimal(base) * _to_decimal(projectile))
-        for base, projectile in zip(base_values, projectile_values)
+        _number_from_decimal(_to_decimal(base) * _to_decimal(projectiles))
+        for base, projectiles in zip(base_values, projectiles_values)
     ]
     return damages if is_list else damages[0]
 
@@ -75,20 +72,18 @@ def calculate_dps(damage, reload_seconds, duration_seconds=None):
     return dps_values if is_list else dps_values[0]
 
 
-def calculate_attack_stats(attack, reload_seconds=None):
+def calculate_attack_stats(attack):
     """Validate an attack and return its derived damage and integer DPS.
 
     The result contains ``damage`` and ``dps``.  Each is scalar when all of
-    ``baseDamage``, ``projectile``, and ``ammo`` are scalar, otherwise each is
+    ``baseDamage``, ``projectiles``, and ``ammo`` are scalar, otherwise each is
     a list aligned to the list-valued attack fields.
     """
-    if reload_seconds is None:
-        reload_seconds = attack.get('reloadSeconds')
-    validate_attack(attack, reload_seconds)
-    damage = calculate_damage(attack['baseDamage'], attack['projectile'])
+    validate_attack(attack)
+    damage = calculate_damage(attack['baseDamage'], attack['projectiles'])
     dps = calculate_dps(
         damage,
-        reload_seconds,
+        attack['reloadSeconds'],
         attack.get('durationSeconds'),
     )
     return {'damage': damage, 'dps': dps}
