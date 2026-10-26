@@ -30,3 +30,12 @@ def test_extract_parser_supports_tiermaker_title():
 
     assert args.source == 'tiermaker'
     assert args.title == 'June 2026'
+
+
+def test_stats_parser_accepts_output_folder_and_resolution():
+    args = cli.create_parser().parse_args([
+        'stats', '--to', 'output', '--reso', '1024x768'])
+
+    assert args.command == 'stats'
+    assert args.toPath == 'output'
+    assert args.reso == '1024x768'

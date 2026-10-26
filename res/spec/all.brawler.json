@@ -3008,7 +3008,7 @@
     },
     "fang": {
         "power": 11,
-        "health":90600,
+        "health":9600,
         "mainAttack": {
             "name": "Kick",
             "baseDamage": 2720,
@@ -3747,7 +3747,7 @@
             "projectile": 1,
             "shape": "scattered",
             "breakdown": "X-Shaped Explosion (Area Damage)",
-            "range": 7.0,
+            "range": 7.7,
             "tags": []
         },
         "super": {
@@ -7516,7 +7516,7 @@
             "projectile": [1, 1],
             "shape": ["singleShot", "singleShot"],
             "breakdown": "Single piercing projectile (Decays over distance)",
-            "range": 9.0,
+            "range": 3.7,
             "tags": [
                 "piercing",
                 "wallpass"
@@ -8516,17 +8516,17 @@
     },
     "vince": {
         "power": 11,
-        "health": 7400,
+        "health": 6800,
         "mainAttack": {
             "name": "Coffee Mug",
-            "baseDamage": 1800,
-            "damage": 1800,
-            "DPS": 1385,
+            "baseDamage": 2200,
+            "damage": 2200,
+            "DPS": 1518,
             "ammo": 3,
             "projectile": 1,
             "shape": "singleShot",
             "breakdown": "Throws a straight-flying, far-reaching coffee cup",
-            "range": 8.5,
+            "range": 8.3,
             "tags": []
         },
         "super": {
@@ -8540,19 +8540,19 @@
                 "control"
             ]
         },
-        "reloadSeconds": 1.3,
-        "speedUnits": 770,
+        "reloadSeconds": 1.4,
+        "speedUnits": 750,
         "gadgets": [
             {
                 "name": "Hot Coffee",
-                "effect": "Tosses a projectile in an arc that deals high area damage.",
+                "effect": "Vince throws an explosive cappuccino, dealing area damage.",
                 "tags": [
                     "control"
                 ]
             },
             {
                 "name": "Metamothosis",
-                "effect": "Turns nearby spawned caterpillars into moths instantly, doubling your collection.",
+                "effect": "Vince turns all nearby caterpillars into moths, gaining an additional moth for each collected.",
                 "tags": [
                     "summon"
                 ]
@@ -8560,17 +8560,17 @@
         ],
         "starPowers": [
             {
-                "name": "Caffeine Rush",
-                "effect": "Increases reload speed by 20% while holding maximum moth collection stages.",
+                "name": "COME TO PAPA",
+                "effect": "Nearby caterpillars crawl towards Vince.",
                 "tags": [
                     "buff.reload"
                 ]
             },
             {
-                "name": "Creepy Crawlies",
-                "effect": "Enemies afflicted with caterpillar debuffs have their movement speed reduced by 25%.",
+                "name": "BUG BANDAGE",
+                "effect": "Turning a caterpillar into a moth heals Vince for.",
                 "tags": [
-                    "slow"
+                    "heal"
                 ]
             }
         ],
@@ -8592,7 +8592,7 @@
             "speed": "NORMAL"
         },
         "roles": {
-            "*": "*",
+            "*": "sniper",
             "bounty": "flex",
             "brawlBall": "damage",
             "gemGrab": "damage",

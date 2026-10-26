@@ -12,6 +12,7 @@ sys.path.insert(0, str(_ROOT / 'src'))
 
 import render
 import core
+import stats
 
 
 def _master_document():
@@ -177,6 +178,63 @@ def test_tiermaker_png_respects_explicit_resolution(tmp_path):
 
     with Image.open(output_path) as image:
         assert image.size == (1024, 768)
+
+
+def test_stats_svg_has_two_panels_dynamic_legend_and_plain_credit():
+    catalog = {
+        'gus': {
+            'health': 5000, 'mainAttack': {'range': 9},
+            'super': {'range': 7}, 'speedUnits': 720,
+            'reloadSeconds': 1.5,
+            'rating': {'rangeMain': 'LONG', 'rangeSuper': 'LONG',
+                       'speed': 'NORMAL', 'reload': 'NORMAL'},
+            'roles': {'*': 'sniper'},
+        },
+    }
+    document = stats.build_document(catalog, stats.STATS[1])
+    svg = render.render_master_svg(
+        document, _ROOT / 'res/avatar', _ROOT / 'res/map', width=900)
+
+    assert document['title'] in svg
+    assert 'Rating Tiers' in svg
+    assert 'Common Classes' in svg
+    assert 'data-tier-legend="LONG"' in svg
+    assert 'data-tier="LONG"' in svg
+    assert svg.count('data-brawler="gus"') == 2
+    assert f'Produced by kakyo on {datetime.date.today().isoformat()}' in svg
+    assert 'Powered by DeepDraft' not in svg
+
+
+def test_stats_ties_hide_only_following_underlines_in_each_panel(tmp_path):
+    document = {
+        'source': 'stats',
+        'title': 'Brawler Tierlist: Main Attack Range',
+        'tierOrder': ['LONG'],
+        'tierColors': {'LONG': '#e87582'},
+        'originalTierlist': {'LONG': ['gus', 'piper', 'brock', 'belle']},
+        'globalRoles': {'sniper': ['gus', 'piper', 'brock', 'belle']},
+        'values': {'gus': 9, 'piper': 9, 'brock': 9, 'belle': 8},
+    }
+    svg = render.render_master_svg(document, _ROOT / 'res/avatar', width=900)
+
+    assert svg.count('stroke="transparent"') == 4
+    assert svg.count('stroke="#e87582"') == 4
+
+    output_path = tmp_path / 'ties.png'
+    render.render_document(document, _ROOT / 'res/avatar', output_path)
+    layout = render.build_layout(document, render.DEFAULT_PNG_RESOLUTION[0])
+    with Image.open(output_path) as image:
+        for panel in layout.panels:
+            tiles = panel.rows[0].tiles
+            pixels = []
+            for tile in tiles:
+                visuals = render._tile_visuals(tile, layout.scale)
+                pixels.append(image.getpixel((tile.x + tile.width // 2,
+                                              visuals['underline_y'])))
+            assert pixels == [
+                (232, 117, 130), (43, 41, 71),
+                (43, 41, 71), (232, 117, 130),
+            ]
 
 
 def test_requested_png_resolution_reflows_without_stretching_avatars():

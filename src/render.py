@@ -133,6 +133,11 @@ def _source_tiers(document):
 
 
 def _panel_groups(document):
+    if document.get('source') == 'stats':
+        return (
+            ('Rating Tiers', document['originalTierlist']),
+            ('Common Classes', document['globalRoles']),
+        )
     if 'globalRoles' in document and 'mapRoles' in document:
         return (
             ('Common Classes', document['globalRoles']),
@@ -317,6 +322,8 @@ def _role_color(index):
 
 
 def _document_title(document):
+    if document.get('source') == 'stats':
+        return document['title']
     if document.get('title'):
         return f'BrawlStars Tierlist: {document["title"]}'
     title = f'BrawlStars Tierlists: {_title_case(document.get("map", "Tierlist"))}'
@@ -327,6 +334,8 @@ def _document_title(document):
 
 def _is_tiermaker_document(document):
     source = document.get('source')
+    if source == 'stats':
+        return False
     return source == 'tiermaker' or (
         'title' in document
         and 'map' not in document
@@ -336,6 +345,8 @@ def _is_tiermaker_document(document):
 
 def _tier_colors(document):
     """Return the source palette used for tier emphasis."""
+    if document.get('source') == 'stats':
+        return document['tierColors']
     palette = (TIERMAKER_TIER_COLORS if _is_tiermaker_document(document)
                else TIER_COLORS).copy()
     for tier, color in document.get('tierColors', {}).items():
@@ -346,7 +357,7 @@ def _tier_colors(document):
 
 def _signature(document):
     signature = f'Produced by kakyo on {datetime.date.today().isoformat()}'
-    if _is_tiermaker_document(document):
+    if _is_tiermaker_document(document) or document.get('source') == 'stats':
         return signature
     return f'{signature} - Powered by DeepDraft'
 
@@ -381,11 +392,21 @@ def _tile_visuals(tile, scale):
     }
 
 
-def _legend_layout(width, scale):
-    block_width = _scaled(34, scale)
+def _tied_with_previous(document, row, index):
+    """A stat tie belongs to the preceding brawler in this panel row."""
+    if document.get('source') != 'stats' or index == 0:
+        return False
+    values = document['values']
+    return values[row.tiles[index].name] == values[row.tiles[index - 1].name]
+
+
+def _legend_layout(width, scale, document=None):
+    tiers = document.get('tierOrder', TIER_ORDER) if document else TIER_ORDER
+    label_width = max((len(tier) for tier in tiers), default=2) * 8 + 12
+    block_width = _scaled(max(34, label_width if document else 34), scale)
     block_height = _scaled(18, scale)
     gap = _scaled(6, scale)
-    total_width = len(TIER_ORDER) * block_width + (len(TIER_ORDER) - 1) * gap
+    total_width = len(tiers) * block_width + (len(tiers) - 1) * gap
     start_x = width - _scaled(24, scale) - total_width
     y = _scaled(72, scale)
     return tuple(
@@ -396,7 +417,7 @@ def _legend_layout(width, scale):
             block_width,
             block_height,
         )
-        for index, tier in enumerate(TIER_ORDER)
+        for index, tier in enumerate(tiers)
     )
 
 
@@ -424,8 +445,9 @@ def render_master_svg(document, avatar_dir, map_dir=None, width=1600):
          f'fill="#ffffff">{html.escape(title)}</text>'),
     ]
     legend_font_size = _scaled(12, layout.scale)
+    legend_text_color = BACKGROUND if document.get('source') == 'stats' else '#ffffff'
     for tier, x, y, legend_width, legend_height in _legend_layout(
-            layout.width, layout.scale):
+            layout.width, layout.scale, document):
         parts.append(
             f'<rect data-tier-legend="{html.escape(tier, quote=True)}" '
             f'x="{x}" y="{y}" width="{legend_width}" '
@@ -436,7 +458,7 @@ def render_master_svg(document, avatar_dir, map_dir=None, width=1600):
             f'y="{y + legend_height - _scaled(4, layout.scale)}" '
             'text-anchor="middle" font-family="sans-serif" '
             f'font-size="{legend_font_size}" font-weight="bold" '
-            f'fill="#ffffff">{html.escape(tier)}</text>')
+            f'fill="{legend_text_color}">{html.escape(tier)}</text>')
     if layout.map_panel:
         map_panel = layout.map_panel
         parts.append(
@@ -479,9 +501,14 @@ def render_master_svg(document, avatar_dir, map_dir=None, width=1600):
         for role_index, row in enumerate(panel.rows):
             role_x = panel.x + panel_padding
             role_y = row.y
+            rating_row = (document.get('source') == 'stats'
+                          and panel.title == 'Rating Tiers')
+            row_color = (tier_colors[row.label] if rating_row
+                         else _role_color(role_index))
+            label_color = BACKGROUND if rating_row else '#ffffff'
             parts.append(
                 f'<rect x="{role_x}" y="{role_y}" width="{layout.role_width}" '
-                f'height="{row.height}" rx="8" fill="{_role_color(role_index)}"/>')
+                f'height="{row.height}" rx="8" fill="{row_color}"/>')
             role_label, role_font = _fit_caption(
                 text_draw,
                 _title_case(row.label),
@@ -493,9 +520,12 @@ def render_master_svg(document, avatar_dir, map_dir=None, width=1600):
                 f'y="{role_y + _scaled(24, layout.scale)}" '
                 f'text-anchor="middle" font-family="sans-serif" '
                 f'font-size="{role_font.size}" '
-                f'font-weight="bold" fill="#ffffff">{html.escape(role_label)}</text>')
-            for tile in row.tiles:
-                tier_color = tier_colors.get(tile.tier, '#aaaaaa')
+                f'font-weight="bold" fill="{label_color}">'
+                f'{html.escape(role_label)}</text>')
+            for tile_index, tile in enumerate(row.tiles):
+                tier_color = ('transparent' if _tied_with_previous(
+                    document, row, tile_index)
+                    else tier_colors.get(tile.tier, '#aaaaaa'))
                 visuals = _tile_visuals(tile, layout.scale)
                 parts.append(
                     f'<rect data-brawler="{html.escape(str(tile.name), quote=True)}" '
@@ -549,7 +579,8 @@ def _fit_text(draw, text, width, font):
 def render_master_png(document, avatar_dir, output_path, resolution=None, map_dir=None):
     """Render a master or tierlist document as PNG using the shared layout."""
     target = parse_resolution(resolution)
-    if target is None and _is_tiermaker_document(document):
+    if target is None and (_is_tiermaker_document(document)
+                           or document.get('source') == 'stats'):
         # A single Common Classes panel is often much shorter than the
         # two-panel DeepDraft canvas. Keep its footer close to the content.
         layout = build_layout(document, DEFAULT_PNG_RESOLUTION[0], map_dir)
@@ -574,8 +605,9 @@ def render_master_png(document, avatar_dir, output_path, resolution=None, map_di
               fill='#ffffff', font=title_font)
 
     legend_font = ImageFont.load_default(size=_scaled(12, layout.scale))
+    legend_text_color = BACKGROUND if document.get('source') == 'stats' else '#ffffff'
     for tier, x, y, legend_width, legend_height in _legend_layout(
-            layout.width, layout.scale):
+            layout.width, layout.scale, document):
         draw.rounded_rectangle(
             (x, y, x + legend_width, y + legend_height),
             radius=_scaled(4, layout.scale),
@@ -586,7 +618,7 @@ def render_master_png(document, avatar_dir, output_path, resolution=None, map_di
             (x + (legend_width - tier_box[2]) // 2,
              y + (legend_height - tier_box[3]) // 2),
             tier,
-            fill='#ffffff',
+            fill=legend_text_color,
             font=legend_font,
         )
 
@@ -644,10 +676,13 @@ def render_master_png(document, avatar_dir, output_path, resolution=None, map_di
         for role_index, row in enumerate(panel.rows):
             role_x = panel.x + panel_padding
             role_y = row.y
+            rating_row = (document.get('source') == 'stats'
+                          and panel.title == 'Rating Tiers')
             draw.rounded_rectangle(
                 (role_x, role_y, role_x + layout.role_width, row.y + row.height),
                 radius=_scaled(8, layout.scale),
-                fill=_role_color(role_index),
+                fill=(tier_colors[row.label] if rating_row
+                      else _role_color(role_index)),
             )
             role_label, role_font = _fit_caption(
                 draw,
@@ -660,10 +695,11 @@ def render_master_png(document, avatar_dir, output_path, resolution=None, map_di
                 (role_x + (layout.role_width - role_box[2]) // 2,
                  role_y + _scaled(10, layout.scale)),
                 role_label,
-                fill='#ffffff',
+                fill=BACKGROUND if rating_row else '#ffffff',
                 font=role_font,
             )
-            for tile in row.tiles:
+            for tile_index, tile in enumerate(row.tiles):
+                tied = _tied_with_previous(document, row, tile_index)
                 tier_color = tier_colors.get(tile.tier, '#aaaaaa')
                 visuals = _tile_visuals(tile, layout.scale)
                 draw.rounded_rectangle(
@@ -671,13 +707,14 @@ def render_master_png(document, avatar_dir, output_path, resolution=None, map_di
                     radius=_scaled(7, layout.scale),
                     fill='#2b2947',
                 )
-                draw.line(
-                    (tile.x + visuals['underline_padding'], visuals['underline_y'],
-                     tile.x + tile.width - visuals['underline_padding'],
-                     visuals['underline_y']),
-                    fill=tier_color,
-                    width=visuals['underline_width'],
-                )
+                if not tied:
+                    draw.line(
+                        (tile.x + visuals['underline_padding'], visuals['underline_y'],
+                         tile.x + tile.width - visuals['underline_padding'],
+                         visuals['underline_y']),
+                        fill=tier_color,
+                        width=visuals['underline_width'],
+                    )
                 avatar_path = avatars.get(_normalize_identifier(tile.name))
                 if avatar_path:
                     with Image.open(avatar_path) as avatar:

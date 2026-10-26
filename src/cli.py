@@ -42,6 +42,9 @@ Examples:
   # Same as above, but outputs to a rasterized picture
   bstier generate --from /path/to/tier.json --to tier.png --reso 1024x768
 
+  # Generate five stat tierlists as JSON, SVG, PNG, and JPG
+  bstier stats --to /path/to/stats-output
+
   # Convert a regular text tierlist to a class-based tierlist
   bstier convert --by class --from /path/to/tier-in.json --to /path/to/tier-out.json
 
@@ -68,6 +71,12 @@ Examples:
         '--reso',
         help='PNG resolution (DeepDraft default: 2048x1536; TierMaker: content height at 2048 wide)',
     )
+
+    stats_parser = subparsers.add_parser(
+        'stats', help='Generate five brawler stat tierlists from the local catalog')
+    stats_parser.add_argument('-t', '--to', dest='toPath', required=True,
+                              help='Output folder for JSON, SVG, PNG, and JPG files')
+    stats_parser.add_argument('--reso', help='PNG resolution in WIDTHxHEIGHT format')
 
     # convert subcommand
     convert_parser = subparsers.add_parser('convert', help='Convert a tierlist format')

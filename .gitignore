@@ -2,6 +2,7 @@
 # Project
 # ========
 **/_gen
+temp/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

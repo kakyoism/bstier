@@ -254,6 +254,28 @@ rendered tier legend and avatar underlines use the source header colors, with
 the standard TierMaker palette as a fallback. JPG copies are created from PNGs
 with ImageMagick, which must be installed and available on `PATH`.
 
+### Brawler stat tierlists
+
+Generate five tierlists directly from `res/spec/all.brawler.json`:
+
+- macOS/Linux: `./ci/run.sh stats --to /tmp/bstier-stats`
+- Windows: `ci\run.bat stats --to stats-output`
+
+The command creates `health`, `main-range`, `super-range`, `movement-speed`, and
+`reload-speed` files in `json/`, `svg/`, `png/`, and `png/jpg/` subfolders of the
+output directory. ImageMagick must be installed on `PATH` for JPG conversion.
+Use `--reso WIDTHxHEIGHT` to request an exact PNG size; otherwise the PNG height
+fits the content at 2048 pixels wide.
+
+Each image has rating tiers on the left and Common Classes on the right. Both
+panels rank by rating tier first, then by numeric stat within each tier.
+Reload speed is `1 / reloadSeconds`, so a faster reload appears farther left.
+The underline and legend colors show the rating tier. For consecutive brawlers
+with the same numeric value in a row, only the first keeps its underline; the
+others have transparent underlines to show the tie. Slash ratings use their
+first label, `N/A` is last, and health uses 1000-HP bands with `5000-` and
+`10000+` at the ends. Titles follow `Brawler Tierlist: <stat name>`.
+
 ## Brawler Roles
 - The official brawler classes can be midleading in draft process, e.g., Najia is used as a Range brawler (sniper) in open maps rather than a Damage Dealer (the official class).
 - The same brawler may serve different purposes in different modes and maps, e.g., Barley can be a counter to other throwers when they are present, or a controller in a closed HotZone map.

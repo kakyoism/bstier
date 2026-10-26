@@ -71,3 +71,21 @@ TierMaker has no `map` or `mode` fields and therefore renders only the
 `Common Classes` panel. DeepDraft continues to support its existing basic
 extraction output and optional `--master` map-aware document.
 
+## Milestone 3 (M3): Basic stats tierlist regarding health, range, movement speed, reload speed
+
+- `stats --to OUTPUT_DIR` reads `res/spec/all.brawler.json` directly and creates
+  five charts: health, main attack range, super range, movement speed, and
+  reload speed. Each chart is exported as JSON, SVG, PNG, and an ImageMagick JPG.
+- Each image has two panels. The left panel groups brawlers by their stat rating;
+  the right panel groups them by the project's Common Classes. In both panels,
+  rating tier takes priority, then brawlers within a tier are sorted by
+  descending numeric value. There is no cross-row alignment.
+  `reloadSpeed = 1 / reloadSeconds` makes faster reloads rank farther left.
+- Ratings come from `rating.rangeMain`, `rating.rangeSuper`, `rating.speed`, and
+  `rating.reload`. For slash-separated ratings, only the first label is used.
+  `N/A` is its own last tier. Health uses `5000-` for values below 5000,
+  thousand-HP bands from `5000` to `9000`, and `10000+` for values at least 10000.
+- The tier legend and avatar underlines share a color scale. Consecutive
+  brawlers tied on the numeric value in a row show only the first underline;
+  later tied underlines are transparent in both panels. Titles use
+  `Brawler Tierlist: <stat name>` and retain the existing dated credit.

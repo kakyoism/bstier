@@ -34,6 +34,8 @@ class Worker:
             return self._generate()
         elif self.args.command == 'convert':
             return self._convert()
+        elif self.args.command == 'stats':
+            return self._stats()
         else:
             self.res.detail = f"Unknown or unhandled command: {self.args.command}"
         return self.res, self.out
@@ -51,7 +53,7 @@ class Worker:
                     'The --title option is required for TierMaker extraction')
 
         # Validate input path (--from) exists
-        if fixed_args.fromPath:
+        if getattr(fixed_args, 'fromPath', None):
             abs_from = osp.abspath(fixed_args.fromPath)
             if not osp.isfile(abs_from):
                 raise FileNotFoundError(f"Input file not found: {abs_from}")
@@ -150,4 +152,17 @@ class Worker:
     def _convert(self):
         self.res.ok = True
         self.res.detail = "Conversion routine executed."
+        return self.res, self.out
+
+    def _stats(self):
+        import stats
+
+        catalog_path = osp.join(self.repo.resDir, 'spec', 'all.brawler.json')
+        stats.generate_all(
+            catalog_path, self.paths.avatarDir, self.paths.mapDir,
+            self.args.toPath, getattr(self.args, 'reso', None),
+        )
+        self.out.toPath = self.args.toPath
+        self.res.ok = True
+        self.res.detail = 'Five stat tierlists generated.'
         return self.res, self.out
