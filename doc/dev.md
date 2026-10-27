@@ -80,6 +80,8 @@ extraction output and optional `--master` map-aware document.
   the right panel groups them by the project's Common Classes. In both panels,
   rating tier takes priority, then brawlers within a tier are sorted by
   descending numeric value. There is no cross-row alignment.
+  Multi-valued main or super ranges use their maximum value for this milestone.
+  Other multi-valued stats continue to use their first value.
   `reloadSpeed = 1 / mainAttack.reloadSeconds` makes faster reloads rank farther left.
 - Ratings come from `rating.rangeMain`, `rating.rangeSuper`, `rating.speed`, and
   `rating.reload`. For slash-separated ratings, only the first label is used.

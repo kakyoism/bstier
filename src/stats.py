@@ -1,6 +1,7 @@
 """Build and publish brawler stat tierlists from the local catalog."""
 
 import json
+import math
 import pathlib
 import shutil
 import subprocess
@@ -44,8 +45,17 @@ def _numeric_value(spec, stat):
     value = spec
     for field in stat.path:
         value = value[field]
-    if isinstance(value, bool) or not isinstance(value, (int, float)):
+    if isinstance(value, list):
+        if not value:
+            raise ValueError(f'{stat.key} values must not be empty')
+        candidates = value
+    else:
+        candidates = [value]
+    if any(isinstance(item, bool) or not isinstance(item, (int, float))
+           or not math.isfinite(item) for item in candidates):
         raise ValueError(f'{stat.key} must be numeric')
+    value = (max(candidates) if stat.key in ('main-range', 'super-range')
+             else candidates[0])
     if stat.key == 'reload-speed':
         if value <= 0:
             raise ValueError('reloadSeconds must be positive')

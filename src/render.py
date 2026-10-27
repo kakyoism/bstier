@@ -511,7 +511,7 @@ def render_master_svg(document, avatar_dir, map_dir=None, width=1600):
                 f'height="{row.height}" rx="8" fill="{row_color}"/>')
             role_label, role_font = _fit_caption(
                 text_draw,
-                _title_case(row.label),
+                row.label if rating_row else _title_case(row.label),
                 max(1, layout.role_width - 2 * panel_padding),
                 _scaled(18, layout.scale),
             )
@@ -686,7 +686,7 @@ def render_master_png(document, avatar_dir, output_path, resolution=None, map_di
             )
             role_label, role_font = _fit_caption(
                 draw,
-                _title_case(row.label),
+                row.label if rating_row else _title_case(row.label),
                 max(1, layout.role_width - 2 * panel_padding),
                 _scaled(18, layout.scale),
             )

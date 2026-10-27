@@ -269,6 +269,8 @@ fits the content at 2048 pixels wide.
 
 Each image has rating tiers on the left and Common Classes on the right. Both
 panels rank by rating tier first, then by numeric stat within each tier.
+For main or super attacks with multiple listed ranges, the chart uses the
+maximum range for that brawler. Other multi-valued stats use their first value.
 Reload speed is `1 / mainAttack.reloadSeconds`, so a faster reload appears
 farther left.
 The underline and legend colors show the rating tier. For consecutive brawlers

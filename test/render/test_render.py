@@ -205,6 +205,37 @@ def test_stats_svg_has_two_panels_dynamic_legend_and_plain_credit():
     assert 'Powered by DeepDraft' not in svg
 
 
+def test_stats_rating_row_preserves_trailing_hyphen(tmp_path, monkeypatch):
+    document = {
+        'source': 'stats',
+        'title': 'Brawler Tierlist: Health',
+        'tierOrder': ['5000-'],
+        'tierColors': {'5000-': '#e87582'},
+        'originalTierlist': {'5000-': ['tick']},
+        'globalRoles': {'thrower': ['tick']},
+        'values': {'tick': 4800},
+    }
+    layout = render.build_layout(document, width=900)
+    row = layout.panels[0].rows[0]
+    svg = render.render_master_svg(document, _ROOT / 'res/avatar', width=900)
+
+    assert (f'y="{row.y + 24}" text-anchor="middle" '
+            'font-family="sans-serif" font-size="18" '
+            'font-weight="bold" fill="#17152c">5000-</text>') in svg
+
+    seen_labels = []
+    fit_caption = render._fit_caption
+
+    def record_caption(draw, label, width, size):
+        seen_labels.append(label)
+        return fit_caption(draw, label, width, size)
+
+    monkeypatch.setattr(render, '_fit_caption', record_caption)
+    render.render_document(
+        document, _ROOT / 'res/avatar', tmp_path / 'health.png')
+    assert '5000-' in seen_labels
+
+
 def test_stats_ties_hide_only_following_underlines_in_each_panel(tmp_path):
     document = {
         'source': 'stats',

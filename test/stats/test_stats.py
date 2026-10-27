@@ -2,6 +2,8 @@ import json
 import pathlib
 import sys
 
+import pytest
+
 
 _ROOT = pathlib.Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(_ROOT / 'src'))
@@ -61,6 +63,30 @@ def test_slash_rating_uses_first_label_and_na_stays_last():
     assert super_range['globalRoles']['sniper'] == ['plain', 'split']
 
 
+def test_range_charts_use_maximum_of_multiple_ranges():
+    catalog = {
+        'multi': _spec(8000, [2.7, 9.0], [4, 10.3], 700, 1.5),
+        'single': _spec(8000, 8.0, 9.0, 700, 1.5),
+    }
+
+    main = stats.build_document(catalog, stats.STATS[1])
+    super_range = stats.build_document(catalog, stats.STATS[2])
+
+    assert main['values'] == {'multi': 9.0, 'single': 8.0}
+    assert main['originalTierlist']['LONG'] == ['multi', 'single']
+    assert main['globalRoles']['sniper'] == ['multi', 'single']
+    assert super_range['values'] == {'multi': 10.3, 'single': 9.0}
+    assert super_range['globalRoles']['sniper'] == ['multi', 'single']
+
+
+@pytest.mark.parametrize('ranges', [[], [8.0, None], [8.0, True]])
+def test_range_charts_reject_invalid_range_lists(ranges):
+    catalog = {'bad': _spec(8000, ranges, 9.0, 700, 1.5)}
+
+    with pytest.raises(ValueError, match='values|numeric'):
+        stats.build_document(catalog, stats.STATS[1])
+
+
 def test_common_classes_prioritize_rating_before_numeric_range():
     catalog = {
         'carl': _spec(8000, 8.33, 3, 720, 2.0,
@@ -90,6 +116,18 @@ def test_reload_speed_inverts_seconds_and_keeps_fastest_left():
     assert document['globalRoles']['sniper'] == ['fast', 'slow']
     assert document['originalTierlist']['VERY FAST'] == ['fast']
     assert document['title'] == 'Brawler Tierlist: Reload Speed'
+
+
+def test_reload_speed_uses_first_value_for_alternate_forms():
+    catalog = {
+        'bonnie': _spec(10000, 9, 7, 620, [1.0, 2.0],
+                        reload_rating='VERY FAST/SLOW'),
+    }
+
+    document = stats.build_document(catalog, stats.STATS[4])
+
+    assert document['values']['bonnie'] == 1.0
+    assert document['originalTierlist'] == {'VERY FAST': ['bonnie']}
 
 
 def test_current_catalog_places_every_brawler_in_both_panels():
